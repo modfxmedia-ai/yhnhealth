@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { ArrowUpRight, Phone, MapPin, Mail, Clock } from "lucide-react";
+import { CITIES, SERVICES } from "@/lib/pseoData";
 
 type IconProps = { size?: number; strokeWidth?: number };
 
@@ -40,6 +41,7 @@ const QUICK_LINKS = [
   { label: "Meet The Team", href: "/meet-the-doctor" },
   { label: "Articles", href: "/articles" },
   { label: "Locations", href: "/locations" },
+  { label: "Areas We Serve", href: "/areas-we-serve" },
   { label: "Contact", href: "/contact-us" },
 ];
 
@@ -239,6 +241,75 @@ export default function Footer() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="relative border-t border-white/10">
+        <div className="mx-auto max-w-[1320px] px-6 py-12 lg:px-10">
+          <div className="flex flex-wrap items-baseline justify-between gap-3">
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent">Areas We Serve</p>
+              <p className="mt-2 font-display text-2xl font-bold md:text-3xl">
+                {CITIES.length} cities · {SERVICES.length} services · {(CITIES.length * SERVICES.length).toLocaleString()}+ local pages
+              </p>
+            </div>
+            <Link
+              href="/areas-we-serve"
+              className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-[0.24em] text-white/80 hover:text-accent"
+            >
+              See all areas
+              <ArrowUpRight size={12} />
+            </Link>
+          </div>
+
+          <div className="mt-8 grid gap-8 md:grid-cols-2">
+            {[
+              { state: "New Jersey", list: CITIES.filter((c) => c.state === "NJ") },
+              { state: "Pennsylvania", list: CITIES.filter((c) => c.state === "PA") },
+            ].map((g) => (
+              <div key={g.state}>
+                <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/60">{g.state}</p>
+                <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-1.5">
+                  {g.list.map((c) => (
+                    <li key={c.slug}>
+                      <Link
+                        href={`/areas-we-serve/${c.slug}`}
+                        className="text-[12px] text-white/70 hover:text-accent"
+                      >
+                        {c.name}, {c.state}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <details className="mt-8 group">
+            <summary className="flex cursor-pointer items-center gap-2 text-[10px] font-bold uppercase tracking-[0.28em] text-white/60 list-none">
+              <span className="transition-transform group-open:rotate-180">▾</span>
+              Browse all {(CITIES.length * SERVICES.length).toLocaleString()}+ local service pages
+            </summary>
+            <div className="mt-5 space-y-5">
+              {SERVICES.map((s) => (
+                <div key={s.slug}>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent">{s.name}</p>
+                  <ul className="mt-1.5 flex flex-wrap gap-x-3 gap-y-1">
+                    {CITIES.map((c) => (
+                      <li key={`${s.slug}-${c.slug}`}>
+                        <Link
+                          href={`/areas-we-serve/${c.slug}/${s.slug}`}
+                          className="text-[11px] text-white/55 hover:text-accent"
+                        >
+                          {c.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </details>
         </div>
       </div>
 
