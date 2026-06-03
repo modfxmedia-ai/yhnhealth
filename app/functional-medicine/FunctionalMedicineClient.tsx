@@ -1,0 +1,199 @@
+"use client";
+
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
+import Link from "next/link";
+import { ArrowUpRight, Atom, Microscope, Heart, Sparkles, ListChecks } from "lucide-react";
+import { Breadcrumbs, BookingStrip, FadeUp } from "@/components/page/Primitives";
+
+const PILLARS = [
+  { icon: Atom, title: "Root-Cause Analysis", body: "We investigate biochemistry, gut health, hormones, and lifestyle to find why symptoms appear — not just what they look like." },
+  { icon: Microscope, title: "Functional Lab Testing", body: "Comprehensive labs go beyond standard panels: micronutrients, food sensitivity, hormonal panels, and gut microbiome analysis." },
+  { icon: Heart, title: "Personalized Care Plan", body: "Your protocol is built around your biology, your history, and your goals — not a one-size-fits-all template." },
+  { icon: ListChecks, title: "Ongoing Optimization", body: "Functional medicine is iterative. We measure, adjust, and refine until you're not just less sick — you're well." },
+];
+
+const CONDITIONS = [
+  "Chronic Fatigue & Energy",
+  "Digestive Issues & Gut Health",
+  "Hormone Imbalances",
+  "Autoimmune Conditions",
+  "Lyme Disease & Tick-Borne",
+  "Inflammation & Pain",
+  "Brain Fog & Mood",
+  "Metabolic Health",
+];
+
+export default function FunctionalMedicineClient() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const y = useTransform(scrollYProgress, [0, 1], [60, -60]);
+
+  return (
+    <main className="bg-white">
+      {/* Hero */}
+      <section ref={ref} className="relative overflow-hidden bg-gradient-to-br from-cream-light via-white to-mist">
+        <motion.div style={{ y }} aria-hidden="true" className="absolute -right-40 top-20 h-[28rem] w-[28rem] rounded-full bg-accent/10 blur-3xl" />
+        <motion.div style={{ y }} aria-hidden="true" className="absolute -left-40 bottom-0 h-[24rem] w-[24rem] rounded-full bg-brand/10 blur-3xl" />
+
+        <div className="relative mx-auto max-w-[1320px] px-6 pt-12 pb-20 lg:px-10 lg:pt-16 lg:pb-32">
+          <Breadcrumbs trail={[{ label: "Home", href: "/" }, { label: "Functional Medicine" }]} />
+
+          <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
+            <div className="lg:col-span-7">
+              <motion.span
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="inline-flex items-center gap-2 rounded-full border border-brand/15 bg-white px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.32em] text-brand"
+              >
+                <Sparkles size={11} className="text-accent" />
+                Beyond Symptom Management
+              </motion.span>
+
+              <motion.h1
+                initial={{ opacity: 0, y: 22 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+                className="mt-6 font-display text-5xl font-bold leading-[0.95] text-brand md:text-6xl lg:text-[5.5rem]"
+              >
+                Functional <span className="font-script font-normal italic text-accent">Medicine.</span>
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                className="mt-7 max-w-xl text-lg leading-relaxed text-stone"
+              >
+                Where conventional medicine has failed to find the answer, functional medicine asks the next question. We address complex chronic conditions by treating the whole biology &mdash; not just the diagnosis.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+                className="mt-9 flex flex-wrap gap-3"
+              >
+                <Link
+                  href="https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:bg-accent"
+                >
+                  Free Consultation Call
+                  <ArrowUpRight size={14} />
+                </Link>
+                <Link
+                  href="/meet-the-doctor"
+                  className="inline-flex items-center gap-2 rounded-full border border-brand/15 px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-brand transition-all hover:bg-mist"
+                >
+                  Meet Dr. Chris
+                </Link>
+              </motion.div>
+            </div>
+
+            {/* Atom illustration */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.9, delay: 0.2 }}
+              className="relative aspect-square lg:col-span-5"
+            >
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 rounded-full border border-dashed border-brand/20"
+              />
+              <motion.div
+                animate={{ rotate: -360 }}
+                transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-8 rounded-full border border-dashed border-accent/30"
+              />
+              <div className="absolute inset-1/3 rounded-full bg-gradient-to-br from-brand to-brand-dark shadow-card" />
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+                <Atom size={32} className="mx-auto text-accent" strokeWidth={1.5} />
+                <p className="mt-2 font-display text-3xl font-bold text-white">Whole</p>
+                <p className="-mt-1 font-script text-3xl font-normal italic text-accent">biology</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pillars */}
+      <section className="relative bg-brand-dark text-white">
+        <div className="mx-auto max-w-[1320px] px-6 py-20 lg:px-10 lg:py-28">
+          <FadeUp>
+            <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent">Our Approach</p>
+            <h2 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight md:text-5xl">
+              Four pillars of functional care.
+            </h2>
+          </FadeUp>
+
+          <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {PILLARS.map((p, i) => (
+              <motion.article
+                key={p.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.55, delay: i * 0.08 }}
+                className="group rounded-2xl border border-white/10 bg-white/5 p-7 backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-accent/40 hover:bg-white/10"
+              >
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent text-white">
+                  <p.icon size={20} strokeWidth={1.75} />
+                </span>
+                <h3 className="mt-6 font-display text-xl font-bold">{p.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-white/70">{p.body}</p>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Conditions list */}
+      <section className="relative bg-white">
+        <div className="mx-auto max-w-[1320px] px-6 py-20 lg:px-10 lg:py-28">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+            <FadeUp className="lg:col-span-5">
+              <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent-dark">Conditions We Address</p>
+              <h2 className="mt-4 font-display text-4xl font-bold leading-tight text-brand md:text-5xl">
+                When conventional care leaves you with{" "}
+                <span className="font-script font-normal italic text-accent">questions.</span>
+              </h2>
+              <p className="mt-6 max-w-md text-base leading-relaxed text-stone">
+                Functional medicine is at its best with complex, chronic, multi-system conditions. If you&rsquo;ve been told your labs are &ldquo;normal&rdquo; but you don&rsquo;t feel well, this is for you.
+              </p>
+            </FadeUp>
+
+            <FadeUp delay={0.15} className="lg:col-span-7">
+              <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {CONDITIONS.map((c, i) => (
+                  <motion.li
+                    key={c}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-60px" }}
+                    transition={{ duration: 0.4, delay: i * 0.04 }}
+                    className="flex items-center gap-3 rounded-xl border border-brand/10 bg-mist/40 px-5 py-4 transition-all hover:border-accent/30 hover:bg-white"
+                  >
+                    <span className="h-2 w-2 rounded-full bg-accent" />
+                    <span className="text-sm font-semibold text-brand">{c}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </FadeUp>
+          </div>
+        </div>
+      </section>
+
+      <BookingStrip
+        variant="navy"
+        eyebrow="Schedule"
+        title="A complimentary 15-minute consultation."
+        copy="Speak with Dr. Chris before you commit. We'll discuss your case and whether functional medicine is the right fit."
+      />
+    </main>
+  );
+}
