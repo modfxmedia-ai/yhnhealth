@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "motion/react";
-import { CheckCircle, Users, Award, Stethoscope } from "lucide-react";
+import { ArrowUpRight, CheckCircle, Users, Award, Stethoscope } from "lucide-react";
 
 const FEATURES = [
   {
@@ -11,6 +12,7 @@ const FEATURES = [
     body: "Our staff is trained and knowledgeable with multiple advanced accreditations about the latest procedures, tools, and techniques to properly care for our patients.",
     image: "/images/yhn-clone/practice.webp",
     highlight: "Advanced Tech",
+    href: "/about-us",
   },
   {
     icon: Users,
@@ -18,6 +20,7 @@ const FEATURES = [
     body: "Each patient requires something different and we are focused on meeting their individual needs with a fully customized treatment plan built around your goals.",
     image: "/images/yhn-clone/individual-approach.webp",
     highlight: "Custom Plans",
+    href: "/meet-the-doctor",
   },
 ];
 
@@ -86,40 +89,50 @@ export default function BetterCareSection() {
                 whileHover={{ y: -8 }}
                 className="group relative overflow-hidden rounded-3xl border border-brand/10 bg-white shadow-card transition-shadow duration-500 hover:shadow-card-hover"
               >
-                <div className="relative aspect-[16/10] w-full overflow-hidden">
-                  <Image
-                    src={card.image}
-                    alt={card.title}
-                    fill
-                    sizes="(min-width: 1024px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-brand/20 to-transparent" />
-                  <span className="absolute left-6 top-6 rounded-full bg-white/95 px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.24em] text-brand backdrop-blur">
-                    {card.highlight}
-                  </span>
-                </div>
-
-                <div className="relative p-8 lg:p-10">
-                  <div className="absolute -top-7 right-8 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-brand text-white shadow-card transition-colors duration-500 group-hover:bg-accent">
-                    <Icon size={22} strokeWidth={1.75} />
-                  </div>
-
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-accent-dark">
-                    0{i + 1} · Excellence
-                  </p>
-                  <h3 className="mt-3 font-display text-2xl font-bold leading-tight text-brand md:text-3xl">
-                    {card.title}
-                  </h3>
-                  <p className="mt-4 leading-relaxed text-stone">{card.body}</p>
-
-                  <div className="mt-6 flex items-center gap-3 border-t border-brand/10 pt-5">
-                    <span className="h-px w-8 bg-accent" />
-                    <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-stone">
-                      Learn the YHN approach
+                <Link
+                  href={card.href}
+                  aria-label={`${card.title} — learn the YHN approach`}
+                  className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+                >
+                  <div className="relative aspect-[16/10] w-full overflow-hidden">
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      fill
+                      sizes="(min-width: 1024px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-brand/20 to-transparent" />
+                    <span className="absolute left-6 top-6 rounded-full bg-white/95 px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.24em] text-brand backdrop-blur">
+                      {card.highlight}
                     </span>
                   </div>
-                </div>
+
+                  <div className="relative p-8 lg:p-10">
+                    <div className="absolute -top-7 right-8 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-brand text-white shadow-card transition-colors duration-500 group-hover:bg-accent">
+                      <Icon size={22} strokeWidth={1.75} />
+                    </div>
+
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-accent-dark">
+                      0{i + 1} · Excellence
+                    </p>
+                    <h3 className="mt-3 font-display text-2xl font-bold leading-tight text-brand md:text-3xl">
+                      {card.title}
+                    </h3>
+                    <p className="mt-4 leading-relaxed text-stone">{card.body}</p>
+
+                    <div className="mt-6 flex items-center gap-3 border-t border-brand/10 pt-5">
+                      <span className="h-px w-8 bg-accent transition-all duration-500 group-hover:w-12" />
+                      <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.28em] text-stone transition-colors duration-500 group-hover:text-accent-dark">
+                        Learn the YHN approach
+                        <ArrowUpRight
+                          size={12}
+                          className="transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </Link>
               </motion.article>
             );
           })}

@@ -121,6 +121,72 @@ export const SERVICES = [
   { name: "Integrative Nutrition",           href: "/integrative-nutrition",           image: "/images/yhn-clone/svc-nutrition.webp" },
 ];
 
+export type ServiceGroup = {
+  id: string;
+  eyebrow: string;
+  title: string;
+  scriptWord: string;
+  description: string;
+  metric: { value: string; label: string };
+  items: { name: string; href: string; image: string; blurb: string }[];
+};
+
+export const SERVICE_GROUPS: ServiceGroup[] = [
+  {
+    id: "life-stage",
+    eyebrow: "Care for Every Life Stage",
+    title: "From first heartbeat to ",
+    scriptWord: "lifelong vitality.",
+    description:
+      "Specialized programs that meet you where you are — pregnancy, pediatrics, athletes, and seniors.",
+    metric: { value: "All Ages", label: "0 — 99+" },
+    items: [
+      { name: "Pregnancy Care", href: "/pregnancy-care", image: "/images/yhn-clone/svc-pregnancy.webp", blurb: "Comfort + alignment through every trimester." },
+      { name: "Webster Technique", href: "/webster-technique", image: "/images/yhn-clone/svc-webster.webp", blurb: "Pelvic balance for an easier delivery." },
+      { name: "Pediatric Care", href: "/pediatric-care", image: "/images/yhn-clone/svc-pediatric.webp", blurb: "Gentle adjustments tailored to growing bodies." },
+      { name: "Geriatric Care", href: "/geriatric-care", image: "/images/yhn-clone/svc-geriatric.webp", blurb: "Mobility, balance, and pain relief in later years." },
+      { name: "Athletic Care", href: "/athletic-care", image: "/images/yhn-clone/svc-athletic.webp", blurb: "Performance-grade care for serious athletes." },
+      { name: "DOT Physicals", href: "/dot-physicals", image: "/images/yhn-clone/svc-dot.webp", blurb: "Certified medical exams for commercial drivers." },
+    ],
+  },
+  {
+    id: "functional",
+    eyebrow: "Functional & Whole-Body Care",
+    title: "Root-cause care, ",
+    scriptWord: "evidence-backed.",
+    description:
+      "Movement, posture, kinesiology, and metabolic medicine working together — not isolated visits.",
+    metric: { value: "8", label: "integrated programs" },
+    items: [
+      { name: "Chiropractic Medicine", href: "/family-chiropractic-care", image: "/images/yhn-clone/svc-chiropractic.webp", blurb: "Spinal care delivered with clinical precision." },
+      { name: "Functional Posture Analysis", href: "/functional-postural-analysis", image: "/images/yhn-clone/svc-posture.webp", blurb: "Map imbalances before they become injuries." },
+      { name: "Functional Movement Restoration", href: "/functional-movement-restoration", image: "/images/yhn-clone/svc-movement.webp", blurb: "Re-train how your body moves under load." },
+      { name: "Functional Kinesiology", href: "/functional-kinesiology", image: "/images/yhn-clone/svc-kinesiology.webp", blurb: "Muscle testing that uncovers hidden dysfunction." },
+      { name: "Functional Medicine", href: "/functional-medicine", image: "/images/yhn-clone/svc-funcmed.webp", blurb: "Personalized clinical care for chronic conditions." },
+      { name: "Integrative Nutrition", href: "/integrative-nutrition", image: "/images/yhn-clone/svc-nutrition.webp", blurb: "Food as medicine — guided, not guessed." },
+      { name: "Physician Grade Supplementation", href: "/physician-grade-supplementation", image: "/images/yhn-clone/svc-supplements.webp", blurb: "Pharmaceutical-grade, prescriber-curated." },
+      { name: "Lyme Disease Solutions", href: "/lyme-disease-solutions", image: "/images/yhn-clone/svc-lyme.webp", blurb: "Targeted protocols for chronic Lyme recovery." },
+    ],
+  },
+  {
+    id: "therapies",
+    eyebrow: "Therapies & Techniques",
+    title: "Tools we reach for ",
+    scriptWord: "when it matters.",
+    description:
+      "Soft tissue, decompression, vibracussion — modalities chosen for the case, not a one-size playbook.",
+    metric: { value: "6", label: "in-clinic modalities" },
+    items: [
+      { name: "Active Release (ART)", href: "/art", image: "/images/yhn-clone/svc-art.webp", blurb: "Hands-on technique for adhesions and scar tissue." },
+      { name: "IASTM", href: "/iastm", image: "/images/yhn-clone/svc-iastm.webp", blurb: "Instrument-assisted soft tissue mobilization." },
+      { name: "Percussion Therapy", href: "/percussion-therapy", image: "/images/yhn-clone/svc-percussion.webp", blurb: "Deep, rhythmic relief for tight muscle groups." },
+      { name: "Arthrostimulation Therapy", href: "/arthrostimulation-therapy", image: "/images/yhn-clone/svc-arthrostim.webp", blurb: "Precision adjustments without manual force." },
+      { name: "Vibracussion Therapy", href: "/vibracussion-therapy", image: "/images/yhn-clone/svc-vibracussion.webp", blurb: "Vibration + percussion for circulation and recovery." },
+      { name: "Decompression Therapy", href: "/decompression-therapy", image: "/images/yhn-clone/svc-decompression.webp", blurb: "Non-surgical disc relief for chronic back pain." },
+    ],
+  },
+];
+
 export const ARTICLES = [
   {
     title: "Top Benefits of Combining Chiropractic Care and Physical Therapy",
