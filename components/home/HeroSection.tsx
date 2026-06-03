@@ -146,7 +146,7 @@ export default function HeroSection() {
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.7, ease: "easeOut" }}
-              className="mt-7 max-w-2xl text-lg leading-relaxed text-white/80 md:text-xl"
+              className="mt-7 max-w-2xl text-lg leading-relaxed text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] md:text-xl"
             >
               Function well so you feel well. Contemporary chiropractic care
               built on advanced technology and root-cause science — so health

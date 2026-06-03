@@ -34,7 +34,10 @@ export const NAV_ITEMS: NavItem[] = [
   {
     label: "Functional Medicine",
     href: "/functional-medicine",
-    children: [],
+    children: [
+      { label: "Personalized Clinical Care", href: "/functional-medicine" },
+      { label: "Health Optimization Programs", href: "/health-optimization-programs" },
+    ],
   },
   {
     label: "Physiotherapy Services",
@@ -115,6 +118,7 @@ export const SITE_PATHS: string[] = [
   "/geriatric-care",
   "/athletic-care",
   "/functional-medicine",
+  "/health-optimization-programs",
   "/art",
   "/iastm",
   "/percussion-therapy",

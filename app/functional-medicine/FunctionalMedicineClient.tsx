@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Atom, Microscope, Heart, Sparkles, ListChecks } from "lucide-react";
+import { ArrowUpRight, Atom, Microscope, Heart, Sparkles, ListChecks, Stethoscope, Compass } from "lucide-react";
 import { Breadcrumbs, BookingStrip, FadeUp } from "@/components/page/Primitives";
 
 const PILLARS = [
@@ -37,7 +37,23 @@ export default function FunctionalMedicineClient() {
         <motion.div style={{ y }} aria-hidden="true" className="absolute -left-40 bottom-0 h-[24rem] w-[24rem] rounded-full bg-brand/10 blur-3xl" />
 
         <div className="relative mx-auto max-w-[1320px] px-6 pt-12 pb-20 lg:px-10 lg:pt-16 lg:pb-32">
-          <Breadcrumbs trail={[{ label: "Home", href: "/" }, { label: "Functional Medicine" }]} />
+          <Breadcrumbs trail={[{ label: "Home", href: "/" }, { label: "Functional Medicine", href: "/functional-medicine" }, { label: "Personalized Clinical Care" }]} />
+
+          {/* Tab switcher */}
+          <div className="mt-8 flex flex-wrap gap-2">
+            <span className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-[10px] font-bold uppercase tracking-[0.24em] text-white">
+              <Stethoscope size={12} className="text-accent" />
+              Personalized Clinical Care
+            </span>
+            <Link
+              href="/health-optimization-programs"
+              className="inline-flex items-center gap-2 rounded-full border border-brand/15 bg-white px-5 py-2.5 text-[10px] font-bold uppercase tracking-[0.24em] text-brand transition-all hover:border-accent hover:text-accent-dark"
+            >
+              <Compass size={12} />
+              Health Optimization Programs
+              <ArrowUpRight size={12} />
+            </Link>
+          </div>
 
           <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-7">
@@ -148,6 +164,70 @@ export default function FunctionalMedicineClient() {
                 <p className="mt-3 text-sm leading-relaxed text-white/70">{p.body}</p>
               </motion.article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Personalized Clinical Care explainer */}
+      <section className="bg-cream-light">
+        <div className="mx-auto max-w-[1320px] px-6 py-20 lg:px-10 lg:py-24">
+          <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
+            <FadeUp className="lg:col-span-5">
+              <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent-dark">Tab 1 · Care Pathway</p>
+              <h2 className="mt-4 font-display text-4xl font-bold leading-tight text-brand md:text-5xl">
+                Personalized <span className="font-script font-normal italic text-accent">Clinical Care.</span>
+              </h2>
+              <div className="mt-5 h-[3px] w-20 bg-accent" />
+              <p className="mt-6 text-base leading-relaxed text-stone">
+                Designed for individuals dealing with more complex or ongoing health concerns who are looking for a deeper, highly individualized functional medicine approach.
+              </p>
+            </FadeUp>
+
+            <FadeUp delay={0.1} className="lg:col-span-7">
+              <div className="rounded-3xl border border-brand/10 bg-white p-7 shadow-card md:p-9">
+                <p className="text-base leading-relaxed text-stone">
+                  This doctor-led care focuses on identifying and addressing the root causes of illness through{" "}
+                  <span className="font-semibold text-brand">comprehensive testing</span>,{" "}
+                  <span className="font-semibold text-brand">advanced personalized treatment plans</span>,{" "}
+                  <span className="font-semibold text-brand">ongoing clinical guidance</span>, and{" "}
+                  <span className="font-semibold text-brand">close follow-up management care</span>.
+                </p>
+                <p className="mt-5 text-base leading-relaxed text-stone">
+                  Ideal for those struggling with chronic symptoms, complex illness, multiple health concerns, or conditions that have not fully improved with conventional approaches.
+                </p>
+
+                <div className="mt-7 grid gap-3 sm:grid-cols-2">
+                  {[
+                    "Comprehensive testing",
+                    "Personalized treatment plans",
+                    "Ongoing clinical guidance",
+                    "Close follow-up management",
+                  ].map((f) => (
+                    <div
+                      key={f}
+                      className="flex items-center gap-2 rounded-xl border border-brand/10 bg-cream-light px-4 py-3"
+                    >
+                      <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                      <span className="text-sm font-semibold text-brand">{f}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-7 rounded-2xl border border-brand/10 bg-cream-light p-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-accent-dark">Looking to optimize, not treat?</p>
+                  <p className="mt-2 text-sm text-stone">
+                    If you&rsquo;re proactively focused on energy, longevity, hormones, or metabolism, our 12 structured programs may be a better fit.
+                  </p>
+                  <Link
+                    href="/health-optimization-programs"
+                    className="mt-4 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.24em] text-brand hover:text-accent-dark"
+                  >
+                    Explore Health Optimization Programs
+                    <ArrowUpRight size={12} />
+                  </Link>
+                </div>
+              </div>
+            </FadeUp>
           </div>
         </div>
       </section>
