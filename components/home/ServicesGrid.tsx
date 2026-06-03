@@ -20,7 +20,7 @@ export default function ServicesGrid() {
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-7"
           >
@@ -39,7 +39,7 @@ export default function ServicesGrid() {
           <motion.p
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-lg leading-relaxed text-stone lg:col-span-5"
           >
@@ -55,7 +55,7 @@ export default function ServicesGrid() {
               key={s.name}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{
                 duration: 0.5,
                 ease: "easeOut",

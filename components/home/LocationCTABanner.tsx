@@ -27,7 +27,7 @@ export default function LocationCTABanner() {
           key={loc.city}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.7, delay: i * 0.1, ease: "easeOut" }}
           className="relative"
         >

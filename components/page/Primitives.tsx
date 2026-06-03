@@ -52,7 +52,7 @@ export function BookingStrip({
     <motion.section
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.6 }}
       className={`${palettes[variant]} relative overflow-hidden`}
     >
@@ -104,7 +104,7 @@ export function FadeUp({
     <motion.div
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.55, delay, ease: "easeOut" }}
       className={className}
     >

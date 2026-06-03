@@ -195,10 +195,10 @@ export default function HeroSection() {
                 { value: "5.0", label: "Patient Rating" },
               ].map((s) => (
                 <div key={s.label}>
-                  <p className="font-display text-3xl font-bold text-white md:text-4xl">
+                  <p className="font-display text-3xl font-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)] md:text-4xl">
                     {s.value}
                   </p>
-                  <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-steel-light">
+                  <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/85 drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]">
                     {s.label}
                   </p>
                 </div>
@@ -235,12 +235,12 @@ export default function HeroSection() {
                       />
                     </motion.div>
                   </AnimatePresence>
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/55 to-brand-dark/10" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-accent">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
                       Now Featuring
                     </p>
-                    <p className="mt-2 font-display text-xl text-white">
+                    <p className="mt-2 font-display text-xl font-semibold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
                       {HERO_SLIDES[active].alt}
                     </p>
                   </div>

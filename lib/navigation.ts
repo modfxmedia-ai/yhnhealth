@@ -83,6 +83,7 @@ export const NAV_ITEMS: NavItem[] = [
           { label: "Testimonials", href: "/testimonials" },
         ],
       },
+      { label: "Articles", href: "/articles" },
       {
         label: "Resources",
         children: [

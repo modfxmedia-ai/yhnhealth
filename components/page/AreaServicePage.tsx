@@ -78,7 +78,7 @@ export default function AreaServicePage({
               <motion.div
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
-                viewport={{ once: true, margin: "-60px" }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.6, delay: 0.15 }}
                 style={{ transformOrigin: "left" }}
                 className="mt-6 h-[3px] w-24 bg-accent"
@@ -201,7 +201,7 @@ export default function AreaServicePage({
           <motion.ul
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.06 } } }}
             className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
           >
@@ -238,7 +238,7 @@ export default function AreaServicePage({
                 key={step.title}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="relative rounded-2xl border border-brand/10 bg-cream-light p-7"
               >
@@ -267,7 +267,7 @@ export default function AreaServicePage({
           <motion.ul
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.07 } } }}
             className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
           >

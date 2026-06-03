@@ -83,7 +83,7 @@ export default function Footer() {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
+        viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.7 }}
         className="relative overflow-hidden border-b border-white/10 bg-gradient-to-br from-brand to-brand-dark"
       >

@@ -129,7 +129,7 @@ export default function AboutUsClient() {
             <motion.blockquote
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.8 }}
               className="lg:col-span-7"
             >
@@ -188,7 +188,7 @@ export default function AboutUsClient() {
                     <motion.article
                       initial={{ opacity: 0, x: isRight ? 40 : -40 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true, margin: "-80px" }}
+                      viewport={{ once: true, amount: 0.1 }}
                       transition={{ duration: 0.6, delay: 0.05 }}
                       className={`ml-14 md:ml-0 md:w-[calc(50%-2.5rem)] ${isRight ? "md:ml-auto md:pl-12" : "md:pr-12"}`}
                     >
@@ -228,7 +228,7 @@ export default function AboutUsClient() {
           <motion.ul
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={{
               hidden: {},
               visible: { transition: { staggerChildren: 0.12 } },

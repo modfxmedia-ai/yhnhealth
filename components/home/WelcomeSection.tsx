@@ -14,7 +14,7 @@ const PARAGRAPHS = [
 
 function Counter({ end, suffix = "" }: { end: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const inView = useInView(ref, { once: true, amount: 0.1 });
   const [n, setN] = useState(0);
 
   useEffect(() => {
@@ -62,7 +62,7 @@ export default function WelcomeSection() {
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.9, ease: [0.22, 0.61, 0.36, 1] }}
           className="relative lg:col-span-6"
         >
@@ -81,7 +81,7 @@ export default function WelcomeSection() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="absolute -right-4 top-12 hidden rounded-2xl border border-brand/10 bg-white/95 p-5 shadow-card backdrop-blur md:block"
           >
@@ -98,7 +98,7 @@ export default function WelcomeSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="absolute -bottom-6 -left-4 hidden items-center gap-3 rounded-full border border-brand/10 bg-white px-5 py-3 shadow-card md:inline-flex"
           >
@@ -130,7 +130,7 @@ export default function WelcomeSection() {
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.8, ease: [0.22, 0.61, 0.36, 1] }}
           className="lg:col-span-6"
         >

@@ -163,7 +163,7 @@ export default function HealthOptimizationProgramsClient() {
               <motion.div
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
-                viewport={{ once: true, margin: "-60px" }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.6, delay: 0.15 }}
                 style={{ transformOrigin: "left" }}
                 className="mt-6 h-[3px] w-24 bg-accent"
@@ -241,7 +241,7 @@ export default function HealthOptimizationProgramsClient() {
                 key={p.months}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.55, delay: i * 0.08 }}
                 className="relative overflow-hidden rounded-3xl border border-brand/10 bg-cream-light p-8 shadow-card md:p-10"
               >
@@ -287,7 +287,7 @@ export default function HealthOptimizationProgramsClient() {
                 key={p.title}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.55, delay: i * 0.06 }}
                 className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-brand/10 bg-white p-7 shadow-card transition-all hover:-translate-y-1 hover:shadow-card-hover"
               >
@@ -334,7 +334,7 @@ export default function HealthOptimizationProgramsClient() {
                 key={p.title}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.55, delay: i * 0.06 }}
                 className="group flex h-full flex-col rounded-2xl border border-brand/10 bg-cream-light p-7 transition-all hover:bg-white hover:shadow-card"
               >

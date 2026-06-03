@@ -8,6 +8,7 @@ import { Breadcrumbs, FadeUp } from "@/components/page/Primitives";
 
 type Doc = {
   name: string;
+  slug: string;
   credentials: string;
   role: string;
   bio: string;
@@ -20,6 +21,7 @@ type Doc = {
 const TEAM: Doc[] = [
   {
     name: "Dr. Chris Chianese",
+    slug: "dr-chris",
     credentials: "MS, DC, CPSC",
     role: "Chiropractic Physician · Functional Medicine · Applied Nutritionist",
     src: "/images/team/chris.webp",
@@ -30,6 +32,7 @@ const TEAM: Doc[] = [
   },
   {
     name: "Dr. Marc T. Chianese",
+    slug: "dr-marc",
     credentials: "MS, DC, CPSC",
     role: "Chiropractic Physician",
     src: "/images/team/marc.webp",
@@ -40,6 +43,7 @@ const TEAM: Doc[] = [
   },
   {
     name: "Dr. Lillee Chianese",
+    slug: "dr-lillee",
     credentials: "DC, ART, CPSC, NRCME",
     role: "Chiropractic Physician",
     src: "/images/team/lillee.webp",
@@ -50,6 +54,7 @@ const TEAM: Doc[] = [
   },
   {
     name: "Barbara Chianese",
+    slug: "barbara",
     credentials: "Office Director",
     role: "Practice Operations",
     src: "/images/team/barbara.webp",
@@ -122,11 +127,12 @@ export default function MeetTheDoctorClient() {
               return (
                 <motion.article
                   key={doc.name}
+                  id={doc.slug}
                   initial={{ opacity: 0, y: 32 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
+                  viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
-                  className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14"
+                  className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14 scroll-mt-32"
                 >
                   {/* Portrait — compact 4:5 */}
                   <div className={`lg:col-span-5 ${reverse ? "lg:order-2" : ""}`}>
@@ -181,7 +187,7 @@ export default function MeetTheDoctorClient() {
 
       {/* OPERATIONS — slim featured row for Barbara */}
       {TEAM[3] && (
-        <section className="relative bg-cream-light">
+        <section id={TEAM[3].slug} className="relative bg-cream-light scroll-mt-32">
           <div className="mx-auto max-w-[1320px] px-6 py-20 lg:px-10 lg:py-24">
             <FadeUp className="max-w-2xl">
               <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent-dark">Operations</p>

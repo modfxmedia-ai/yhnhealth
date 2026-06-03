@@ -14,7 +14,7 @@ export default function MeetTeamSection() {
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-7"
           >
@@ -32,7 +32,7 @@ export default function MeetTeamSection() {
           <motion.p
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-lg leading-relaxed text-stone lg:col-span-5"
           >
@@ -47,37 +47,43 @@ export default function MeetTeamSection() {
               key={m.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.6, delay: i * 0.08 }}
               whileHover={{ y: -6 }}
               className="group relative overflow-hidden rounded-3xl bg-mist transition-shadow duration-500 hover:shadow-card-hover"
             >
-              <div className="relative aspect-[4/5] w-full overflow-hidden">
-                <Image
-                  src={m.image}
-                  alt={m.name}
-                  fill
-                  sizes="(min-width: 1024px) 25vw, 50vw"
-                  className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand/30 to-transparent" />
+              <Link
+                href={`/meet-the-doctor#${m.slug}`}
+                aria-label={`Read more about ${m.name}`}
+                className="block"
+              >
+                <div className="relative aspect-[4/5] w-full overflow-hidden">
+                  <Image
+                    src={m.image}
+                    alt={m.name}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, 50vw"
+                    className="object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand/30 to-transparent" />
 
-                <div className="absolute inset-x-0 bottom-0 p-6">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-accent">
-                    0{i + 1}
-                  </p>
-                  <h3 className="mt-2 font-display text-xl font-bold leading-tight text-white">
-                    {m.name}
-                  </h3>
-                  <p className="mt-1 text-[11px] uppercase tracking-[0.18em] text-steel-light">
-                    {m.credentials}
-                  </p>
+                  <div className="absolute inset-x-0 bottom-0 p-6">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-accent">
+                      0{i + 1}
+                    </p>
+                    <h3 className="mt-2 font-display text-xl font-bold leading-tight text-white">
+                      {m.name}
+                    </h3>
+                    <p className="mt-1 text-[11px] uppercase tracking-[0.18em] text-steel-light">
+                      {m.credentials}
+                    </p>
+                  </div>
+
+                  <span className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur transition-all duration-500 group-hover:bg-accent group-hover:text-white">
+                    <ArrowUpRight size={14} />
+                  </span>
                 </div>
-
-                <span className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur transition-all duration-500 group-hover:bg-accent group-hover:text-white">
-                  <ArrowUpRight size={14} />
-                </span>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>

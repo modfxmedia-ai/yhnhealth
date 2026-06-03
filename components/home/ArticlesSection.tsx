@@ -14,7 +14,7 @@ export default function ArticlesSection() {
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6 }}
             className="lg:col-span-7"
           >
@@ -32,7 +32,7 @@ export default function ArticlesSection() {
           <motion.p
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-lg leading-relaxed text-stone lg:col-span-5"
           >
@@ -47,7 +47,7 @@ export default function ArticlesSection() {
               key={a.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.6, delay: (i % 3) * 0.08 }}
               whileHover={{ y: -6 }}
               className="group flex flex-col overflow-hidden rounded-3xl border border-brand/10 bg-white shadow-soft transition-shadow duration-500 hover:shadow-card-hover"

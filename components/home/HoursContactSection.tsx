@@ -14,7 +14,7 @@ export default function HoursContactSection() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.7 }}
             className="lg:col-span-5"
           >
@@ -77,7 +77,7 @@ export default function HoursContactSection() {
                 key={loc.name}
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="group relative overflow-hidden rounded-3xl border border-brand/10 bg-white p-8 shadow-soft transition-shadow duration-500 hover:shadow-card-hover md:p-10"
               >

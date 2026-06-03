@@ -66,7 +66,7 @@ export default function SitemapPage() {
               <motion.div
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
-                viewport={{ once: true, margin: "-60px" }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.6, delay: 0.15 }}
                 style={{ transformOrigin: "left" }}
                 className="mt-6 h-[3px] w-24 bg-accent"

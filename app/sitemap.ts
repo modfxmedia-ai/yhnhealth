@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE_PATHS } from "@/lib/navigation";
 import { CITIES, SERVICES } from "@/lib/pseoData";
+import { ARTICLES } from "@/lib/articlesData";
 
 const BASE = "https://yhnhealth.com";
 
@@ -41,5 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  return [...core, ...areasIndex, ...cityHubs, ...cityServices];
+  const articles: MetadataRoute.Sitemap = ARTICLES.map((a) => ({
+    url: `${BASE}/articles/${a.slug}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  return [...core, ...areasIndex, ...cityHubs, ...cityServices, ...articles];
 }

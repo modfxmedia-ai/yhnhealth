@@ -153,7 +153,7 @@ export default function FunctionalMedicineClient() {
                 key={p.title}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.55, delay: i * 0.08 }}
                 className="group rounded-2xl border border-white/10 bg-white/5 p-7 backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-accent/40 hover:bg-white/10"
               >
@@ -254,7 +254,7 @@ export default function FunctionalMedicineClient() {
                     key={c}
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: "-60px" }}
+                    viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.4, delay: i * 0.04 }}
                     className="flex items-center gap-3 rounded-xl border border-brand/10 bg-mist/40 px-5 py-4 transition-all hover:border-accent/30 hover:bg-white"
                   >

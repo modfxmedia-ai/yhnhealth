@@ -115,7 +115,7 @@ export default function LocationsClient() {
                   key={loc.city}
                   initial={{ opacity: 0, x: fromLeft ? -40 : 40 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
+                  viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.7, ease: "easeOut" }}
                   className="overflow-hidden rounded-3xl bg-white shadow-card transition-all hover:shadow-card-hover"
                 >

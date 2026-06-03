@@ -103,7 +103,7 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 className="lg:col-span-7"
               >
@@ -130,7 +130,7 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
                 className="lg:col-span-5"
               >
@@ -175,7 +175,7 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
                 variants={cardStagger}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-80px" }}
+                viewport={{ once: true, amount: 0.1 }}
                 className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
               >
                 {benefits.items.map((item, i) => {
@@ -230,7 +230,7 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true, margin: "-80px" }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.6 }}
                 className="mt-10 -mx-6 flex snap-x snap-mandatory gap-5 overflow-x-auto px-6 pb-4 lg:-mx-10 lg:px-10 [scrollbar-width:thin]"
               >

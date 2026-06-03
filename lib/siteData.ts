@@ -65,10 +65,10 @@ export const HERO_SLIDES = [
 ];
 
 export const TEAM = [
-  { name: "Dr. Chris Chianese",   credentials: "MS, DC, CPSC",         image: "/images/yhn-clone/team-chris.webp" },
-  { name: "Dr. Marc T. Chianese", credentials: "MS, DC, CPSC",         image: "/images/yhn-clone/team-marc.webp" },
-  { name: "Dr. Lillee Chianese",  credentials: "DC, ART, CPSC, NRCME", image: "/images/yhn-clone/team-lillee.webp" },
-  { name: "Barbara Chianese",     credentials: "Office Director",      image: "/images/yhn-clone/team-barbara.webp" },
+  { name: "Dr. Chris Chianese",   slug: "dr-chris",   credentials: "MS, DC, CPSC",         image: "/images/yhn-clone/team-chris.webp" },
+  { name: "Dr. Marc T. Chianese", slug: "dr-marc",    credentials: "MS, DC, CPSC",         image: "/images/yhn-clone/team-marc.webp" },
+  { name: "Dr. Lillee Chianese",  slug: "dr-lillee",  credentials: "DC, ART, CPSC, NRCME", image: "/images/yhn-clone/team-lillee.webp" },
+  { name: "Barbara Chianese",     slug: "barbara",    credentials: "Office Director",      image: "/images/yhn-clone/team-barbara.webp" },
 ];
 
 export const TESTIMONIALS = [
@@ -123,39 +123,39 @@ export const SERVICES = [
 
 export const ARTICLES = [
   {
-    title: "January Newsletter: Top Benefits of Combining Chiropractic Care and Physical Therapy",
+    title: "Top Benefits of Combining Chiropractic Care and Physical Therapy",
     excerpt: "Struggling with pain and stiffness? The chiropractic and physical therapy combination approach may offer the ideal solution.",
-    href: "/articles",
+    href: "/articles/chiropractic-and-physical-therapy",
     image: "/images/articles/woman-does-her-therapeutic-exercises--718292.png",
   },
   {
-    title: "May Newsletter: How Your Morning Routine Affects Your Spine",
+    title: "How Your Morning Routine Affects Your Spine",
     excerpt: "Could your morning routine be causing your back pain?",
-    href: "/articles",
+    href: "/articles/morning-routine-affects-your-spine",
     image: "/images/articles/woman-suffers-from-chronic-neck-pain--714856.png",
   },
   {
-    title: "May Newsletter: Why You Wake Up Stiff and How to Fix It",
+    title: "Why You Wake Up Stiff and How to Fix It",
     excerpt: "Feeling stiff in the morning? Find out what you can do about it.",
-    href: "/articles",
+    href: "/articles/why-you-wake-up-stiff",
     image: "/images/articles/woman-stretches-on-a-track-field--720902.png",
   },
   {
-    title: "April Newsletter: Chiropractic Care Can Help Get Your Back Ready for Summer",
+    title: "Chiropractic Care Can Help Get Your Back Ready for Summer",
     excerpt: "Want to avoid back issues this summer? Chiropractic care could help protect your back.",
-    href: "/articles",
+    href: "/articles/back-ready-for-summer",
     image: "/images/articles/woman-wearing-sneakers-stands-on-boulder--713132.png",
   },
   {
-    title: "April Newsletter: How Your Chiropractor Addresses Microtrauma Before Injury",
+    title: "How Your Chiropractor Addresses Microtrauma Before Injury",
     excerpt: "Could a microtrauma be the reason for your pain? Find out how your chiropractor can help.",
-    href: "/articles",
+    href: "/articles/microtrauma-before-injury",
     image: "/images/articles/man-with-back-pain-sits-on-tiny-fence--714830.png",
   },
   {
-    title: "March Newsletter: How Chiropractic Care May Improve Your Stress Levels",
+    title: "How Chiropractic Care May Improve Your Stress Levels",
     excerpt: "Has stress taken control of your life? Chiropractic care could help you relax.",
-    href: "/articles",
+    href: "/articles/chiropractic-care-stress-levels",
     image: "/images/articles/asian-woman-struggles-with-back-pain--713054.png",
   },
 ];

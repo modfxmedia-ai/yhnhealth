@@ -24,7 +24,7 @@ export default function SpineSimulatorClient() {
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.55, ease: "easeOut" }}
               >
                 <span className="inline-flex items-center gap-2 rounded-full bg-brand/5 px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-accent-dark">
@@ -38,7 +38,7 @@ export default function SpineSimulatorClient() {
               <motion.div
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
-                viewport={{ once: true, margin: "-60px" }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
                 style={{ transformOrigin: "left" }}
                 className="mt-8 h-[3px] w-24 bg-accent"
