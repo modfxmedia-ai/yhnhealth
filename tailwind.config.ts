@@ -72,6 +72,15 @@ const config: Config = {
         "card-hover": "0 12px 40px rgba(31,53,99,0.16)",
         soft: "0 2px 12px rgba(31,53,99,0.06)",
       },
+      keyframes: {
+        "testimonial-marquee": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        "testimonial-marquee": "testimonial-marquee 50s linear infinite",
+      },
     },
   },
   plugins: [typography],

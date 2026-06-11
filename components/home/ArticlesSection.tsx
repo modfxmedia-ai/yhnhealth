@@ -8,7 +8,7 @@ import { ARTICLES } from "@/lib/siteData";
 
 export default function ArticlesSection() {
   return (
-    <section className="relative overflow-hidden bg-cream-light py-28">
+    <section className="relative overflow-hidden bg-cream-light py-20 md:py-24 lg:py-28">
       <div className="relative mx-auto max-w-[1320px] px-6 lg:px-10">
         <div className="grid grid-cols-1 items-end gap-8 lg:grid-cols-12">
           <motion.div
@@ -64,7 +64,7 @@ export default function ArticlesSection() {
                   Newsletter
                 </span>
               </Link>
-              <div className="flex flex-1 flex-col p-7">
+              <div className="flex flex-1 flex-col p-6 sm:p-7">
                 <h3 className="font-display text-lg font-bold leading-snug text-brand md:text-xl">
                   <Link href={a.href} className="hover:text-accent-dark">
                     {a.title}

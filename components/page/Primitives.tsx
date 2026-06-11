@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Phone } from "lucide-react";
 
 type Crumb = { label: string; href?: string };
 
@@ -63,6 +63,9 @@ export function BookingStrip({
           </p>
           <h2 className="mt-2 max-w-2xl font-display text-2xl font-bold leading-tight md:text-3xl">{title}</h2>
           <p className={`mt-2 max-w-xl text-sm ${variant === "cream" ? "text-stone" : "text-white/75"}`}>{copy}</p>
+          <p className={`mt-2 max-w-xl text-[12px] ${variant === "cream" ? "text-stone-light" : "text-white/55"}`}>
+            Prefer to talk first? Start with a free 15-minute consultation call.
+          </p>
         </div>
         <div className="flex flex-wrap items-center gap-3">
           <Link
@@ -77,9 +80,14 @@ export function BookingStrip({
           </Link>
           <a
             href="tel:8565322063"
-            className={`text-[11px] font-bold uppercase tracking-[0.22em] ${variant === "cream" ? "text-brand hover:text-accent-dark" : "text-white/80 hover:text-accent"}`}
+            className={`inline-flex items-center gap-2 rounded-full border px-5 py-3 text-[11px] font-bold uppercase tracking-[0.22em] transition-colors ${
+              variant === "cream"
+                ? "border-brand/20 text-brand hover:border-accent hover:text-accent-dark"
+                : "border-white/25 text-white/85 hover:border-accent hover:text-accent"
+            }`}
           >
-            (856) 532-2063
+            <Phone size={12} strokeWidth={2.25} />
+            Free Consult Call
           </a>
         </div>
       </div>

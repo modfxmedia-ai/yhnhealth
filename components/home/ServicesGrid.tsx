@@ -3,13 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView } from "motion/react";
-import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import { SERVICE_GROUPS, type ServiceGroup } from "@/lib/siteData";
 
 export default function ServicesGrid() {
   return (
-    <section className="relative overflow-hidden bg-cream-light py-24 lg:py-28">
+    <section className="relative overflow-hidden bg-cream-light py-20 md:py-24 lg:py-28">
       <div
         aria-hidden="true"
         className="absolute -left-40 top-32 h-96 w-96 rounded-full bg-steel-soft/60 blur-3xl"
@@ -81,32 +81,70 @@ function ServiceTrack({ group, index }: { group: ServiceGroup; index: number }) 
   const scrollerRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const inView = useInView(headerRef, { once: true, amount: 0.3 });
-  const [canPrev, setCanPrev] = useState(false);
-  const [canNext, setCanNext] = useState(true);
+  const [isDragging, setIsDragging] = useState(false);
 
+  // Click-and-drag horizontal scroll
   useEffect(() => {
     const el = scrollerRef.current;
     if (!el) return;
-    const update = () => {
-      setCanPrev(el.scrollLeft > 4);
-      setCanNext(el.scrollLeft + el.clientWidth < el.scrollWidth - 4);
+
+    let isDown = false;
+    let didDrag = false;
+    let startX = 0;
+    let startScroll = 0;
+
+    const onPointerDown = (e: PointerEvent) => {
+      // Only main button / touch / pen
+      if (e.pointerType === "mouse" && e.button !== 0) return;
+      isDown = true;
+      didDrag = false;
+      startX = e.clientX;
+      startScroll = el.scrollLeft;
+      el.setPointerCapture(e.pointerId);
     };
-    update();
-    el.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
+
+    const onPointerMove = (e: PointerEvent) => {
+      if (!isDown) return;
+      const dx = e.clientX - startX;
+      if (Math.abs(dx) > 4) {
+        didDrag = true;
+        setIsDragging(true);
+      }
+      el.scrollLeft = startScroll - dx;
+    };
+
+    const onPointerUp = (e: PointerEvent) => {
+      if (!isDown) return;
+      isDown = false;
+      try {
+        el.releasePointerCapture(e.pointerId);
+      } catch {}
+      // Defer so click handlers see the dragging flag and can suppress
+      setTimeout(() => setIsDragging(false), 0);
+    };
+
+    const onClickCapture = (e: MouseEvent) => {
+      if (didDrag) {
+        e.preventDefault();
+        e.stopPropagation();
+        didDrag = false;
+      }
+    };
+
+    el.addEventListener("pointerdown", onPointerDown);
+    el.addEventListener("pointermove", onPointerMove);
+    el.addEventListener("pointerup", onPointerUp);
+    el.addEventListener("pointercancel", onPointerUp);
+    el.addEventListener("click", onClickCapture, true);
+
     return () => {
-      el.removeEventListener("scroll", update);
-      window.removeEventListener("resize", update);
+      el.removeEventListener("pointerdown", onPointerDown);
+      el.removeEventListener("pointermove", onPointerMove);
+      el.removeEventListener("pointerup", onPointerUp);
+      el.removeEventListener("pointercancel", onPointerUp);
+      el.removeEventListener("click", onClickCapture, true);
     };
   }, []);
-
-  const scrollBy = (dir: 1 | -1) => {
-    const el = scrollerRef.current;
-    if (!el) return;
-    const card = el.querySelector("[data-svc-card]") as HTMLElement | null;
-    const step = card ? card.offsetWidth + 20 : el.clientWidth * 0.8;
-    el.scrollBy({ left: dir * step, behavior: "smooth" });
-  };
 
   return (
     <div className="relative">
@@ -144,12 +182,12 @@ function ServiceTrack({ group, index }: { group: ServiceGroup; index: number }) 
 
         {/* Mini "motion graph" + count */}
         <div className="lg:col-span-5">
-          <div className="flex items-end justify-between gap-6 rounded-2xl border border-brand/10 bg-white/60 p-5 backdrop-blur">
+          <div className="flex items-end justify-between gap-4 rounded-2xl border border-brand/10 bg-white/60 p-4 backdrop-blur sm:gap-6 sm:p-5">
             <div>
-              <p className="font-display text-4xl font-bold leading-none text-brand md:text-5xl">
+              <p className="font-display text-3xl font-bold leading-none text-brand sm:text-4xl md:text-5xl">
                 {group.metric.value}
               </p>
-              <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-stone">
+              <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-stone sm:tracking-[0.28em]">
                 {group.metric.label}
               </p>
             </div>
@@ -158,33 +196,15 @@ function ServiceTrack({ group, index }: { group: ServiceGroup; index: number }) 
         </div>
       </div>
 
-      {/* Scroll controls */}
-      <div className="pointer-events-none absolute -top-2 right-0 flex gap-2 lg:flex">
-        <button
-          type="button"
-          onClick={() => scrollBy(-1)}
-          disabled={!canPrev}
-          aria-label="Scroll left"
-          className="pointer-events-auto inline-flex h-10 w-10 items-center justify-center rounded-full border border-brand/20 bg-white text-brand transition-all hover:border-accent hover:text-accent-dark disabled:opacity-30"
-        >
-          <ChevronLeft size={16} />
-        </button>
-        <button
-          type="button"
-          onClick={() => scrollBy(1)}
-          disabled={!canNext}
-          aria-label="Scroll right"
-          className="pointer-events-auto inline-flex h-10 w-10 items-center justify-center rounded-full border border-brand/20 bg-white text-brand transition-all hover:border-accent hover:text-accent-dark disabled:opacity-30"
-        >
-          <ChevronRight size={16} />
-        </button>
-      </div>
-
       {/* Scrolling cards */}
       <div className="relative -mx-6 lg:-mx-10">
         <div
           ref={scrollerRef}
-          className="flex snap-x snap-mandatory gap-5 overflow-x-auto px-6 pb-4 lg:px-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className={`flex snap-x gap-5 overflow-x-auto px-6 pb-4 lg:px-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${
+            isDragging ? "cursor-grabbing select-none" : "cursor-grab"
+          }`}
+          style={{ touchAction: "pan-y" }}
+          onDragStart={(e) => e.preventDefault()}
         >
           {group.items.map((item, i) => (
             <motion.div
@@ -193,11 +213,16 @@ function ServiceTrack({ group, index }: { group: ServiceGroup; index: number }) 
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: (i % 4) * 0.06 }}
-              className="snap-start shrink-0 basis-[260px] sm:basis-[290px] lg:basis-[300px]"
+              className="shrink-0 basis-[260px] sm:basis-[290px] lg:basis-[300px]"
               data-svc-card
             >
               <Link
                 href={item.href}
+                draggable={false}
+                onClick={(e) => {
+                  // Prevent navigation if a drag just happened
+                  if (isDragging) e.preventDefault();
+                }}
                 className="group relative block overflow-hidden rounded-2xl bg-brand shadow-soft transition-all duration-500 hover:shadow-card-hover"
               >
                 <div className="relative aspect-[4/5] w-full overflow-hidden">
@@ -206,7 +231,8 @@ function ServiceTrack({ group, index }: { group: ServiceGroup; index: number }) 
                     alt={item.name}
                     fill
                     sizes="320px"
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    draggable={false}
+                    className="select-none object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/95 via-brand-dark/50 to-transparent transition-opacity duration-500 group-hover:from-brand-dark group-hover:via-brand/75" />
 

@@ -86,9 +86,15 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
                 </Link>
                 <a
                   href="tel:8565322063"
-                  className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-brand transition-colors hover:text-accent-dark"
+                  className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.22em] text-accent-dark transition-colors hover:border-accent hover:bg-accent hover:text-white"
                 >
                   <Phone size={13} strokeWidth={2.5} />
+                  Free Consult Call
+                </a>
+                <a
+                  href="tel:8565322063"
+                  className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-brand transition-colors hover:text-accent-dark"
+                >
                   (856) 532-2063
                 </a>
               </div>
@@ -287,6 +293,9 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
                 </h2>
                 <p className="mt-5 max-w-2xl text-white/75">
                   Two locations · Merchantville, NJ and Chalfont, PA. Same-day appointments available.
+                </p>
+                <p className="mt-3 max-w-2xl text-sm text-white/65">
+                  Not ready to book? Start with a complimentary 15-minute consultation call — no in-person visit required.
                 </p>
               </FadeUp>
 

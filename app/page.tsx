@@ -3,6 +3,7 @@ import HeroSection from "@/components/home/HeroSection";
 import WelcomeSection from "@/components/home/WelcomeSection";
 import LocationCTABanner from "@/components/home/LocationCTABanner";
 import BetterCareSection from "@/components/home/BetterCareSection";
+import ConsultationCallBanner from "@/components/home/ConsultationCallBanner";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import ServicesGrid from "@/components/home/ServicesGrid";
 import MeetTeamSection from "@/components/home/MeetTeamSection";
@@ -36,6 +37,7 @@ export default function HomePage() {
       <WelcomeSection />
       <LocationCTABanner />
       <BetterCareSection />
+      <ConsultationCallBanner />
       <TestimonialsSection />
       <ServicesGrid />
       <MeetTeamSection />

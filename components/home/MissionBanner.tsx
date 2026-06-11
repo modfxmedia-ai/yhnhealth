@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function MissionBanner() {
   return (
-    <section className="relative overflow-hidden bg-brand py-32">
+    <section className="relative overflow-hidden bg-brand py-20 md:py-24 lg:py-32">
       {/* Background image */}
       <div className="absolute inset-0">
         <Image

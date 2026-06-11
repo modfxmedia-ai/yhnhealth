@@ -47,7 +47,7 @@ const PILLS = [
 
 export default function WelcomeSection() {
   return (
-    <section className="relative overflow-hidden bg-cream-light py-28">
+    <section className="relative overflow-hidden bg-cream-light py-20 md:py-24 lg:py-28">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -left-32 top-32 h-96 w-96 rounded-full bg-steel-soft/40 blur-3xl"
@@ -66,9 +66,9 @@ export default function WelcomeSection() {
           transition={{ duration: 0.9, ease: [0.22, 0.61, 0.36, 1] }}
           className="relative lg:col-span-6"
         >
-          <div className="relative aspect-[5/6] w-full max-w-lg overflow-hidden rounded-[40px] shadow-card-hover">
+          <div className="relative aspect-[5/6] w-full max-w-lg overflow-hidden rounded-[28px] shadow-card-hover sm:rounded-[40px]">
             <Image
-              src="/images/yhn-clone/welcome-chiro.webp"
+              src="/images/yhn-clone/your-health-now.jpg"
               alt="Chiropractor at Your Health Now"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"

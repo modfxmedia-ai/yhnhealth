@@ -15,14 +15,14 @@ export default function NewsletterSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-white py-24">
+    <section className="relative overflow-hidden bg-white py-16 md:py-20 lg:py-24">
       <div className="relative mx-auto max-w-5xl px-6 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.7 }}
-          className="relative overflow-hidden rounded-[40px] bg-gradient-to-br from-brand via-brand to-brand-dark p-10 md:p-16"
+          className="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-brand via-brand to-brand-dark p-7 sm:rounded-[40px] sm:p-10 md:p-16"
         >
           <motion.div
             aria-hidden="true"
@@ -80,24 +80,26 @@ export default function NewsletterSection() {
                   <label htmlFor="newsletter-email" className="sr-only">
                     Email address
                   </label>
-                  <div className="relative flex items-center overflow-hidden rounded-full border border-white/20 bg-white/5 backdrop-blur transition-colors focus-within:border-accent">
-                    <Mail
-                      size={16}
-                      className="absolute left-5 text-steel-light"
-                      strokeWidth={2}
-                    />
-                    <input
-                      id="newsletter-email"
-                      type="email"
-                      required
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="your@email.com"
-                      className="w-full bg-transparent py-4 pl-12 pr-32 text-sm text-white placeholder:text-white/40 focus:outline-none"
-                    />
+                  <div className="relative flex flex-col gap-2 overflow-visible sm:flex-row sm:items-center sm:gap-0 sm:overflow-hidden sm:rounded-full sm:border sm:border-white/20 sm:bg-white/5 sm:backdrop-blur sm:transition-colors sm:focus-within:border-accent">
+                    <div className="relative flex items-center rounded-full border border-white/20 bg-white/5 backdrop-blur sm:flex-1 sm:rounded-none sm:border-0 sm:bg-transparent">
+                      <Mail
+                        size={16}
+                        className="absolute left-5 text-steel-light"
+                        strokeWidth={2}
+                      />
+                      <input
+                        id="newsletter-email"
+                        type="email"
+                        required
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="your@email.com"
+                        className="w-full bg-transparent py-3.5 pl-12 pr-5 text-sm text-white placeholder:text-white/40 focus:outline-none sm:py-4 sm:pr-32"
+                      />
+                    </div>
                     <button
                       type="submit"
-                      className="group absolute right-1 inline-flex items-center gap-2 rounded-full bg-accent px-5 py-3 text-[10px] font-bold uppercase tracking-[0.22em] text-white transition-colors hover:bg-white hover:text-brand"
+                      className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 text-[10px] font-bold uppercase tracking-[0.22em] text-white transition-colors hover:bg-white hover:text-brand sm:absolute sm:right-1 sm:top-1/2 sm:-translate-y-1/2 sm:py-3"
                     >
                       Sign up
                       <Send

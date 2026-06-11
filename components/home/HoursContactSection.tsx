@@ -1,13 +1,59 @@
 "use client";
 
+import type { ReactElement } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { Clock, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import { HOURS, LOCATIONS } from "@/lib/siteData";
 
+type IconProps = { size?: number };
+
+function FacebookIcon({ size = 14 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z" />
+    </svg>
+  );
+}
+
+function InstagramIcon({ size = 14 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="5" />
+      <path d="M16 11.4a4 4 0 1 1-7.9 1.2 4 4 0 0 1 7.9-1.2z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
+
+function LinkedinIcon({ size = 14 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect x="2" y="9" width="4" height="12" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  );
+}
+
+function YelpIcon({ size = 14 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M11.5 2.1c-.3 0-3.6.7-4.6 1.6-.4.4-.5 1-.3 1.5l3.7 7c.4.7 1.5.4 1.5-.4V2.9c0-.4-.3-.8-.8-.8h.5zM4.6 9.5c-.4 0-.7.3-.7.7v3.6c0 .4.3.7.7.7h.1l4.7-1.3c.7-.2.7-1.2 0-1.4l-4.4-2.2c-.1-.1-.3-.1-.4-.1zm14.7 0c-.4 0-.7.2-1.1.4l-3.4 2.1c-.6.4-.4 1.3.3 1.5l4.6 1.3c.5.1 1-.2 1-.7V11c0-.4-.3-.7-.7-.7h-.7zm-7.6 5.2c-.4 0-.8.4-.8.8v6c0 .4.3.8.8.8.3 0 3.6-.7 4.6-1.6.4-.4.5-1 .3-1.5l-3.7-7c-.2-.3-.5-.5-.8-.5h-.4z"/>
+    </svg>
+  );
+}
+
+const SOCIAL_ICONS: Record<string, { Icon: (p: IconProps) => ReactElement; label: string }> = {
+  facebook: { Icon: FacebookIcon, label: "Facebook" },
+  instagram: { Icon: InstagramIcon, label: "Instagram" },
+  linkedin: { Icon: LinkedinIcon, label: "LinkedIn" },
+  yelp: { Icon: YelpIcon, label: "Yelp" },
+};
+
 export default function HoursContactSection() {
   return (
-    <section className="relative overflow-hidden bg-cream-light py-28">
+    <section className="relative overflow-hidden bg-cream-light py-20 md:py-24 lg:py-28">
       <div className="relative mx-auto max-w-[1320px] px-6 lg:px-10">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           {/* Hours card */}
@@ -113,6 +159,33 @@ export default function HoursContactSection() {
                         />
                         {loc.phone}
                       </a>
+                    </div>
+
+                    {/* Per-location socials */}
+                    <div className="mt-5 flex items-center gap-2">
+                      <span className="text-[10px] font-semibold uppercase tracking-[0.24em] text-stone-light">
+                        Follow this location
+                      </span>
+                      <span className="h-px flex-1 bg-brand/10" />
+                    </div>
+                    <div className="mt-3 flex flex-wrap items-center gap-2">
+                      {(["facebook", "instagram", "linkedin", "yelp"] as const).map((key) => {
+                        const url = (loc.social as Record<string, string | undefined>)[key];
+                        if (!url) return null;
+                        const { Icon, label } = SOCIAL_ICONS[key];
+                        return (
+                          <Link
+                            key={key}
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${loc.name} on ${label}`}
+                            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-brand/15 bg-white text-brand transition-all hover:-translate-y-0.5 hover:border-accent hover:bg-accent hover:text-white"
+                          >
+                            <Icon size={14} />
+                          </Link>
+                        );
+                      })}
                     </div>
                   </div>
 

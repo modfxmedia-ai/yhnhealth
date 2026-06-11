@@ -109,28 +109,33 @@ export default function FunctionalMedicineClient() {
               </motion.div>
             </div>
 
-            {/* Atom illustration */}
+            {/* Hero video */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.92 }}
+              initial={{ opacity: 0, scale: 0.94 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.9, delay: 0.2 }}
-              className="relative aspect-square lg:col-span-5"
+              className="relative lg:col-span-5"
             >
               <motion.div
+                aria-hidden="true"
                 animate={{ rotate: 360 }}
-                transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 rounded-full border border-dashed border-brand/20"
-              />
-              <motion.div
-                animate={{ rotate: -360 }}
                 transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-8 rounded-full border border-dashed border-accent/30"
+                className="absolute -inset-3 rounded-[2rem] border border-dashed border-brand/15"
               />
-              <div className="absolute inset-1/3 rounded-full bg-gradient-to-br from-brand to-brand-dark shadow-card" />
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-                <Atom size={32} className="mx-auto text-accent" strokeWidth={1.5} />
-                <p className="mt-2 font-display text-3xl font-bold text-white">Whole</p>
-                <p className="-mt-1 font-script text-3xl font-normal italic text-accent">biology</p>
+              <div
+                aria-hidden="true"
+                className="absolute -inset-6 rounded-[2.25rem] bg-gradient-to-br from-accent/15 via-transparent to-brand/10 blur-2xl"
+              />
+              <div className="relative overflow-hidden rounded-[1.75rem] border border-brand/10 bg-brand-dark shadow-card">
+                <video
+                  className="block aspect-square w-full object-cover"
+                  src="/videos/functional-medicine.mp4"
+                  autoPlay
+                  loop
+                  controls
+                  playsInline
+                  preload="metadata"
+                />
               </div>
             </motion.div>
           </div>

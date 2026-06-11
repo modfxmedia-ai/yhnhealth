@@ -12,15 +12,16 @@ const FEATURES = [
     body: "Our staff is trained and knowledgeable with multiple advanced accreditations about the latest procedures, tools, and techniques to properly care for our patients.",
     image: "/images/yhn-clone/practice.webp",
     highlight: "Advanced Tech",
-    href: "/about-us",
+    href: "/meet-the-doctor",
   },
   {
     icon: Users,
     title: "Individual Approach",
     body: "Each patient requires something different and we are focused on meeting their individual needs with a fully customized treatment plan built around your goals.",
-    image: "/images/yhn-clone/individual-approach.webp",
+    image: "/images/yhn-clone/testimonials.jpg",
+    imagePosition: "object-top",
     highlight: "Custom Plans",
-    href: "/meet-the-doctor",
+    href: "/about-us",
   },
 ];
 
@@ -33,7 +34,7 @@ const BADGES = [
 
 export default function BetterCareSection() {
   return (
-    <section className="relative overflow-hidden bg-white py-28">
+    <section className="relative overflow-hidden bg-white py-20 md:py-24 lg:py-28">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand/15 to-transparent"
@@ -100,7 +101,7 @@ export default function BetterCareSection() {
                       alt={card.title}
                       fill
                       sizes="(min-width: 1024px) 50vw, 100vw"
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      className={`object-cover ${card.imagePosition ?? ""} transition-transform duration-700 group-hover:scale-105`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-brand/20 to-transparent" />
                     <span className="absolute left-6 top-6 rounded-full bg-white/95 px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.24em] text-brand backdrop-blur">
@@ -108,7 +109,7 @@ export default function BetterCareSection() {
                     </span>
                   </div>
 
-                  <div className="relative p-8 lg:p-10">
+                  <div className="relative p-6 sm:p-8 lg:p-10">
                     <div className="absolute -top-7 right-8 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-brand text-white shadow-card transition-colors duration-500 group-hover:bg-accent">
                       <Icon size={22} strokeWidth={1.75} />
                     </div>

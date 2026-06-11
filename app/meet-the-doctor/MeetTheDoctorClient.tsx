@@ -11,7 +11,7 @@ type Doc = {
   slug: string;
   credentials: string;
   role: string;
-  bio: string;
+  bio: string[];
   src: string;
   accent: string; // gradient frame around portrait
   icon: React.ComponentType<{ size?: number; strokeWidth?: number; className?: string }>;
@@ -28,29 +28,46 @@ const TEAM: Doc[] = [
     accent: "from-brand via-brand-dark to-brand-light",
     icon: Award,
     badges: ["MS Applied Nutrition", "DC Sherman", "CPSC Founder", "IASTM", "ART", "Functional Neurology"],
-    bio: "Dr. Chris graduated with his Bachelor of Science in Biology from Marist College Cum Laude. He graduated with his Master of Science in Applied Nutrition from Canisius College, with a minor in Exercise Physiology. He was the 7th student to ever achieve Summa Cum Laude (4.0 GPA). His Master's Thesis [Medical Nutrition Therapy in Soft Tissue Treatment & Rehabilitation] is All-But-Published. He graduated with his Doctor of Chiropractic from Sherman College Summa Cum Laude (3.9 GPA). Dr. Chris received the Milton Garfunkel Distinction Award, the highest honor awarded in each graduating class. As the recipient of this top award, he delivered the Farewell Address at the graduation ceremony. He received most all other graduation honors including the Clinical Excellence Distinction Award, Academy of Chiropractic Excellence Award, and X Ray Internship Award. Dr. Chris is the founder and Lead Instructor of the Certification in Patient-Specific Chiropractic (CPSC) seminar series, post-graduate clinical training that provides Continuing Education in functional analysis for practicing doctors. He has achieved further advanced training in Instrument Assisted Soft Tissue Mobilization (IASTM), Active Release Technique (ART), Functional Neurology, and Neuromusculoskeletal Functional Analysis & Rehabilitation. He is a Speaker who provides corporate Health & Wellness education and Ergonomic Specialty care. Dr. Chris is passionate about getting to the root cause of his patient's health concerns and preventing further health problems before they start. As a leading Doctor of Chiropractic, Dr. Chris is the authority on conservative management of neuromusculoskeletal conditions and brings a salutogenic (health promotion) approach to his patient care, helping people of all ages to be healthier and not just 'less sick', with a goal of his patients achieving the life they deserve. He enjoys snow skiing in the winter and jet skiing in the summer.",
+    bio: [
+      "Dr. Chris Chianese earned his Bachelor of Science in Biology from Marist College, his Master of Science in Applied Nutrition from Canisius College, and his Doctor of Chiropractic degree from Sherman College, graduating with highest honors. Throughout his academic career, he received numerous distinctions for clinical excellence, leadership, and patient care, including the prestigious Milton Garfunkel Distinction Award.",
+      "Committed to ongoing professional development, Dr. Chris has completed advanced training in Instrument Assisted Soft Tissue Mobilization (IASTM), Active Release Technique (ART), Functional Neurology, and Neuromusculoskeletal Functional Analysis & Rehabilitation. He is also the founder and lead instructor of the Certification in Patient-Specific Chiropractic (CPSC), a post-graduate continuing education program for healthcare providers.",
+      "Dr. Chris specializes in identifying and treating the root cause of neuromusculoskeletal conditions rather than simply managing symptoms. His patient-centered approach focuses on helping individuals restore function, improve overall health, and achieve lasting results.",
+      "When he's not caring for patients, Dr. Chris enjoys snow skiing in the winter and jet skiing in the summer.",
+    ],
   },
   {
-    name: "Dr. Marc T. Chianese",
+    name: "Dr. Marc Chianese",
     slug: "dr-marc",
     credentials: "MS, DC, CPSC",
-    role: "Chiropractic Physician",
+    role: "Chiropractic Physician · Sports & Athletic Care",
     src: "/images/team/marc.webp",
     accent: "from-accent via-accent-dark to-brand",
     icon: Activity,
     badges: ["MS Sport Health Science", "DC Life University", "CPSC Instructor", "IASTM", "ART"],
-    bio: "Dr. Marc graduated with his Bachelor of Science in Biology from St. Joseph's University. He graduated with his Masters of Sport Health Science (Sports Chiropractic) from Life University. He graduated with his Doctor of Chiropractic from Life University. Dr. Marc has extensive experience in working with athletes of all disciplines. He is an Instructor of the Certification in Patient-Specific Chiropractic (CPSC) seminar series, post-graduate clinical training that provides Continuing Education for practicing doctors. He is a Speaker who provides corporate Health & Wellness education and Ergonomic Specialty care. Dr. Marc has achieved further advanced training in Neuromusculoskeletal Functional Analysis & Rehabilitation, Instrument Assisted Soft Tissue Mobilization (IASTM), and Active Release Technique (ART). Dr. Marc is passionate about getting to the root cause of his patient's health concerns and preventing further health problems before they start. As a leading Doctor of Chiropractic, Dr. Marc is the authority on conservative management of neuromusculoskeletal conditions and brings a salutogenic (health promotion) approach to his patient care, helping people of all ages to be healthier and not just 'less sick', with a goal of his patients achieving the life they deserve. He is an avid exercise enthusiast and a prolific musician.",
+    bio: [
+      "Dr. Marc Chianese earned his Bachelor of Science in Biology from St. Joseph's University, his Master's in Sport Health Science (Sports Chiropractic), and his Doctor of Chiropractic degree from Life University.",
+      "With extensive experience treating athletes of all levels, Dr. Marc specializes in helping patients recover from injury, improve performance, and restore optimal function. He has completed advanced training in Neuromusculoskeletal Functional Analysis & Rehabilitation, Instrument Assisted Soft Tissue Mobilization (IASTM), and Active Release Technique (ART).",
+      "In addition to patient care, Dr. Marc serves as an instructor for the Certification in Patient-Specific Chiropractic (CPSC), a post-graduate continuing education program for healthcare professionals. He is also a sought-after speaker who provides corporate health, wellness, and ergonomic education.",
+      "Dr. Marc is passionate about identifying the root cause of health concerns and helping patients achieve long-term results through conservative, evidence-based care. His goal is to help individuals of all ages move better, feel better, and live healthier lives.",
+      "Outside the office, Dr. Marc is an avid fitness enthusiast and accomplished musician.",
+    ],
   },
   {
     name: "Dr. Lillee Chianese",
     slug: "dr-lillee",
     credentials: "DC, ART, CPSC, NRCME",
-    role: "Chiropractic Physician",
+    role: "Chiropractic Physician · Pregnancy, Pediatric & DOT Care",
     src: "/images/team/lillee.webp",
     accent: "from-brand-light via-brand to-brand-dark",
     icon: BookOpen,
     badges: ["DC Sherman Summa Cum Laude", "ART Elite Provider", "CPSC Instructor", "NRCME", "IASTM"],
-    bio: "Dr. Lillee graduated with her Bachelor of Science in Exercise Physiology Magna Cum Laude. She graduated with her Doctor of Chiropractic Summa Cum Laude from Sherman College of Chiropractic, 2nd overall in her graduating class. She received many awards including the X-Ray Intern award and was a top tutor in anatomy, physical examination, orthro/neuro examination, case history, and technique. She also achieved National Board awards, including the highest Part 1 Score in her class. Dr. Lillee is an Instructor of the Certification in Patient-Specific Chiropractic (CPSC) seminar series, post-graduate clinical training that provides Continuing Education for practicing doctors. She is a Speaker who provides corporate Health & Wellness education and Ergonomic Specialty care. She has achieved further advanced training in Instrument Assisted Soft Tissue Mobilization (IASTM), Neuromusculoskeletal Functional Analysis & Rehabilitation, and is an ELITE provider in Active Release Technique (ART). She is also a Nationally Registered Certified Medical Examiner (NRCME) for the US Federal Motor Carrier Safety Administration. Dr. Lillee is passionate about getting to the root cause of her patient's health concerns and preventing further health problems before they start. As a leading Doctor of Chiropractic, Dr. Lillee is the authority on conservative management of neuromusculoskeletal conditions and brings a salutogenic (health promotion) approach to her patient care, helping people of all ages to be healthier and not just 'less sick', with a goal of her patients achieving the life they deserve. She is an accomplished equestrian and enjoys anything having to do with the outdoors.",
+    bio: [
+      "Dr. Lillee Chianese earned her Bachelor of Science in Exercise Physiology and graduated Summa Cum Laude from Sherman College of Chiropractic, finishing second in her graduating class. Throughout her academic career, she received numerous honors for academic excellence, clinical achievement, and National Board performance.",
+      "She has completed advanced training in Instrument Assisted Soft Tissue Mobilization (IASTM), Neuromusculoskeletal Functional Analysis & Rehabilitation, and is an Elite Provider in Active Release Technique (ART). Dr. Lillee also serves as an instructor for the Certification in Patient-Specific Chiropractic (CPSC), a post-graduate continuing education program for healthcare professionals.",
+      "In addition, Dr. Lillee is a Nationally Registered Certified Medical Examiner (NRCME) for the U.S. Federal Motor Carrier Safety Administration, allowing her to perform DOT physical examinations for commercial drivers.",
+      "Dr. Lillee is passionate about helping patients identify and address the root cause of their health concerns through conservative, evidence-based care. Her goal is to help individuals of all ages improve function, prevent future injuries, and achieve lasting health and wellness.",
+      "Outside the clinic, Dr. Lillee is an accomplished equestrian who enjoys spending time outdoors and staying active.",
+    ],
   },
   {
     name: "Barbara Chianese",
@@ -60,8 +77,12 @@ const TEAM: Doc[] = [
     src: "/images/team/barbara.webp",
     accent: "from-accent-dark via-accent to-brand-light",
     icon: Briefcase,
-    badges: ["20+ Years HR Leadership", "Director-Level", "VP-Level", "Multi-Industry"],
-    bio: "Our Office Manager that makes the business run. Barbara has an extensive resume including over 20 years of Human Resource Leadership at the Director and Vice-President level. She has led Administration at multiple nationally and internationally renowned organizations. Barbara has supervised and mentored multiple individuals, helping them become professionals in their own right. Her expertise extends into running a OBGYN office, Dental office, and Attorney Group firm. She holds multiple Certifications and Professional Affiliations. At YHN, Barbara leads all Practice operations including Scheduling, Accounting, Partner Relations, Insurance, Communications, Doctor Networks, Budget, and Billing. New and existing patients always find that there's one thing that eclipses Barbara's competence and expertise- her warm personality and sincere care for them, their families, and their lives.",
+    badges: ["20+ Years Leadership", "Healthcare Operations", "Patient Experience", "Provider Relations"],
+    bio: [
+      "With more than 20 years of leadership and administrative experience, Barbara Chianese oversees the daily operations of our practice, including scheduling, billing, insurance coordination, patient communications, and provider relations.",
+      "Her background includes executive leadership roles in healthcare and professional organizations, giving her a wealth of experience in creating exceptional patient experiences and efficient office operations.",
+      "Patients know Barbara not only for her expertise but also for her kindness, compassion, and genuine commitment to helping every individual who walks through our doors feel welcomed and supported.",
+    ],
   },
 ];
 
@@ -176,7 +197,11 @@ export default function MeetTheDoctorClient() {
                       ))}
                     </div>
 
-                    <p className="mt-7 text-[15px] leading-relaxed text-stone">{doc.bio}</p>
+                    <div className="mt-7 space-y-4 text-[15px] leading-relaxed text-stone">
+                      {doc.bio.map((p, idx) => (
+                        <p key={idx}>{p}</p>
+                      ))}
+                    </div>
                   </div>
                 </motion.article>
               );
@@ -229,7 +254,11 @@ export default function MeetTheDoctorClient() {
                       </span>
                     ))}
                   </div>
-                  <p className="mt-5 text-[15px] leading-relaxed text-stone">{TEAM[3].bio}</p>
+                  <div className="mt-5 space-y-4 text-[15px] leading-relaxed text-stone">
+                    {TEAM[3].bio.map((p, idx) => (
+                      <p key={idx}>{p}</p>
+                    ))}
+                  </div>
                 </div>
               </article>
             </FadeUp>

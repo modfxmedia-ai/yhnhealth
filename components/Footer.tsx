@@ -100,56 +100,53 @@ export default function Footer() {
           className="absolute -left-40 -bottom-40 h-[28rem] w-[28rem] rounded-full border border-dashed border-white/8"
         />
 
-        <div className="relative mx-auto flex max-w-[1320px] flex-col items-center gap-6 px-6 py-20 text-center lg:px-10">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.32em] text-steel-light backdrop-blur">
+        <div className="relative mx-auto flex max-w-[1320px] flex-col items-center gap-3 px-6 py-10 text-center lg:px-10">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1 text-[10px] font-semibold uppercase tracking-[0.32em] text-steel-light backdrop-blur">
             <span className="h-1 w-1 rounded-full bg-accent" />
             Begin Today
           </span>
-          <h2 className="font-display text-4xl font-bold leading-[1.05] md:text-5xl lg:text-6xl">
+          <h2 className="font-display text-2xl font-bold leading-[1.1] md:text-3xl">
             <span className="font-script font-normal italic text-accent">be well,</span> be you
           </h2>
-          <p className="max-w-xl text-base leading-relaxed text-white/75">
-            Your path to better health begins with a single visit. We&rsquo;re ready when you are.
-          </p>
           <Link
             href="/locations"
-            className="group inline-flex items-center gap-3 rounded-full bg-accent px-9 py-4 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:-translate-y-0.5 hover:bg-white hover:text-brand"
+            className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-2.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:-translate-y-0.5 hover:bg-white hover:text-brand"
           >
             Schedule a Visit
             <ArrowUpRight
-              size={14}
+              size={12}
               className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
             />
           </Link>
         </div>
       </motion.div>
 
-      <div className="relative mx-auto max-w-[1320px] px-6 py-20 lg:px-10">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
+      <div className="relative mx-auto max-w-[1320px] px-6 py-12 lg:px-10">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
           <div className="md:col-span-4">
             <Link href="/" aria-label="Your Health Now — home" className="inline-flex items-center">
-              <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white p-2">
+              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white p-2">
                 <Image
                   src="/images/logo.webp"
                   alt="Your Health Now"
-                  width={48}
-                  height={48}
+                  width={40}
+                  height={40}
                   className="h-full w-auto object-contain"
                 />
               </span>
-              <span className="ml-3 font-display text-xl font-bold leading-tight">
+              <span className="ml-3 font-display text-lg font-bold leading-tight">
                 Your Health Now
-                <span className="block text-[10px] font-semibold uppercase tracking-[0.28em] text-steel-light">
+                <span className="block text-[9px] font-semibold uppercase tracking-[0.28em] text-steel-light">
                   Health for every body
                 </span>
               </span>
             </Link>
 
-            <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/70">
-              Contemporary chiropractic and functional medicine care built on advanced technology and root-cause science. Two locations serving New Jersey and Pennsylvania.
+            <p className="mt-4 max-w-sm text-[13px] leading-relaxed text-white/70">
+              Contemporary chiropractic and functional medicine care. Two locations serving NJ and PA.
             </p>
 
-            <div className="mt-7 flex items-center gap-3">
+            <div className="mt-5 flex items-center gap-2">
               {SOCIALS.map((s) => {
                 const Icon = s.icon;
                 return (
@@ -159,9 +156,9 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.label}
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition-all hover:border-accent hover:bg-accent hover:text-white"
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition-all hover:border-accent hover:bg-accent hover:text-white"
                   >
-                    <Icon size={15} />
+                    <Icon size={14} />
                   </Link>
                 );
               })}
@@ -170,18 +167,14 @@ export default function Footer() {
 
           <div className="md:col-span-2">
             <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent">Explore</p>
-            <ul className="mt-5 space-y-3">
+            <ul className="mt-4 space-y-2">
               {QUICK_LINKS.map((l) => (
                 <li key={l.label}>
                   <Link
                     href={l.href}
-                    className="group inline-flex items-center gap-1.5 text-sm text-white/75 transition-colors hover:text-white"
+                    className="text-[13px] text-white/75 transition-colors hover:text-white"
                   >
                     {l.label}
-                    <ArrowUpRight
-                      size={12}
-                      className="opacity-0 transition-all duration-300 group-hover:translate-x-0.5 group-hover:opacity-100"
-                    />
                   </Link>
                 </li>
               ))}
@@ -190,12 +183,12 @@ export default function Footer() {
 
           <div className="md:col-span-3">
             <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent">Services</p>
-            <ul className="mt-5 space-y-3">
+            <ul className="mt-4 space-y-2">
               {SERVICE_LINKS.map((l) => (
                 <li key={l.label}>
                   <Link
                     href={l.href}
-                    className="text-sm text-white/75 transition-colors hover:text-white"
+                    className="text-[13px] text-white/75 transition-colors hover:text-white"
                   >
                     {l.label}
                   </Link>
@@ -206,36 +199,36 @@ export default function Footer() {
 
           <div className="md:col-span-3">
             <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent">Visit Us</p>
-            <div className="mt-5 space-y-5">
+            <div className="mt-4 space-y-4">
               {FOOTER_LOCATIONS.map((loc) => (
                 <div key={loc.name}>
-                  <p className="font-display text-base font-semibold">
+                  <p className="font-display text-sm font-semibold">
                     {loc.name}, <span className="text-steel-light">{loc.state}</span>
                   </p>
-                  <p className="mt-1.5 flex items-start gap-2 text-xs leading-relaxed text-white/70">
-                    <MapPin size={12} className="mt-0.5 shrink-0 text-accent" strokeWidth={2} />
+                  <p className="mt-1 flex items-start gap-2 text-[11px] leading-relaxed text-white/70">
+                    <MapPin size={11} className="mt-0.5 shrink-0 text-accent" strokeWidth={2} />
                     {loc.address}
                   </p>
                   <a
                     href={loc.tel}
-                    className="mt-1.5 inline-flex items-center gap-2 text-xs font-semibold text-white hover:text-accent"
+                    className="mt-1 inline-flex items-center gap-2 text-[11px] font-semibold text-white hover:text-accent"
                   >
-                    <Phone size={12} className="text-accent" strokeWidth={2} />
+                    <Phone size={11} className="text-accent" strokeWidth={2} />
                     {loc.phone}
                   </a>
                 </div>
               ))}
 
-              <div className="border-t border-white/10 pt-4">
-                <p className="flex items-center gap-2 text-xs text-white/70">
-                  <Clock size={12} className="text-accent" strokeWidth={2} />
-                  Mon–Fri · 7:30 am – 8:00 pm
-                </p>
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-white/10 pt-3 text-[11px] text-white/65">
+                <span className="inline-flex items-center gap-1.5">
+                  <Clock size={11} className="text-accent" strokeWidth={2} />
+                  Mon–Fri · 7:30a–8p
+                </span>
                 <a
                   href="mailto:info@yhnhealth.com"
-                  className="mt-2 inline-flex items-center gap-2 text-xs text-white/70 hover:text-accent"
+                  className="inline-flex items-center gap-1.5 hover:text-accent"
                 >
-                  <Mail size={12} className="text-accent" strokeWidth={2} />
+                  <Mail size={11} className="text-accent" strokeWidth={2} />
                   info@yhnhealth.com
                 </a>
               </div>
@@ -245,78 +238,29 @@ export default function Footer() {
       </div>
 
       <div className="relative border-t border-white/10">
-        <div className="mx-auto max-w-[1320px] px-6 py-12 lg:px-10">
-          <div className="flex flex-wrap items-baseline justify-between gap-3">
-            <div>
-              <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent">Areas We Serve</p>
-              <p className="mt-2 font-display text-2xl font-bold md:text-3xl">
-                {CITIES.length} cities · {SERVICES.length} services · {(CITIES.length * SERVICES.length).toLocaleString()}+ local pages
-              </p>
-            </div>
-            <Link
-              href="/areas-we-serve"
-              className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-[0.24em] text-white/80 hover:text-accent"
-            >
-              See all areas
-              <ArrowUpRight size={12} />
-            </Link>
+        <div className="mx-auto flex max-w-[1320px] flex-wrap items-center justify-between gap-3 px-6 py-5 lg:px-10">
+          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+            <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent">
+              Areas We Serve
+            </p>
+            <p className="text-[12px] text-white/70">
+              {CITIES.length} cities across NJ &amp; PA · {SERVICES.length} services
+            </p>
           </div>
-
-          <div className="mt-8 grid gap-8 md:grid-cols-2">
-            {[
-              { state: "New Jersey", list: CITIES.filter((c) => c.state === "NJ") },
-              { state: "Pennsylvania", list: CITIES.filter((c) => c.state === "PA") },
-            ].map((g) => (
-              <div key={g.state}>
-                <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/60">{g.state}</p>
-                <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-1.5">
-                  {g.list.map((c) => (
-                    <li key={c.slug}>
-                      <Link
-                        href={`/areas-we-serve/${c.slug}`}
-                        className="text-[12px] text-white/70 hover:text-accent"
-                      >
-                        {c.name}, {c.state}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <details className="mt-8 group">
-            <summary className="flex cursor-pointer items-center gap-2 text-[10px] font-bold uppercase tracking-[0.28em] text-white/60 list-none">
-              <span className="transition-transform group-open:rotate-180">▾</span>
-              Browse all {(CITIES.length * SERVICES.length).toLocaleString()}+ local service pages
-            </summary>
-            <div className="mt-5 space-y-5">
-              {SERVICES.map((s) => (
-                <div key={s.slug}>
-                  <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent">{s.name}</p>
-                  <ul className="mt-1.5 flex flex-wrap gap-x-3 gap-y-1">
-                    {CITIES.map((c) => (
-                      <li key={`${s.slug}-${c.slug}`}>
-                        <Link
-                          href={`/areas-we-serve/${c.slug}/${s.slug}`}
-                          className="text-[11px] text-white/55 hover:text-accent"
-                        >
-                          {c.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </details>
+          <Link
+            href="/areas-we-serve"
+            className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-[0.24em] text-white/80 hover:text-accent"
+          >
+            See all areas
+            <ArrowUpRight size={12} />
+          </Link>
         </div>
       </div>
 
       <div className="relative border-t border-white/10">
-        <div className="mx-auto flex max-w-[1320px] flex-col items-center justify-between gap-4 px-6 py-6 text-[11px] uppercase tracking-[0.22em] text-white/50 md:flex-row lg:px-10">
+        <div className="mx-auto flex max-w-[1320px] flex-col items-center justify-between gap-3 px-6 py-5 text-[11px] uppercase tracking-[0.22em] text-white/50 md:flex-row lg:px-10">
           <p>© {new Date().getFullYear()} Your Health Now. All rights reserved.</p>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-4">
             <Link href="/privacy-policy" className="hover:text-accent">Privacy</Link>
             <span className="h-3 w-px bg-white/20" />
             <Link href="/sitemap" className="hover:text-accent">Sitemap</Link>

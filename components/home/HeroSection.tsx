@@ -4,16 +4,18 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
-import { ChevronDown, ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Phone, RotateCw, Sparkles } from "lucide-react";
 import { HERO_SLIDES } from "@/lib/siteData";
 import { cn } from "@/lib/utils";
 
 export default function HeroSection() {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [flipped, setFlipped] = useState(false);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 600], [0, 120]);
-  const opacity = useTransform(scrollY, [0, 400], [1, 0]);
+
+  const slide = HERO_SLIDES[active];
 
   useEffect(() => {
     if (paused) return;
@@ -22,6 +24,11 @@ export default function HeroSection() {
     }, 5500);
     return () => clearInterval(id);
   }, [paused]);
+
+  // Reset to front face whenever the slide changes so the new image is seen first.
+  useEffect(() => {
+    setFlipped(false);
+  }, [active]);
 
   const prev = () =>
     setActive((i) => (i - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
@@ -93,14 +100,13 @@ export default function HeroSection() {
 
       {/* Content */}
       <motion.div
-        style={{ opacity }}
         initial="hidden"
         animate="visible"
         variants={{
           hidden: {},
           visible: { transition: { staggerChildren: 0.12, delayChildren: 0.15 } },
         }}
-        className="relative z-10 mx-auto w-full max-w-[1320px] px-6 py-24 lg:px-10"
+        className="relative z-10 mx-auto w-full max-w-[1320px] px-6 pb-32 pt-20 md:py-24 lg:px-10"
       >
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
           <div className="lg:col-span-8">
@@ -122,7 +128,7 @@ export default function HeroSection() {
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.9, ease: "easeOut" }}
-              className="mt-7 font-display text-[44px] font-bold leading-[1.02] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-[88px]"
+              className="mt-7 font-display text-[40px] font-bold leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-[88px]"
             >
               Health{" "}
               <span className="relative inline-block">
@@ -180,6 +186,44 @@ export default function HeroSection() {
               </Link>
             </motion.div>
 
+            {/* Free consultation call note */}
+            <motion.a
+              href="tel:8565322063"
+              variants={{
+                hidden: { opacity: 0, y: 16 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.7, ease: "easeOut", delay: 0.35 }}
+              className="group relative mt-6 inline-flex items-center gap-3 self-start overflow-hidden rounded-full bg-accent px-6 py-3.5 text-[12px] font-bold uppercase tracking-[0.22em] text-white shadow-[0_18px_45px_-15px_rgba(199,134,49,0.85)] ring-2 ring-accent/40 ring-offset-2 ring-offset-transparent transition-all hover:-translate-y-0.5 hover:bg-accent-dark hover:shadow-[0_22px_55px_-15px_rgba(199,134,49,1)] sm:px-7 sm:py-4"
+            >
+              {/* Pulsing halo */}
+              <motion.span
+                aria-hidden="true"
+                animate={{ scale: [1, 1.18, 1], opacity: [0.55, 0, 0.55] }}
+                transition={{ duration: 2.4, repeat: Infinity, ease: "easeOut" }}
+                className="pointer-events-none absolute inset-0 -z-0 rounded-full bg-accent/60"
+              />
+              {/* Sheen sweep on hover */}
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-y-0 -left-full w-1/2 -skew-x-12 bg-gradient-to-r from-transparent via-white/35 to-transparent transition-all duration-700 group-hover:left-full"
+              />
+              <span className="relative inline-flex h-8 w-8 items-center justify-center rounded-full bg-white text-accent shadow-inner">
+                <Phone size={14} strokeWidth={2.5} />
+              </span>
+              <span className="relative inline-flex items-center gap-2">
+                <span className="rounded-full bg-white/25 px-2 py-0.5 text-[10px] font-extrabold tracking-[0.18em] text-white">
+                  FREE
+                </span>
+                <span>15-Min Consultation Call</span>
+              </span>
+              <ChevronRight
+                size={14}
+                strokeWidth={2.5}
+                className="relative transition-transform duration-300 group-hover:translate-x-1"
+              />
+            </motion.a>
+
             {/* Stats strip */}
             <motion.div
               variants={{
@@ -187,7 +231,7 @@ export default function HeroSection() {
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-              className="mt-14 grid max-w-2xl grid-cols-3 gap-4 border-t border-white/15 pt-7"
+              className="mt-10 grid max-w-2xl grid-cols-3 gap-3 border-t border-white/15 pt-7 sm:mt-14 sm:gap-4"
             >
               {[
                 { value: "15+", label: "Years of Care" },
@@ -195,10 +239,10 @@ export default function HeroSection() {
                 { value: "5.0", label: "Patient Rating" },
               ].map((s) => (
                 <div key={s.label}>
-                  <p className="font-display text-3xl font-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)] md:text-4xl">
+                  <p className="font-display text-2xl font-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)] sm:text-3xl md:text-4xl">
                     {s.value}
                   </p>
-                  <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/85 drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]">
+                  <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.18em] text-white/85 drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)] sm:text-[10px] sm:tracking-[0.22em]">
                     {s.label}
                   </p>
                 </div>
@@ -206,59 +250,123 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Slide preview card */}
+          {/* Slide preview flip card */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
             className="hidden lg:col-span-4 lg:block"
           >
-            <div className="relative ml-auto max-w-sm">
+            <div className="relative ml-auto max-w-sm" style={{ perspective: "1600px" }}>
               <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-accent/30 to-steel/20 blur-2xl" />
-              <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 backdrop-blur">
-                <div className="relative aspect-[4/5] w-full overflow-hidden">
-                  <AnimatePresence mode="sync">
-                    <motion.div
-                      key={`card-${active}`}
-                      initial={{ opacity: 0, scale: 1.05 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.8 }}
-                      className="absolute inset-0"
-                    >
-                      <Image
-                        src={HERO_SLIDES[active].src}
-                        alt=""
-                        fill
-                        sizes="400px"
-                        className="object-cover"
-                      />
-                    </motion.div>
-                  </AnimatePresence>
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/55 to-brand-dark/10" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
-                      Now Featuring
-                    </p>
-                    <p className="mt-2 font-display text-xl font-semibold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
-                      {HERO_SLIDES[active].alt}
-                    </p>
+              <button
+                type="button"
+                aria-label={flipped ? `Hide details for ${slide.title}` : `Show details about ${slide.title}`}
+                aria-pressed={flipped}
+                onClick={() => setFlipped((v) => !v)}
+                className="group relative block aspect-[4/5] w-full text-left focus:outline-none"
+              >
+                <motion.div
+                  animate={{ rotateY: flipped ? 180 : 0 }}
+                  transition={{ duration: 0.8, ease: [0.22, 0.61, 0.36, 1] }}
+                  className="relative h-full w-full"
+                  style={{ transformStyle: "preserve-3d" }}
+                >
+                  {/* Front — slide preview */}
+                  <div
+                    className="absolute inset-0 overflow-hidden rounded-3xl border border-white/15 bg-white/5 backdrop-blur"
+                    style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
+                  >
+                    <div className="relative h-full w-full overflow-hidden">
+                      <AnimatePresence mode="sync">
+                        <motion.div
+                          key={`card-${active}`}
+                          initial={{ opacity: 0, scale: 1.05 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 0.8 }}
+                          className="absolute inset-0"
+                        >
+                          <Image
+                            src={slide.src}
+                            alt=""
+                            fill
+                            sizes="400px"
+                            className="object-cover"
+                          />
+                        </motion.div>
+                      </AnimatePresence>
+                      <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/55 to-brand-dark/10" />
+                      <span className="absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.24em] text-white backdrop-blur transition-colors group-hover:bg-accent">
+                        <RotateCw size={10} strokeWidth={2.25} />
+                        Tap to flip
+                      </span>
+                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">
+                          {slide.eyebrow}
+                        </p>
+                        <p className="mt-2 font-display text-xl font-semibold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+                          {slide.title}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
+
+                  {/* Back — per-slide info */}
+                  <div
+                    className="absolute inset-0 flex flex-col justify-between overflow-hidden rounded-3xl border border-accent/30 bg-gradient-to-br from-brand to-brand-dark p-7"
+                    style={{
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                      transform: "rotateY(180deg)",
+                    }}
+                  >
+                    <div>
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/15 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.28em] text-accent">
+                        <Sparkles size={10} strokeWidth={2.25} />
+                        {slide.eyebrow}
+                      </span>
+                      <h3 className="mt-4 font-display text-2xl font-semibold leading-tight text-white">
+                        {slide.title}
+                      </h3>
+                      <p className="mt-3 text-[13.5px] leading-relaxed text-white/80">
+                        {slide.info}
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-between gap-3">
+                      {slide.href ? (
+                        <Link
+                          href={slide.href}
+                          onClick={(e) => e.stopPropagation()}
+                          className="inline-flex items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-white shadow-card transition-all hover:bg-accent-dark"
+                        >
+                          {slide.cta ?? "Learn more"}
+                          <ArrowUpRight size={12} strokeWidth={2.5} />
+                        </Link>
+                      ) : (
+                        <span className="h-1" />
+                      )}
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.24em] text-white">
+                        <RotateCw size={10} strokeWidth={2.25} />
+                        Flip back
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              </button>
             </div>
           </motion.div>
         </div>
       </motion.div>
 
       {/* Slide controls */}
-      <div className="absolute bottom-10 left-0 right-0 z-20 mx-auto flex max-w-[1320px] items-center justify-between gap-6 px-6 lg:px-10">
-        <div className="flex items-center gap-3 text-white/70">
-          <span className="font-display text-3xl font-bold text-white">
+      <div className="absolute bottom-6 left-0 right-0 z-20 mx-auto flex max-w-[1320px] items-center justify-between gap-4 px-6 sm:bottom-8 lg:bottom-10 lg:px-10">
+        <div className="flex items-center gap-2 sm:gap-3 text-white/70">
+          <span className="font-display text-2xl font-bold text-white sm:text-3xl">
             {String(active + 1).padStart(2, "0")}
           </span>
-          <span className="h-px w-10 bg-white/30" />
-          <span className="text-[11px] uppercase tracking-[0.28em]">
+          <span className="h-px w-6 bg-white/30 sm:w-10" />
+          <span className="text-[10px] uppercase tracking-[0.24em] sm:text-[11px] sm:tracking-[0.28em]">
             of {String(HERO_SLIDES.length).padStart(2, "0")}
           </span>
         </div>
@@ -283,7 +391,7 @@ export default function HeroSection() {
             type="button"
             aria-label="Previous slide"
             onClick={prev}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white backdrop-blur transition-all hover:border-accent hover:text-accent"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white backdrop-blur transition-all hover:border-accent hover:text-accent sm:h-11 sm:w-11"
           >
             <ChevronLeft size={18} />
           </button>
@@ -291,7 +399,7 @@ export default function HeroSection() {
             type="button"
             aria-label="Next slide"
             onClick={next}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white backdrop-blur transition-all hover:border-accent hover:text-accent"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white backdrop-blur transition-all hover:border-accent hover:text-accent sm:h-11 sm:w-11"
           >
             <ChevronRight size={18} />
           </button>

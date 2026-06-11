@@ -15,7 +15,7 @@ const TIMELINE = [
   {
     year: "Family Practice",
     title: "Three generations of doctors",
-    body: "Drs. Chris, Marc, and Lillee Chianese — each Summa or Magna Cum Laude — combined their distinct specialties under one roof, supported by Office Director Barbara Chianese.",
+    body: "Dr. Chris Chianese, Dr. Marc Chianese, and Dr. Lillee Chianese — each Summa or Magna Cum Laude — combined their distinct specialties under one roof, supported by Office Director Barbara Chianese.",
     icon: Users,
   },
   {
@@ -27,7 +27,7 @@ const TIMELINE = [
   {
     year: "Post-Graduate",
     title: "Founders of the CPSC seminars",
-    body: "Dr. Chris founded the Certification in Patient-Specific Chiropractic seminar series — six modules of post-graduate training that now educate practicing doctors nationwide.",
+    body: "Dr. Chris Chianese founded the Certification in Patient-Specific Chiropractic seminar series — six modules of post-graduate training that now educate practicing doctors nationwide.",
     icon: GraduationCap,
   },
   {

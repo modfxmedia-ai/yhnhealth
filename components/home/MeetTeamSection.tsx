@@ -8,7 +8,7 @@ import { TEAM } from "@/lib/siteData";
 
 export default function MeetTeamSection() {
   return (
-    <section className="relative overflow-hidden bg-white py-28">
+    <section className="relative overflow-hidden bg-white py-20 md:py-24 lg:py-28">
       <div className="relative mx-auto max-w-[1320px] px-6 lg:px-10">
         <div className="grid grid-cols-1 items-end gap-8 lg:grid-cols-12">
           <motion.div
@@ -36,8 +36,8 @@ export default function MeetTeamSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-lg leading-relaxed text-stone lg:col-span-5"
           >
-            Our doctors and providers bring decades of experience and a deep
-            commitment to whole-body, evidence-based care.
+            Our doctors bring decades of experience and a deep commitment to
+            whole-body, evidence-based care.
           </motion.p>
         </div>
 

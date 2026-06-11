@@ -24,7 +24,7 @@ const MAPS = [
 
 export default function LocationMapSection() {
   return (
-    <section className="relative overflow-hidden bg-white py-24">
+    <section className="relative overflow-hidden bg-white py-16 md:py-20 lg:py-24">
       <div className="relative mx-auto max-w-[1320px] px-6 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

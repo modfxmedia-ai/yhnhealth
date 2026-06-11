@@ -276,7 +276,7 @@ function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => void })
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-brand-dark/50 backdrop-blur-sm lg:hidden"
+            className="fixed inset-0 z-40 bg-brand-dark/50 backdrop-blur-sm xl:hidden"
             onClick={onClose}
           />
           <motion.aside
@@ -287,7 +287,7 @@ function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => void })
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "tween", duration: 0.32, ease: [0.32, 0.72, 0, 1] }}
-            className="fixed inset-y-0 right-0 z-50 flex h-full w-[88vw] max-w-md flex-col overflow-y-auto bg-white shadow-2xl lg:hidden"
+            className="fixed inset-y-0 right-0 z-50 flex h-full w-[88vw] max-w-md flex-col overflow-y-auto bg-white shadow-2xl xl:hidden"
           >
             <div className="flex items-center justify-between border-b border-brand/10 px-6 py-5">
               <Link href="/" onClick={onClose} aria-label="Your Health Now — home">
@@ -472,7 +472,7 @@ export default function Header() {
               aria-label="Open menu"
               aria-expanded={mobileOpen}
               onClick={() => setMobileOpen(true)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-md text-brand hover:bg-mist lg:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-md text-brand hover:bg-mist xl:hidden"
             >
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -499,7 +499,7 @@ export default function Header() {
             {/* Desktop nav (centered) */}
             <nav
               aria-label="Primary navigation"
-              className="hidden h-full flex-1 items-stretch justify-center lg:flex"
+              className="hidden h-full flex-1 items-stretch justify-center xl:flex"
             >
               {NAV_ITEMS.map((item) => (
                 <DesktopDropdown
