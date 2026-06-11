@@ -114,7 +114,7 @@ export default function FunctionalMedicineClient() {
               initial={{ opacity: 0, scale: 0.94 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.9, delay: 0.2 }}
-              className="relative lg:col-span-5"
+              className="relative mx-auto w-full max-w-[240px] lg:col-span-5 lg:max-w-[260px]"
             >
               <motion.div
                 aria-hidden="true"
@@ -127,15 +127,16 @@ export default function FunctionalMedicineClient() {
                 className="absolute -inset-6 rounded-[2.25rem] bg-gradient-to-br from-accent/15 via-transparent to-brand/10 blur-2xl"
               />
               <div className="relative overflow-hidden rounded-[1.75rem] border border-brand/10 bg-brand-dark shadow-card">
-                <video
-                  className="block aspect-square w-full object-cover"
-                  src="/videos/functional-medicine.mp4"
-                  autoPlay
-                  loop
-                  controls
-                  playsInline
-                  preload="metadata"
-                />
+                <div className="relative aspect-[9/16] w-full">
+                  <iframe
+                    src="https://player.vimeo.com/video/1200442621?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    allowFullScreen
+                    title="Functional Medicine — Your Health Now"
+                    className="absolute inset-0 h-full w-full"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </motion.div>
           </div>
