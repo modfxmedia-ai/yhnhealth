@@ -45,6 +45,15 @@ export const HOURS = [
 
 export const HERO_SLIDES = [
   {
+    src: "/images/yhn-clone/hero-funcmed.webp",
+    alt: "Functional Medicine",
+    eyebrow: "Now Featuring",
+    title: "Functional medicine",
+    info: "Where conventional medicine ends, we ask the next question — using advanced labs and root-cause protocols to restore whole-body health.",
+    href: "/functional-medicine",
+    cta: "Functional medicine",
+  },
+  {
     src: "/images/yhn-clone/hero-1.webp",
     alt: "Chiropractic adjustment",
     eyebrow: "Now Featuring",
@@ -52,15 +61,6 @@ export const HERO_SLIDES = [
     info: "Precise, patient-specific spinal adjustments restore joint motion, calm the nervous system, and remove the interference behind pain.",
     href: "/family-chiropractic-care",
     cta: "Learn about chiropractic care",
-  },
-  {
-    src: "/images/yhn-clone/hero-2.webp",
-    alt: "Patient care at Your Health Now",
-    eyebrow: "Now Featuring",
-    title: "Care, not just treatment",
-    info: "Every visit is doctor-led — listening longer, examining more thoroughly, and building a plan around your biology, not a template.",
-    href: "/about-us",
-    cta: "How we care",
   },
   {
     src: "/images/yhn-clone/hero-3.webp",
@@ -72,24 +72,6 @@ export const HERO_SLIDES = [
     cta: "Explore functional medicine",
   },
   {
-    src: "/images/yhn-clone/hero-4.webp",
-    alt: "Spinal health treatment",
-    eyebrow: "Now Featuring",
-    title: "Spinal health",
-    info: "Healthy spinal mechanics influence everything from posture and breathing to mood and recovery. We rebuild the foundation first.",
-    href: "/decompression-therapy",
-    cta: "Decompression therapy",
-  },
-  {
-    src: "/images/yhn-clone/hero-5.webp",
-    alt: "Active recovery",
-    eyebrow: "Now Featuring",
-    title: "Active recovery",
-    info: "Movement-based recovery helps you bounce back faster from training, work, or injury — guided by clinicians who understand performance.",
-    href: "/athletic-care",
-    cta: "Athletic care",
-  },
-  {
     src: "/images/yhn-clone/hero-6.webp",
     alt: "Patient wellness session",
     eyebrow: "Now Featuring",
@@ -99,85 +81,22 @@ export const HERO_SLIDES = [
     cta: "Lifestyle & nutrition",
   },
   {
-    src: "/images/yhn-clone/hero-7.webp",
-    alt: "Manual therapy",
+    src: "/images/yhn-clone/hero-2.webp",
+    alt: "Patient care at Your Health Now",
     eyebrow: "Now Featuring",
-    title: "Manual therapy",
-    info: "Hands-on soft-tissue work — Active Release, IASTM, percussion, and more — releases adhesions and restores tissue glide.",
-    href: "/iastm",
-    cta: "Soft-tissue therapies",
-  },
-  {
-    src: "/images/yhn-clone/hero-8.webp",
-    alt: "Mobility care",
-    eyebrow: "Now Featuring",
-    title: "Mobility care",
-    info: "Gain range and confidence in your joints with a mobility plan built for your body, your sport, and your goals.",
-    href: "/functional-movement-restoration",
-    cta: "Functional movement",
-  },
-  {
-    src: "/images/yhn-clone/hero-9.webp",
-    alt: "Chiropractic technique",
-    eyebrow: "Now Featuring",
-    title: "Patient-specific technique",
-    info: "We use the technique that fits the patient — Diversified, Activator, Thompson Drop, ArthroStim, and more — never one-size-fits-all.",
-    href: "/arthrostimulation-therapy",
-    cta: "ArthroStim therapy",
+    title: "Care, not just treatment",
+    info: "Every visit is doctor-led — listening longer, examining more thoroughly, and building a plan around your biology, not a template.",
+    href: "/about-us",
+    cta: "How we care",
   },
   {
     src: "/images/yhn-clone/hero-10.webp",
     alt: "Wellness care",
     eyebrow: "Now Featuring",
-    title: "Salutogenic wellness",
-    info: "We promote health, not just absence of disease. The goal is for you to be measurably better — not simply 'less sick'.",
+    title: "Health optimization",
+    info: "Energy, hormones, longevity, metabolism — structured functional programs designed to make you measurably better, not just less sick.",
     href: "/health-optimization-programs",
     cta: "Optimization programs",
-  },
-  {
-    src: "/images/yhn-clone/hero-arthrostim.webp",
-    alt: "Arthrostimulation Therapy",
-    eyebrow: "Now Featuring",
-    title: "ArthroStim therapy",
-    info: "A precision instrument-assisted adjustment that delivers gentle, rapid impulses — ideal for sensitive spines, kids, and seniors.",
-    href: "/arthrostimulation-therapy",
-    cta: "Learn more",
-  },
-  {
-    src: "/images/yhn-clone/hero-pediatric.webp",
-    alt: "Pediatric Care",
-    eyebrow: "Now Featuring",
-    title: "Pediatric care",
-    info: "Gentle, age-appropriate care from infancy through adolescence — supporting healthy nervous system development at every stage.",
-    href: "/pediatric-care",
-    cta: "Pediatric care",
-  },
-  {
-    src: "/images/yhn-clone/hero-athletic.webp",
-    alt: "Athletic Care",
-    eyebrow: "Now Featuring",
-    title: "Athletic care",
-    info: "From weekend warriors to competitive athletes — recover faster, prevent injuries, and unlock the next level of performance.",
-    href: "/athletic-care",
-    cta: "Athletic care",
-  },
-  {
-    src: "/images/yhn-clone/hero-movement.webp",
-    alt: "Functional Movement Restoration",
-    eyebrow: "Now Featuring",
-    title: "Functional movement restoration",
-    info: "We assess how you move, find the faulty patterns, and rebuild quality movement — so adjustments and exercise actually stick.",
-    href: "/functional-movement-restoration",
-    cta: "How it works",
-  },
-  {
-    src: "/images/yhn-clone/hero-posture.webp",
-    alt: "Functional Posture Analysis",
-    eyebrow: "Now Featuring",
-    title: "Functional posture analysis",
-    info: "Objective postural and biomechanical analysis pinpoints the asymmetries driving pain, fatigue, and recurring injuries.",
-    href: "/functional-postural-analysis",
-    cta: "See the analysis",
   },
   {
     src: "/images/yhn-clone/hero-supplements.webp",
@@ -189,15 +108,6 @@ export const HERO_SLIDES = [
     cta: "Browse protocols",
   },
   {
-    src: "/images/yhn-clone/hero-funcmed.webp",
-    alt: "Functional Medicine",
-    eyebrow: "Now Featuring",
-    title: "Functional medicine",
-    info: "Where conventional medicine ends, we ask the next question — using advanced labs and root-cause protocols to restore whole-body health.",
-    href: "/functional-medicine",
-    cta: "Functional medicine",
-  },
-  {
     src: "/images/yhn-clone/hero-telehealth.webp",
     alt: "Telehealth visits",
     eyebrow: "Now Featuring",
@@ -205,6 +115,96 @@ export const HERO_SLIDES = [
     info: "Functional medicine and follow-up care from anywhere — same depth, same doctor, same plan, delivered via secure video.",
     href: "/contact-us",
     cta: "Request a visit",
+  },
+  {
+    src: "/images/yhn-clone/hero-4.webp",
+    alt: "Spinal health treatment",
+    eyebrow: "Now Featuring",
+    title: "Spinal health",
+    info: "Healthy spinal mechanics influence everything from posture and breathing to mood and recovery. We rebuild the foundation first.",
+    href: "/decompression-therapy",
+    cta: "Decompression therapy",
+  },
+  {
+    src: "/images/yhn-clone/hero-7.webp",
+    alt: "Manual therapy",
+    eyebrow: "Now Featuring",
+    title: "Manual therapy",
+    info: "Hands-on soft-tissue work — Active Release, IASTM, percussion, and more — releases adhesions and restores tissue glide.",
+    href: "/iastm",
+    cta: "Soft-tissue therapies",
+  },
+  {
+    src: "/images/yhn-clone/hero-posture.webp",
+    alt: "Functional Posture Analysis",
+    eyebrow: "Now Featuring",
+    title: "Functional posture analysis",
+    info: "Objective postural and biomechanical analysis pinpoints the asymmetries driving pain, fatigue, and recurring injuries.",
+    href: "/functional-postural-analysis",
+    cta: "See the analysis",
+  },
+  {
+    src: "/images/yhn-clone/hero-movement.webp",
+    alt: "Functional Movement Restoration",
+    eyebrow: "Now Featuring",
+    title: "Functional movement restoration",
+    info: "We assess how you move, find the faulty patterns, and rebuild quality movement — so adjustments and exercise actually stick.",
+    href: "/functional-movement-restoration",
+    cta: "How it works",
+  },
+  {
+    src: "/images/yhn-clone/hero-5.webp",
+    alt: "Active recovery",
+    eyebrow: "Now Featuring",
+    title: "Active recovery",
+    info: "Movement-based recovery helps you bounce back faster from training, work, or injury — guided by clinicians who understand performance.",
+    href: "/athletic-care",
+    cta: "Athletic care",
+  },
+  {
+    src: "/images/yhn-clone/hero-9.webp",
+    alt: "Chiropractic technique",
+    eyebrow: "Now Featuring",
+    title: "Patient-specific technique",
+    info: "We use the technique that fits the patient — Diversified, Activator, Thompson Drop, ArthroStim, and more — never one-size-fits-all.",
+    href: "/arthrostimulation-therapy",
+    cta: "ArthroStim therapy",
+  },
+  {
+    src: "/images/yhn-clone/hero-arthrostim.webp",
+    alt: "Arthrostimulation Therapy",
+    eyebrow: "Now Featuring",
+    title: "ArthroStim therapy",
+    info: "A precision instrument-assisted adjustment that delivers gentle, rapid impulses — ideal for sensitive spines, kids, and seniors.",
+    href: "/arthrostimulation-therapy",
+    cta: "Learn more",
+  },
+  {
+    src: "/images/yhn-clone/hero-8.webp",
+    alt: "Mobility care",
+    eyebrow: "Now Featuring",
+    title: "Mobility care",
+    info: "Gain range and confidence in your joints with a mobility plan built for your body, your sport, and your goals.",
+    href: "/functional-movement-restoration",
+    cta: "Functional movement",
+  },
+  {
+    src: "/images/yhn-clone/hero-athletic.webp",
+    alt: "Athletic Care",
+    eyebrow: "Now Featuring",
+    title: "Athletic care",
+    info: "From weekend warriors to competitive athletes — recover faster, prevent injuries, and unlock the next level of performance.",
+    href: "/athletic-care",
+    cta: "Athletic care",
+  },
+  {
+    src: "/images/yhn-clone/hero-pediatric.webp",
+    alt: "Pediatric Care",
+    eyebrow: "Now Featuring",
+    title: "Pediatric care",
+    info: "Gentle, age-appropriate care from infancy through adolescence — supporting healthy nervous system development at every stage.",
+    href: "/pediatric-care",
+    cta: "Pediatric care",
   },
 ];
 
@@ -218,10 +218,19 @@ export const TEAM = [
 export const TESTIMONIALS = [
   {
     quote:
-      "Our 4-year-old son waits by the door for Dr. Marc — that says it all. He engages every age group, listens carefully, and explains things in a down-to-earth way. We are so thankful for his care and highly recommend Your Health Now.",
-    author: "Murari and Ashley S.",
-    location: "Merchantville, NJ",
-    service: "Pediatric Care",
+      "I had been told for years that my fatigue was 'just stress.' Functional medicine here finally found the underlying issue. I have my energy and life back.",
+    author: "Renee M.",
+    location: "Chalfont, PA",
+    service: "Functional Medicine",
+    source: "Yelp",
+    stars: 5,
+  },
+  {
+    quote:
+      "I had chronic Lyme symptoms for over a decade. The protocol Dr. Chris built for me is the first thing that has actually moved the needle. I am so grateful for this team.",
+    author: "Kevin S.",
+    location: "Chalfont, PA",
+    service: "Lyme Disease Solutions",
     source: "Google",
     stars: 5,
   },
@@ -236,11 +245,29 @@ export const TESTIMONIALS = [
   },
   {
     quote:
+      "After my first call I felt heard. The 15-minute consultation alone was more thorough than any visit I had with my previous doctor — and that was before I even stepped into the office.",
+    author: "Jessica R.",
+    location: "Merchantville, NJ",
+    service: "Functional Medicine",
+    source: "Google",
+    stars: 5,
+  },
+  {
+    quote:
       "I have been to many chiropractors over the past 15+ years, but this is the first time I have ever had long-lasting relief and back health. It has truly been a game changer.",
     author: "Jaime B.",
     location: "Merchantville, NJ",
     service: "Decompression Therapy",
     source: "Yelp",
+    stars: 5,
+  },
+  {
+    quote:
+      "What sold me was the free consultation call before booking. No pressure, just a real conversation about whether they could help. They could — and they did.",
+    author: "Maria G.",
+    location: "Merchantville, NJ",
+    service: "Functional Medicine",
+    source: "Google",
     stars: 5,
   },
   {
@@ -254,10 +281,10 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "After my first call I felt heard. The 15-minute consultation alone was more thorough than any visit I had with my previous doctor — and that was before I even stepped into the office.",
-    author: "Jessica R.",
+      "Our 4-year-old son waits by the door for Dr. Marc — that says it all. He engages every age group, listens carefully, and explains things in a down-to-earth way. We are so thankful for his care and highly recommend Your Health Now.",
+    author: "Murari and Ashley S.",
     location: "Merchantville, NJ",
-    service: "Functional Medicine",
+    service: "Pediatric Care",
     source: "Google",
     stars: 5,
   },
@@ -281,15 +308,6 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "I had been told for years that my fatigue was 'just stress.' Functional medicine here finally found the underlying issue. I have my energy and life back.",
-    author: "Renee M.",
-    location: "Chalfont, PA",
-    service: "Functional Medicine",
-    source: "Yelp",
-    stars: 5,
-  },
-  {
-    quote:
       "Best chiropractic experience I have ever had. They explained the plan clearly, never pushed unnecessary visits, and the results speak for themselves. Highly recommend.",
     author: "Anthony D.",
     location: "Merchantville, NJ",
@@ -308,15 +326,6 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "I had chronic Lyme symptoms for over a decade. The protocol Dr. Chris built for me is the first thing that has actually moved the needle. I am so grateful for this team.",
-    author: "Kevin S.",
-    location: "Chalfont, PA",
-    service: "Lyme Disease Solutions",
-    source: "Google",
-    stars: 5,
-  },
-  {
-    quote:
       "Friendly, professional, and on time every visit. The Arthrostim adjustments are gentle but effective — perfect for someone like me who is nervous about manual cracking.",
     author: "Patricia W.",
     location: "Merchantville, NJ",
@@ -330,15 +339,6 @@ export const TESTIMONIALS = [
     author: "Robert C.",
     location: "Chalfont, PA",
     service: "Decompression Therapy",
-    source: "Google",
-    stars: 5,
-  },
-  {
-    quote:
-      "What sold me was the free consultation call before booking. No pressure, just a real conversation about whether they could help. They could — and they did.",
-    author: "Maria G.",
-    location: "Merchantville, NJ",
-    service: "Functional Medicine",
     source: "Google",
     stars: 5,
   },
@@ -379,6 +379,25 @@ export type ServiceGroup = {
 
 export const SERVICE_GROUPS: ServiceGroup[] = [
   {
+    id: "functional",
+    eyebrow: "Functional Medicine & Whole-Body Care",
+    title: "Root-cause care, ",
+    scriptWord: "evidence-backed.",
+    description:
+      "Doctor-led functional medicine, integrative nutrition, and chiropractic working together — advanced labs, personalized protocols, and clinical care under one roof.",
+    metric: { value: "8", label: "integrated programs" },
+    items: [
+      { name: "Functional Medicine", href: "/functional-medicine", image: "/images/yhn-clone/svc-funcmed.webp", blurb: "Personalized clinical care for chronic conditions." },
+      { name: "Integrative Nutrition", href: "/integrative-nutrition", image: "/images/yhn-clone/svc-nutrition.webp", blurb: "Food as medicine — guided, not guessed." },
+      { name: "Physician Grade Supplementation", href: "/physician-grade-supplementation", image: "/images/yhn-clone/svc-supplements.webp", blurb: "Pharmaceutical-grade, prescriber-curated." },
+      { name: "Lyme Disease Solutions", href: "/lyme-disease-solutions", image: "/images/yhn-clone/svc-lyme.webp", blurb: "Targeted protocols for chronic Lyme recovery." },
+      { name: "Chiropractic Medicine", href: "/family-chiropractic-care", image: "/images/yhn-clone/svc-chiropractic.webp", blurb: "Spinal care delivered with clinical precision." },
+      { name: "Functional Posture Analysis", href: "/functional-postural-analysis", image: "/images/yhn-clone/svc-posture.webp", blurb: "Map imbalances before they become injuries." },
+      { name: "Functional Movement Restoration", href: "/functional-movement-restoration", image: "/images/yhn-clone/svc-movement.webp", blurb: "Re-train how your body moves under load." },
+      { name: "Functional Kinesiology", href: "/functional-kinesiology", image: "/images/yhn-clone/svc-kinesiology.webp", blurb: "Muscle testing that uncovers hidden dysfunction." },
+    ],
+  },
+  {
     id: "life-stage",
     eyebrow: "Care for Every Life Stage",
     title: "From first heartbeat to ",
@@ -393,25 +412,6 @@ export const SERVICE_GROUPS: ServiceGroup[] = [
       { name: "Geriatric Care", href: "/geriatric-care", image: "/images/yhn-clone/svc-geriatric.webp", blurb: "Mobility, balance, and pain relief in later years." },
       { name: "Athletic Care", href: "/athletic-care", image: "/images/yhn-clone/svc-athletic.webp", blurb: "Performance-grade care for serious athletes." },
       { name: "DOT Physicals", href: "/dot-physicals", image: "/images/yhn-clone/svc-dot.webp", blurb: "Certified medical exams for commercial drivers." },
-    ],
-  },
-  {
-    id: "functional",
-    eyebrow: "Functional & Whole-Body Care",
-    title: "Root-cause care, ",
-    scriptWord: "evidence-backed.",
-    description:
-      "Movement, posture, kinesiology, and metabolic medicine working together — not isolated visits.",
-    metric: { value: "8", label: "integrated programs" },
-    items: [
-      { name: "Chiropractic Medicine", href: "/family-chiropractic-care", image: "/images/yhn-clone/svc-chiropractic.webp", blurb: "Spinal care delivered with clinical precision." },
-      { name: "Functional Posture Analysis", href: "/functional-postural-analysis", image: "/images/yhn-clone/svc-posture.webp", blurb: "Map imbalances before they become injuries." },
-      { name: "Functional Movement Restoration", href: "/functional-movement-restoration", image: "/images/yhn-clone/svc-movement.webp", blurb: "Re-train how your body moves under load." },
-      { name: "Functional Kinesiology", href: "/functional-kinesiology", image: "/images/yhn-clone/svc-kinesiology.webp", blurb: "Muscle testing that uncovers hidden dysfunction." },
-      { name: "Functional Medicine", href: "/functional-medicine", image: "/images/yhn-clone/svc-funcmed.webp", blurb: "Personalized clinical care for chronic conditions." },
-      { name: "Integrative Nutrition", href: "/integrative-nutrition", image: "/images/yhn-clone/svc-nutrition.webp", blurb: "Food as medicine — guided, not guessed." },
-      { name: "Physician Grade Supplementation", href: "/physician-grade-supplementation", image: "/images/yhn-clone/svc-supplements.webp", blurb: "Pharmaceutical-grade, prescriber-curated." },
-      { name: "Lyme Disease Solutions", href: "/lyme-disease-solutions", image: "/images/yhn-clone/svc-lyme.webp", blurb: "Targeted protocols for chronic Lyme recovery." },
     ],
   },
   {
@@ -435,6 +435,27 @@ export const SERVICE_GROUPS: ServiceGroup[] = [
 
 export const ARTICLES = [
   {
+    title: "Why You're Still Tired: A Functional Medicine Look at Fatigue",
+    excerpt:
+      "Told your fatigue is 'just stress'? Here's how functional medicine actually investigates low energy — and what standard labs miss.",
+    href: "/articles/functional-medicine-fatigue-root-causes",
+    image: "/images/yhn-clone/hero-funcmed.webp",
+  },
+  {
+    title: "The Gut-Body Connection: How Digestion Shapes Energy, Mood & Pain",
+    excerpt:
+      "Brain fog, joint pain, mood swings, and skin issues often share a single upstream driver — and it's not where most people are looking.",
+    href: "/articles/functional-medicine-gut-health",
+    image: "/images/yhn-clone/hero-supplements.webp",
+  },
+  {
+    title: "Functional Medicine vs. Conventional Care: When Each Is the Right Fit",
+    excerpt:
+      "Functional medicine isn't anti-medicine. It's a different lens — one that asks why a problem started, not just how to suppress symptoms.",
+    href: "/articles/functional-medicine-vs-conventional",
+    image: "/images/yhn-clone/hero-telehealth.webp",
+  },
+  {
     title: "Top Benefits of Combining Chiropractic Care and Physical Therapy",
     excerpt: "Struggling with pain and stiffness? The chiropractic and physical therapy combination approach may offer the ideal solution.",
     href: "/articles/chiropractic-and-physical-therapy",
@@ -444,31 +465,13 @@ export const ARTICLES = [
     title: "How Your Morning Routine Affects Your Spine",
     excerpt: "Could your morning routine be causing your back pain?",
     href: "/articles/morning-routine-affects-your-spine",
-    image: "/images/articles/woman-suffers-from-chronic-neck-pain--714856.png",
-  },
-  {
-    title: "Why You Wake Up Stiff and How to Fix It",
-    excerpt: "Feeling stiff in the morning? Find out what you can do about it.",
-    href: "/articles/why-you-wake-up-stiff",
-    image: "/images/articles/woman-stretches-on-a-track-field--720902.png",
-  },
-  {
-    title: "Chiropractic Care Can Help Get Your Back Ready for Summer",
-    excerpt: "Want to avoid back issues this summer? Chiropractic care could help protect your back.",
-    href: "/articles/back-ready-for-summer",
-    image: "/images/articles/woman-wearing-sneakers-stands-on-boulder--713132.png",
-  },
-  {
-    title: "How Your Chiropractor Addresses Microtrauma Before Injury",
-    excerpt: "Could a microtrauma be the reason for your pain? Find out how your chiropractor can help.",
-    href: "/articles/microtrauma-before-injury",
     image: "/images/articles/man-with-back-pain-sits-on-tiny-fence--714830.png",
   },
   {
     title: "How Chiropractic Care May Improve Your Stress Levels",
     excerpt: "Has stress taken control of your life? Chiropractic care could help you relax.",
     href: "/articles/chiropractic-care-stress-levels",
-    image: "/images/articles/asian-woman-struggles-with-back-pain--713054.png",
+    image: "/images/yhn-clone/individual-approach.webp",
   },
 ];
 

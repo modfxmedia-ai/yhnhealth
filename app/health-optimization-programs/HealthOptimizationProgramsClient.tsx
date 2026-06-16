@@ -382,8 +382,9 @@ export default function HealthOptimizationProgramsClient() {
       <BookingStrip
         variant="navy"
         eyebrow="Get Started"
-        title="A complimentary 15-minute consultation."
+        title="A complimentary 30-minute consultation."
         copy="Speak with the Doctor to find the program that fits your goals — weight, hormones, energy, longevity, and more."
+        fm
       />
     </main>
   );

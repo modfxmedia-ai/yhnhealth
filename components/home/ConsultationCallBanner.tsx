@@ -1,12 +1,32 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ArrowUpRight, CheckCircle2, Phone, PhoneCall } from "lucide-react";
+import {
+  ArrowUpRight,
+  Calendar,
+  CheckCircle2,
+  FlaskConical,
+  MapPin,
+  PhoneCall,
+  Video,
+} from "lucide-react";
+
+const FM_BOOKING_URL =
+  "https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2";
 
 const BENEFITS = [
-  "No-pressure conversation",
-  "Discuss your case directly",
-  "Decide if we're the right fit",
+  "Speak directly with Dr. Chris",
+  "Review your goals & symptoms",
+  "See if functional medicine fits",
+];
+
+const CASES = [
+  "Fatigue & low energy",
+  "Hormone & thyroid concerns",
+  "Gut & digestive issues",
+  "Autoimmune & inflammation",
+  "Chronic Lyme & complex illness",
+  "Brain fog & sleep issues",
 ];
 
 export default function ConsultationCallBanner() {
@@ -39,20 +59,26 @@ export default function ConsultationCallBanner() {
           <div className="relative grid gap-10 md:grid-cols-12 md:items-center">
             <div className="md:col-span-7">
               <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.32em] text-accent-dark">
-                <PhoneCall size={12} strokeWidth={2.25} />
-                Free 15-Minute Consultation Call
+                <FlaskConical size={12} strokeWidth={2.25} />
+                Functional Medicine · Telehealth
               </span>
 
               <h2 className="mt-6 font-display text-3xl font-bold leading-[1.1] text-brand md:text-4xl lg:text-5xl">
-                Talk to us{" "}
+                Free 30-Min{" "}
                 <span className="font-script font-normal italic text-accent">
-                  before
-                </span>{" "}
-                you book.
+                  Consultation Call
+                </span>
               </h2>
 
               <p className="mt-5 max-w-xl text-base leading-relaxed text-stone md:text-lg">
-                Not sure if we&rsquo;re the right fit? Start with a complimentary phone consultation — no waiting room, no in-person visit required. We&rsquo;ll discuss your case and whether our care can help.
+                Wondering if functional medicine is the right path for your
+                chronic symptoms? Start with a complimentary 30-minute phone
+                consultation with Dr. Chris &mdash; no waiting room, no
+                in-person visit required. Open to residents anywhere in{" "}
+                <span className="font-semibold text-brand">
+                  Pennsylvania &amp; New Jersey
+                </span>
+                .
               </p>
 
               <ul className="mt-6 grid gap-2 sm:grid-cols-3">
@@ -61,51 +87,100 @@ export default function ConsultationCallBanner() {
                     key={b}
                     className="flex items-center gap-2 text-[13px] font-semibold text-brand"
                   >
-                    <CheckCircle2 size={14} className="shrink-0 text-accent" strokeWidth={2.25} />
+                    <CheckCircle2
+                      size={14}
+                      className="shrink-0 text-accent"
+                      strokeWidth={2.25}
+                    />
                     {b}
                   </li>
                 ))}
               </ul>
+
+              <div className="mt-7 rounded-2xl border border-brand/10 bg-cream-light p-5">
+                <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-accent-dark">
+                  Common reasons patients call
+                </p>
+                <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                  {CASES.map((c) => (
+                    <li
+                      key={c}
+                      className="flex items-center gap-2 text-[13px] text-stone"
+                    >
+                      <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                      {c}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             <div className="md:col-span-5">
               <div className="rounded-2xl border border-brand/10 bg-cream-light p-6">
                 <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-accent-dark">
-                  Call Either Location
+                  Schedule Your Free Consult
+                </p>
+                <p className="mt-3 font-display text-xl font-bold leading-tight text-brand md:text-2xl">
+                  30 minutes with Dr. Chris
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-stone">
+                  Functional medicine telehealth visits available across all of
+                  Pennsylvania &amp; New Jersey. Pick a time that works for you.
                 </p>
 
                 <div className="mt-5 space-y-3">
                   <a
+                    href={FM_BOOKING_URL}
+                    target="_blank"
+                    rel="noopener"
+                    className="group flex items-center justify-between gap-3 rounded-2xl border border-accent bg-accent px-5 py-4 transition-all hover:-translate-y-0.5 hover:bg-accent-dark hover:shadow-card"
+                  >
+                    <div>
+                      <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-white/85">
+                        Free 30-Min Consult
+                      </p>
+                      <p className="mt-1 font-display text-lg font-bold text-white">
+                        Book with Dr. Chris
+                      </p>
+                    </div>
+                    <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-accent">
+                      <Calendar size={14} strokeWidth={2.25} />
+                    </span>
+                  </a>
+
+                  <div className="flex items-center justify-between gap-3 rounded-2xl border border-brand/10 bg-white px-5 py-4">
+                    <div className="text-left">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-accent-dark">
+                        Telehealth Coverage
+                      </p>
+                      <p className="mt-1 flex items-center gap-2 text-sm font-semibold text-brand">
+                        <MapPin
+                          size={13}
+                          className="text-accent"
+                          strokeWidth={2.25}
+                        />
+                        All of PA &amp; NJ
+                      </p>
+                    </div>
+                    <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand/5 text-brand">
+                      <Video size={14} strokeWidth={2.25} />
+                    </span>
+                  </div>
+
+                  <a
                     href="tel:8565322063"
                     className="group flex items-center justify-between gap-3 rounded-2xl border border-brand/10 bg-white px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-accent hover:shadow-card"
                   >
-                    <div>
+                    <div className="text-left">
                       <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-accent-dark">
-                        Merchantville, NJ
+                        Prefer to call?
                       </p>
-                      <p className="mt-1 font-display text-lg font-bold text-brand">
+                      <p className="mt-1 font-display text-base font-bold text-brand">
                         (856) 532-2063
                       </p>
                     </div>
                     <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand text-white transition-colors group-hover:bg-accent">
-                      <Phone size={14} strokeWidth={2.25} />
-                    </span>
-                  </a>
-
-                  <a
-                    href="tel:6096517436"
-                    className="group flex items-center justify-between gap-3 rounded-2xl border border-brand/10 bg-white px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-accent hover:shadow-card"
-                  >
-                    <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-accent-dark">
-                        Chalfont, PA
-                      </p>
-                      <p className="mt-1 font-display text-lg font-bold text-brand">
-                        (609) 651-7436
-                      </p>
-                    </div>
-                    <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand text-white transition-colors group-hover:bg-accent">
-                      <Phone size={14} strokeWidth={2.25} />
+                      <PhoneCall size={14} strokeWidth={2.25} />
                     </span>
                   </a>
                 </div>

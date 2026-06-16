@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowRight, Phone, type LucideIcon } from "lucide-react";
+import { ArrowRight, type LucideIcon } from "lucide-react";
 import { Breadcrumbs, FadeUp } from "@/components/page/Primitives";
 
 export type ServiceSection = { heading?: string; body: string };
@@ -84,19 +84,6 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
                   Book Appointment
                   <ArrowRight size={14} strokeWidth={2.5} />
                 </Link>
-                <a
-                  href="tel:8565322063"
-                  className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.22em] text-accent-dark transition-colors hover:border-accent hover:bg-accent hover:text-white"
-                >
-                  <Phone size={13} strokeWidth={2.5} />
-                  Free Consult Call
-                </a>
-                <a
-                  href="tel:8565322063"
-                  className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-brand transition-colors hover:text-accent-dark"
-                >
-                  (856) 532-2063
-                </a>
               </div>
             </FadeUp>
           </div>
@@ -105,7 +92,7 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
         {/* 2 — 2-COL CONTENT */}
         <section className="relative bg-white py-20 md:py-28">
           <div className="mx-auto max-w-[1320px] px-6 lg:px-10">
-            <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+            <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 lg:items-center">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -141,7 +128,7 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
                 className="lg:col-span-5"
               >
                 <div className="sticky top-28">
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-mist shadow-card">
+                  <div className="relative aspect-[4/5] lg:aspect-video overflow-hidden rounded-3xl bg-mist shadow-card">
                     <Image
                       src={imageSrc}
                       alt={imageAlt}
@@ -289,13 +276,15 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
                   Ready to Get Started?
                 </p>
                 <h2 className="mt-4 font-display text-3xl font-bold leading-tight md:text-4xl lg:text-[46px]">
-                  Schedule your visit and meet the team behind {title.toLowerCase()}.
+                  Schedule your visit and meet the team behind{" "}
+                  {title
+                    .split(" ")
+                    .map((w) => (w === w.toUpperCase() ? w : w.toLowerCase()))
+                    .join(" ")}
+                  .
                 </h2>
                 <p className="mt-5 max-w-2xl text-white/75">
                   Two locations · Merchantville, NJ and Chalfont, PA. Same-day appointments available.
-                </p>
-                <p className="mt-3 max-w-2xl text-sm text-white/65">
-                  Not ready to book? Start with a complimentary 15-minute consultation call — no in-person visit required.
                 </p>
               </FadeUp>
 

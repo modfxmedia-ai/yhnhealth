@@ -63,17 +63,18 @@ export default function SpineSimulatorClient() {
             <FadeUp>
               <div className="overflow-hidden rounded-3xl border border-brand/10 shadow-card">
                 <iframe
-                  src="https://www.spinesim.com/"
-                  title="3D Spine Simulator"
-                  className="h-[720px] w-full"
+                  src="https://yhnhealth.com/content/chiromatrix/3d_spine/nerve_chart/index.htm"
+                  title="3D Spine Simulator — Nerve Chart"
+                  className="h-[720px] w-full bg-white"
                   loading="lazy"
+                  allowFullScreen
                 />
               </div>
               <p className="mt-4 text-center text-xs text-stone">
-                Simulator content provided by spinesim.com. If the embed does not load, you
+                Simulator content provided by ChiroMatrix. If the embed does not load, you
                 can{" "}
                 <a
-                  href="https://www.spinesim.com/"
+                  href="https://yhnhealth.com/content/chiromatrix/3d_spine/nerve_chart/index.htm"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-accent-dark underline"

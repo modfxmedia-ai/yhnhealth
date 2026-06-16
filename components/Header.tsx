@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
-import { ChevronDown, ChevronRight, Menu, X, Phone, MapPin, Clock } from "lucide-react";
+import { ChevronDown, ChevronRight, Menu, X, MapPin, Clock } from "lucide-react";
 import { NAV_ITEMS, isNavGroup, type NavChild, type NavItem } from "@/lib/navigation";
 import { cn } from "@/lib/utils";
 
@@ -512,16 +512,6 @@ export default function Header() {
 
             {/* Right cluster */}
             <div className="ml-auto flex shrink-0 items-center gap-2.5">
-              <a
-                href={`tel:${PHONES.merchantville.tel}`}
-                aria-label="Call us"
-                className={cn(
-                  "hidden items-center justify-center rounded-full border border-brand/15 text-brand transition-colors hover:border-accent hover:text-accent-dark md:inline-flex",
-                  scrolled ? "h-9 w-9" : "h-10 w-10"
-                )}
-              >
-                <Phone size={14} strokeWidth={1.75} />
-              </a>
               <Link
                 href="/locations"
                 className={cn(

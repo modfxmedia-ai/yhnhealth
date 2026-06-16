@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/home/HeroSection";
 import WelcomeSection from "@/components/home/WelcomeSection";
+import FunctionalMedicineTelehealthBanner from "@/components/home/FunctionalMedicineTelehealthBanner";
 import LocationCTABanner from "@/components/home/LocationCTABanner";
 import BetterCareSection from "@/components/home/BetterCareSection";
 import ConsultationCallBanner from "@/components/home/ConsultationCallBanner";
@@ -14,15 +15,23 @@ import HoursContactSection from "@/components/home/HoursContactSection";
 import LocationMapSection from "@/components/home/LocationMapSection";
 
 export const metadata: Metadata = {
-  title: "Your Health Now | Chiropractors in Chalfont, PA & Merchantville, NJ",
+  title: "Your Health Now | Functional Medicine & Chiropractic in Chalfont, PA & Merchantville, NJ",
   description:
-    "Are you seeking pain relief? Our chiropractor provides effective treatment for patients like you in Chalfont, PA & Merchantville, NJ. Call today for an appointment!",
-  keywords: ["Chiropractor", "Chiropractic Care", "Merchantville NJ", "Chalfont PA"],
+    "Functional medicine and chiropractic care under one roof — root-cause investigation, advanced labs, and precise hands-on care in Chalfont, PA and Merchantville, NJ. Call today for an appointment.",
+  keywords: [
+    "Functional Medicine",
+    "Chiropractor",
+    "Chiropractic Care",
+    "Root-Cause Care",
+    "Integrative Nutrition",
+    "Merchantville NJ",
+    "Chalfont PA",
+  ],
   alternates: { canonical: "https://yhnhealth.com/" },
   openGraph: {
-    title: "Your Health Now | Chiropractors in Chalfont, PA & Merchantville, NJ",
+    title: "Your Health Now | Functional Medicine & Chiropractic in Chalfont, PA & Merchantville, NJ",
     description:
-      "Are you seeking pain relief? Our chiropractor provides effective treatment for patients like you in Chalfont, PA & Merchantville, NJ. Call today for an appointment!",
+      "Functional medicine and chiropractic care under one roof — root-cause investigation, advanced labs, and precise hands-on care in Chalfont, PA and Merchantville, NJ.",
     url: "https://yhnhealth.com/",
     type: "website",
     siteName: "Your Health Now",
@@ -35,6 +44,7 @@ export default function HomePage() {
     <main>
       <HeroSection />
       <WelcomeSection />
+      <FunctionalMedicineTelehealthBanner />
       <LocationCTABanner />
       <BetterCareSection />
       <ConsultationCallBanner />

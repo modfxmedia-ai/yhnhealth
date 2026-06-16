@@ -154,9 +154,10 @@ export default function HeroSection() {
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="mt-7 max-w-2xl text-lg leading-relaxed text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] md:text-xl"
             >
-              Function well so you feel well. Contemporary chiropractic care
-              built on advanced technology and root-cause science — so health
-              problems don&rsquo;t just go away, they go away and stay away.
+              Function well so you feel well. Functional medicine and
+              chiropractic care, working together — advanced labs, root-cause
+              protocols, and precise hands-on care, so health problems don&rsquo;t
+              just go away, they go away and stay away.
             </motion.p>
 
             <motion.div
@@ -188,7 +189,9 @@ export default function HeroSection() {
 
             {/* Free consultation call note */}
             <motion.a
-              href="tel:8565322063"
+              href="https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2"
+              target="_blank"
+              rel="noopener"
               variants={{
                 hidden: { opacity: 0, y: 16 },
                 visible: { opacity: 1, y: 0 },
@@ -215,7 +218,7 @@ export default function HeroSection() {
                 <span className="rounded-full bg-white/25 px-2 py-0.5 text-[10px] font-extrabold tracking-[0.18em] text-white">
                   FREE
                 </span>
-                <span>15-Min Consultation Call</span>
+                <span>30-Min Functional Medicine Consult</span>
               </span>
               <ChevronRight
                 size={14}

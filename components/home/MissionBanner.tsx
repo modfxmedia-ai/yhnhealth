@@ -69,7 +69,8 @@ export default function MissionBanner() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/80 md:text-xl"
         >
-          We treat the root cause, not just symptoms — so you can return to the
+          Functional medicine and chiropractic care, working together — we
+          treat the root cause, not just symptoms, so you can return to the
           activities you love and keep moving forward, stronger than before.
         </motion.p>
 

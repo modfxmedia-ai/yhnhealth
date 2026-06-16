@@ -22,6 +22,7 @@ export type Article = {
 export const ARTICLE_CATEGORIES = [
   "About Chiropractic Care",
   "Common Conditions Treated",
+  "Functional Medicine",
   "Health & Wellness",
   "Therapies & Techniques",
   "Newsletter Library",
@@ -41,6 +42,29 @@ const IMG = {
   stretch: "/images/articles/woman-stretches-on-a-track-field--720902.png",
   active: "/images/articles/woman-wearing-sneakers-stands-on-boulder--713132.png",
   couple: "/images/articles/old-couple-being-happy-together--720365.png",
+  // Service / functional-medicine themed imagery from /yhn-clone
+  funcmed: "/images/yhn-clone/hero-funcmed.webp",
+  funcmedHero: "/images/yhn-clone/svc-funcmed.webp",
+  supplements: "/images/yhn-clone/hero-supplements.webp",
+  supplementsSvc: "/images/yhn-clone/svc-supplements.webp",
+  telehealth: "/images/yhn-clone/hero-telehealth.webp",
+  nutrition: "/images/yhn-clone/svc-nutrition.webp",
+  lyme: "/images/yhn-clone/svc-lyme.webp",
+  pediatric: "/images/yhn-clone/svc-pediatric.webp",
+  pregnancy: "/images/yhn-clone/svc-pregnancy.webp",
+  decompression: "/images/yhn-clone/svc-decompression.webp",
+  posture: "/images/yhn-clone/svc-posture.webp",
+  movement: "/images/yhn-clone/svc-movement.webp",
+  spine: "/images/yhn-clone/spine-model.webp",
+  practice: "/images/yhn-clone/practice.webp",
+  individualApproach: "/images/yhn-clone/individual-approach.webp",
+  athletic: "/images/yhn-clone/svc-athletic.webp",
+  geriatric: "/images/yhn-clone/svc-geriatric.webp",
+  chiropracticHero: "/images/yhn-clone/svc-chiropractic.webp",
+  iastm: "/images/yhn-clone/svc-iastm.webp",
+  art: "/images/yhn-clone/svc-art.webp",
+  welcome: "/images/yhn-clone/welcome-chiro.webp",
+  inflammation: "/images/yhn-clone/hero-7.webp",
 };
 
 export const ARTICLES: Article[] = [
@@ -100,8 +124,8 @@ export const ARTICLES: Article[] = [
     category: "Common Conditions Treated",
     date: "May 2026",
     readTime: 6,
-    image: IMG.neck,
-    imageAlt: "Woman with chronic neck pain stretching her neck",
+    image: IMG.stretch,
+    imageAlt: "Person stretching after waking up",
     body: [
       {
         type: "p",
@@ -220,8 +244,8 @@ export const ARTICLES: Article[] = [
     category: "Health & Wellness",
     date: "March 2026",
     readTime: 7,
-    image: IMG.exercises,
-    imageAlt: "Woman doing therapeutic exercises on a mat",
+    image: IMG.individualApproach,
+    imageAlt: "Calming wellness setting",
     body: [
       {
         type: "p",
@@ -302,8 +326,8 @@ export const ARTICLES: Article[] = [
     category: "About Chiropractic Care",
     date: "February 2026",
     readTime: 6,
-    image: IMG.couple,
-    imageAlt: "Older couple being happy together outdoors",
+    image: IMG.chiropracticHero,
+    imageAlt: "Chiropractic care benefits",
     body: [
       {
         type: "p",
@@ -409,8 +433,8 @@ export const ARTICLES: Article[] = [
     category: "Therapies & Techniques",
     date: "January 2026",
     readTime: 6,
-    image: IMG.back,
-    imageAlt: "Person with back pain",
+    image: IMG.decompression,
+    imageAlt: "Spinal decompression therapy",
     body: [
       {
         type: "p",
@@ -447,8 +471,8 @@ export const ARTICLES: Article[] = [
     category: "Therapies & Techniques",
     date: "December 2025",
     readTime: 5,
-    image: IMG.shoulder,
-    imageAlt: "Woman with shoulder pain",
+    image: IMG.art,
+    imageAlt: "Active Release Technique therapy",
     body: [
       {
         type: "p",
@@ -477,8 +501,8 @@ export const ARTICLES: Article[] = [
     category: "Therapies & Techniques",
     date: "December 2025",
     readTime: 5,
-    image: IMG.knee,
-    imageAlt: "Runner with knee pain",
+    image: IMG.iastm,
+    imageAlt: "IASTM instrument-assisted soft tissue mobilization",
     body: [
       {
         type: "p",
@@ -510,8 +534,8 @@ export const ARTICLES: Article[] = [
     category: "Wellness4Kids",
     date: "November 2025",
     readTime: 6,
-    image: IMG.exercises,
-    imageAlt: "Child-sized rehab exercise demonstration",
+    image: IMG.pediatric,
+    imageAlt: "Pediatric chiropractic care",
     body: [
       {
         type: "p",
@@ -544,8 +568,8 @@ export const ARTICLES: Article[] = [
     category: "Wellness4Kids",
     date: "November 2025",
     readTime: 6,
-    image: IMG.knee,
-    imageAlt: "Young runner with knee pain",
+    image: IMG.athletic,
+    imageAlt: "Athletic care for young athletes",
     body: [
       {
         type: "p",
@@ -607,8 +631,8 @@ export const ARTICLES: Article[] = [
     category: "Health & Wellness",
     date: "October 2025",
     readTime: 6,
-    image: IMG.back,
-    imageAlt: "Person with desk-related back pain",
+    image: IMG.posture,
+    imageAlt: "Workplace ergonomics and posture",
     body: [
       {
         type: "p",
@@ -641,8 +665,8 @@ export const ARTICLES: Article[] = [
     category: "Common Conditions Treated",
     date: "September 2025",
     readTime: 7,
-    image: IMG.asianBack,
-    imageAlt: "Woman holding her low back in pain",
+    image: IMG.spine,
+    imageAlt: "Sciatica spine anatomy",
     body: [
       {
         type: "p",
@@ -742,8 +766,8 @@ export const ARTICLES: Article[] = [
     category: "Common Conditions Treated",
     date: "August 2025",
     readTime: 7,
-    image: IMG.shoulder,
-    imageAlt: "Woman with shoulder impingement pain",
+    image: IMG.movement,
+    imageAlt: "Shoulder mobility and movement therapy",
     body: [
       {
         type: "p",
@@ -770,8 +794,8 @@ export const ARTICLES: Article[] = [
     category: "Health & Wellness",
     date: "July 2025",
     readTime: 6,
-    image: IMG.couple,
-    imageAlt: "Family wellness imagery",
+    image: IMG.pregnancy,
+    imageAlt: "Prenatal chiropractic care",
     body: [
       {
         type: "p",
@@ -804,8 +828,8 @@ export const ARTICLES: Article[] = [
     category: "Health & Wellness",
     date: "July 2025",
     readTime: 7,
-    image: IMG.stretch,
-    imageAlt: "Active woman stretching",
+    image: IMG.nutrition,
+    imageAlt: "Nutrition for pain and recovery",
     body: [
       {
         type: "p",
@@ -838,8 +862,8 @@ export const ARTICLES: Article[] = [
     category: "Health & Wellness",
     date: "June 2025",
     readTime: 6,
-    image: IMG.back,
-    imageAlt: "Person with back discomfort",
+    image: IMG.practice,
+    imageAlt: "Restorative sleep environment",
     body: [
       {
         type: "p",
@@ -867,8 +891,8 @@ export const ARTICLES: Article[] = [
     category: "About Chiropractic Care",
     date: "June 2025",
     readTime: 6,
-    image: IMG.couple,
-    imageAlt: "Confident older couple",
+    image: IMG.welcome,
+    imageAlt: "Welcoming chiropractic clinic",
     body: [
       {
         type: "p",
@@ -910,8 +934,8 @@ export const ARTICLES: Article[] = [
     category: "About Chiropractic Care",
     date: "May 2025",
     readTime: 5,
-    image: IMG.exercises,
-    imageAlt: "Patient consultation imagery",
+    image: IMG.geriatric,
+    imageAlt: "Patient consultation",
     body: [
       {
         type: "p",
@@ -936,6 +960,314 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: ["benefits-regular-chiropractic-adjustments", "chiropractic-myths"],
+  },
+  {
+    slug: "functional-medicine-fatigue-root-causes",
+    title: "Why You're Still Tired: A Functional Medicine Look at Fatigue",
+    excerpt:
+      "If you've been told your fatigue is 'just stress,' you're not getting the full picture. Here's how functional medicine actually investigates low energy.",
+    category: "Functional Medicine",
+    date: "June 2026",
+    readTime: 8,
+    image: "/images/yhn-clone/hero-funcmed.webp",
+    imageAlt: "Functional medicine consultation",
+    body: [
+      {
+        type: "p",
+        text: "Persistent fatigue is one of the most common reasons patients book a functional medicine consult — and one of the most under-investigated symptoms in conventional care. A normal CBC and a TSH inside the lab range do not rule out a real, fixable problem. They rule out roughly five problems out of dozens.",
+      },
+      { type: "h2", text: "The five drivers we see most often" },
+      {
+        type: "list",
+        items: [
+          "Suboptimal thyroid function (free T3, reverse T3, and antibodies — not just TSH).",
+          "Iron and ferritin in the lower quartile, even when 'normal.'",
+          "Cortisol dysregulation from chronic stress, poor sleep, or post-viral inflammation.",
+          "Nutrient depletion — B12, vitamin D, magnesium, and zinc are common.",
+          "Hidden infections, including chronic Lyme and tick-borne co-infections.",
+        ],
+      },
+      { type: "h2", text: "Why standard labs miss it" },
+      {
+        type: "p",
+        text: "Conventional reference ranges are statistical descriptions of a sick population, not definitions of optimal function. A ferritin of 18 is 'normal' on most lab reports, but it's a near-certain driver of fatigue in a 35-year-old woman. Functional medicine uses tighter, evidence-based optimal ranges and looks at patterns across panels — not isolated red flags.",
+      },
+      {
+        type: "callout",
+        title: "What a workup actually looks like",
+        text: "Comprehensive thyroid panel, full iron studies, fasting insulin and HbA1c, four-point salivary cortisol, vitamin D, B12, methylmalonic acid, and homocysteine — at minimum. From there we add gut, hormone, or tick-borne testing based on your history.",
+      },
+      { type: "h2", text: "When to ask for a different approach" },
+      {
+        type: "p",
+        text: "If you've been told 'everything looks fine' more than once, but you don't feel fine — that's the moment to escalate, not to accept it. Bring your prior labs to a free 30-minute consultation call. We'll tell you honestly whether there's more to investigate or whether a different specialist is the right next step.",
+      },
+    ],
+    related: ["functional-medicine-gut-health", "functional-medicine-vs-conventional"],
+  },
+  {
+    slug: "functional-medicine-gut-health",
+    title: "The Gut-Body Connection: How Digestion Shapes Energy, Mood, and Pain",
+    excerpt:
+      "Bloating, brain fog, joint pain, and skin issues often share a single upstream driver — and it's not where most people are looking.",
+    category: "Functional Medicine",
+    date: "June 2026",
+    readTime: 7,
+    image: "/images/articles/gut-health.jpeg",
+    imageAlt: "Gut health and nutrition focus",
+    body: [
+      {
+        type: "p",
+        text: "Patients are often surprised to learn how often the symptom they came in for traces back to the gut. Brain fog, joint pain, mood swings, eczema, and chronic fatigue can all share a common upstream driver: an inflamed, dysbiotic, or hyper-permeable digestive system.",
+      },
+      { type: "h2", text: "Why the gut matters everywhere else" },
+      {
+        type: "p",
+        text: "Roughly 70 percent of your immune system lives along the lining of your gut. So does the production site for most of your serotonin and a meaningful share of your dopamine precursors. When the gut barrier is compromised, the immune system stays activated, neurotransmitter signaling shifts, and inflammation rises systemically. The symptoms can show up anywhere — skin, joints, mood, energy, focus.",
+      },
+      { type: "h2", text: "What we test (and why) " },
+      {
+        type: "list",
+        items: [
+          "Comprehensive stool analysis — looks at digestion, absorption, inflammation markers, and the microbiome.",
+          "Food sensitivity panels when symptoms suggest immune-mediated reactivity.",
+          "SIBO breath testing for unexplained bloating and IBS-pattern symptoms.",
+          "Organic acids testing for clues about microbial overgrowth and nutrient status.",
+        ],
+      },
+      {
+        type: "callout",
+        title: "Eat-this-not-that lists aren't the answer",
+        text: "Removing foods without a plan to repair the gut is a short-term fix. The real work is reducing inflammation, restoring the microbiome, and rebuilding the barrier — then reintroducing foods one at a time to see what your body actually tolerates.",
+      },
+      { type: "h2", text: "A typical 90-day gut protocol" },
+      {
+        type: "p",
+        text: "We use a structured approach — remove triggers, replace digestive support, reinoculate with targeted strains, and repair the lining with specific nutrients like L-glutamine, zinc carnosine, and butyrate. Most patients feel meaningful change in the first 30 days and see lab markers move in 90.",
+      },
+    ],
+    related: ["functional-medicine-fatigue-root-causes", "functional-medicine-vs-conventional"],
+  },
+  {
+    slug: "functional-medicine-vs-conventional",
+    title: "Functional Medicine vs. Conventional Care: When Each Is the Right Fit",
+    excerpt:
+      "Functional medicine isn't anti-medicine. It's a different lens — one that asks why a problem started, not just how to suppress its symptoms.",
+    category: "Functional Medicine",
+    date: "June 2026",
+    readTime: 6,
+    image: "/images/yhn-clone/hero-telehealth.webp",
+    imageAlt: "Functional medicine telehealth consultation",
+    body: [
+      {
+        type: "p",
+        text: "Conventional medicine is exceptional at acute care, surgery, and life-threatening disease. Functional medicine is exceptional at chronic, multi-system, and 'I don't feel right but my labs are normal' problems. Most patients benefit from both — used appropriately.",
+      },
+      { type: "h2", text: "The core difference" },
+      {
+        type: "p",
+        text: "Conventional care is largely organized around diagnosis codes. You get a label, then a guideline-driven treatment for that label. Functional medicine is organized around systems and root causes. We ask why your immune system is overactive, why your gut isn't absorbing, why your hormones are dysregulated — and we treat the upstream cause, not just the downstream symptom.",
+      },
+      { type: "h2", text: "When functional medicine is the right fit" },
+      {
+        type: "list",
+        items: [
+          "Chronic fatigue, brain fog, or low energy with 'normal' bloodwork.",
+          "Hormonal symptoms, irregular cycles, or peri/menopausal changes.",
+          "Gut symptoms, food reactivity, or autoimmune flares.",
+          "Chronic Lyme, post-viral syndromes, or unexplained inflammation.",
+          "Optimization goals — energy, longevity, metabolic health, sleep.",
+        ],
+      },
+      { type: "h2", text: "When to stay with conventional care" },
+      {
+        type: "p",
+        text: "Acute injuries, infections, surgical needs, cardiac events, cancer screening, and emergency care belong in conventional medicine. We coordinate with your primary care doctor, OB-GYN, oncologist, or specialists when their care is the right tool for the job.",
+      },
+      {
+        type: "callout",
+        title: "Telehealth across PA & NJ",
+        text: "Functional medicine consults at YHN are delivered via secure video to residents anywhere in Pennsylvania and New Jersey. New patients start with a free 30-minute call to see if it's a fit.",
+      },
+    ],
+    related: ["functional-medicine-fatigue-root-causes", "functional-medicine-gut-health"],
+  },
+  {
+    slug: "functional-medicine-hormone-thyroid",
+    title: "Hormones & Thyroid: Why Functional Medicine Looks Beyond TSH",
+    excerpt:
+      "Fatigue, weight gain, anxiety, and brain fog are often labeled 'hormonal' — then dismissed because labs are 'normal.' Here's how functional medicine actually evaluates hormone health.",
+    category: "Functional Medicine",
+    date: "June 2026",
+    readTime: 7,
+    image: IMG.funcmedHero,
+    imageAlt: "Functional medicine hormone and thyroid testing",
+    body: [
+      {
+        type: "p",
+        text: "Hormones don't work in isolation. Thyroid function depends on adrenal status, gut health, nutrient availability, and inflammatory load — and yet most patients are evaluated by a single TSH lab. When that one number falls inside a wide statistical range, they're told everything is fine. For someone whose symptoms scream otherwise, that conversation is exhausting.",
+      },
+      { type: "h2", text: "What we look at instead" },
+      {
+        type: "list",
+        items: [
+          "Full thyroid panel — TSH, free T4, free T3, reverse T3, plus TPO and Tg antibodies.",
+          "Sex hormones in context — estrogen and progesterone balance, free and total testosterone, DHEA-S.",
+          "Adrenal pattern — four-point salivary cortisol with DHEA, not just a 9 a.m. serum cortisol.",
+          "Insulin and HbA1c — because metabolic dysregulation drives hormone disruption upstream.",
+          "Iron, vitamin D, B12, and selenium — without these, your thyroid simply cannot convert T4 into active T3.",
+        ],
+      },
+      { type: "h2", text: "Why 'normal' labs aren't always healthy" },
+      {
+        type: "p",
+        text: "A TSH of 3.8 sits inside most reference ranges, but it's a near-certain driver of fatigue, low mood, and weight resistance in someone with classic symptoms. Functional ranges are tighter, evidence-based, and designed around how you should feel — not just how a sick population looks on average.",
+      },
+      {
+        type: "callout",
+        title: "What hormone optimization actually looks like",
+        text: "We don't reach for hormones first. We address sleep, nutrient status, blood sugar, gut health, and stress load — then layer in targeted support (botanicals, nutrients, sometimes bioidentical hormones) once the foundation is in place.",
+      },
+      { type: "h2", text: "Common patterns we see" },
+      {
+        type: "p",
+        text: "Subclinical hypothyroidism with autoimmune antibodies. Cortisol that crashes by 2 p.m. Estrogen dominance in perimenopause. Low free testosterone in 30-something men. Each pattern has a clear playbook — but only when someone is willing to look past the surface number.",
+      },
+    ],
+    related: ["functional-medicine-fatigue-root-causes", "functional-medicine-vs-conventional", "personalized-nutrition-functional-medicine"],
+  },
+  {
+    slug: "chronic-lyme-functional-medicine",
+    title: "Chronic Lyme: Why It Often Requires a Functional Medicine Approach",
+    excerpt:
+      "Lyme and tick-borne co-infections rarely show up cleanly on standard testing. Here's how a functional medicine workup uncovers what's been missed.",
+    category: "Functional Medicine",
+    date: "June 2026",
+    readTime: 8,
+    image: "/images/articles/chronic-lyme.jpg",
+    imageAlt: "Chronic Lyme disease and tick-borne illness assessment",
+    body: [
+      {
+        type: "p",
+        text: "Patients with chronic Lyme are often dismissed at the most frustrating moment of their journey — when the standard ELISA and Western blot come back negative, or when they're told their symptoms are 'just anxiety.' The truth is that conventional Lyme testing was designed for early, classic cases. It misses chronic, late-stage, and co-infected presentations regularly.",
+      },
+      { type: "h2", text: "What chronic Lyme really looks like" },
+      {
+        type: "list",
+        items: [
+          "Migrating joint pain, especially with no clear injury.",
+          "Severe, unrelenting fatigue that worsens with exertion.",
+          "Brain fog, word-finding trouble, and disrupted sleep.",
+          "Air-hunger, palpitations, or autonomic dysregulation.",
+          "Random, system-jumping symptoms that come and go in waves.",
+        ],
+      },
+      { type: "h2", text: "Better testing changes the picture" },
+      {
+        type: "p",
+        text: "We use specialty labs that look for direct evidence (PCR), antibody patterns across more bands, and common co-infections — Babesia, Bartonella, Ehrlichia, and more. Just as importantly, we look at the inflammatory and immune fingerprint these infections leave behind, even when the bug itself is hard to detect.",
+      },
+      {
+        type: "callout",
+        title: "Treatment is rarely just an antibiotic",
+        text: "Successful chronic Lyme protocols address the infection, the immune dysregulation, the inflammatory load, the gut, and the detoxification pathways simultaneously. Antibiotics alone — without that scaffolding — usually disappoint.",
+      },
+      { type: "h2", text: "When to suspect Lyme" },
+      {
+        type: "p",
+        text: "If you have multiple symptoms across multiple body systems, if you've been worse since a flu-like illness or tick exposure (even years ago), or if you've seen several specialists with no clear answer — it's worth evaluating. Many of our patients didn't realize Lyme was on the table until five-plus years into their journey.",
+      },
+    ],
+    related: ["functional-medicine-fatigue-root-causes", "functional-medicine-gut-health", "inflammation-chronic-illness"],
+  },
+  {
+    slug: "inflammation-chronic-illness",
+    title: "Inflammation: The Common Thread Behind Chronic Illness",
+    excerpt:
+      "Heart disease, depression, autoimmune flares, joint pain, brain fog — they look unrelated, but they often share one upstream driver.",
+    category: "Functional Medicine",
+    date: "June 2026",
+    readTime: 6,
+    image: "/images/articles/inflammation.jpeg",
+    imageAlt: "Functional medicine approach to chronic inflammation",
+    body: [
+      {
+        type: "p",
+        text: "Ask conventional medicine what's behind heart disease, depression, autoimmune disease, and chronic pain, and you'll get four different answers. Ask functional medicine the same question, and you'll often get one: chronic, low-grade inflammation. Treating it directly — at the source — is one of the most powerful things you can do for long-term health.",
+      },
+      { type: "h2", text: "Where the inflammation actually starts" },
+      {
+        type: "list",
+        items: [
+          "Diet — refined carbs, industrial seed oils, and ultra-processed foods.",
+          "Gut dysbiosis and intestinal hyper-permeability ('leaky gut').",
+          "Chronic stress and cortisol dysregulation.",
+          "Hidden infections — chronic viral, bacterial, or tick-borne.",
+          "Toxic exposures — mold, heavy metals, plastics.",
+          "Poor sleep and circadian disruption.",
+        ],
+      },
+      { type: "h2", text: "How we measure it" },
+      {
+        type: "p",
+        text: "High-sensitivity CRP, homocysteine, fasting insulin, oxidized LDL, ferritin, fibrinogen, and a comprehensive metabolic panel — together — paint a clearer picture than any single marker. Patterns matter more than any one number.",
+      },
+      {
+        type: "callout",
+        title: "Anti-inflammatory living isn't a fad diet",
+        text: "It's the daily layering of food quality, sleep regularity, gut repair, stress management, and movement — done well over months, not days. The labs follow. The symptoms follow. That's the work.",
+      },
+      { type: "h2", text: "Why this matters" },
+      {
+        type: "p",
+        text: "Lower the inflammation, and you don't just feel better — you reduce risk for almost every chronic disease that drives healthcare costs and shortens lives. That's why we treat it early and aggressively, even when conventional labs are still 'normal.'",
+      },
+    ],
+    related: ["functional-medicine-fatigue-root-causes", "functional-medicine-gut-health", "functional-medicine-vs-conventional"],
+  },
+  {
+    slug: "personalized-nutrition-functional-medicine",
+    title: "Personalized Nutrition: Why One Diet Never Fits All",
+    excerpt:
+      "Keto, paleo, plant-based, Mediterranean — every diet has fans and critics. Functional medicine asks a different question: what does your body actually need?",
+    category: "Functional Medicine",
+    date: "June 2026",
+    readTime: 6,
+    image: IMG.supplementsSvc,
+    imageAlt: "Personalized nutrition planning in functional medicine",
+    body: [
+      {
+        type: "p",
+        text: "There is no single diet that works for everyone. The same food that quiets one person's inflammation can spike another person's. Functional medicine starts with the individual — your labs, your symptoms, your goals — and builds the plan from there.",
+      },
+      { type: "h2", text: "What we evaluate before recommending a plan" },
+      {
+        type: "list",
+        items: [
+          "Inflammatory markers and food sensitivity patterns.",
+          "Blood sugar handling — fasting insulin, HbA1c, glucose response.",
+          "Gut microbiome status and digestive function.",
+          "Nutrient deficiencies — iron, B vitamins, vitamin D, magnesium, zinc.",
+          "Lifestyle realities — schedule, family, cooking time, budget.",
+        ],
+      },
+      { type: "h2", text: "Why generic diets fail" },
+      {
+        type: "p",
+        text: "Most diet rules are built for a population, not a person. Strict keto can be transformative for one patient and disastrous for another with low-functioning thyroid or chronic stress. Plant-based eating can be healing for some and trigger nutrient depletion in others. The protocol must match the patient.",
+      },
+      {
+        type: "callout",
+        title: "Food first, then targeted supplements",
+        text: "We use food as the foundation and add physician-grade supplements only where labs and symptoms point to a specific need — never as a shotgun approach.",
+      },
+      { type: "h2", text: "What success looks like" },
+      {
+        type: "p",
+        text: "Not weight loss alone. Better energy, stable mood, improved labs, fewer cravings, better sleep, lower inflammation. Weight changes follow when the plan fits — but they're a side effect of getting the system right, not the goal in isolation.",
+      },
+    ],
+    related: ["functional-medicine-gut-health", "functional-medicine-fatigue-root-causes", "functional-medicine-hormone-thyroid"],
   },
 ];
 

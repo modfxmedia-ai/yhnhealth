@@ -1,0 +1,165 @@
+"use client";
+
+import Link from "next/link";
+import { motion } from "motion/react";
+import {
+  ArrowUpRight,
+  Calendar,
+  FlaskConical,
+  MapPin,
+  Phone,
+  Video,
+} from "lucide-react";
+
+const FM_BOOKING_URL =
+  "https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2";
+
+const FEATURES = [
+  "Advanced labs & root-cause workups",
+  "Personalized clinical protocols",
+  "Same depth, same doctor — over secure video",
+];
+
+export default function FunctionalMedicineTelehealthBanner() {
+  return (
+    <section className="relative overflow-hidden bg-brand-dark">
+      {/* Decorative rings */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full border-2 border-white/10"
+      />
+      <motion.div
+        aria-hidden="true"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+        className="pointer-events-none absolute -bottom-32 -left-32 h-80 w-80 rounded-full border border-dashed border-white/10"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_30%,rgba(199,134,49,0.18),transparent_55%),radial-gradient(circle_at_85%_70%,rgba(123,143,181,0.18),transparent_55%)]"
+      />
+
+      <motion.div
+        initial={{ opacity: 0, y: 28 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="relative z-10 grid grid-cols-1 gap-10 px-6 py-14 sm:px-8 sm:py-16 md:grid-cols-12 md:items-center md:gap-8 md:px-14 md:py-20"
+      >
+        {/* LEFT — Headline + value */}
+        <div className="md:col-span-7">
+          <span className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/15 px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.32em] text-accent backdrop-blur">
+            <FlaskConical size={11} strokeWidth={2.25} />
+            Functional Medicine · Telehealth
+          </span>
+
+          <h3 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
+            Functional medicine,{" "}
+            <span className="font-script font-normal italic text-accent">
+              wherever you are
+            </span>
+          </h3>
+
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75 md:text-lg">
+            Doctor-led functional medicine care delivered across{" "}
+            <span className="font-semibold text-white">
+              all of Pennsylvania &amp; New Jersey
+            </span>{" "}
+            via secure video. No commute, no waiting room — just deep
+            root-cause work with Dr. Chris.
+          </p>
+
+          <ul className="mt-6 grid gap-2 sm:grid-cols-3">
+            {FEATURES.map((f) => (
+              <li
+                key={f}
+                className="flex items-start gap-2 text-[13px] font-semibold text-white/85"
+              >
+                <span className="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                {f}
+              </li>
+            ))}
+          </ul>
+
+          {/* Coverage strip */}
+          <div className="mt-7 flex flex-wrap items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 backdrop-blur">
+              <MapPin size={12} className="text-accent" strokeWidth={2.25} />
+              Pennsylvania
+            </span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 backdrop-blur">
+              <MapPin size={12} className="text-accent" strokeWidth={2.25} />
+              New Jersey
+            </span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 backdrop-blur">
+              <Video size={12} className="text-accent" strokeWidth={2.25} />
+              Secure Video Visits
+            </span>
+          </div>
+        </div>
+
+        {/* RIGHT — Booking card */}
+        <div className="md:col-span-5">
+          <div className="rounded-2xl border border-white/15 bg-white/5 p-6 backdrop-blur">
+            <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-accent">
+              Book Functional Medicine
+            </p>
+            <p className="mt-3 font-display text-2xl font-bold leading-tight text-white">
+              Schedule with Dr. Chris
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-white/70">
+              Telehealth visits open to PA &amp; NJ residents. New patients can
+              start with a free 30-minute consultation call.
+            </p>
+
+            <div className="mt-5 space-y-3">
+              <a
+                href={FM_BOOKING_URL}
+                target="_blank"
+                rel="noopener"
+                className="group flex items-center justify-between gap-3 rounded-2xl border border-accent bg-accent px-5 py-4 transition-all hover:-translate-y-0.5 hover:bg-accent-dark hover:shadow-card"
+              >
+                <div className="text-left">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-white/85">
+                    Telehealth Booking
+                  </p>
+                  <p className="mt-0.5 font-display text-base font-bold text-white">
+                    Book a Telehealth Visit
+                  </p>
+                </div>
+                <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-accent">
+                  <Calendar size={14} strokeWidth={2.25} />
+                </span>
+              </a>
+
+              <Link
+                href="/functional-medicine"
+                className="group flex items-center justify-between gap-3 rounded-2xl border border-white/15 bg-white/5 px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-accent hover:bg-white/10"
+              >
+                <div className="text-left">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-white/55">
+                    Learn More
+                  </p>
+                  <p className="mt-0.5 font-display text-base font-bold text-white">
+                    Explore Functional Medicine
+                  </p>
+                </div>
+                <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-accent transition-colors group-hover:bg-accent group-hover:text-white">
+                  <ArrowUpRight size={14} strokeWidth={2.25} />
+                </span>
+              </Link>
+            </div>
+
+            <a
+              href="tel:8565322063"
+              className="mt-4 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-white/65 transition-colors hover:text-accent"
+            >
+              <Phone size={12} strokeWidth={2.25} />
+              Or call (856) 532-2063
+            </a>
+          </div>
+        </div>
+      </motion.div>
+    </section>
+  );
+}

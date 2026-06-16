@@ -3,8 +3,11 @@
 import type { ReactElement } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { Clock, Phone, MapPin, ArrowUpRight } from "lucide-react";
+import { Clock, Phone, MapPin, ArrowUpRight, FlaskConical, Video, Calendar } from "lucide-react";
 import { HOURS, LOCATIONS } from "@/lib/siteData";
+
+const FM_BOOKING_URL =
+  "https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2";
 
 type IconProps = { size?: number };
 
@@ -113,6 +116,18 @@ export default function HoursContactSection() {
                   Call your nearest location to schedule a same-day visit.
                 </p>
               </div>
+
+              <div className="mt-4 rounded-2xl border border-accent/20 bg-accent/5 p-5">
+                <p className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-accent-dark">
+                  <Video size={12} strokeWidth={2.25} />
+                  Functional Medicine Telehealth
+                </p>
+                <p className="mt-1 text-sm text-stone">
+                  Telehealth visits with Dr. Chris are scheduled by appointment
+                  and run independently of office hours. Available across all
+                  of PA &amp; NJ.
+                </p>
+              </div>
             </div>
           </motion.div>
 
@@ -214,6 +229,94 @@ export default function HoursContactSection() {
                 </div>
               </motion.div>
             ))}
+
+            {/* FM Telehealth — third "location" */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.6, delay: LOCATIONS.length * 0.1 }}
+              className="group relative overflow-hidden rounded-3xl border border-accent/30 bg-brand p-8 shadow-card transition-shadow duration-500 hover:shadow-card-hover md:p-10"
+            >
+              <div
+                aria-hidden="true"
+                className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-accent/15 opacity-60 transition-opacity duration-500 group-hover:opacity-100"
+              />
+              <div className="relative flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <p className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-accent">
+                    <FlaskConical size={11} strokeWidth={2.25} />
+                    Pennsylvania &amp; New Jersey
+                  </p>
+                  <h3 className="mt-2 font-display text-3xl font-bold text-white md:text-4xl">
+                    Functional Medicine Telehealth
+                  </h3>
+                  <p className="mt-3 max-w-md text-sm leading-relaxed text-white/75">
+                    Doctor-led functional medicine care with Dr. Chris,
+                    delivered via secure video. Open to residents anywhere in
+                    PA &amp; NJ — no commute, no waiting room.
+                  </p>
+                  <div className="mt-5 space-y-3">
+                    <p className="flex items-start gap-3 text-sm text-white/80">
+                      <Video
+                        size={16}
+                        className="mt-0.5 shrink-0 text-accent"
+                        strokeWidth={1.75}
+                      />
+                      Secure video visits · scheduled by appointment
+                    </p>
+                    <p className="flex items-start gap-3 text-sm text-white/80">
+                      <MapPin
+                        size={16}
+                        className="mt-0.5 shrink-0 text-accent"
+                        strokeWidth={1.75}
+                      />
+                      Available across all of PA &amp; NJ
+                    </p>
+                    <a
+                      href="tel:8565322063"
+                      className="flex items-center gap-3 text-sm font-semibold text-white hover:text-accent"
+                    >
+                      <Phone
+                        size={16}
+                        className="shrink-0 text-accent"
+                        strokeWidth={1.75}
+                      />
+                      (856) 532-2063
+                    </a>
+                  </div>
+
+                  <div className="mt-5 flex items-center gap-2">
+                    <span className="text-[10px] font-semibold uppercase tracking-[0.24em] text-white/55">
+                      Free 30-min consult available
+                    </span>
+                    <span className="h-px flex-1 bg-white/15" />
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-3">
+                  <Link
+                    href={FM_BOOKING_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/btn inline-flex items-center justify-center gap-3 rounded-full bg-accent px-6 py-3 text-[10px] font-bold uppercase tracking-[0.22em] text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-accent-dark"
+                  >
+                    <Calendar size={12} strokeWidth={2.25} />
+                    Book Telehealth
+                    <ArrowUpRight
+                      size={12}
+                      className="transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5"
+                    />
+                  </Link>
+                  <Link
+                    href="/functional-medicine"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-3 text-[10px] font-bold uppercase tracking-[0.22em] text-white transition-colors hover:border-accent hover:text-accent"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>

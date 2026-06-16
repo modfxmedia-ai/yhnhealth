@@ -179,7 +179,7 @@ export default function FunctionalMedicineClient() {
         <div className="mx-auto max-w-[1320px] px-6 py-20 lg:px-10 lg:py-24">
           <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
             <FadeUp className="lg:col-span-5">
-              <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent-dark">Tab 1 · Care Pathway</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent-dark">Care Pathway</p>
               <h2 className="mt-4 font-display text-4xl font-bold leading-tight text-brand md:text-5xl">
                 Personalized <span className="font-script font-normal italic text-accent">Clinical Care.</span>
               </h2>
@@ -277,8 +277,9 @@ export default function FunctionalMedicineClient() {
       <BookingStrip
         variant="navy"
         eyebrow="Schedule"
-        title="A complimentary 15-minute consultation."
+        title="A complimentary 30-minute consultation."
         copy="Speak with Dr. Chris before you commit. We'll discuss your case and whether functional medicine is the right fit."
+        fm
       />
     </main>
   );

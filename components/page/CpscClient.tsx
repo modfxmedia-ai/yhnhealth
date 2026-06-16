@@ -17,6 +17,152 @@ const cardItem = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
 };
 
+const ORBIT_RADIUS = 38; // % from center of the square card
+const ORBIT_NODES = Array.from({ length: 6 }, (_, i) => {
+  const angle = (i * 60 - 90) * (Math.PI / 180);
+  return {
+    label: `M${i + 1}`,
+    x: 50 + Math.cos(angle) * ORBIT_RADIUS,
+    y: 50 + Math.sin(angle) * ORBIT_RADIUS,
+    delay: i * 0.45,
+  };
+});
+
+function CpscOrbitGraphic() {
+  return (
+    <div className="relative aspect-square w-full max-w-[34rem] lg:max-w-[36rem]">
+      {/* Background plate */}
+      <div className="absolute inset-0 overflow-hidden rounded-3xl bg-gradient-to-br from-white via-cream-light to-white shadow-card ring-1 ring-brand/10">
+        <div
+          aria-hidden
+          className="absolute inset-0 opacity-[0.07]"
+          style={{
+            backgroundImage: "radial-gradient(#1F3563 1px, transparent 1px)",
+            backgroundSize: "18px 18px",
+          }}
+        />
+        <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-accent/15 blur-3xl" aria-hidden />
+        <div className="absolute -bottom-24 -left-16 h-56 w-56 rounded-full bg-brand/10 blur-3xl" aria-hidden />
+      </div>
+
+      {/* Outer dashed orbit (rotating CW) */}
+      <motion.div
+        aria-hidden
+        animate={{ rotate: 360 }}
+        transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+        className="absolute inset-[6%] rounded-full border-2 border-dashed border-brand/15"
+      />
+
+      {/* Inner dashed orbit (rotating CCW) */}
+      <motion.div
+        aria-hidden
+        animate={{ rotate: -360 }}
+        transition={{ duration: 70, repeat: Infinity, ease: "linear" }}
+        className="absolute inset-[24%] rounded-full border border-dashed border-accent/35"
+      />
+
+      {/* Connector rays */}
+      <svg
+        aria-hidden
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+        className="absolute inset-0 h-full w-full"
+      >
+        {ORBIT_NODES.map((n, i) => (
+          <motion.line
+            key={i}
+            x1="50"
+            y1="50"
+            x2={n.x}
+            y2={n.y}
+            stroke="#1F3563"
+            strokeWidth="0.25"
+            strokeOpacity="0.25"
+            strokeDasharray="1.5 1.5"
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={{ pathLength: [0, 1, 1, 0], opacity: [0, 0.7, 0.7, 0] }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              delay: n.delay,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+      </svg>
+
+      {/* Module nodes */}
+      {ORBIT_NODES.map((n, i) => (
+        <motion.div
+          key={i}
+          style={{ top: `${n.y}%`, left: `${n.x}%` }}
+          className="absolute -translate-x-1/2 -translate-y-1/2"
+          initial={{ scale: 0, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.45, delay: 0.25 + i * 0.08, ease: "easeOut" }}
+        >
+          <motion.div
+            animate={{ y: [0, -5, 0] }}
+            transition={{
+              duration: 3.6,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: n.delay,
+            }}
+            className="relative flex h-16 w-16 items-center justify-center rounded-2xl bg-white font-display text-base font-bold text-brand-dark shadow-card ring-1 ring-brand/10"
+          >
+            <motion.span
+              aria-hidden
+              animate={{ scale: [1, 1.35, 1], opacity: [0.5, 0, 0.5] }}
+              transition={{
+                duration: 2.4,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: n.delay,
+              }}
+              className="absolute inset-0 rounded-2xl bg-accent/40"
+            />
+            <span className="relative">{n.label}</span>
+          </motion.div>
+        </motion.div>
+      ))}
+
+      {/* Center badge */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+        <motion.div
+          initial={{ scale: 0.85, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.55, ease: "easeOut", delay: 0.15 }}
+          className="relative"
+        >
+          <motion.span
+            aria-hidden
+            animate={{ scale: [1, 1.18, 1], opacity: [0.45, 0, 0.45] }}
+            transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute inset-0 rounded-full bg-accent"
+          />
+          <div className="relative flex h-44 w-44 flex-col items-center justify-center rounded-full bg-brand-dark text-white shadow-card ring-4 ring-white">
+            <span className="font-display text-3xl font-bold tracking-[0.18em]">CPSC</span>
+            <span className="mt-1.5 text-[9px] font-bold uppercase tracking-[0.3em] text-accent">
+              Certification
+            </span>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Corner pills */}
+      <div className="absolute left-4 top-4 rounded-full bg-white/95 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-accent-dark shadow-sm ring-1 ring-brand/10 backdrop-blur">
+        40 CE Hours
+      </div>
+      <div className="absolute bottom-4 right-4 rounded-full bg-brand px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-accent shadow-sm">
+        6 Modules · 54 Hrs
+      </div>
+    </div>
+  );
+}
+
 export default function CpscClient() {
   return (
     <main>
@@ -88,15 +234,7 @@ export default function CpscClient() {
               </div>
               <div className="lg:col-span-5 lg:flex lg:items-center lg:justify-center">
                 <FadeUp delay={0.1}>
-                  <div className="relative aspect-square w-full max-w-sm rounded-3xl bg-white p-10 shadow-card">
-                    <Image
-                      src="/images/modules/sherman-logo.webp"
-                      alt="Sherman College of Chiropractic"
-                      fill
-                      sizes="(min-width:1024px) 30vw, 80vw"
-                      className="object-contain p-10"
-                    />
-                  </div>
+                  <CpscOrbitGraphic />
                 </FadeUp>
               </div>
             </div>
@@ -342,13 +480,13 @@ export default function CpscClient() {
             <div className="lg:col-span-5">
               <FadeUp delay={0.1}>
                 <a
-                  href="tel:8565322063"
+                  href="tel:6096517436"
                   className="flex items-center gap-4 rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:bg-white/10"
                 >
                   <Phone className="h-5 w-5 text-accent" />
                   <div>
                     <div className="text-[10px] uppercase tracking-[0.3em] text-accent">Call YHN</div>
-                    <div className="font-display text-2xl">(856) 532-2063</div>
+                    <div className="font-display text-2xl">(609) 651-7436</div>
                   </div>
                 </a>
               </FadeUp>

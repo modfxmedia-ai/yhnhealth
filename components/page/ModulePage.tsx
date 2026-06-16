@@ -267,11 +267,11 @@ export default function ModulePage({ config }: { config: ModuleConfig }) {
                     <li className="flex gap-3"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />Locations: Ewing, NJ &amp; Sherman College, SC</li>
                   </ul>
                   <a
-                    href="tel:8565322063"
+                    href="tel:6096517436"
                     className="mt-6 flex items-center gap-3 rounded-2xl bg-white/5 p-4 transition hover:bg-white/10"
                   >
                     <Phone className="h-4 w-4 text-accent" />
-                    <span className="text-sm font-medium">(856) 532-2063</span>
+                    <span className="text-sm font-medium">(609) 651-7436</span>
                   </a>
                 </div>
               </FadeUp>

@@ -7,9 +7,9 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Heart, Sparkles, Shield } from "lucide-react";
 
 const PARAGRAPHS = [
-  "We provide the highest quality of health care available today, helping health problems not just go away — but go away and never come back.",
-  "We identify and treat the root cause of your concerns, producing health instead of managing symptoms, and giving you back the quality of life you deserve.",
-  "True health care is proactive, preventative, and an ongoing experience we share with our patients.",
+  "We pair functional medicine with chiropractic care so you get the deeper picture and the hands-on relief — root-cause investigation, advanced labs, and precise in-clinic care all under one roof.",
+  "For chronic conditions, complex illness, fatigue, or hormone and digestive concerns, our doctor-led functional medicine protocols look upstream of your symptoms. For pain, mobility, and nervous-system care, our chiropractic team delivers patient-specific adjustments and soft-tissue work.",
+  "True health care is proactive, preventative, and an ongoing experience we share with our patients — whether you come in for an adjustment, a lab review, or both.",
 ];
 
 function Counter({ end, suffix = "" }: { end: number; suffix?: string }) {
@@ -40,9 +40,9 @@ function Counter({ end, suffix = "" }: { end: number; suffix?: string }) {
 }
 
 const PILLS = [
-  { icon: Heart, label: "Whole-Body Care" },
-  { icon: Shield, label: "Evidence-Based" },
-  { icon: Sparkles, label: "Personalized Plans" },
+  { icon: Sparkles, label: "Functional Medicine" },
+  { icon: Heart, label: "Chiropractic Care" },
+  { icon: Shield, label: "Root-Cause Solutions" },
 ];
 
 export default function WelcomeSection() {
@@ -69,7 +69,7 @@ export default function WelcomeSection() {
           <div className="relative aspect-[5/6] w-full max-w-lg overflow-hidden rounded-[28px] shadow-card-hover sm:rounded-[40px]">
             <Image
               src="/images/yhn-clone/your-health-now.jpg"
-              alt="Chiropractor at Your Health Now"
+              alt="Functional medicine and chiropractic care at Your Health Now"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
@@ -110,7 +110,7 @@ export default function WelcomeSection() {
                 Root-Cause Care
               </p>
               <p className="text-[10px] uppercase tracking-[0.22em] text-stone-light">
-                Whole-Body Approach
+                Functional Medicine + Chiropractic
               </p>
             </div>
           </motion.div>
@@ -181,10 +181,10 @@ export default function WelcomeSection() {
               />
             </Link>
             <Link
-              href="/about-us"
+              href="/functional-medicine"
               className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.22em] text-brand hover:text-accent-dark"
             >
-              About our practice
+              Explore functional medicine
               <ArrowRight size={14} />
             </Link>
           </div>

@@ -35,11 +35,13 @@ export function BookingStrip({
   eyebrow = "Book Now",
   title = "Ready to feel the difference?",
   copy = "Schedule your visit at our Merchantville, NJ or Chalfont, PA location.",
+  fm = false,
 }: {
   variant?: "navy" | "cream" | "gold" | "split";
   eyebrow?: string;
   title?: string;
   copy?: string;
+  fm?: boolean;
 }) {
   const palettes = {
     navy: "bg-brand text-white",
@@ -47,6 +49,9 @@ export function BookingStrip({
     gold: "bg-accent text-white",
     split: "bg-gradient-to-r from-brand via-brand-dark to-brand text-white",
   } as const;
+
+  const FM_BOOKING_URL =
+    "https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2";
 
   return (
     <motion.section
@@ -63,23 +68,29 @@ export function BookingStrip({
           </p>
           <h2 className="mt-2 max-w-2xl font-display text-2xl font-bold leading-tight md:text-3xl">{title}</h2>
           <p className={`mt-2 max-w-xl text-sm ${variant === "cream" ? "text-stone" : "text-white/75"}`}>{copy}</p>
-          <p className={`mt-2 max-w-xl text-[12px] ${variant === "cream" ? "text-stone-light" : "text-white/55"}`}>
-            Prefer to talk first? Start with a free 15-minute consultation call.
-          </p>
+          {!fm && (
+            <p className={`mt-2 max-w-xl text-[12px] ${variant === "cream" ? "text-stone-light" : "text-white/55"}`}>
+              Prefer to talk first? Start with a free 15-minute consultation call.
+            </p>
+          )}
         </div>
         <div className="flex flex-wrap items-center gap-3">
-          <Link
-            href="/locations"
-            className={`inline-flex items-center gap-2 rounded-full px-7 py-3 text-[11px] font-bold uppercase tracking-[0.24em] transition-all ${
-              variant === "cream"
-                ? "bg-brand text-white hover:bg-brand-dark"
-                : "bg-white text-brand hover:bg-accent hover:text-white"
-            }`}
-          >
-            Book Appointment
-          </Link>
+          {!fm && (
+            <Link
+              href="/locations"
+              className={`inline-flex items-center gap-2 rounded-full px-7 py-3 text-[11px] font-bold uppercase tracking-[0.24em] transition-all ${
+                variant === "cream"
+                  ? "bg-brand text-white hover:bg-brand-dark"
+                  : "bg-white text-brand hover:bg-accent hover:text-white"
+              }`}
+            >
+              Book Appointment
+            </Link>
+          )}
           <a
-            href="tel:8565322063"
+            href={fm ? FM_BOOKING_URL : "tel:8565322063"}
+            target={fm ? "_blank" : undefined}
+            rel={fm ? "noopener noreferrer" : undefined}
             className={`inline-flex items-center gap-2 rounded-full border px-5 py-3 text-[11px] font-bold uppercase tracking-[0.22em] transition-colors ${
               variant === "cream"
                 ? "border-brand/20 text-brand hover:border-accent hover:text-accent-dark"

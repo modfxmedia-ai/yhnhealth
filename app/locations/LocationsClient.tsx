@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
-import { ArrowUpRight, MapPin, Phone, Clock, Mail } from "lucide-react";
+import { ArrowUpRight, MapPin, Phone, Clock, Mail, FlaskConical, Video, Calendar } from "lucide-react";
 import { Breadcrumbs, FadeUp } from "@/components/page/Primitives";
 
 type Loc = {
@@ -50,6 +50,12 @@ const HOURS = [
   { day: "Saturday", time: "Closed" },
   { day: "Sunday", time: "Closed" },
 ];
+
+const FM_BOOKING_URL =
+  "https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2";
+
+const FM_REGION_MAP =
+  "https://www.google.com/maps?q=Pennsylvania+and+New+Jersey,+USA&z=7&output=embed";
 
 export default function LocationsClient() {
   return (
@@ -206,6 +212,124 @@ export default function LocationsClient() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* FUNCTIONAL MEDICINE — TELEHEALTH STATEWIDE */}
+      <section className="relative bg-cream-light">
+        <div className="mx-auto max-w-[1320px] px-6 pb-20 lg:px-10 lg:pb-28">
+          <FadeUp>
+            <div className="flex flex-col items-start gap-3 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.32em] text-accent-dark">
+                  <FlaskConical size={11} strokeWidth={2.25} />
+                  Functional Medicine · Telehealth
+                </p>
+                <h2 className="mt-4 max-w-2xl font-display text-3xl font-bold leading-tight text-brand md:text-4xl lg:text-[44px]">
+                  Serving all of <span className="font-script font-normal italic text-accent">PA &amp; NJ.</span>
+                </h2>
+              </div>
+              <p className="max-w-md text-sm leading-relaxed text-stone md:text-right">
+                Dr. Chris sees functional medicine patients via secure video visit anywhere in Pennsylvania and New Jersey — no in-person visit required.
+              </p>
+            </div>
+          </FadeUp>
+
+          <FadeUp delay={0.1}>
+            <article className="mt-10 overflow-hidden rounded-3xl bg-white shadow-card">
+              <div className="grid grid-cols-1 lg:grid-cols-12">
+                {/* Map */}
+                <div className="relative aspect-[16/10] w-full bg-mist lg:col-span-7 lg:aspect-auto">
+                  <iframe
+                    src={FM_REGION_MAP}
+                    title="Pennsylvania and New Jersey service area"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="h-full w-full border-0"
+                  />
+                  <div className="pointer-events-none absolute left-5 top-5 inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.28em] text-white shadow-card">
+                    <Video size={11} strokeWidth={2.5} />
+                    PA &amp; NJ Coverage
+                  </div>
+                </div>
+
+                {/* Details */}
+                <div className="bg-brand-dark px-7 py-9 text-white md:px-9 md:py-11 lg:col-span-5">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent">
+                    Telehealth · Statewide
+                  </p>
+                  <h3 className="mt-3 font-display text-2xl font-bold leading-tight md:text-3xl">
+                    Functional medicine, wherever you are.
+                  </h3>
+                  <p className="mt-4 text-sm leading-relaxed text-white/75">
+                    Doctor-led functional medicine with Dr. Chris. Available to residents anywhere in Pennsylvania and New Jersey via secure video visit.
+                  </p>
+
+                  <div className="mt-7 space-y-4">
+                    <div className="flex items-start gap-3">
+                      <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/10 text-accent">
+                        <Video size={15} strokeWidth={2} />
+                      </span>
+                      <div>
+                        <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-white/55">
+                          Format
+                        </p>
+                        <p className="mt-1 text-sm font-semibold">Secure video visits — no clinic visit required</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/10 text-accent">
+                        <MapPin size={15} strokeWidth={2} />
+                      </span>
+                      <div>
+                        <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-white/55">
+                          Coverage
+                        </p>
+                        <p className="mt-1 text-sm font-semibold">All of Pennsylvania &amp; New Jersey</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/10 text-accent">
+                        <Phone size={15} strokeWidth={2} />
+                      </span>
+                      <div>
+                        <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-white/55">
+                          Schedule by phone
+                        </p>
+                        <a href="tel:6096517436" className="mt-1 block text-sm font-semibold hover:text-accent">
+                          (609) 651-7436
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 flex flex-col gap-3">
+                    <a
+                      href={FM_BOOKING_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center justify-between gap-3 rounded-full bg-accent px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:bg-accent-dark"
+                    >
+                      <span className="inline-flex items-center gap-2">
+                        <Calendar size={13} strokeWidth={2.5} />
+                        Book Free 30-Min Consult
+                      </span>
+                      <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5" />
+                    </a>
+                    <Link
+                      href="/functional-medicine"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-6 py-3 text-[11px] font-bold uppercase tracking-[0.22em] text-white/85 transition-colors hover:border-accent hover:text-accent"
+                    >
+                      Explore Functional Medicine
+                      <ArrowUpRight size={12} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </FadeUp>
         </div>
       </section>
 

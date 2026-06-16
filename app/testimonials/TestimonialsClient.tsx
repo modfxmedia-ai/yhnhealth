@@ -303,17 +303,24 @@ export default function TestimonialsClient() {
                 <div className="md:col-span-4">
                   <div className="rounded-2xl border border-brand/10 bg-mist p-5">
                     <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-accent-dark">
-                      Talk Before You Book
+                      Ready to Book?
                     </p>
                     <p className="mt-2 text-sm text-stone">
-                      Not sure if we&rsquo;re the right fit? Start with a complimentary 15-minute consultation call.
+                      Pick a service, location, and time that works for you — booking is open online.
                     </p>
-                    <a
-                      href="tel:8565322063"
+                    <Link
+                      href="/locations"
                       className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-[10px] font-bold uppercase tracking-[0.22em] text-white transition-all hover:-translate-y-0.5 hover:bg-accent"
                     >
+                      Book Appointment
+                      <ArrowUpRight size={12} strokeWidth={2.25} />
+                    </Link>
+                    <a
+                      href="tel:6096517436"
+                      className="mt-3 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-brand hover:text-accent-dark"
+                    >
                       <Phone size={12} strokeWidth={2.25} />
-                      (856) 532-2063
+                      (609) 651-7436
                     </a>
                   </div>
                 </div>

@@ -3,33 +3,33 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowUpRight, CheckCircle, Users, Award, Stethoscope } from "lucide-react";
+import { ArrowUpRight, CheckCircle, Users, Award, Stethoscope, FlaskConical, Activity } from "lucide-react";
 
 const FEATURES = [
   {
-    icon: Stethoscope,
-    title: "Quality Services",
-    body: "Our staff is trained and knowledgeable with multiple advanced accreditations about the latest procedures, tools, and techniques to properly care for our patients.",
+    icon: FlaskConical,
+    title: "Functional Medicine",
+    body: "Doctor-led, root-cause investigation for chronic conditions, fatigue, hormones, gut health, and complex illness — built on advanced labs, personalized protocols, and close clinical follow-up.",
     image: "/images/yhn-clone/practice.webp",
-    highlight: "Advanced Tech",
-    href: "/meet-the-doctor",
+    highlight: "Root-Cause Care",
+    href: "/functional-medicine",
   },
   {
-    icon: Users,
-    title: "Individual Approach",
-    body: "Each patient requires something different and we are focused on meeting their individual needs with a fully customized treatment plan built around your goals.",
+    icon: Activity,
+    title: "Chiropractic & Manual Care",
+    body: "Patient-specific adjustments, decompression, ART, IASTM, and percussion therapy — precision hands-on care for pain, mobility, and nervous-system function across every life stage.",
     image: "/images/yhn-clone/testimonials.jpg",
     imagePosition: "object-top",
-    highlight: "Custom Plans",
-    href: "/about-us",
+    highlight: "Hands-On Care",
+    href: "/family-chiropractic-care",
   },
 ];
 
 const BADGES = [
+  { icon: Stethoscope, label: "Functional & Integrative Medicine" },
   { icon: CheckCircle, label: "Board Certified Providers" },
   { icon: Award, label: "Multiple Advanced Accreditations" },
   { icon: Users, label: "Family-Friendly Care" },
-  { icon: Stethoscope, label: "Functional & Integrative" },
 ];
 
 export default function BetterCareSection() {
@@ -70,9 +70,10 @@ export default function BetterCareSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-lg leading-relaxed text-stone lg:col-span-5"
           >
-            Our team of experts is dedicated to providing each patient with
-            high-quality care so that they receive the very best service
-            possible in Merchantville and Chalfont.
+            Two complementary tracks of care under one roof — functional
+            medicine for the deeper picture, chiropractic and manual therapy
+            for the hands-on relief. You get both, working together, in
+            Merchantville and Chalfont.
           </motion.p>
         </div>
 
@@ -115,7 +116,7 @@ export default function BetterCareSection() {
                     </div>
 
                     <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-accent-dark">
-                      0{i + 1} · Excellence
+                      0{i + 1} · Care Track
                     </p>
                     <h3 className="mt-3 font-display text-2xl font-bold leading-tight text-brand md:text-3xl">
                       {card.title}
