@@ -44,7 +44,7 @@ export default function FunctionalMedicineTelehealthBanner() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="relative z-10 grid grid-cols-1 gap-10 px-6 py-14 sm:px-8 sm:py-16 md:grid-cols-12 md:items-center md:gap-8 md:px-14 md:py-20"
+        className="container relative z-10 grid grid-cols-1 gap-10 py-14 sm:py-16 md:grid-cols-12 md:items-center md:gap-8 md:py-20"
       >
         {/* LEFT — Headline + value */}
         <div className="md:col-span-7">
