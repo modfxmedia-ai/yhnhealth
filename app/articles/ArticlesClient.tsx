@@ -72,8 +72,7 @@ function ArticlesIndex() {
               />
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-stone md:text-lg">
                 Practical chiropractic, functional medicine, nutrition, and recovery guidance from
-                our team. {ARTICLES.length} articles across {ARTICLE_CATEGORIES.length} categories
-                — updated regularly.
+                our team. {ARTICLES.length} articles across {ARTICLE_CATEGORIES.length} categories - updated regularly.
               </p>
             </FadeUp>
 

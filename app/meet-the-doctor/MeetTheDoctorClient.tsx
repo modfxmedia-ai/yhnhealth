@@ -109,7 +109,7 @@ const ALL_BADGES = [
 export default function MeetTheDoctorClient() {
   return (
     <main className="bg-white">
-      {/* HERO — cream, no full-bleed photo */}
+      {/* HERO - cream, no full-bleed photo */}
       <section className="relative bg-cream-light">
         <div className="mx-auto max-w-[1320px] px-6 pt-12 pb-20 lg:px-10 lg:pt-16 lg:pb-28">
           <Breadcrumbs trail={[{ label: "Home", href: "/" }, { label: "Meet The Team" }]} />
@@ -130,7 +130,7 @@ export default function MeetTheDoctorClient() {
         </div>
       </section>
 
-      {/* DOCTORS — alternating editorial rows */}
+      {/* DOCTORS - alternating editorial rows */}
       <section className="relative bg-white">
         <div className="mx-auto max-w-[1320px] px-6 py-20 lg:px-10 lg:py-28">
           <FadeUp className="max-w-2xl">
@@ -155,7 +155,7 @@ export default function MeetTheDoctorClient() {
                   transition={{ duration: 0.6, ease: "easeOut" }}
                   className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14 scroll-mt-32"
                 >
-                  {/* Portrait — compact 4:5 */}
+                  {/* Portrait - compact 4:5 */}
                   <div className={`lg:col-span-5 ${reverse ? "lg:order-2" : ""}`}>
                     <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-mist shadow-card lg:sticky lg:top-28">
                       <Image
@@ -210,7 +210,7 @@ export default function MeetTheDoctorClient() {
         </div>
       </section>
 
-      {/* OPERATIONS — slim featured row for Barbara */}
+      {/* OPERATIONS - slim featured row for Barbara */}
       {TEAM[3] && (
         <section id={TEAM[3].slug} className="relative bg-cream-light scroll-mt-32">
           <div className="mx-auto max-w-[1320px] px-6 py-20 lg:px-10 lg:py-24">
@@ -266,7 +266,7 @@ export default function MeetTheDoctorClient() {
         </section>
       )}
 
-      {/* CREDENTIALS — horizontal scrolling badge strip */}
+      {/* CREDENTIALS - horizontal scrolling badge strip */}
       <section className="relative overflow-hidden bg-brand-dark py-14 text-white">
         <FadeUp className="mx-auto max-w-[1320px] px-6 lg:px-10">
           <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent">Credentials &amp; Accreditations</p>
@@ -306,7 +306,7 @@ export default function MeetTheDoctorClient() {
               Ready to meet us in <span className="font-script font-normal italic text-accent">person?</span>
             </h2>
             <p className="mt-6 text-base leading-relaxed text-stone">
-              Stop by our Merchantville, NJ or Chalfont, PA office — or schedule online and we&rsquo;ll greet you when you arrive.
+              Stop by our Merchantville, NJ or Chalfont, PA office - or schedule online and we&rsquo;ll greet you when you arrive.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
               <Link

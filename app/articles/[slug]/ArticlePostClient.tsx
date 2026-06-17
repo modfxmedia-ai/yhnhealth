@@ -61,8 +61,7 @@ function Block({ block }: { block: ArticleBlock }) {
             &ldquo;{block.text}&rdquo;
           </blockquote>
           {block.cite && (
-            <figcaption className="mt-3 text-[11px] font-bold uppercase tracking-[0.22em] text-accent-dark">
-              — {block.cite}
+            <figcaption className="mt-3 text-[11px] font-bold uppercase tracking-[0.22em] text-accent-dark"> - {block.cite}
             </figcaption>
           )}
         </figure>

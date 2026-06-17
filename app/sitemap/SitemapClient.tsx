@@ -72,7 +72,7 @@ export default function SitemapPage() {
                 className="mt-6 h-[3px] w-24 bg-accent"
               />
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-stone md:text-lg">
-                Every page on yhnhealth.com — chiropractic care, functional medicine, physiotherapy
+                Every page on yhnhealth.com - chiropractic care, functional medicine, physiotherapy
                 services, locations, resources, and {TOTAL_PSEO.toLocaleString()} local service pages
                 across South Jersey and Bucks/Montgomery County, PA.
               </p>

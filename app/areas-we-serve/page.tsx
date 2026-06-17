@@ -7,7 +7,7 @@ import { Breadcrumbs, FadeUp } from "@/components/page/Primitives";
 export const metadata: Metadata = {
   title: "Areas We Serve | Chiropractors in NJ & PA | Your Health Now",
   description:
-    "Your Health Now serves 30+ cities across South Jersey and Bucks/Montgomery County, PA — patient-specific chiropractic, functional medicine, and rehab. Find your area.",
+    "Your Health Now serves 30+ cities across South Jersey and Bucks/Montgomery County, PA - patient-specific chiropractic, functional medicine, and rehab. Find your area.",
   alternates: { canonical: "https://yhnhealth.com/areas-we-serve" },
 };
 

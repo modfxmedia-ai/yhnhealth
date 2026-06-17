@@ -383,7 +383,7 @@ export default function HealthOptimizationProgramsClient() {
         variant="navy"
         eyebrow="Get Started"
         title="A complimentary 30-minute consultation."
-        copy="Speak with the Doctor to find the program that fits your goals — weight, hormones, energy, longevity, and more."
+        copy="Speak with the Doctor to find the program that fits your goals, weight, hormones, energy, longevity, and more."
         fm
       />
     </main>

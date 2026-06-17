@@ -79,7 +79,7 @@ export const SERVICE_CONTENT: Record<string, ServiceConfig> = {
     title: "Family Chiropractic Care",
     eyebrow: "Chiropractic Medicine",
     intro:
-      "Modern, evidence-based chiropractic care for every member of your family — from infants and athletes to expectant mothers and grandparents.",
+      "Modern, evidence-based chiropractic care for every member of your family - from infants and athletes to expectant mothers and grandparents.",
     imageSrc: img("family-chiropractic-care"),
     imageAlt: "Chiropractor performing an adjustment",
     sections: [
@@ -241,7 +241,7 @@ export const SERVICE_CONTENT: Record<string, ServiceConfig> = {
     title: "Athletic Care",
     eyebrow: "Chiropractic Medicine",
     intro:
-      "Sports chiropractic for high school, collegiate and professional athletes — perform at your best, recover faster, prevent injury.",
+      "Sports chiropractic for high school, collegiate and professional athletes - perform at your best, recover faster, prevent injury.",
     imageSrc: img("athletic-care"),
     imageAlt: "Athlete training",
     sections: [
@@ -281,7 +281,7 @@ export const SERVICE_CONTENT: Record<string, ServiceConfig> = {
     title: "IASTM",
     eyebrow: "Physiotherapy Services",
     intro:
-      "Instrument-Assisted Soft Tissue Mobilization — a precise, non-invasive treatment for chronic musculoskeletal problems.",
+      "Instrument-Assisted Soft Tissue Mobilization - a precise, non-invasive treatment for chronic musculoskeletal problems.",
     imageSrc: img("iastm"),
     imageAlt: "IASTM stainless steel instrument",
     sections: [
@@ -401,7 +401,7 @@ export const SERVICE_CONTENT: Record<string, ServiceConfig> = {
     title: "Physician Grade Supplementation",
     eyebrow: "Other Services",
     intro:
-      "Pharmaceutical-grade supplementation that meets the same FDA-regulated standards as drugs — sold only through licensed practitioners.",
+      "Pharmaceutical-grade supplementation that meets the same FDA-regulated standards as drugs - sold only through licensed practitioners.",
     imageSrc: img("physician-grade-supplementation"),
     imageAlt: "Physician grade supplements",
     sections: [
@@ -584,7 +584,7 @@ export const SERVICE_CONTENT: Record<string, ServiceConfig> = {
     title: "Lifestyle & Nutritional Advice",
     eyebrow: "Other Services",
     intro:
-      "A coordinated, whole-body approach to physical wellness — diet, exercise, sleep, mindset and lasting lifestyle change.",
+      "A coordinated, whole-body approach to physical wellness - diet, exercise, sleep, mindset and lasting lifestyle change.",
     imageSrc: img("lifestyle-and-nutritional-advice"),
     imageAlt: "Woman cooking nutritious meal",
     sections: [
@@ -616,7 +616,7 @@ export const SERVICE_CONTENT: Record<string, ServiceConfig> = {
     title: "Worksite Care",
     eyebrow: "Other Services",
     intro:
-      "On-site corporate chiropractic that delivers a $6:1 ROI in preventable healthcare costs — at zero cost to the company.",
+      "On-site corporate chiropractic that delivers a $6:1 ROI in preventable healthcare costs - at zero cost to the company.",
     imageSrc: img("worksite-care"),
     imageAlt: "On-site corporate chiropractic care",
     sections: [
@@ -638,12 +638,12 @@ export const SERVICE_CONTENT: Record<string, ServiceConfig> = {
       {
         heading: "The Annual Breakdown",
         body:
-          "Employers spend more on musculoskeletal disorders (MSD) than on any other condition or chronic disease. Direct and Indirect costs to the Employer total approximately $100 billion/year. The majority of these costs are preventable.\n\nWorkers Compensation: $8,650 / Lowest Claim — ↓88% in Total Direct Costs with YHN.\nAbsenteeism / Presenteeism (Productivity): $1,359 + $1,685 / Employee — ↓73% Respectively.\nPharmaceuticals / Opioids Usage: $1,030 / Employee — ↓85% / ↓49%.\nHospital Admissions: $4,679 / Employee — ↓60%.\nEmployee Engagement & Retirement: $9,828 / Employee (21% of Salary) — ↑93% Engagement / ↓61% Turnover.\nOffsite Provider MSD Costs: $7,800 / Employee — ↓63%.",
+          "Employers spend more on musculoskeletal disorders (MSD) than on any other condition or chronic disease. Direct and Indirect costs to the Employer total approximately $100 billion/year. The majority of these costs are preventable.\n\nWorkers Compensation: $8,650 / Lowest Claim - ↓88% in Total Direct Costs with YHN.\nAbsenteeism / Presenteeism (Productivity): $1,359 + $1,685 / Employee - ↓73% Respectively.\nPharmaceuticals / Opioids Usage: $1,030 / Employee - ↓85% / ↓49%.\nHospital Admissions: $4,679 / Employee - ↓60%.\nEmployee Engagement & Retirement: $9,828 / Employee (21% of Salary) - ↑93% Engagement / ↓61% Turnover.\nOffsite Provider MSD Costs: $7,800 / Employee - ↓63%.",
       },
       {
         heading: "Simple As Simple Gets",
         body:
-          "Zero Work for you; Zero Cost to your organization. All you do is show us the room. Your organization saves money with us. No Pain, Stress, Traffic, Waiting Rooms, or Wasted Lunches for your employees. They pay with HSA, FSA, or Debit/Credit — we are not involved with insurance. A Common Sense, Win-Win benefit — which is as Simple as Simple gets.",
+          "Zero Work for you; Zero Cost to your organization. All you do is show us the room. Your organization saves money with us. No Pain, Stress, Traffic, Waiting Rooms, or Wasted Lunches for your employees. They pay with HSA, FSA, or Debit/Credit - we are not involved with insurance. A Common Sense, Win-Win benefit - which is as Simple as Simple gets.",
       },
     ],
     benefits: {
@@ -652,7 +652,7 @@ export const SERVICE_CONTENT: Record<string, ServiceConfig> = {
       items: [
         { icon: CheckCircle2, title: "ZERO COST to the Organization" },
         { icon: Shield, title: "ZERO LIABILITY to the Organization" },
-        { icon: Sparkles, title: "ZERO WORK for You — All you do is Show us the Room" },
+        { icon: Sparkles, title: "ZERO WORK for You - All you do is Show us the Room" },
         { icon: Heart, title: "ONLY Safe, Natural, Effective, Drug-Free, & Surgery-Free care" },
         { icon: Briefcase, title: "NO Dedicated on-site Space needed" },
         { icon: TrendingUp, title: "INCREASE Employee Productivity & Engagement" },

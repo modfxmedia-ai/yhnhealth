@@ -3,7 +3,7 @@
 @config "../tailwind.config.ts";
 
 @theme {
-  /* Brand blues — sampled from logo */
+  /* Brand blues sampled from logo */
   --color-brand: #1F3563;
   --color-brand-dark: #142348;
   --color-brand-light: #2A4580;

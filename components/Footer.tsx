@@ -124,7 +124,7 @@ export default function Footer() {
       <div className="relative mx-auto max-w-[1320px] px-6 py-12 lg:px-10">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
           <div className="md:col-span-4">
-            <Link href="/" aria-label="Your Health Now — home" className="inline-flex items-center">
+            <Link href="/" aria-label="Your Health Now - home" className="inline-flex items-center">
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white p-2">
                 <Image
                   src="/images/logo.webp"

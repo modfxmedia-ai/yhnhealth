@@ -64,7 +64,7 @@ export default function SpineSimulatorClient() {
               <div className="overflow-hidden rounded-3xl border border-brand/10 shadow-card">
                 <iframe
                   src="https://yhnhealth.com/content/chiromatrix/3d_spine/nerve_chart/index.htm"
-                  title="3D Spine Simulator — Nerve Chart"
+                  title="3D Spine Simulator - Nerve Chart"
                   className="h-[720px] w-full bg-white"
                   loading="lazy"
                   allowFullScreen

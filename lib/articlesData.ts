@@ -95,7 +95,7 @@ export const ARTICLES: Article[] = [
           "Sitting up straight from a flat-back position instead of rolling onto your side first.",
           "Bending forward to brush teeth or wash your face with locked knees.",
           "Sliding into car seats with twisted hips.",
-          "Drinking very little water before coffee — disc rehydration depends on plain water.",
+          "Drinking very little water before coffee - disc rehydration depends on plain water.",
           "Skipping any kind of movement and going straight from bed to a desk chair.",
         ],
       },
@@ -111,7 +111,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "p",
-        text: "If you've been waking up with stiffness or pain that lingers past breakfast, that's not normal — it's data. Bring it up at your next visit so we can address it before it becomes a chronic pattern.",
+        text: "If you've been waking up with stiffness or pain that lingers past breakfast, that's not normal - it's data. Bring it up at your next visit so we can address it before it becomes a chronic pattern.",
       },
     ],
     related: ["why-you-wake-up-stiff", "benefits-regular-chiropractic-adjustments"],
@@ -135,16 +135,16 @@ export const ARTICLES: Article[] = [
       {
         type: "list",
         items: [
-          "Sleeping position — stomach sleepers and pillow-stack sleepers see the most cervical complaints.",
-          "Dehydration — connective tissue loses elasticity overnight when fluid intake is low.",
-          "Inflammatory load — diet, stress, and unresolved injuries leave joints primed for stiffness.",
-          "Underlying joint dysfunction — restricted segments stiffen up faster than healthy ones.",
+          "Sleeping position - stomach sleepers and pillow-stack sleepers see the most cervical complaints.",
+          "Dehydration - connective tissue loses elasticity overnight when fluid intake is low.",
+          "Inflammatory load - diet, stress, and unresolved injuries leave joints primed for stiffness.",
+          "Underlying joint dysfunction - restricted segments stiffen up faster than healthy ones.",
         ],
       },
       { type: "h2", text: "How chiropractic helps" },
       {
         type: "p",
-        text: "When a vertebral segment loses motion, the surrounding tissue thickens and the local muscles guard. Adjustments restore segmental motion, which lets the local tissue rehydrate and the muscles let go. Patients almost always report waking up looser within a few visits — not because adjustments are magic, but because we're addressing the actual mechanical reason the stiffness was there.",
+        text: "When a vertebral segment loses motion, the surrounding tissue thickens and the local muscles guard. Adjustments restore segmental motion, which lets the local tissue rehydrate and the muscles let go. Patients almost always report waking up looser within a few visits - not because adjustments are magic, but because we're addressing the actual mechanical reason the stiffness was there.",
       },
       {
         type: "callout",
@@ -172,13 +172,13 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "Every spring our clinics see a predictable spike in low back, shoulder, and elbow injuries. The cause is rarely a single dramatic event — it's the cumulative effect of moving from a sedentary winter into a high-volume summer in the span of a weekend.",
+        text: "Every spring our clinics see a predictable spike in low back, shoulder, and elbow injuries. The cause is rarely a single dramatic event - it's the cumulative effect of moving from a sedentary winter into a high-volume summer in the span of a weekend.",
       },
       { type: "h2", text: "Where most summer back injuries actually happen" },
       {
         type: "list",
         items: [
-          "First yard cleanup of the season — repetitive bending and twisting.",
+          "First yard cleanup of the season - repetitive bending and twisting.",
           "Loading and unloading vehicles for travel.",
           "Returning to golf, tennis, or pickleball without a ramp-up.",
           "Carrying kids and gear at the beach.",
@@ -188,7 +188,7 @@ export const ARTICLES: Article[] = [
       { type: "h2", text: "What pre-season chiropractic actually does" },
       {
         type: "p",
-        text: "We assess where your spine and pelvis are restricted, restore motion in the segments that are stuck, and prescribe two or three specific exercises that address your individual asymmetries. Patients often describe it as preventive maintenance — exactly the kind of thing you'd want on your car before a long trip.",
+        text: "We assess where your spine and pelvis are restricted, restore motion in the segments that are stuck, and prescribe two or three specific exercises that address your individual asymmetries. Patients often describe it as preventive maintenance - exactly the kind of thing you'd want on your car before a long trip.",
       },
       {
         type: "callout",
@@ -211,7 +211,7 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "Microtrauma is the medical term for small tissue damage that falls below the threshold of pain. Picked up alone, it heals. Repeated daily without recovery — sitting in the same posture, swinging a golf club the same way, scrolling on your phone — it accumulates into something you do feel.",
+        text: "Microtrauma is the medical term for small tissue damage that falls below the threshold of pain. Picked up alone, it heals. Repeated daily without recovery - sitting in the same posture, swinging a golf club the same way, scrolling on your phone - it accumulates into something you do feel.",
       },
       { type: "h2", text: "How we identify the pattern early" },
       {
@@ -231,7 +231,7 @@ export const ARTICLES: Article[] = [
       {
         type: "callout",
         title: "Don't wait for pain",
-        text: "If you've noticed something feels 'off' for more than two weeks — a clicking shoulder, a heavy leg, a tight hip — that's the time to come in. Pain is the last symptom to arrive and the first one we'd rather you never reach.",
+        text: "If you've noticed something feels 'off' for more than two weeks - a clicking shoulder, a heavy leg, a tight hip - that's the time to come in. Pain is the last symptom to arrive and the first one we'd rather you never reach.",
       },
     ],
     related: ["disc-conditions-chiropractor", "back-ready-for-summer"],
@@ -249,7 +249,7 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "Stress is usually framed as a mental phenomenon, but it lives in your body. Tense traps, a clenched jaw, shallow breathing, a tight low back — these aren't side effects of stress, they are stress, and they create a feedback loop that keeps the nervous system in a guarded state.",
+        text: "Stress is usually framed as a mental phenomenon, but it lives in your body. Tense traps, a clenched jaw, shallow breathing, a tight low back - these aren't side effects of stress, they are stress, and they create a feedback loop that keeps the nervous system in a guarded state.",
       },
       { type: "h2", text: "The autonomic nervous system, simplified" },
       {
@@ -283,7 +283,7 @@ export const ARTICLES: Article[] = [
     slug: "disc-conditions-chiropractor",
     title: "What Disc Conditions Can a Chiropractor Help With?",
     excerpt:
-      "Bulges, herniations, degeneration — most disc conditions respond well to conservative care. Here's what we treat and how.",
+      "Bulges, herniations, degeneration - most disc conditions respond well to conservative care. Here's what we treat and how.",
     category: "Common Conditions Treated",
     date: "March 2026",
     readTime: 8,
@@ -292,16 +292,16 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "When patients hear 'disc problem,' they often picture surgery. The reality is that the vast majority of disc-related pain resolves with conservative care — chiropractic adjustments, decompression therapy, targeted exercise, and time. Surgery is the last 5% of the conversation, not the first.",
+        text: "When patients hear 'disc problem,' they often picture surgery. The reality is that the vast majority of disc-related pain resolves with conservative care - chiropractic adjustments, decompression therapy, targeted exercise, and time. Surgery is the last 5% of the conversation, not the first.",
       },
       { type: "h2", text: "Conditions we routinely manage" },
       {
         type: "list",
         items: [
-          "Disc bulges — outer fibers bulging without rupture.",
-          "Disc herniations — inner nucleus material extruding through the outer wall.",
-          "Degenerative disc disease — gradual height and hydration loss with age.",
-          "Annular tears — small fissures in the disc wall.",
+          "Disc bulges - outer fibers bulging without rupture.",
+          "Disc herniations - inner nucleus material extruding through the outer wall.",
+          "Degenerative disc disease - gradual height and hydration loss with age.",
+          "Annular tears - small fissures in the disc wall.",
           "Sciatica from disc-related nerve root irritation.",
         ],
       },
@@ -331,12 +331,12 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "Most people come in for pain. They stay, when they stay, because they notice everything else gets a little better too — they breathe deeper, sleep harder, move more freely, and bounce back from life faster. Regular chiropractic isn't about chasing symptoms; it's about keeping the system running well.",
+        text: "Most people come in for pain. They stay, when they stay, because they notice everything else gets a little better too - they breathe deeper, sleep harder, move more freely, and bounce back from life faster. Regular chiropractic isn't about chasing symptoms; it's about keeping the system running well.",
       },
       { type: "h2", text: "What 'regular' actually means" },
       {
         type: "p",
-        text: "There's no universal cadence. Some patients do well at four to six week check-ins; others come in monthly for the first few months and taper. We base the schedule on your exam findings, your goals, and how your body is responding — not on a generic plan.",
+        text: "There's no universal cadence. Some patients do well at four to six week check-ins; others come in monthly for the first few months and taper. We base the schedule on your exam findings, your goals, and how your body is responding - not on a generic plan.",
       },
       { type: "h2", text: "What you might notice" },
       {
@@ -366,18 +366,18 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "One of the most common questions we get is whether chiropractic is safe across the lifespan. The answer is yes — when the technique is matched to the patient. The adjustment used on a six-week-old is nothing like the adjustment used on a college lacrosse player, and neither resembles what a 75-year-old with osteoporosis would receive.",
+        text: "One of the most common questions we get is whether chiropractic is safe across the lifespan. The answer is yes - when the technique is matched to the patient. The adjustment used on a six-week-old is nothing like the adjustment used on a college lacrosse player, and neither resembles what a 75-year-old with osteoporosis would receive.",
       },
       { type: "h2", text: "Through the lifespan" },
       { type: "h3", text: "Infants and toddlers" },
       {
         type: "p",
-        text: "Birth — even a smooth one — places real mechanical demand on a baby's spine. Gentle techniques (we're talking the pressure you'd use to test a ripe tomato) can address feeding asymmetries, restricted neck rotation, and reflux contributors.",
+        text: "Birth - even a smooth one - places real mechanical demand on a baby's spine. Gentle techniques (we're talking the pressure you'd use to test a ripe tomato) can address feeding asymmetries, restricted neck rotation, and reflux contributors.",
       },
       { type: "h3", text: "Children and teens" },
       {
         type: "p",
-        text: "Backpacks, devices, and sports load young spines hard. Care here is part adjustment, part posture coaching, part movement screen — catching issues before they become adult problems.",
+        text: "Backpacks, devices, and sports load young spines hard. Care here is part adjustment, part posture coaching, part movement screen - catching issues before they become adult problems.",
       },
       { type: "h3", text: "Adults" },
       {
@@ -405,7 +405,7 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "Chiropractic and physical therapy aren't competing approaches — they're complementary. Chiropractic addresses the mechanical restrictions in your joints. Physical therapy builds the strength, endurance, and motor control to maintain those gains. The combination consistently produces faster, more durable outcomes than either alone.",
+        text: "Chiropractic and physical therapy aren't competing approaches - they're complementary. Chiropractic addresses the mechanical restrictions in your joints. Physical therapy builds the strength, endurance, and motor control to maintain those gains. The combination consistently produces faster, more durable outcomes than either alone.",
       },
       { type: "h2", text: "Why the combination works" },
       {
@@ -453,7 +453,7 @@ export const ARTICLES: Article[] = [
       { type: "h2", text: "What a session feels like" },
       {
         type: "p",
-        text: "You're fully clothed, lying down, comfortable. The pull is gentle and rhythmic — most patients find it deeply relaxing and many doze off. A typical course runs 12 to 20 sessions, paired with adjustments and progressive exercise.",
+        text: "You're fully clothed, lying down, comfortable. The pull is gentle and rhythmic - most patients find it deeply relaxing and many doze off. A typical course runs 12 to 20 sessions, paired with adjustments and progressive exercise.",
       },
       {
         type: "callout",
@@ -467,7 +467,7 @@ export const ARTICLES: Article[] = [
     slug: "what-is-art-active-release",
     title: "What is ART? Active Release Technique, Explained",
     excerpt:
-      "A hands-on soft tissue technique that breaks up adhesions in muscle, tendon, fascia, and nerve — with movement.",
+      "A hands-on soft tissue technique that breaks up adhesions in muscle, tendon, fascia, and nerve - with movement.",
     category: "Therapies & Techniques",
     date: "December 2025",
     readTime: 5,
@@ -530,7 +530,7 @@ export const ARTICLES: Article[] = [
     slug: "pediatric-care-benefits",
     title: "When Chiropractic Care Makes Sense for Kids",
     excerpt:
-      "Backpacks, sports, screens, growth spurts — kids' spines deal with a lot. Here's how gentle pediatric care helps.",
+      "Backpacks, sports, screens, growth spurts - kids' spines deal with a lot. Here's how gentle pediatric care helps.",
     category: "Wellness4Kids",
     date: "November 2025",
     readTime: 6,
@@ -545,7 +545,7 @@ export const ARTICLES: Article[] = [
       {
         type: "list",
         items: [
-          "Sports injuries — soccer, gymnastics, hockey, lacrosse.",
+          "Sports injuries - soccer, gymnastics, hockey, lacrosse.",
           "Postural complaints from heavy backpacks and screen use.",
           "Growth-related stiffness.",
           "Recurrent headaches.",
@@ -564,7 +564,7 @@ export const ARTICLES: Article[] = [
     slug: "athletic-care-young-athletes",
     title: "Caring for the Young Athlete",
     excerpt:
-      "Year-round single-sport specialization, growing bones, and adult-level training volumes — young athletes need different care.",
+      "Year-round single-sport specialization, growing bones, and adult-level training volumes - young athletes need different care.",
     category: "Wellness4Kids",
     date: "November 2025",
     readTime: 6,
@@ -579,10 +579,10 @@ export const ARTICLES: Article[] = [
       {
         type: "list",
         items: [
-          "Restoring full mobility — most growth-related issues start as restriction.",
+          "Restoring full mobility - most growth-related issues start as restriction.",
           "Building hip and core strength to protect the low back.",
           "Coaching landing mechanics and deceleration to lower ACL risk.",
-          "Recovery education — sleep, hydration, fueling.",
+          "Recovery education - sleep, hydration, fueling.",
           "A clear return-to-play protocol when injuries occur.",
         ],
       },
@@ -636,17 +636,17 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "If you spend most of your day at a desk, your setup is doing more for or against your back than any single workout you'll do this week. The fix doesn't require an expensive chair — it requires a few specific adjustments to what you already have.",
+        text: "If you spend most of your day at a desk, your setup is doing more for or against your back than any single workout you'll do this week. The fix doesn't require an expensive chair - it requires a few specific adjustments to what you already have.",
       },
       { type: "h2", text: "The non-negotiables" },
       {
         type: "list",
         items: [
-          "Top of the monitor at eye level — books or a monitor arm fix this fast.",
+          "Top of the monitor at eye level - books or a monitor arm fix this fast.",
           "Elbows at roughly 90° with shoulders relaxed.",
-          "Feet flat on the floor or a footrest — knees at 90°.",
+          "Feet flat on the floor or a footrest - knees at 90°.",
           "Phone off the desk and out of arm's reach during deep work.",
-          "Stand or change position every 30 minutes — set a timer if needed.",
+          "Stand or change position every 30 minutes - set a timer if needed.",
         ],
       },
       { type: "h2", text: "The three movements that offset desk work" },
@@ -675,7 +675,7 @@ export const ARTICLES: Article[] = [
       { type: "h2", text: "Our diagnostic process" },
       {
         type: "p",
-        text: "A careful neurological and orthopedic exam usually identifies the source. Imaging is reserved for cases that don't respond to conservative care or where red flags are present. The exam findings — not just the symptoms — drive the treatment plan.",
+        text: "A careful neurological and orthopedic exam usually identifies the source. Imaging is reserved for cases that don't respond to conservative care or where red flags are present. The exam findings - not just the symptoms - drive the treatment plan.",
       },
       { type: "h2", text: "What care typically looks like" },
       {
@@ -693,7 +693,7 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: "running-injuries-prevention",
-    title: "Why Runners Get Hurt — and How to Stay Healthy",
+    title: "Why Runners Get Hurt - and How to Stay Healthy",
     excerpt:
       "Most running injuries aren't caused by running. They're caused by what runners aren't doing the rest of the week.",
     category: "Therapies & Techniques",
@@ -710,9 +710,9 @@ export const ARTICLES: Article[] = [
       {
         type: "list",
         items: [
-          "Hip and glute strength — single-leg work, lateral chain.",
-          "Calf and foot capacity — slow heavy raises, often missed.",
-          "Hip mobility — front and back of the hip.",
+          "Hip and glute strength - single-leg work, lateral chain.",
+          "Calf and foot capacity - slow heavy raises, often missed.",
+          "Hip mobility - front and back of the hip.",
           "Core that resists rotation, not just bends and crunches.",
         ],
       },
@@ -737,16 +737,16 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "The classic ankle sprain story: you roll it, ice it, walk on it within a couple of weeks, and call it done. The problem is that most ankle sprains tear or stretch ligaments that take months to remodel — and they leave behind a balance and proprioception deficit that nobody addresses.",
+        text: "The classic ankle sprain story: you roll it, ice it, walk on it within a couple of weeks, and call it done. The problem is that most ankle sprains tear or stretch ligaments that take months to remodel - and they leave behind a balance and proprioception deficit that nobody addresses.",
       },
       { type: "h2", text: "A complete recovery looks like this" },
       {
         type: "list",
         items: [
-          "Acute care — protect, elevate, control swelling, restore range.",
+          "Acute care - protect, elevate, control swelling, restore range.",
           "Mobility work to recover full ankle dorsiflexion.",
-          "Calf and foot strength — single-leg calf raises, controlled lowering.",
-          "Balance and proprioception — single-leg standing, eyes closed progressions.",
+          "Calf and foot strength - single-leg calf raises, controlled lowering.",
+          "Balance and proprioception - single-leg standing, eyes closed progressions.",
           "Sport-specific reintegration before returning to play.",
         ],
       },
@@ -778,7 +778,7 @@ export const ARTICLES: Article[] = [
         type: "list",
         items: [
           "Thoracic adjustments to restore extension and rotation.",
-          "Scapular control work — wall slides, prone Y-T-W's.",
+          "Scapular control work - wall slides, prone Y-T-W's.",
           "Rotator cuff strength once the position is right.",
           "Soft tissue work on overactive upper traps and lats.",
         ],
@@ -790,7 +790,7 @@ export const ARTICLES: Article[] = [
     slug: "pregnancy-chiropractic",
     title: "Chiropractic Care During Pregnancy",
     excerpt:
-      "From early back discomfort to round ligament pain to pelvic positioning for delivery — pregnancy-trained chiropractic helps.",
+      "From early back discomfort to round ligament pain to pelvic positioning for delivery - pregnancy-trained chiropractic helps.",
     category: "Health & Wellness",
     date: "July 2025",
     readTime: 6,
@@ -799,7 +799,7 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "Pregnancy reshapes a body in months. Hormonal changes loosen ligaments. The growing belly shifts the center of mass forward. The pelvis and low back take on entirely new loads. All of this is normal — and almost all of it responds well to gentle, pregnancy-specific chiropractic.",
+        text: "Pregnancy reshapes a body in months. Hormonal changes loosen ligaments. The growing belly shifts the center of mass forward. The pelvis and low back take on entirely new loads. All of this is normal - and almost all of it responds well to gentle, pregnancy-specific chiropractic.",
       },
       { type: "h2", text: "Common pregnancy complaints we help with" },
       {
@@ -824,7 +824,7 @@ export const ARTICLES: Article[] = [
     slug: "nutrition-and-pain",
     title: "How Nutrition Affects Chronic Pain",
     excerpt:
-      "Chronic pain has a chemistry. The foods you eat either feed inflammation or feed recovery — there isn't really a neutral.",
+      "Chronic pain has a chemistry. The foods you eat either feed inflammation or feed recovery - there isn't really a neutral.",
     category: "Health & Wellness",
     date: "July 2025",
     readTime: 7,
@@ -833,7 +833,7 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "Inflammation is the body's repair signal. Acute inflammation is helpful. Chronic, low-grade, system-wide inflammation is the soil chronic pain grows in, and it's heavily influenced by what you eat. We've watched countless patients shave 30–50% off their baseline pain just by changing their nutritional inputs — without anything else changing.",
+        text: "Inflammation is the body's repair signal. Acute inflammation is helpful. Chronic, low-grade, system-wide inflammation is the soil chronic pain grows in, and it's heavily influenced by what you eat. We've watched countless patients shave 30–50% off their baseline pain just by changing their nutritional inputs - without anything else changing.",
       },
       { type: "h2", text: "The short list that consistently helps" },
       {
@@ -841,15 +841,15 @@ export const ARTICLES: Article[] = [
         items: [
           "Three palm-sized servings of protein per day.",
           "Two to three handfuls of colorful vegetables.",
-          "Healthy fats — olive oil, avocado, fatty fish.",
+          "Healthy fats - olive oil, avocado, fatty fish.",
           "Less ultra-processed food and seed oils.",
-          "Adequate water — bodyweight in pounds, divided in half, in ounces.",
+          "Adequate water - bodyweight in pounds, divided in half, in ounces.",
         ],
       },
       { type: "h2", text: "When to look deeper" },
       {
         type: "p",
-        text: "If you've cleaned up your nutrition and pain or fatigue is still high, that's where our functional medicine programs come in — targeted lab work, gut and hormone analysis, and a structured plan. Most patients are surprised how much further they can get.",
+        text: "If you've cleaned up your nutrition and pain or fatigue is still high, that's where our functional medicine programs come in - targeted lab work, gut and hormone analysis, and a structured plan. Most patients are surprised how much further they can get.",
       },
     ],
     related: ["chiropractic-care-stress-levels", "morning-routine-affects-your-spine"],
@@ -858,7 +858,7 @@ export const ARTICLES: Article[] = [
     slug: "sleep-and-back-pain",
     title: "Sleep, Mattresses, and Back Pain: What Actually Matters",
     excerpt:
-      "There is no one perfect mattress. There is a perfect mattress for you — and it's probably not the one in the ad.",
+      "There is no one perfect mattress. There is a perfect mattress for you - and it's probably not the one in the ad.",
     category: "Health & Wellness",
     date: "June 2025",
     readTime: 6,
@@ -874,10 +874,10 @@ export const ARTICLES: Article[] = [
         type: "list",
         items: [
           "Sleep on your side or back, not your stomach.",
-          "Pillow that keeps your neck in line with your spine — neither propped up nor sagging.",
+          "Pillow that keeps your neck in line with your spine - neither propped up nor sagging.",
           "Pillow between (side) or under (back) your knees.",
           "Mattress firm enough to support, soft enough to contour. Most adults do best on medium-firm.",
-          "Replace mattresses every 7–10 years — older ones develop body impressions you don't see.",
+          "Replace mattresses every 7–10 years - older ones develop body impressions you don't see.",
         ],
       },
     ],
@@ -911,7 +911,7 @@ export const ARTICLES: Article[] = [
       { type: "h3", text: "Myth: The popping sound is bones cracking." },
       {
         type: "p",
-        text: "It's a release of gas (mostly nitrogen) from inside the joint capsule, similar to opening a soda. Nothing is breaking, and the sound itself is not the goal — restored motion is.",
+        text: "It's a release of gas (mostly nitrogen) from inside the joint capsule, similar to opening a soda. Nothing is breaking, and the sound itself is not the goal - restored motion is.",
       },
       { type: "h3", text: "Myth: Chiropractic is just for back pain." },
       {
@@ -939,15 +939,15 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "First visits set the tone for everything after. Ours are designed to give you clarity — about what's going on, why, and what your options are. You should leave with a clear plan, even if that plan ends up being 'this isn't a chiropractic case, here's where to go.'",
+        text: "First visits set the tone for everything after. Ours are designed to give you clarity - about what's going on, why, and what your options are. You should leave with a clear plan, even if that plan ends up being 'this isn't a chiropractic case, here's where to go.'",
       },
       { type: "h2", text: "The walk-through" },
       {
         type: "list",
         items: [
-          "Brief paperwork — most of it submitted online before you arrive.",
+          "Brief paperwork - most of it submitted online before you arrive.",
           "A focused conversation about your history and goals.",
-          "A thorough physical exam — orthopedic, neurological, postural.",
+          "A thorough physical exam - orthopedic, neurological, postural.",
           "Imaging or referrals if indicated (we don't image just to image).",
           "A clear explanation of findings and a recommended plan.",
           "Treatment that day if appropriate, or scheduling if a multi-step workup is needed.",
@@ -974,33 +974,33 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "Persistent fatigue is one of the most common reasons patients book a functional medicine consult — and one of the most under-investigated symptoms in conventional care. A normal CBC and a TSH inside the lab range do not rule out a real, fixable problem. They rule out roughly five problems out of dozens.",
+        text: "Persistent fatigue is one of the most common reasons patients book a functional medicine consult - and one of the most under-investigated symptoms in conventional care. A normal CBC and a TSH inside the lab range do not rule out a real, fixable problem. They rule out roughly five problems out of dozens.",
       },
       { type: "h2", text: "The five drivers we see most often" },
       {
         type: "list",
         items: [
-          "Suboptimal thyroid function (free T3, reverse T3, and antibodies — not just TSH).",
+          "Suboptimal thyroid function (free T3, reverse T3, and antibodies - not just TSH).",
           "Iron and ferritin in the lower quartile, even when 'normal.'",
           "Cortisol dysregulation from chronic stress, poor sleep, or post-viral inflammation.",
-          "Nutrient depletion — B12, vitamin D, magnesium, and zinc are common.",
+          "Nutrient depletion - B12, vitamin D, magnesium, and zinc are common.",
           "Hidden infections, including chronic Lyme and tick-borne co-infections.",
         ],
       },
       { type: "h2", text: "Why standard labs miss it" },
       {
         type: "p",
-        text: "Conventional reference ranges are statistical descriptions of a sick population, not definitions of optimal function. A ferritin of 18 is 'normal' on most lab reports, but it's a near-certain driver of fatigue in a 35-year-old woman. Functional medicine uses tighter, evidence-based optimal ranges and looks at patterns across panels — not isolated red flags.",
+        text: "Conventional reference ranges are statistical descriptions of a sick population, not definitions of optimal function. A ferritin of 18 is 'normal' on most lab reports, but it's a near-certain driver of fatigue in a 35-year-old woman. Functional medicine uses tighter, evidence-based optimal ranges and looks at patterns across panels - not isolated red flags.",
       },
       {
         type: "callout",
         title: "What a workup actually looks like",
-        text: "Comprehensive thyroid panel, full iron studies, fasting insulin and HbA1c, four-point salivary cortisol, vitamin D, B12, methylmalonic acid, and homocysteine — at minimum. From there we add gut, hormone, or tick-borne testing based on your history.",
+        text: "Comprehensive thyroid panel, full iron studies, fasting insulin and HbA1c, four-point salivary cortisol, vitamin D, B12, methylmalonic acid, and homocysteine - at minimum. From there we add gut, hormone, or tick-borne testing based on your history.",
       },
       { type: "h2", text: "When to ask for a different approach" },
       {
         type: "p",
-        text: "If you've been told 'everything looks fine' more than once, but you don't feel fine — that's the moment to escalate, not to accept it. Bring your prior labs to a free 30-minute consultation call. We'll tell you honestly whether there's more to investigate or whether a different specialist is the right next step.",
+        text: "If you've been told 'everything looks fine' more than once, but you don't feel fine - that's the moment to escalate, not to accept it. Bring your prior labs to a free 30-minute consultation call. We'll tell you honestly whether there's more to investigate or whether a different specialist is the right next step.",
       },
     ],
     related: ["functional-medicine-gut-health", "functional-medicine-vs-conventional"],
@@ -1009,7 +1009,7 @@ export const ARTICLES: Article[] = [
     slug: "functional-medicine-gut-health",
     title: "The Gut-Body Connection: How Digestion Shapes Energy, Mood, and Pain",
     excerpt:
-      "Bloating, brain fog, joint pain, and skin issues often share a single upstream driver — and it's not where most people are looking.",
+      "Bloating, brain fog, joint pain, and skin issues often share a single upstream driver - and it's not where most people are looking.",
     category: "Functional Medicine",
     date: "June 2026",
     readTime: 7,
@@ -1023,13 +1023,13 @@ export const ARTICLES: Article[] = [
       { type: "h2", text: "Why the gut matters everywhere else" },
       {
         type: "p",
-        text: "Roughly 70 percent of your immune system lives along the lining of your gut. So does the production site for most of your serotonin and a meaningful share of your dopamine precursors. When the gut barrier is compromised, the immune system stays activated, neurotransmitter signaling shifts, and inflammation rises systemically. The symptoms can show up anywhere — skin, joints, mood, energy, focus.",
+        text: "Roughly 70 percent of your immune system lives along the lining of your gut. So does the production site for most of your serotonin and a meaningful share of your dopamine precursors. When the gut barrier is compromised, the immune system stays activated, neurotransmitter signaling shifts, and inflammation rises systemically. The symptoms can show up anywhere - skin, joints, mood, energy, focus.",
       },
       { type: "h2", text: "What we test (and why) " },
       {
         type: "list",
         items: [
-          "Comprehensive stool analysis — looks at digestion, absorption, inflammation markers, and the microbiome.",
+          "Comprehensive stool analysis - looks at digestion, absorption, inflammation markers, and the microbiome.",
           "Food sensitivity panels when symptoms suggest immune-mediated reactivity.",
           "SIBO breath testing for unexplained bloating and IBS-pattern symptoms.",
           "Organic acids testing for clues about microbial overgrowth and nutrient status.",
@@ -1038,12 +1038,12 @@ export const ARTICLES: Article[] = [
       {
         type: "callout",
         title: "Eat-this-not-that lists aren't the answer",
-        text: "Removing foods without a plan to repair the gut is a short-term fix. The real work is reducing inflammation, restoring the microbiome, and rebuilding the barrier — then reintroducing foods one at a time to see what your body actually tolerates.",
+        text: "Removing foods without a plan to repair the gut is a short-term fix. The real work is reducing inflammation, restoring the microbiome, and rebuilding the barrier - then reintroducing foods one at a time to see what your body actually tolerates.",
       },
       { type: "h2", text: "A typical 90-day gut protocol" },
       {
         type: "p",
-        text: "We use a structured approach — remove triggers, replace digestive support, reinoculate with targeted strains, and repair the lining with specific nutrients like L-glutamine, zinc carnosine, and butyrate. Most patients feel meaningful change in the first 30 days and see lab markers move in 90.",
+        text: "We use a structured approach - remove triggers, replace digestive support, reinoculate with targeted strains, and repair the lining with specific nutrients like L-glutamine, zinc carnosine, and butyrate. Most patients feel meaningful change in the first 30 days and see lab markers move in 90.",
       },
     ],
     related: ["functional-medicine-fatigue-root-causes", "functional-medicine-vs-conventional"],
@@ -1052,7 +1052,7 @@ export const ARTICLES: Article[] = [
     slug: "functional-medicine-vs-conventional",
     title: "Functional Medicine vs. Conventional Care: When Each Is the Right Fit",
     excerpt:
-      "Functional medicine isn't anti-medicine. It's a different lens — one that asks why a problem started, not just how to suppress its symptoms.",
+      "Functional medicine isn't anti-medicine. It's a different lens - one that asks why a problem started, not just how to suppress its symptoms.",
     category: "Functional Medicine",
     date: "June 2026",
     readTime: 6,
@@ -1061,12 +1061,12 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "Conventional medicine is exceptional at acute care, surgery, and life-threatening disease. Functional medicine is exceptional at chronic, multi-system, and 'I don't feel right but my labs are normal' problems. Most patients benefit from both — used appropriately.",
+        text: "Conventional medicine is exceptional at acute care, surgery, and life-threatening disease. Functional medicine is exceptional at chronic, multi-system, and 'I don't feel right but my labs are normal' problems. Most patients benefit from both - used appropriately.",
       },
       { type: "h2", text: "The core difference" },
       {
         type: "p",
-        text: "Conventional care is largely organized around diagnosis codes. You get a label, then a guideline-driven treatment for that label. Functional medicine is organized around systems and root causes. We ask why your immune system is overactive, why your gut isn't absorbing, why your hormones are dysregulated — and we treat the upstream cause, not just the downstream symptom.",
+        text: "Conventional care is largely organized around diagnosis codes. You get a label, then a guideline-driven treatment for that label. Functional medicine is organized around systems and root causes. We ask why your immune system is overactive, why your gut isn't absorbing, why your hormones are dysregulated - and we treat the upstream cause, not just the downstream symptom.",
       },
       { type: "h2", text: "When functional medicine is the right fit" },
       {
@@ -1076,7 +1076,7 @@ export const ARTICLES: Article[] = [
           "Hormonal symptoms, irregular cycles, or peri/menopausal changes.",
           "Gut symptoms, food reactivity, or autoimmune flares.",
           "Chronic Lyme, post-viral syndromes, or unexplained inflammation.",
-          "Optimization goals — energy, longevity, metabolic health, sleep.",
+          "Optimization goals - energy, longevity, metabolic health, sleep.",
         ],
       },
       { type: "h2", text: "When to stay with conventional care" },
@@ -1096,7 +1096,7 @@ export const ARTICLES: Article[] = [
     slug: "functional-medicine-hormone-thyroid",
     title: "Hormones & Thyroid: Why Functional Medicine Looks Beyond TSH",
     excerpt:
-      "Fatigue, weight gain, anxiety, and brain fog are often labeled 'hormonal' — then dismissed because labs are 'normal.' Here's how functional medicine actually evaluates hormone health.",
+      "Fatigue, weight gain, anxiety, and brain fog are often labeled 'hormonal' - then dismissed because labs are 'normal.' Here's how functional medicine actually evaluates hormone health.",
     category: "Functional Medicine",
     date: "June 2026",
     readTime: 7,
@@ -1105,33 +1105,33 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "Hormones don't work in isolation. Thyroid function depends on adrenal status, gut health, nutrient availability, and inflammatory load — and yet most patients are evaluated by a single TSH lab. When that one number falls inside a wide statistical range, they're told everything is fine. For someone whose symptoms scream otherwise, that conversation is exhausting.",
+        text: "Hormones don't work in isolation. Thyroid function depends on adrenal status, gut health, nutrient availability, and inflammatory load - and yet most patients are evaluated by a single TSH lab. When that one number falls inside a wide statistical range, they're told everything is fine. For someone whose symptoms scream otherwise, that conversation is exhausting.",
       },
       { type: "h2", text: "What we look at instead" },
       {
         type: "list",
         items: [
-          "Full thyroid panel — TSH, free T4, free T3, reverse T3, plus TPO and Tg antibodies.",
-          "Sex hormones in context — estrogen and progesterone balance, free and total testosterone, DHEA-S.",
-          "Adrenal pattern — four-point salivary cortisol with DHEA, not just a 9 a.m. serum cortisol.",
-          "Insulin and HbA1c — because metabolic dysregulation drives hormone disruption upstream.",
-          "Iron, vitamin D, B12, and selenium — without these, your thyroid simply cannot convert T4 into active T3.",
+          "Full thyroid panel - TSH, free T4, free T3, reverse T3, plus TPO and Tg antibodies.",
+          "Sex hormones in context - estrogen and progesterone balance, free and total testosterone, DHEA-S.",
+          "Adrenal pattern - four-point salivary cortisol with DHEA, not just a 9 a.m. serum cortisol.",
+          "Insulin and HbA1c - because metabolic dysregulation drives hormone disruption upstream.",
+          "Iron, vitamin D, B12, and selenium - without these, your thyroid simply cannot convert T4 into active T3.",
         ],
       },
       { type: "h2", text: "Why 'normal' labs aren't always healthy" },
       {
         type: "p",
-        text: "A TSH of 3.8 sits inside most reference ranges, but it's a near-certain driver of fatigue, low mood, and weight resistance in someone with classic symptoms. Functional ranges are tighter, evidence-based, and designed around how you should feel — not just how a sick population looks on average.",
+        text: "A TSH of 3.8 sits inside most reference ranges, but it's a near-certain driver of fatigue, low mood, and weight resistance in someone with classic symptoms. Functional ranges are tighter, evidence-based, and designed around how you should feel - not just how a sick population looks on average.",
       },
       {
         type: "callout",
         title: "What hormone optimization actually looks like",
-        text: "We don't reach for hormones first. We address sleep, nutrient status, blood sugar, gut health, and stress load — then layer in targeted support (botanicals, nutrients, sometimes bioidentical hormones) once the foundation is in place.",
+        text: "We don't reach for hormones first. We address sleep, nutrient status, blood sugar, gut health, and stress load - then layer in targeted support (botanicals, nutrients, sometimes bioidentical hormones) once the foundation is in place.",
       },
       { type: "h2", text: "Common patterns we see" },
       {
         type: "p",
-        text: "Subclinical hypothyroidism with autoimmune antibodies. Cortisol that crashes by 2 p.m. Estrogen dominance in perimenopause. Low free testosterone in 30-something men. Each pattern has a clear playbook — but only when someone is willing to look past the surface number.",
+        text: "Subclinical hypothyroidism with autoimmune antibodies. Cortisol that crashes by 2 p.m. Estrogen dominance in perimenopause. Low free testosterone in 30-something men. Each pattern has a clear playbook - but only when someone is willing to look past the surface number.",
       },
     ],
     related: ["functional-medicine-fatigue-root-causes", "functional-medicine-vs-conventional", "personalized-nutrition-functional-medicine"],
@@ -1149,7 +1149,7 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "Patients with chronic Lyme are often dismissed at the most frustrating moment of their journey — when the standard ELISA and Western blot come back negative, or when they're told their symptoms are 'just anxiety.' The truth is that conventional Lyme testing was designed for early, classic cases. It misses chronic, late-stage, and co-infected presentations regularly.",
+        text: "Patients with chronic Lyme are often dismissed at the most frustrating moment of their journey - when the standard ELISA and Western blot come back negative, or when they're told their symptoms are 'just anxiety.' The truth is that conventional Lyme testing was designed for early, classic cases. It misses chronic, late-stage, and co-infected presentations regularly.",
       },
       { type: "h2", text: "What chronic Lyme really looks like" },
       {
@@ -1165,17 +1165,17 @@ export const ARTICLES: Article[] = [
       { type: "h2", text: "Better testing changes the picture" },
       {
         type: "p",
-        text: "We use specialty labs that look for direct evidence (PCR), antibody patterns across more bands, and common co-infections — Babesia, Bartonella, Ehrlichia, and more. Just as importantly, we look at the inflammatory and immune fingerprint these infections leave behind, even when the bug itself is hard to detect.",
+        text: "We use specialty labs that look for direct evidence (PCR), antibody patterns across more bands, and common co-infections - Babesia, Bartonella, Ehrlichia, and more. Just as importantly, we look at the inflammatory and immune fingerprint these infections leave behind, even when the bug itself is hard to detect.",
       },
       {
         type: "callout",
         title: "Treatment is rarely just an antibiotic",
-        text: "Successful chronic Lyme protocols address the infection, the immune dysregulation, the inflammatory load, the gut, and the detoxification pathways simultaneously. Antibiotics alone — without that scaffolding — usually disappoint.",
+        text: "Successful chronic Lyme protocols address the infection, the immune dysregulation, the inflammatory load, the gut, and the detoxification pathways simultaneously. Antibiotics alone - without that scaffolding - usually disappoint.",
       },
       { type: "h2", text: "When to suspect Lyme" },
       {
         type: "p",
-        text: "If you have multiple symptoms across multiple body systems, if you've been worse since a flu-like illness or tick exposure (even years ago), or if you've seen several specialists with no clear answer — it's worth evaluating. Many of our patients didn't realize Lyme was on the table until five-plus years into their journey.",
+        text: "If you have multiple symptoms across multiple body systems, if you've been worse since a flu-like illness or tick exposure (even years ago), or if you've seen several specialists with no clear answer - it's worth evaluating. Many of our patients didn't realize Lyme was on the table until five-plus years into their journey.",
       },
     ],
     related: ["functional-medicine-fatigue-root-causes", "functional-medicine-gut-health", "inflammation-chronic-illness"],
@@ -1184,7 +1184,7 @@ export const ARTICLES: Article[] = [
     slug: "inflammation-chronic-illness",
     title: "Inflammation: The Common Thread Behind Chronic Illness",
     excerpt:
-      "Heart disease, depression, autoimmune flares, joint pain, brain fog — they look unrelated, but they often share one upstream driver.",
+      "Heart disease, depression, autoimmune flares, joint pain, brain fog - they look unrelated, but they often share one upstream driver.",
     category: "Functional Medicine",
     date: "June 2026",
     readTime: 6,
@@ -1193,34 +1193,34 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "Ask conventional medicine what's behind heart disease, depression, autoimmune disease, and chronic pain, and you'll get four different answers. Ask functional medicine the same question, and you'll often get one: chronic, low-grade inflammation. Treating it directly — at the source — is one of the most powerful things you can do for long-term health.",
+        text: "Ask conventional medicine what's behind heart disease, depression, autoimmune disease, and chronic pain, and you'll get four different answers. Ask functional medicine the same question, and you'll often get one: chronic, low-grade inflammation. Treating it directly - at the source - is one of the most powerful things you can do for long-term health.",
       },
       { type: "h2", text: "Where the inflammation actually starts" },
       {
         type: "list",
         items: [
-          "Diet — refined carbs, industrial seed oils, and ultra-processed foods.",
+          "Diet - refined carbs, industrial seed oils, and ultra-processed foods.",
           "Gut dysbiosis and intestinal hyper-permeability ('leaky gut').",
           "Chronic stress and cortisol dysregulation.",
-          "Hidden infections — chronic viral, bacterial, or tick-borne.",
-          "Toxic exposures — mold, heavy metals, plastics.",
+          "Hidden infections - chronic viral, bacterial, or tick-borne.",
+          "Toxic exposures - mold, heavy metals, plastics.",
           "Poor sleep and circadian disruption.",
         ],
       },
       { type: "h2", text: "How we measure it" },
       {
         type: "p",
-        text: "High-sensitivity CRP, homocysteine, fasting insulin, oxidized LDL, ferritin, fibrinogen, and a comprehensive metabolic panel — together — paint a clearer picture than any single marker. Patterns matter more than any one number.",
+        text: "High-sensitivity CRP, homocysteine, fasting insulin, oxidized LDL, ferritin, fibrinogen, and a comprehensive metabolic panel - together - paint a clearer picture than any single marker. Patterns matter more than any one number.",
       },
       {
         type: "callout",
         title: "Anti-inflammatory living isn't a fad diet",
-        text: "It's the daily layering of food quality, sleep regularity, gut repair, stress management, and movement — done well over months, not days. The labs follow. The symptoms follow. That's the work.",
+        text: "It's the daily layering of food quality, sleep regularity, gut repair, stress management, and movement - done well over months, not days. The labs follow. The symptoms follow. That's the work.",
       },
       { type: "h2", text: "Why this matters" },
       {
         type: "p",
-        text: "Lower the inflammation, and you don't just feel better — you reduce risk for almost every chronic disease that drives healthcare costs and shortens lives. That's why we treat it early and aggressively, even when conventional labs are still 'normal.'",
+        text: "Lower the inflammation, and you don't just feel better - you reduce risk for almost every chronic disease that drives healthcare costs and shortens lives. That's why we treat it early and aggressively, even when conventional labs are still 'normal.'",
       },
     ],
     related: ["functional-medicine-fatigue-root-causes", "functional-medicine-gut-health", "functional-medicine-vs-conventional"],
@@ -1229,7 +1229,7 @@ export const ARTICLES: Article[] = [
     slug: "personalized-nutrition-functional-medicine",
     title: "Personalized Nutrition: Why One Diet Never Fits All",
     excerpt:
-      "Keto, paleo, plant-based, Mediterranean — every diet has fans and critics. Functional medicine asks a different question: what does your body actually need?",
+      "Keto, paleo, plant-based, Mediterranean - every diet has fans and critics. Functional medicine asks a different question: what does your body actually need?",
     category: "Functional Medicine",
     date: "June 2026",
     readTime: 6,
@@ -1238,17 +1238,17 @@ export const ARTICLES: Article[] = [
     body: [
       {
         type: "p",
-        text: "There is no single diet that works for everyone. The same food that quiets one person's inflammation can spike another person's. Functional medicine starts with the individual — your labs, your symptoms, your goals — and builds the plan from there.",
+        text: "There is no single diet that works for everyone. The same food that quiets one person's inflammation can spike another person's. Functional medicine starts with the individual - your labs, your symptoms, your goals - and builds the plan from there.",
       },
       { type: "h2", text: "What we evaluate before recommending a plan" },
       {
         type: "list",
         items: [
           "Inflammatory markers and food sensitivity patterns.",
-          "Blood sugar handling — fasting insulin, HbA1c, glucose response.",
+          "Blood sugar handling - fasting insulin, HbA1c, glucose response.",
           "Gut microbiome status and digestive function.",
-          "Nutrient deficiencies — iron, B vitamins, vitamin D, magnesium, zinc.",
-          "Lifestyle realities — schedule, family, cooking time, budget.",
+          "Nutrient deficiencies - iron, B vitamins, vitamin D, magnesium, zinc.",
+          "Lifestyle realities - schedule, family, cooking time, budget.",
         ],
       },
       { type: "h2", text: "Why generic diets fail" },
@@ -1259,12 +1259,12 @@ export const ARTICLES: Article[] = [
       {
         type: "callout",
         title: "Food first, then targeted supplements",
-        text: "We use food as the foundation and add physician-grade supplements only where labs and symptoms point to a specific need — never as a shotgun approach.",
+        text: "We use food as the foundation and add physician-grade supplements only where labs and symptoms point to a specific need - never as a shotgun approach.",
       },
       { type: "h2", text: "What success looks like" },
       {
         type: "p",
-        text: "Not weight loss alone. Better energy, stable mood, improved labs, fewer cravings, better sleep, lower inflammation. Weight changes follow when the plan fits — but they're a side effect of getting the system right, not the goal in isolation.",
+        text: "Not weight loss alone. Better energy, stable mood, improved labs, fewer cravings, better sleep, lower inflammation. Weight changes follow when the plan fits - but they're a side effect of getting the system right, not the goal in isolation.",
       },
     ],
     related: ["functional-medicine-gut-health", "functional-medicine-fatigue-root-causes", "functional-medicine-hormone-thyroid"],

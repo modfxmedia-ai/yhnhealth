@@ -34,10 +34,11 @@ const cardItem = {
 
 export default function ServicePage({ config }: { config: ServiceConfig }) {
   const { title, eyebrow = "Our Services", intro, imageSrc, imageAlt, sections, benefits, related, slug } = config;
+  const isChiropracticMedicine = eyebrow === "Chiropractic Medicine";
 
   return (
     <main className="bg-white">
-        {/* 1 — HERO */}
+        {/* 1 - HERO */}
         <section className="relative overflow-hidden bg-cream-light">
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.07]"
@@ -77,19 +78,29 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
 
             <FadeUp delay={0.35}>
               <div className="mt-10 flex flex-wrap items-center gap-4">
-                <Link
-                  href="/locations"
-                  className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:bg-brand-dark hover:shadow-lg"
-                >
-                  Book Appointment
-                  <ArrowRight size={14} strokeWidth={2.5} />
-                </Link>
+                {isChiropracticMedicine ? (
+                  <Link
+                    href="/contact-us"
+                    className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:bg-brand-dark hover:shadow-lg"
+                  >
+                    Contact the Office
+                    <ArrowRight size={14} strokeWidth={2.5} />
+                  </Link>
+                ) : (
+                  <Link
+                    href="/locations"
+                    className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:bg-brand-dark hover:shadow-lg"
+                  >
+                    Book Appointment
+                    <ArrowRight size={14} strokeWidth={2.5} />
+                  </Link>
+                )}
               </div>
             </FadeUp>
           </div>
         </section>
 
-        {/* 2 — 2-COL CONTENT */}
+        {/* 2 - 2-COL CONTENT */}
         <section className="relative bg-white py-20 md:py-28">
           <div className="mx-auto max-w-[1320px] px-6 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 lg:items-center">
@@ -150,7 +161,7 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
           </div>
         </section>
 
-        {/* 3 — BENEFITS (optional) */}
+        {/* 3 - BENEFITS (optional) */}
         {benefits && benefits.items.length > 0 && (
           <section className="relative bg-cream-light py-20 md:py-28">
             <div className="mx-auto max-w-[1320px] px-6 lg:px-10">
@@ -199,7 +210,7 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
           </section>
         )}
 
-        {/* 4 — RELATED SERVICES */}
+        {/* 4 - RELATED SERVICES */}
         {related.length > 0 && (
           <section className="bg-white py-20 md:py-24">
             <div className="mx-auto max-w-[1320px] px-6 lg:px-10">
@@ -213,10 +224,10 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
                   </h2>
                 </FadeUp>
                 <Link
-                  href="/locations"
+                  href={isChiropracticMedicine ? "/contact-us" : "/locations"}
                   className="text-[11px] font-bold uppercase tracking-[0.24em] text-brand transition-colors hover:text-accent-dark"
                 >
-                  Book Appointment →
+                  {isChiropracticMedicine ? "Contact the Office →" : "Book Appointment →"}
                 </Link>
               </div>
 
@@ -257,7 +268,7 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
           </section>
         )}
 
-        {/* 5 — NAVY CTA BANNER */}
+        {/* 5 - NAVY CTA BANNER */}
         <section className="relative overflow-hidden bg-brand text-white">
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.08]"
@@ -276,7 +287,7 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
                   Ready to Get Started?
                 </p>
                 <h2 className="mt-4 font-display text-3xl font-bold leading-tight md:text-4xl lg:text-[46px]">
-                  Schedule your visit and meet the team behind{" "}
+                  {isChiropracticMedicine ? "Meet the team behind" : "Schedule your visit and meet the team behind"}{" "}
                   {title
                     .split(" ")
                     .map((w) => (w === w.toUpperCase() ? w : w.toLowerCase()))
@@ -290,13 +301,23 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
 
               <FadeUp delay={0.15} className="lg:col-span-5">
                 <div className="flex flex-col gap-4">
-                  <Link
-                    href="/locations"
-                    className="group inline-flex items-center justify-between gap-3 rounded-full bg-accent px-7 py-4 text-[12px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:bg-accent-dark"
-                  >
-                    Book Your Appointment
-                    <ArrowRight size={16} strokeWidth={2.5} className="transition-transform group-hover:translate-x-1" />
-                  </Link>
+                  {isChiropracticMedicine ? (
+                    <Link
+                      href="/contact-us"
+                      className="group inline-flex items-center justify-between gap-3 rounded-full bg-accent px-7 py-4 text-[12px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:bg-accent-dark"
+                    >
+                      Contact the Office
+                      <ArrowRight size={16} strokeWidth={2.5} className="transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  ) : (
+                    <Link
+                      href="/locations"
+                      className="group inline-flex items-center justify-between gap-3 rounded-full bg-accent px-7 py-4 text-[12px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:bg-accent-dark"
+                    >
+                      Book Your Appointment
+                      <ArrowRight size={16} strokeWidth={2.5} className="transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  )}
                   <div className="grid grid-cols-2 gap-3">
                     <a
                       href="tel:8565322063"

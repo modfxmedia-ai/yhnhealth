@@ -93,7 +93,7 @@ export default function ModulePage({ config }: { config: ModuleConfig }) {
                   <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-card">
                     <Image
                       src={config.imageSrc}
-                      alt={`${config.title} — CPSC Module ${config.number}`}
+                      alt={`${config.title} - CPSC Module ${config.number}`}
                       fill
                       sizes="(min-width:1024px) 40vw, 100vw"
                       className="object-cover"

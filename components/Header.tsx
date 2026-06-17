@@ -155,7 +155,7 @@ function DesktopDropdown({
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Dropdown row — leaf or nested group flyout                                */
+/*  Dropdown row, leaf or nested group flyout                                */
 /* -------------------------------------------------------------------------- */
 function DropdownRow({ child }: { child: NavChild }) {
   const [open, setOpen] = useState(false);
@@ -290,7 +290,7 @@ function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => void })
             className="fixed inset-y-0 right-0 z-50 flex h-full w-[88vw] max-w-md flex-col overflow-y-auto bg-white shadow-2xl xl:hidden"
           >
             <div className="flex items-center justify-between border-b border-brand/10 px-6 py-5">
-              <Link href="/" onClick={onClose} aria-label="Your Health Now — home">
+              <Link href="/" onClick={onClose} aria-label="Your Health Now, home">
                 <Image
                   src="/images/logo.webp"
                   alt="Your Health Now"
@@ -480,7 +480,7 @@ export default function Header() {
             {/* Logo */}
             <Link
               href="/"
-              aria-label="Your Health Now — home"
+              aria-label="Your Health Now, home"
               className="flex shrink-0 items-center"
             >
               <Image

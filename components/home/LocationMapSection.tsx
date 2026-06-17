@@ -104,7 +104,7 @@ export default function LocationMapSection() {
           ))}
         </div>
 
-        {/* FM Telehealth coverage card — PA & NJ */}
+        {/* FM Telehealth coverage card, PA & NJ */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

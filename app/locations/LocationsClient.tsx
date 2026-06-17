@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
-import { ArrowUpRight, MapPin, Phone, Clock, Mail, FlaskConical, Video, Calendar } from "lucide-react";
+import { ArrowUpRight, MapPin, Phone, Clock, Mail, FlaskConical, Video } from "lucide-react";
 import { Breadcrumbs, FadeUp } from "@/components/page/Primitives";
 
 type Loc = {
@@ -11,7 +11,6 @@ type Loc = {
   address: string;
   phone: string;
   tel: string;
-  bookingUrl: string;
   mapEmbed: string;
   directionsUrl: string;
 };
@@ -23,7 +22,6 @@ const LOCATIONS: Loc[] = [
     address: "5 W Chestnut Ave, Merchantville, NJ 08109",
     phone: "(856) 532-2063",
     tel: "tel:8565322063",
-    bookingUrl: "https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2",
     mapEmbed:
       "https://www.google.com/maps?q=5+W+Chestnut+Ave,+Merchantville,+NJ+08109&output=embed",
     directionsUrl: "https://maps.app.goo.gl/eZph1e6LanqehCXF8",
@@ -34,7 +32,6 @@ const LOCATIONS: Loc[] = [
     address: "350 N Main St #201, Chalfont, PA 18914",
     phone: "(609) 651-7436",
     tel: "tel:6096517436",
-    bookingUrl: "https://yourhealthnow.janeapp.com/locations/yhn-chalfont/book",
     mapEmbed:
       "https://www.google.com/maps?q=350+N+Main+St+%23201,+Chalfont,+PA+18914&output=embed",
     directionsUrl: "https://maps.app.goo.gl/XZTDgRGTwdgtHUgS6",
@@ -60,7 +57,7 @@ const FM_REGION_MAP =
 export default function LocationsClient() {
   return (
     <main className="bg-cream-light">
-      {/* HERO — full-width navy banner */}
+      {/* HERO - full-width navy banner */}
       <section className="relative overflow-hidden bg-brand-dark text-white">
         <div
           aria-hidden="true"
@@ -105,12 +102,12 @@ export default function LocationsClient() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-8 max-w-xl text-lg leading-relaxed text-white/75"
           >
-            Two convenient locations to serve you — one in South Jersey, one in Bucks County. Same care, same standard, wherever you are.
+            Two convenient locations to serve you - one in South Jersey, one in Bucks County. Same care, same standard, wherever you are.
           </motion.p>
         </div>
       </section>
 
-      {/* LOCATION CARDS — 2-col side-by-side */}
+      {/* LOCATION CARDS - 2-col side-by-side */}
       <section className="relative">
         <div className="mx-auto max-w-[1320px] px-6 -mt-16 pb-20 lg:px-10 lg:-mt-20 lg:pb-28">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10">
@@ -192,15 +189,6 @@ export default function LocationsClient() {
 
                     <div className="flex flex-wrap items-center gap-3 pt-2">
                       <Link
-                        href={loc.bookingUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:bg-accent"
-                      >
-                        Schedule Here
-                        <ArrowUpRight size={13} />
-                      </Link>
-                      <Link
                         href="/contact-us"
                         className="text-[11px] font-bold uppercase tracking-[0.22em] text-brand hover:text-accent-dark"
                       >
@@ -215,7 +203,7 @@ export default function LocationsClient() {
         </div>
       </section>
 
-      {/* FUNCTIONAL MEDICINE — TELEHEALTH STATEWIDE */}
+      {/* FUNCTIONAL MEDICINE - TELEHEALTH STATEWIDE */}
       <section className="relative bg-cream-light">
         <div className="mx-auto max-w-[1320px] px-6 pb-20 lg:px-10 lg:pb-28">
           <FadeUp>
@@ -230,7 +218,7 @@ export default function LocationsClient() {
                 </h2>
               </div>
               <p className="max-w-md text-sm leading-relaxed text-stone md:text-right">
-                Dr. Chris sees functional medicine patients via secure video visit anywhere in Pennsylvania and New Jersey — no in-person visit required.
+                Dr. Chris sees functional medicine patients via secure video visit anywhere in Pennsylvania and New Jersey - no in-person visit required.
               </p>
             </div>
           </FadeUp>
@@ -274,7 +262,7 @@ export default function LocationsClient() {
                         <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-white/55">
                           Format
                         </p>
-                        <p className="mt-1 text-sm font-semibold">Secure video visits — no clinic visit required</p>
+                        <p className="mt-1 text-sm font-semibold">Secure video visits - no clinic visit required</p>
                       </div>
                     </div>
 
@@ -348,7 +336,7 @@ export default function LocationsClient() {
                 Same hours at both offices.
               </h2>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-stone">
-                Open early, close late — built around the schedules of working families and professionals across NJ and PA.
+                Open early, close late - built around the schedules of working families and professionals across NJ and PA.
               </p>
               <a
                 href="mailto:info@yhnhealth.com"

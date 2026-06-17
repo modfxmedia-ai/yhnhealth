@@ -84,7 +84,7 @@ export default function AreaServicePage({
                 className="mt-6 h-[3px] w-24 bg-accent"
               />
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-stone md:text-lg">
-                {summary} Patients across {city.vibe} drive to our {clinic.name} office — about{" "}
+                {summary} Patients across {city.vibe} drive to our {clinic.name} office - about{" "}
                 {city.driveMin === 0 ? "a few minutes away" : `${city.driveMin} minutes from ${city.name}`}.
               </p>
             </FadeUp>
@@ -158,13 +158,13 @@ export default function AreaServicePage({
             <p className="text-[15px] leading-relaxed text-stone md:text-base">
               Whether you live near {city.neighborhoods.slice(0, 2).join(" or ")}, work close to{" "}
               {city.landmarks[0]}, or only ever pass through {city.name} on the way to {clinic.name},
-              you deserve {service.shortName} that addresses <em>your</em> body — not a one-size-fits-all routine.
+              you deserve {service.shortName} that addresses <em>your</em> body - not a one-size-fits-all routine.
               Every plan starts with a real exam, a clear diagnosis, and a written timeline so you know what
               the path looks like before you commit.
             </p>
             <p className="mt-5 text-[15px] leading-relaxed text-stone md:text-base">
               Our doctors are post-graduate-credentialed in patient-specific chiropractic, ART, IASTM, and
-              functional medicine. That depth lets us combine techniques inside a single visit — so {city.name}{" "}
+              functional medicine. That depth lets us combine techniques inside a single visit - so {city.name}{" "}
               patients spend less time chasing relief across four different offices.
             </p>
 
@@ -193,8 +193,7 @@ export default function AreaServicePage({
           <FadeUp className="max-w-2xl">
             <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent-dark">Conditions we treat</p>
             <h2 className="mt-3 font-display text-3xl font-bold text-brand md:text-4xl">
-              {service.name} for {city.name} patients dealing with —
-            </h2>
+              {service.name} for {city.name} patients dealing with - </h2>
             <div className="mt-4 h-[3px] w-20 bg-accent" />
           </FadeUp>
 
@@ -336,7 +335,7 @@ export default function AreaServicePage({
                 <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-accent-dark">From {city.name} to YHN</p>
                 <p className="mt-3 text-sm leading-relaxed text-stone">
                   {city.driveMin === 0
-                    ? `Our ${clinic.name} location is right in town — minutes from anywhere in ${city.name}.`
+                    ? `Our ${clinic.name} location is right in town - minutes from anywhere in ${city.name}.`
                     : `${clinic.name} sits about ${city.driveMin} minutes from ${city.name}. Most ${city.name} patients pair an early-morning or late-afternoon visit with their commute.`}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-stone">
@@ -421,7 +420,7 @@ export default function AreaServicePage({
             </h2>
             <div className="mt-4 h-[3px] w-20 bg-accent" />
             <p className="mt-6 text-sm leading-relaxed text-stone">
-              Don&rsquo;t see your question? Call {clinic.phone} or send us a message — we typically reply within one business day.
+              Don&rsquo;t see your question? Call {clinic.phone} or send us a message - we typically reply within one business day.
             </p>
           </FadeUp>
 
@@ -467,7 +466,7 @@ export default function AreaServicePage({
               Ready to feel like yourself again?
             </h2>
             <p className="mt-5 text-base leading-relaxed text-white/75">
-              Book {service.shortName} at our {clinic.name} office — the closest YHN clinic to {city.name}.
+              Book {service.shortName} at our {clinic.name} office - the closest YHN clinic to {city.name}.
               Same-week appointments are common.
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">

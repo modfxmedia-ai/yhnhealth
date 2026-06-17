@@ -212,7 +212,7 @@ export default function CpscClient() {
                     &ldquo;EDUCATION Is Not The Learning Of Facts, But Training The Mind To
                     THINK&rdquo;
                   </p>
-                  <p className="text-sm">— Albert Einstein</p>
+                  <p className="text-sm"> - Albert Einstein</p>
                   <p>Providing CHIROPRACTORS up to 40 hours of CE credit.</p>
                 </FadeUp>
                 <FadeUp delay={0.25} className="mt-8 flex flex-wrap items-center gap-3">
@@ -300,7 +300,7 @@ export default function CpscClient() {
                 </p>
                 <p>
                   In this course, you must be ready to THINK, and you will take your
-                  clinical skills and business acumen to the next level — practicing with
+                  clinical skills and business acumen to the next level - practicing with
                   superior patient care and solid financial stability.
                 </p>
               </div>

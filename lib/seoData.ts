@@ -1,5 +1,5 @@
 /**
- * SEO metadata cloned verbatim from yhnhealth.com — title and description for
+ * SEO metadata cloned verbatim from yhnhealth.com - title and description for
  * every nav slug. The values match the live site's <title> and
  * <meta name="description"> tags exactly so search appearance is preserved.
  */
@@ -44,7 +44,7 @@ export const SEO: Record<string, SeoEntry> = {
   "/health-optimization-programs": {
     title: "Health Optimization Programs | Functional Medicine in NJ & PA | Your Health Now",
     description:
-      "12 doctor-designed Health Optimization Programs — weight & metabolism, hormones, energy, thyroid, gut, longevity and more. 6- or 12-month pathways with telehealth in Merchantville, NJ & Chalfont, PA.",
+      "12 doctor-designed Health Optimization Programs - weight & metabolism, hormones, energy, thyroid, gut, longevity and more. 6- or 12-month pathways with telehealth in Merchantville, NJ & Chalfont, PA.",
   },
   "/family-chiropractic-care": {
     title: "Chiropractic Care | Chalfont, PA & Merchantville, NJ | Your Health Now",
@@ -204,7 +204,7 @@ export const SEO: Record<string, SeoEntry> = {
   "/privacy-policy": {
     title: "Privacy Policy | Your Health Now",
     description:
-      "Privacy policy for yhnhealth.com — how Your Health Now collects, uses and protects your information.",
+      "Privacy policy for yhnhealth.com - how Your Health Now collects, uses and protects your information.",
   },
 };
 

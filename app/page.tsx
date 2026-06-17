@@ -17,7 +17,7 @@ import LocationMapSection from "@/components/home/LocationMapSection";
 export const metadata: Metadata = {
   title: "Your Health Now | Functional Medicine & Chiropractic in Chalfont, PA & Merchantville, NJ",
   description:
-    "Functional medicine and chiropractic care under one roof — root-cause investigation, advanced labs, and precise hands-on care in Chalfont, PA and Merchantville, NJ. Call today for an appointment.",
+    "Functional medicine and chiropractic care under one roof - root-cause investigation, advanced labs, and precise hands-on care in Chalfont, PA and Merchantville, NJ. Call today for an appointment.",
   keywords: [
     "Functional Medicine",
     "Chiropractor",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Your Health Now | Functional Medicine & Chiropractic in Chalfont, PA & Merchantville, NJ",
     description:
-      "Functional medicine and chiropractic care under one roof — root-cause investigation, advanced labs, and precise hands-on care in Chalfont, PA and Merchantville, NJ.",
+      "Functional medicine and chiropractic care under one roof - root-cause investigation, advanced labs, and precise hands-on care in Chalfont, PA and Merchantville, NJ.",
     url: "https://yhnhealth.com/",
     type: "website",
     siteName: "Your Health Now",

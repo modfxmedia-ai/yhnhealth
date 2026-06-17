@@ -64,7 +64,7 @@ export default function ContactClient() {
                 type="submit"
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:bg-accent md:col-span-2 md:w-fit"
               >
-                {submitted ? "Thanks — we'll be in touch" : "Submit"}
+                {submitted ? "Thanks - we'll be in touch" : "Submit"}
                 <Send size={13} className="transition-transform group-hover:translate-x-0.5" />
               </button>
             </form>

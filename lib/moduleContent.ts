@@ -1,5 +1,5 @@
 /**
- * CPSC Module content cloned verbatim from yhnhealth.com — 6 post-graduate
+ * CPSC Module content cloned verbatim from yhnhealth.com - 6 post-graduate
  * seminars in the Certification in Patient-Specific Chiropractic series.
  */
 

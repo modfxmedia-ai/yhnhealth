@@ -69,7 +69,7 @@ export default function AreaCityPage({ city }: { city: City }) {
                 className="mt-6 h-[3px] w-24 bg-accent"
               />
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-stone md:text-lg">
-                {city.name} is {city.vibe}. Our nearest clinic — {clinic.name} — sits{" "}
+                {city.name} is {city.vibe}. Our nearest clinic - {clinic.name} - sits{" "}
                 {city.driveMin === 0 ? "right in town" : `about ${city.driveMin} minutes away`} and serves{" "}
                 {city.name} families with patient-specific chiropractic, functional medicine, sports rehab, and prenatal care.
               </p>
@@ -132,7 +132,7 @@ export default function AreaCityPage({ city }: { city: City }) {
             <p className="mt-6 text-[15px] leading-relaxed text-stone">
               {city.name} is home to about {city.population} residents in {city.county} County. Patients come
               to us from neighborhoods like {city.neighborhoods.slice(0, 3).join(", ")}, and from work near{" "}
-              {city.landmarks.slice(0, 2).join(" and ")}. Care is scheduled around busy commutes — early morning,
+              {city.landmarks.slice(0, 2).join(" and ")}. Care is scheduled around busy commutes - early morning,
               lunchtime and post-work appointments are standard.
             </p>
           </FadeUp>
@@ -245,7 +245,7 @@ export default function AreaCityPage({ city }: { city: City }) {
               Ready when you are, {city.name}.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-white/75">
-              Book at our {clinic.name} office — the closest YHN clinic to {city.name}.
+              Book at our {clinic.name} office - the closest YHN clinic to {city.name}.
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
               <Link href="/locations" className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-brand-dark transition-colors hover:bg-white">

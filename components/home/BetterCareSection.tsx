@@ -9,7 +9,7 @@ const FEATURES = [
   {
     icon: FlaskConical,
     title: "Functional Medicine",
-    body: "Doctor-led, root-cause investigation for chronic conditions, fatigue, hormones, gut health, and complex illness — built on advanced labs, personalized protocols, and close clinical follow-up.",
+    body: "Doctor-led, root-cause investigation for chronic conditions, fatigue, hormones, gut health, and complex illness - built on advanced labs, personalized protocols, and close clinical follow-up.",
     image: "/images/yhn-clone/practice.webp",
     highlight: "Root-Cause Care",
     href: "/functional-medicine",
@@ -17,7 +17,7 @@ const FEATURES = [
   {
     icon: Activity,
     title: "Chiropractic & Manual Care",
-    body: "Patient-specific adjustments, decompression, ART, IASTM, and percussion therapy — precision hands-on care for pain, mobility, and nervous-system function across every life stage.",
+    body: "Patient-specific adjustments, decompression, ART, IASTM, and percussion therapy - precision hands-on care for pain, mobility, and nervous-system function across every life stage.",
     image: "/images/yhn-clone/testimonials.jpg",
     imagePosition: "object-top",
     highlight: "Hands-On Care",
@@ -70,7 +70,7 @@ export default function BetterCareSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-lg leading-relaxed text-stone lg:col-span-5"
           >
-            Two complementary tracks of care under one roof — functional
+            Two complementary tracks of care under one roof - functional
             medicine for the deeper picture, chiropractic and manual therapy
             for the hands-on relief. You get both, working together, in
             Merchantville and Chalfont.
@@ -93,7 +93,7 @@ export default function BetterCareSection() {
               >
                 <Link
                   href={card.href}
-                  aria-label={`${card.title} — learn the YHN approach`}
+                  aria-label={`${card.title} - learn the YHN approach`}
                   className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
                 >
                   <div className="relative aspect-[16/10] w-full overflow-hidden">

@@ -51,7 +51,7 @@ export default function NewsletterSection() {
               </h2>
               <p className="mt-4 max-w-md text-base leading-relaxed text-white/75">
                 Monthly health insights, practical tips, and care updates from
-                our team — straight to your inbox.
+                our team - straight to your inbox.
               </p>
             </div>
 

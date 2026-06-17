@@ -36,7 +36,7 @@ export default function ArticlesSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-lg leading-relaxed text-stone lg:col-span-5"
           >
-            Insights, tips and care notes from the YHN team — designed to help
+            Insights, tips and care notes from the YHN team - designed to help
             you move better, sleep better, and live well.
           </motion.p>
         </div>

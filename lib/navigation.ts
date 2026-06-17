@@ -12,7 +12,7 @@ export function isNavGroup(child: NavChild): child is NavGroup {
 }
 
 /**
- * Nav structure mirrored from https://yhnhealth.com/ — labels, slugs and the
+ * Nav structure mirrored from https://yhnhealth.com/ - labels, slugs and the
  * nested submenu layout match the live site exactly.
  */
 export const NAV_ITEMS: NavItem[] = [
@@ -106,7 +106,7 @@ export const NAV_ITEMS: NavItem[] = [
   },
 ];
 
-/** All canonical paths — used by the sitemap and for routing. */
+/** All canonical paths - used by the sitemap and for routing. */
 export const SITE_PATHS: string[] = [
   "/",
   "/family-chiropractic-care",

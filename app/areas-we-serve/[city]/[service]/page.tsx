@@ -25,7 +25,7 @@ export async function generateMetadata(
   if (!city || !service) return {};
 
   const title = `${service.name} in ${city.name}, ${city.state} | Your Health Now`;
-  const description = `${service.name} for ${city.name}, ${city.state} patients. ${service.summary.split(".")[0]}. Same-week appointments — book today.`;
+  const description = `${service.name} for ${city.name}, ${city.state} patients. ${service.summary.split(".")[0]}. Same-week appointments - book today.`;
   const canonical = `https://yhnhealth.com/areas-we-serve/${city.slug}/${service.slug}`;
   return {
     title,

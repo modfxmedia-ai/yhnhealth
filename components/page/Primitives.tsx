@@ -26,7 +26,7 @@ export function Breadcrumbs({ trail }: { trail: Crumb[] }) {
 }
 
 /**
- * Inline booking strip — every page calls this so the site keeps a strong CTA.
+ * Inline booking strip - every page calls this so the site keeps a strong CTA.
  * variant lets pages choose a tonal treatment without the strip looking
  * identical on neighbouring pages.
  */

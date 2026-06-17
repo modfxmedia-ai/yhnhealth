@@ -154,10 +154,10 @@ export default function HeroSection() {
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="mt-7 max-w-2xl text-lg leading-relaxed text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] md:text-xl"
             >
-              Function well so you feel well. Functional medicine and
-              chiropractic care, working together — advanced labs, root-cause
-              protocols, and precise hands-on care, so health problems don&rsquo;t
-              just go away, they go away and stay away.
+              Combining Functional Medicine and Chiropractic Care to uncover
+              root causes, restore movement, and help your body perform the way
+              it was designed to, through advanced testing, personalized
+              protocols, and precise hands-on treatment.
             </motion.p>
 
             <motion.div
@@ -173,7 +173,7 @@ export default function HeroSection() {
                 className="group inline-flex items-center gap-3 rounded-full bg-white px-9 py-4 text-[12px] font-bold uppercase tracking-[0.24em] text-brand shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent hover:text-white hover:shadow-card-hover"
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-accent transition-colors group-hover:bg-white" />
-                Book Appointment
+                Book Functional Medicine Visit
                 <ChevronRight
                   size={14}
                   className="transition-transform duration-300 group-hover:translate-x-1"
@@ -218,7 +218,7 @@ export default function HeroSection() {
                 <span className="rounded-full bg-white/25 px-2 py-0.5 text-[10px] font-extrabold tracking-[0.18em] text-white">
                   FREE
                 </span>
-                <span>30-Min Functional Medicine Consult</span>
+                <span>30-Minute Consultation</span>
               </span>
               <ChevronRight
                 size={14}
@@ -226,6 +226,12 @@ export default function HeroSection() {
                 className="relative transition-transform duration-300 group-hover:translate-x-1"
               />
             </motion.a>
+
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/75">
+              Meet with our team to discuss your health concerns, goals,
+              symptoms, and treatment options. We&apos;ll help determine the best
+              path forward for your unique needs.
+            </p>
 
             {/* Stats strip */}
             <motion.div
@@ -275,7 +281,7 @@ export default function HeroSection() {
                   className="relative h-full w-full"
                   style={{ transformStyle: "preserve-3d" }}
                 >
-                  {/* Front — slide preview */}
+                  {/* Front - slide preview */}
                   <div
                     className="absolute inset-0 overflow-hidden rounded-3xl border border-white/15 bg-white/5 backdrop-blur"
                     style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
@@ -315,7 +321,7 @@ export default function HeroSection() {
                     </div>
                   </div>
 
-                  {/* Back — per-slide info */}
+                  {/* Back - per-slide info */}
                   <div
                     className="absolute inset-0 flex flex-col justify-between overflow-hidden rounded-3xl border border-accent/30 bg-gradient-to-br from-brand to-brand-dark p-7"
                     style={{

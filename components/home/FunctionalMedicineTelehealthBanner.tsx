@@ -17,7 +17,7 @@ const FM_BOOKING_URL =
 const FEATURES = [
   "Advanced labs & root-cause workups",
   "Personalized clinical protocols",
-  "Same depth, same doctor — over secure video",
+  "Same depth, same doctor - over secure video",
 ];
 
 export default function FunctionalMedicineTelehealthBanner() {
@@ -46,7 +46,7 @@ export default function FunctionalMedicineTelehealthBanner() {
         transition={{ duration: 0.7, ease: "easeOut" }}
         className="container relative z-10 grid grid-cols-1 gap-10 py-14 sm:py-16 md:grid-cols-12 md:items-center md:gap-8 md:py-20"
       >
-        {/* LEFT — Headline + value */}
+        {/* LEFT - Headline + value */}
         <div className="md:col-span-7">
           <span className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/15 px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.32em] text-accent backdrop-blur">
             <FlaskConical size={11} strokeWidth={2.25} />
@@ -65,7 +65,7 @@ export default function FunctionalMedicineTelehealthBanner() {
             <span className="font-semibold text-white">
               all of Pennsylvania &amp; New Jersey
             </span>{" "}
-            via secure video. No commute, no waiting room — just deep
+            via secure video. No commute, no waiting room - just deep
             root-cause work with Dr. Chris.
           </p>
 
@@ -98,7 +98,7 @@ export default function FunctionalMedicineTelehealthBanner() {
           </div>
         </div>
 
-        {/* RIGHT — Booking card */}
+        {/* RIGHT - Booking card */}
         <div className="md:col-span-5">
           <div className="rounded-2xl border border-white/15 bg-white/5 p-6 backdrop-blur">
             <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-accent">

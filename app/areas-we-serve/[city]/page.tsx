@@ -16,7 +16,7 @@ export async function generateMetadata(
   const city = CITY_BY_SLUG[citySlug];
   if (!city) return {};
   const title = `Chiropractor in ${city.name}, ${city.state} | Your Health Now`;
-  const description = `Patient-specific chiropractic, functional medicine, and rehab serving ${city.name}, ${city.state} and ${city.county} County. ${SERVICES.length} services available — book today.`;
+  const description = `Patient-specific chiropractic, functional medicine, and rehab serving ${city.name}, ${city.state} and ${city.county} County. ${SERVICES.length} services available - book today.`;
   const canonical = `https://yhnhealth.com/areas-we-serve/${city.slug}`;
   return {
     title,

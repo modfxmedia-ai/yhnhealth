@@ -230,7 +230,7 @@ export default function HoursContactSection() {
               </motion.div>
             ))}
 
-            {/* FM Telehealth — third "location" */}
+            {/* FM Telehealth - third "location" */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -254,7 +254,7 @@ export default function HoursContactSection() {
                   <p className="mt-3 max-w-md text-sm leading-relaxed text-white/75">
                     Doctor-led functional medicine care with Dr. Chris,
                     delivered via secure video. Open to residents anywhere in
-                    PA &amp; NJ — no commute, no waiting room.
+                    PA &amp; NJ - no commute, no waiting room.
                   </p>
                   <div className="mt-5 space-y-3">
                     <p className="flex items-start gap-3 text-sm text-white/80">

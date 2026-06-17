@@ -49,7 +49,7 @@ const REVIEWS: Review[] = [
     stars: 5,
   },
   {
-    text: "After my first call I felt heard. The complimentary 15-minute consultation alone was more thorough than any visit I had with my previous doctor — and that was before I even stepped into the office. The team genuinely cares about the why behind your symptoms.",
+    text: "After my first call I felt heard. The complimentary 15-minute consultation alone was more thorough than any visit I had with my previous doctor - and that was before I even stepped into the office. The team genuinely cares about the why behind your symptoms.",
     author: "Jessica R.",
     source: "Google",
     location: "Merchantville, NJ",
@@ -57,7 +57,7 @@ const REVIEWS: Review[] = [
     stars: 5,
   },
   {
-    text: "I came in barely able to walk after a herniated disc. Six weeks of decompression and adjustments later, I'm back on the trail and lifting again. The team is exceptional — they explained the plan, set realistic expectations, and delivered every step of the way.",
+    text: "I came in barely able to walk after a herniated disc. Six weeks of decompression and adjustments later, I'm back on the trail and lifting again. The team is exceptional - they explained the plan, set realistic expectations, and delivered every step of the way.",
     author: "Daniel K.",
     source: "Google",
     location: "Chalfont, PA",
@@ -65,7 +65,7 @@ const REVIEWS: Review[] = [
     stars: 5,
   },
   {
-    text: "Dr. Lillee took care of me through both pregnancies. The Webster Technique made such a difference — I felt aligned, comfortable, and confident going into each delivery. Would recommend to any expecting mom in the area.",
+    text: "Dr. Lillee took care of me through both pregnancies. The Webster Technique made such a difference - I felt aligned, comfortable, and confident going into each delivery. Would recommend to any expecting mom in the area.",
     author: "Hannah P.",
     source: "Google",
     location: "Merchantville, NJ",
@@ -105,7 +105,7 @@ const REVIEWS: Review[] = [
     stars: 5,
   },
   {
-    text: "Friendly, professional, and on time every visit. The Arthrostim adjustments are gentle but effective — perfect for someone like me who is nervous about manual cracking. I drive 40 minutes for my appointments and it's worth it.",
+    text: "Friendly, professional, and on time every visit. The Arthrostim adjustments are gentle but effective - perfect for someone like me who is nervous about manual cracking. I drive 40 minutes for my appointments and it's worth it.",
     author: "Patricia W.",
     source: "Yelp",
     location: "Merchantville, NJ",
@@ -121,7 +121,7 @@ const REVIEWS: Review[] = [
     stars: 5,
   },
   {
-    text: "What sold me was the free consultation call before booking. No pressure, just a real conversation about whether they could help. They could — and they did. I have referred three friends since.",
+    text: "What sold me was the free consultation call before booking. No pressure, just a real conversation about whether they could help. They could - and they did. I have referred three friends since.",
     author: "Maria G.",
     source: "Google",
     location: "Merchantville, NJ",
@@ -145,7 +145,7 @@ const REVIEWS: Review[] = [
     stars: 5,
   },
   {
-    text: "I cannot recommend Your Health Now enough. From the front desk to the doctors, every interaction is professional and warm. They actually listen — and that's rare these days.",
+    text: "I cannot recommend Your Health Now enough. From the front desk to the doctors, every interaction is professional and warm. They actually listen - and that's rare these days.",
     author: "Stephanie A.",
     source: "Facebook",
     location: "Chalfont, PA",
@@ -226,7 +226,7 @@ export default function TestimonialsClient() {
             <p className="mt-8 text-base leading-relaxed text-stone md:text-lg">
               We value our patients&rsquo; experience at Your Health Now. If you are currently a patient, please feel free to submit your review to one of our social media pages or email us on our contact page.
             </p>
-            <p className="mt-4 text-sm font-semibold tracking-wide text-brand">— Dr. Chris Chianese</p>
+            <p className="mt-4 text-sm font-semibold tracking-wide text-brand"> - Dr. Chris Chianese</p>
           </FadeUp>
         </div>
       </section>
@@ -306,7 +306,7 @@ export default function TestimonialsClient() {
                       Ready to Book?
                     </p>
                     <p className="mt-2 text-sm text-stone">
-                      Pick a service, location, and time that works for you — booking is open online.
+                      Pick a service, location, and time that works for you - booking is open online.
                     </p>
                     <Link
                       href="/locations"
@@ -436,7 +436,7 @@ export default function TestimonialsClient() {
               Experience the <span className="font-script font-normal italic text-accent">difference</span>.
             </h2>
             <p className="mt-3 max-w-lg text-sm text-white/70">
-              Schedule your visit at our Merchantville, NJ or Chalfont, PA location — or start with a complimentary 15-minute consultation call.
+              Schedule your visit at our Merchantville, NJ or Chalfont, PA location - or start with a complimentary 15-minute consultation call.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3">

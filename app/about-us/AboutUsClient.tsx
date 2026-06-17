@@ -9,13 +9,13 @@ const TIMELINE = [
   {
     year: "Foundation",
     title: "A salutogenic philosophy",
-    body: "YHN was built on the principle of salutogenesis — health promotion rather than symptom suppression. Every protocol exists to make patients healthier, not just less sick.",
+    body: "YHN was built on the principle of salutogenesis - health promotion rather than symptom suppression. Every protocol exists to make patients healthier, not just less sick.",
     icon: HeartPulse,
   },
   {
     year: "Family Practice",
     title: "Three generations of doctors",
-    body: "Dr. Chris Chianese, Dr. Marc Chianese, and Dr. Lillee Chianese — each Summa or Magna Cum Laude — combined their distinct specialties under one roof, supported by Office Director Barbara Chianese.",
+    body: "Dr. Chris Chianese, Dr. Marc Chianese, and Dr. Lillee Chianese - each Summa or Magna Cum Laude - combined their distinct specialties under one roof, supported by Office Director Barbara Chianese.",
     icon: Users,
   },
   {
@@ -27,13 +27,13 @@ const TIMELINE = [
   {
     year: "Post-Graduate",
     title: "Founders of the CPSC seminars",
-    body: "Dr. Chris Chianese founded the Certification in Patient-Specific Chiropractic seminar series — six modules of post-graduate training that now educate practicing doctors nationwide.",
+    body: "Dr. Chris Chianese founded the Certification in Patient-Specific Chiropractic seminar series - six modules of post-graduate training that now educate practicing doctors nationwide.",
     icon: GraduationCap,
   },
   {
     year: "Today",
     title: "Functional medicine integration",
-    body: "Beyond chiropractic, YHN now offers full functional medicine — root-cause investigation, lab-driven protocols, and integrative nutrition for the whole person.",
+    body: "Beyond chiropractic, YHN now offers full functional medicine - root-cause investigation, lab-driven protocols, and integrative nutrition for the whole person.",
     icon: Atom,
   },
 ];
@@ -42,7 +42,7 @@ const VALUES = [
   {
     icon: HeartPulse,
     title: "Salutogenic Approach",
-    body: "Health promotion, not just disease management. We help patients of all ages be healthier — not just less sick.",
+    body: "Health promotion, not just disease management. We help patients of all ages be healthier - not just less sick.",
   },
   {
     icon: Sparkles,
@@ -59,7 +59,7 @@ const VALUES = [
 export default function AboutUsClient() {
   return (
     <main className="bg-white">
-      {/* HERO — dark navy, no photo, abstract texture */}
+      {/* HERO - dark navy, no photo, abstract texture */}
       <section className="relative overflow-hidden bg-brand-dark text-white">
         <div
           aria-hidden="true"
@@ -113,12 +113,12 @@ export default function AboutUsClient() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-8 max-w-2xl text-lg leading-relaxed text-white/75"
           >
-            A multi-generational team of doctors who treat every patient as more than their condition — using the most contemporary, science-backed chiropractic and functional medicine available today.
+            A multi-generational team of doctors who treat every patient as more than their condition - using the most contemporary, science-backed chiropractic and functional medicine available today.
           </motion.p>
         </div>
       </section>
 
-      {/* MISSION — 2-col oversized pull quote */}
+      {/* MISSION - 2-col oversized pull quote */}
       <section className="relative bg-white">
         <div className="mx-auto max-w-[1320px] px-6 py-24 lg:px-10 lg:py-32">
           <FadeUp className="max-w-2xl">
@@ -141,7 +141,7 @@ export default function AboutUsClient() {
 
             <FadeUp delay={0.15} className="lg:col-span-5 lg:pt-6">
               <p className="text-base leading-relaxed text-stone">
-                Our practice was built on a single conviction: that healthcare should produce health — not simply manage disease. We bring a salutogenic approach to every patient encounter, working to make people healthier and not just &lsquo;less sick&rsquo;.
+                Our practice was built on a single conviction: that healthcare should produce health - not simply manage disease. We bring a salutogenic approach to every patient encounter, working to make people healthier and not just &lsquo;less sick&rsquo;.
               </p>
               <p className="mt-5 text-base leading-relaxed text-stone">
                 That means starting with the root cause, listening longer, testing more thoughtfully, and refusing to treat symptoms in isolation. It is, simply, the kind of care our family wants for our own family.
@@ -158,7 +158,7 @@ export default function AboutUsClient() {
         </div>
       </section>
 
-      {/* TIMELINE — alternating L/R, slide-in from sides */}
+      {/* TIMELINE - alternating L/R, slide-in from sides */}
       <section className="relative bg-cream-light">
         <div className="mx-auto max-w-[1100px] px-6 py-24 lg:px-10 lg:py-32">
           <FadeUp className="text-center">
@@ -215,7 +215,7 @@ export default function AboutUsClient() {
         </div>
       </section>
 
-      {/* VALUES — 3-col icon cards on cream */}
+      {/* VALUES - 3-col icon cards on cream */}
       <section className="relative bg-cream-light">
         <div className="mx-auto max-w-[1320px] px-6 pb-24 lg:px-10 lg:pb-32">
           <FadeUp>
@@ -258,7 +258,7 @@ export default function AboutUsClient() {
         </div>
       </section>
 
-      {/* CTA STRIP — navy w/ two buttons */}
+      {/* CTA STRIP - navy w/ two buttons */}
       <section className="relative overflow-hidden bg-brand-dark text-white">
         <motion.div
           aria-hidden="true"

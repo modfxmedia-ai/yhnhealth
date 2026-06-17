@@ -41,8 +41,7 @@ export default function ServicesGrid() {
             </h2>
           </div>
           <p className="text-lg leading-relaxed text-stone lg:col-span-5">
-            Functional medicine, chiropractic, and integrative therapies —
-            twenty specialties organized into three focused tracks so you can
+            Functional medicine, chiropractic, and integrative therapies - twenty specialties organized into three focused tracks so you can
             find exactly the kind of care you need.
           </p>
         </motion.div>

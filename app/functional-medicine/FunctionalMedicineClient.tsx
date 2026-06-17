@@ -7,10 +7,10 @@ import { ArrowUpRight, Atom, Microscope, Heart, Sparkles, ListChecks, Stethoscop
 import { Breadcrumbs, BookingStrip, FadeUp } from "@/components/page/Primitives";
 
 const PILLARS = [
-  { icon: Atom, title: "Root-Cause Analysis", body: "We investigate biochemistry, gut health, hormones, and lifestyle to find why symptoms appear — not just what they look like." },
+  { icon: Atom, title: "Root-Cause Analysis", body: "We investigate biochemistry, gut health, hormones, and lifestyle to find why symptoms appear, not just what they look like." },
   { icon: Microscope, title: "Functional Lab Testing", body: "Comprehensive labs go beyond standard panels: micronutrients, food sensitivity, hormonal panels, and gut microbiome analysis." },
-  { icon: Heart, title: "Personalized Care Plan", body: "Your protocol is built around your biology, your history, and your goals — not a one-size-fits-all template." },
-  { icon: ListChecks, title: "Ongoing Optimization", body: "Functional medicine is iterative. We measure, adjust, and refine until you're not just less sick — you're well." },
+  { icon: Heart, title: "Personalized Care Plan", body: "Your protocol is built around your biology, your history, and your goals, not a one-size-fits-all template." },
+  { icon: ListChecks, title: "Ongoing Optimization", body: "Functional medicine is iterative. We measure, adjust, and refine until you're not just less sick, you're well." },
 ];
 
 const CONDITIONS = [
@@ -132,7 +132,7 @@ export default function FunctionalMedicineClient() {
                     src="https://player.vimeo.com/video/1200442621?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0"
                     allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                     allowFullScreen
-                    title="Functional Medicine — Your Health Now"
+                    title="Functional Medicine, Your Health Now"
                     className="absolute inset-0 h-full w-full"
                     loading="lazy"
                   />
