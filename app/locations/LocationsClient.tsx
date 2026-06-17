@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
-import { ArrowUpRight, MapPin, Phone, Clock, Mail, FlaskConical, Video } from "lucide-react";
+import { ArrowUpRight, Calendar, MapPin, Phone, Clock, Mail, FlaskConical, Video } from "lucide-react";
 import { Breadcrumbs, FadeUp } from "@/components/page/Primitives";
 
 type Loc = {
