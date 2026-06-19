@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display, Italianno } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -46,6 +47,16 @@ export default function RootLayout({
         <Header />
         <div className="flex flex-1 flex-col">{children}</div>
         <Footer />
+
+        {/* Knock Knock chatbot widget - loaded on every page */}
+        <Script id="knock-knock-widget" strategy="afterInteractive">
+          {`
+            window.company_id = '6a355eb46b7af26290ba9224';
+            var newScript = document.createElement('script');
+            newScript.src = 'https://api.knock-knockapp.com/widget/widget.js';
+            document.getElementsByTagName('HEAD')[0].appendChild(newScript);
+          `}
+        </Script>
       </body>
     </html>
   );
