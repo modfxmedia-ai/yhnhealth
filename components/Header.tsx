@@ -3,10 +3,14 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import { ChevronDown, ChevronRight, Menu, X, MapPin, Clock } from "lucide-react";
 import { NAV_ITEMS, isNavGroup, type NavChild, type NavItem } from "@/lib/navigation";
 import { cn } from "@/lib/utils";
+
+/** Routes that render as standalone landing pages without the site chrome. */
+const BARE_ROUTES = ["/functional-medicine-special-offer"];
 
 const PHONES = {
   merchantville: { label: "Merchantville", display: "(856) 532-2063", tel: "8565322063" },
@@ -457,6 +461,7 @@ function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => void })
 /*  Header                                                                    */
 /* -------------------------------------------------------------------------- */
 export default function Header() {
+  const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -466,6 +471,10 @@ export default function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  if (BARE_ROUTES.some((r) => pathname === r || pathname.startsWith(`${r}/`))) {
+    return null;
+  }
 
   return (
     <>

@@ -51,13 +51,19 @@ export default function RootLayout({
           <Footer />
         </BookingProvider>
 
-        {/* Knock Knock chatbot widget - loaded on every page */}
+        {/* Knock Knock chatbot widget - loaded on every page except bare landing pages */}
         <Script id="knock-knock-widget" strategy="afterInteractive">
           {`
-            window.company_id = '6a355eb46b7af26290ba9224';
-            var newScript = document.createElement('script');
-            newScript.src = 'https://api.knock-knockapp.com/widget/widget.js';
-            document.getElementsByTagName('HEAD')[0].appendChild(newScript);
+            (function () {
+              var bareRoutes = ['/functional-medicine-special-offer'];
+              if (bareRoutes.indexOf(window.location.pathname.replace(/\\/$/, '')) !== -1) {
+                return;
+              }
+              window.company_id = '6a355eb46b7af26290ba9224';
+              var newScript = document.createElement('script');
+              newScript.src = 'https://api.knock-knockapp.com/widget/widget.js';
+              document.getElementsByTagName('HEAD')[0].appendChild(newScript);
+            })();
           `}
         </Script>
       </body>

@@ -2,9 +2,13 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
 import { ArrowUpRight, Phone, MapPin, Mail, Clock } from "lucide-react";
 import { CITIES, SERVICES } from "@/lib/pseoData";
+
+/** Routes that render as standalone landing pages without the site chrome. */
+const BARE_ROUTES = ["/functional-medicine-special-offer"];
 
 type IconProps = { size?: number; strokeWidth?: number };
 
@@ -77,6 +81,12 @@ const SOCIALS = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  if (BARE_ROUTES.some((r) => pathname === r || pathname.startsWith(`${r}/`))) {
+    return null;
+  }
+
   return (
     <footer className="relative overflow-hidden bg-brand-dark text-white">
       <motion.div
