@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { ArrowRight, ArrowLeft, GraduationCap, CheckCircle2, Phone } from "lucide-react";
-import { Breadcrumbs, FadeUp } from "@/components/page/Primitives";
+import { Breadcrumbs, FadeUp, Parallax } from "@/components/page/Primitives";
 import type { ModuleConfig } from "@/lib/moduleContent";
 import { MODULES } from "@/lib/moduleContent";
 
@@ -36,7 +36,9 @@ export default function ModulePage({ config }: { config: ModuleConfig }) {
               backgroundSize: "32px 32px",
             }}
           />
-          <div className="absolute -right-32 top-12 h-96 w-96 rounded-full bg-accent/15 blur-3xl" aria-hidden />
+          <Parallax speed={80} className="pointer-events-none absolute -right-32 top-12">
+            <div className="h-96 w-96 rounded-full bg-accent/15 blur-3xl" aria-hidden />
+          </Parallax>
           <div className="container relative">
             <Breadcrumbs
               trail={[
@@ -91,14 +93,16 @@ export default function ModulePage({ config }: { config: ModuleConfig }) {
               <div className="lg:w-5/12">
                 <FadeUp delay={0.1}>
                   <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-card">
-                    <Image
-                      src={config.imageSrc}
-                      alt={`${config.title} - CPSC Module ${config.number}`}
-                      fill
-                      sizes="(min-width:1024px) 40vw, 100vw"
-                      className="object-cover"
-                      priority
-                    />
+                    <Parallax speed={26} className="absolute inset-0 scale-110">
+                      <Image
+                        src={config.imageSrc}
+                        alt={`${config.title} - CPSC Module ${config.number}`}
+                        fill
+                        sizes="(min-width:1024px) 40vw, 100vw"
+                        className="object-cover"
+                        priority
+                      />
+                    </Parallax>
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-dark/40 to-transparent p-5">
                       <span className="inline-block rounded-full bg-white/95 px-3 py-1 text-[10px] uppercase tracking-[0.3em] text-brand-dark">
                         Post Graduate · CPSC

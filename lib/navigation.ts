@@ -67,8 +67,8 @@ export const NAV_ITEMS: NavItem[] = [
   },
   {
     label: "Contact",
-    href: null,
-    children: [{ label: "Appointments", href: "/locations" }],
+    href: "/contact-us",
+    children: [{ label: "Locations", href: "/locations" }],
   },
   {
     label: "More",

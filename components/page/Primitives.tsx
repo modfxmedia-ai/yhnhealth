@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "motion/react";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { ChevronRight, Phone } from "lucide-react";
 
 type Crumb = { label: string; href?: string };
@@ -100,6 +101,19 @@ export function BookingStrip({
             <Phone size={12} strokeWidth={2.25} />
             Free Consult Call
           </a>
+          {fm && (
+            <a
+              href="tel:6096517436"
+              className={`inline-flex items-center gap-2 rounded-full border px-5 py-3 text-[11px] font-bold uppercase tracking-[0.22em] transition-colors ${
+                variant === "cream"
+                  ? "border-brand/20 text-brand hover:border-accent hover:text-accent-dark"
+                  : "border-white/25 text-white/85 hover:border-accent hover:text-accent"
+              }`}
+            >
+              <Phone size={12} strokeWidth={2.25} />
+              Call (609) 651-7436
+            </a>
+          )}
         </div>
       </div>
     </motion.section>
@@ -114,19 +128,60 @@ export function FadeUp({
   children,
   delay = 0,
   className,
+  direction = "up",
 }: {
   children: React.ReactNode;
   delay?: number;
   className?: string;
+  direction?: "up" | "down" | "left" | "right";
 }) {
+  const offset = 36;
+  const initial =
+    direction === "left"
+      ? { opacity: 0, x: -offset, filter: "blur(6px)" }
+      : direction === "right"
+      ? { opacity: 0, x: offset, filter: "blur(6px)" }
+      : direction === "down"
+      ? { opacity: 0, y: -offset, filter: "blur(6px)" }
+      : { opacity: 0, y: offset, filter: "blur(6px)" };
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.55, delay, ease: "easeOut" }}
+      initial={initial}
+      whileInView={{ opacity: 1, x: 0, y: 0, filter: "blur(0px)" }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
       className={className}
     >
+      {children}
+    </motion.div>
+  );
+}
+
+/**
+ * Scroll-linked parallax wrapper. Children drift vertically as the element
+ * moves through the viewport, giving inner pages continuous motion on scroll
+ * (not just on hover or a one-shot reveal). `speed` controls travel distance
+ * in pixels; negative values move the content the opposite way.
+ */
+export function Parallax({
+  children,
+  speed = 60,
+  className,
+}: {
+  children: React.ReactNode;
+  speed?: number;
+  className?: string;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [speed, -speed]);
+
+  return (
+    <motion.div ref={ref} style={{ y }} className={className}>
       {children}
     </motion.div>
   );

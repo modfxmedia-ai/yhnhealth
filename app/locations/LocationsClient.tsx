@@ -6,32 +6,38 @@ import { ArrowUpRight, Calendar, MapPin, Phone, Clock, Mail, FlaskConical, Video
 import { Breadcrumbs, FadeUp } from "@/components/page/Primitives";
 
 type Loc = {
+  clinic: string;
   city: string;
   state: string;
   address: string;
   phone: string;
   tel: string;
+  bookingUrl: string;
   mapEmbed: string;
   directionsUrl: string;
 };
 
 const LOCATIONS: Loc[] = [
   {
+    clinic: "Chiropractic Clinic 1",
     city: "Merchantville",
     state: "NJ",
     address: "5 W Chestnut Ave, Merchantville, NJ 08109",
     phone: "(856) 532-2063",
     tel: "tel:8565322063",
+    bookingUrl: "https://yourhealthnow.janeapp.com/locations/mmwc/book#/staff_member/1",
     mapEmbed:
       "https://www.google.com/maps?q=5+W+Chestnut+Ave,+Merchantville,+NJ+08109&output=embed",
     directionsUrl: "https://maps.app.goo.gl/eZph1e6LanqehCXF8",
   },
   {
+    clinic: "Chiropractic Clinic 2",
     city: "Chalfont",
     state: "PA",
     address: "350 N Main St #201, Chalfont, PA 18914",
     phone: "(609) 651-7436",
     tel: "tel:6096517436",
+    bookingUrl: "https://yourhealthnow.janeapp.com/locations/afc/book#/staff_member/3",
     mapEmbed:
       "https://www.google.com/maps?q=350+N+Main+St+%23201,+Chalfont,+PA+18914&output=embed",
     directionsUrl: "https://maps.app.goo.gl/XZTDgRGTwdgtHUgS6",
@@ -127,11 +133,14 @@ export default function LocationsClient() {
                     <div className="flex items-center justify-between gap-3">
                       <div>
                         <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent">
-                          {loc.state}
+                          {loc.clinic} · {loc.state}
                         </p>
                         <h2 className="mt-1 font-display text-3xl font-bold leading-tight md:text-4xl">
                           {loc.city}
                         </h2>
+                        <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/55">
+                          In-Person Visits
+                        </p>
                       </div>
                       <span className="font-display text-5xl font-bold leading-none text-accent/40 md:text-6xl">
                         0{i + 1}
@@ -188,6 +197,16 @@ export default function LocationsClient() {
                     </div>
 
                     <div className="flex flex-wrap items-center gap-3 pt-2">
+                      <a
+                        href={loc.bookingUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-[11px] font-bold uppercase tracking-[0.22em] text-white transition-all hover:bg-accent-dark"
+                      >
+                        <Calendar size={13} strokeWidth={2.5} />
+                        Book at this location
+                        <ArrowUpRight size={13} className="transition-transform group-hover:translate-x-0.5" />
+                      </a>
                       <Link
                         href="/contact-us"
                         className="text-[11px] font-bold uppercase tracking-[0.22em] text-brand hover:text-accent-dark"

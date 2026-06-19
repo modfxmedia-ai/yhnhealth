@@ -225,13 +225,13 @@ export default function MeetTheDoctorClient() {
             <FadeUp delay={0.1} className="mt-12">
               <article className="grid gap-8 overflow-hidden rounded-3xl border border-brand/10 bg-white p-6 shadow-card md:grid-cols-12 md:p-8">
                 <div className="md:col-span-4">
-                  <div className="relative aspect-square overflow-hidden rounded-2xl bg-mist">
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-mist">
                     <Image
                       src={TEAM[3].src}
                       alt={TEAM[3].name}
                       fill
                       sizes="(min-width:768px) 30vw, 100vw"
-                      className="object-cover object-center"
+                      className="object-cover object-top"
                     />
                   </div>
                 </div>

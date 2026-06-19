@@ -2,8 +2,21 @@
 
 import { motion } from "motion/react";
 import { useState } from "react";
-import { Phone, Mail, MapPin, Send, ShieldAlert } from "lucide-react";
+import { Phone, Mail, MapPin, Send, ShieldAlert, Calendar, ArrowUpRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/page/Primitives";
+import { LOCATIONS } from "@/lib/siteData";
+
+const MAP_EMBEDS: Record<string, string> = {
+  Merchantville:
+    "https://www.google.com/maps?q=5+W+Chestnut+Ave,+Merchantville,+NJ+08109&output=embed",
+  Chalfont:
+    "https://www.google.com/maps?q=350+N+Main+St+%23201,+Chalfont,+PA+18914&output=embed",
+};
+
+const LOCATION_STATE: Record<string, string> = {
+  Merchantville: "NJ",
+  Chalfont: "PA",
+};
 
 export default function ContactClient() {
   const [submitted, setSubmitted] = useState(false);
@@ -35,21 +48,23 @@ export default function ContactClient() {
               Let&rsquo;s <span className="font-script font-normal italic text-accent">talk</span>.
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-stone">
-              Send us a message and our team will reply within one business day. For urgent care, call either location directly.
+              Send us a quick message and our team will reply within one business day. To book an
+              appointment, use the booking links for your location. For urgent care, call us directly.
             </p>
 
             <form onSubmit={handleSubmit} className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
               <Field label="Name" name="name" required />
-              <Field label="Email" name="email" type="email" required />
               <Field label="Phone" name="phone" type="tel" />
-              <Field label="Preferred Location" name="location" placeholder="Merchantville or Chalfont" />
+              <div className="md:col-span-2">
+                <Field label="Email" name="email" type="email" required />
+              </div>
               <div className="md:col-span-2">
                 <label className="block text-[10px] font-bold uppercase tracking-[0.24em] text-stone">
                   Message
                 </label>
                 <textarea
                   name="message"
-                  rows={5}
+                  rows={4}
                   required
                   className="mt-2 w-full rounded-xl border border-brand/15 bg-mist/40 px-4 py-3 text-sm text-brand placeholder:text-stone/60 focus:border-brand focus:bg-white focus:outline-none"
                 />
@@ -64,13 +79,22 @@ export default function ContactClient() {
                 type="submit"
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:bg-accent md:col-span-2 md:w-fit"
               >
-                {submitted ? "Thanks - we'll be in touch" : "Submit"}
+                {submitted ? "Thanks - we'll be in touch" : "Send Message"}
                 <Send size={13} className="transition-transform group-hover:translate-x-0.5" />
               </button>
             </form>
+
+            {/* Direct email link (no dropdown) */}
+            <a
+              href="mailto:info@yhnhealth.com"
+              className="mt-10 inline-flex items-center gap-2 text-sm font-semibold text-brand hover:text-accent"
+            >
+              <Mail size={15} className="text-accent" />
+              info@yhnhealth.com
+            </a>
           </motion.div>
 
-          {/* Right: info dark panel */}
+          {/* Right: info dark panel with per-location booking links */}
           <motion.aside
             initial={{ opacity: 0, x: 22 }}
             animate={{ opacity: 1, x: 0 }}
@@ -83,25 +107,23 @@ export default function ContactClient() {
               transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
               className="absolute -right-32 -top-32 h-80 w-80 rounded-full border border-dashed border-white/10"
             />
-            <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent">Reach Us</p>
+            <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent">Visit or Book</p>
             <h2 className="mt-3 font-display text-3xl font-bold leading-tight md:text-4xl">
               Two locations. <br />
-              One phone call away.
+              Book in seconds.
             </h2>
 
-            <div className="mt-10 space-y-9">
-              <InfoBlock
-                title="Merchantville, NJ"
-                lines={["5 W Chestnut Ave", "Merchantville, NJ 08109"]}
-                phone="(856) 532-2063"
-                tel="tel:8565322063"
-              />
-              <InfoBlock
-                title="Chalfont, PA"
-                lines={["350 N Main St #201", "Chalfont, PA 18914"]}
-                phone="(609) 651-7436"
-                tel="tel:6096517436"
-              />
+            <div className="mt-10 space-y-8">
+              {LOCATIONS.map((loc) => (
+                <LocationBlock
+                  key={loc.name}
+                  title={`${loc.name}, ${LOCATION_STATE[loc.name] ?? ""}`}
+                  address={loc.address}
+                  phone={loc.phone}
+                  tel={loc.tel}
+                  bookingUrl={loc.bookingUrl}
+                />
+              ))}
 
               <div className="border-t border-white/10 pt-7">
                 <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent">Hours</p>
@@ -109,15 +131,47 @@ export default function ContactClient() {
                 <p className="text-base font-semibold">7:30 am &ndash; 8:00 pm</p>
                 <p className="mt-2 text-xs text-white/60">Saturday &amp; Sunday Closed</p>
               </div>
-
-              <div className="flex items-center gap-3 border-t border-white/10 pt-7">
-                <Mail size={14} className="text-accent" />
-                <a href="mailto:info@yhnhealth.com" className="text-sm text-white/80 hover:text-accent">
-                  info@yhnhealth.com
-                </a>
-              </div>
             </div>
           </motion.aside>
+        </div>
+      </section>
+
+      {/* Smaller maps - one compact map per location */}
+      <section className="bg-cream-light pb-20 pt-4 lg:pb-28">
+        <div className="mx-auto max-w-[1320px] px-6 lg:px-10">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {LOCATIONS.map((loc) => (
+              <div
+                key={loc.name}
+                className="overflow-hidden rounded-2xl border border-brand/10 bg-white shadow-card"
+              >
+                <div className="relative aspect-[16/9]">
+                  <iframe
+                    src={MAP_EMBEDS[loc.name]}
+                    title={`Map of ${loc.name} office`}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="absolute inset-0 h-full w-full border-0"
+                  />
+                </div>
+                <div className="flex items-center justify-between gap-3 px-5 py-4">
+                  <div className="min-w-0">
+                    <p className="font-display text-sm font-bold text-brand">{loc.name}</p>
+                    <p className="truncate text-xs text-stone">{loc.address}</p>
+                  </div>
+                  <a
+                    href={loc.social.maps}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex shrink-0 items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-brand hover:text-accent"
+                  >
+                    Directions
+                    <ArrowUpRight size={12} />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </main>
@@ -153,30 +207,42 @@ function Field({
   );
 }
 
-function InfoBlock({
+function LocationBlock({
   title,
-  lines,
+  address,
   phone,
   tel,
+  bookingUrl,
 }: {
   title: string;
-  lines: string[];
+  address: string;
   phone: string;
   tel: string;
+  bookingUrl: string;
 }) {
   return (
     <div>
       <p className="font-display text-lg font-bold">{title}</p>
       <p className="mt-3 inline-flex items-start gap-2 text-sm text-white/75">
         <MapPin size={13} className="mt-0.5 shrink-0 text-accent" strokeWidth={2} />
-        <span>
-          {lines.join(", ")}
-        </span>
+        <span>{address}</span>
       </p>
-      <a href={tel} className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-accent">
-        <Phone size={13} className="text-accent" strokeWidth={2} />
-        {phone}
-      </a>
+      <div className="mt-3 flex flex-wrap items-center gap-3">
+        <a href={tel} className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-accent">
+          <Phone size={13} className="text-accent" strokeWidth={2} />
+          {phone}
+        </a>
+        <a
+          href={bookingUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-white transition-all hover:bg-accent-dark"
+        >
+          <Calendar size={12} strokeWidth={2.25} />
+          Book Online
+          <ArrowUpRight size={12} className="transition-transform group-hover:translate-x-0.5" />
+        </a>
+      </div>
     </div>
   );
 }

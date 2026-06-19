@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Atom, Microscope, Heart, Sparkles, ListChecks, Stethoscope, Compass } from "lucide-react";
+import { ArrowUpRight, Atom, Microscope, Heart, Sparkles, ListChecks, Stethoscope, Compass, Phone } from "lucide-react";
 import { Breadcrumbs, BookingStrip, FadeUp } from "@/components/page/Primitives";
 
 const PILLARS = [
@@ -106,6 +106,13 @@ export default function FunctionalMedicineClient() {
                 >
                   Meet Dr. Chris
                 </Link>
+                <a
+                  href="tel:6096517436"
+                  className="inline-flex items-center gap-2 rounded-full border border-brand/15 px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-brand transition-all hover:bg-mist"
+                >
+                  <Phone size={14} />
+                  Call (609) 651-7436
+                </a>
               </motion.div>
             </div>
 
@@ -114,7 +121,7 @@ export default function FunctionalMedicineClient() {
               initial={{ opacity: 0, scale: 0.94 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.9, delay: 0.2 }}
-              className="relative mx-auto w-full max-w-[240px] lg:col-span-5 lg:max-w-[260px]"
+              className="relative mx-auto w-full max-w-[320px] lg:col-span-5 lg:max-w-[380px]"
             >
               <motion.div
                 aria-hidden="true"

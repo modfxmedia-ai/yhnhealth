@@ -10,7 +10,7 @@ export const LOCATIONS = [
     address: "5 W Chestnut Ave, Merchantville, NJ 08109",
     phone: "(856) 532-2063",
     tel: "tel:8565322063",
-    bookingUrl: "https://yourhealthnow.janeapp.com/locations/mmwc/book#staff_member/1",
+    bookingUrl: "https://yourhealthnow.janeapp.com/locations/mmwc/book#/staff_member/1",
     social: {
       instagram: "https://www.instagram.com/p/DQrd5dHE7_b/",
       linkedin: "https://www.linkedin.com/company/your-health-now-llc",
@@ -22,7 +22,7 @@ export const LOCATIONS = [
     address: "350 N Main St #201, Chalfont, PA 18914",
     phone: "(609) 651-7436",
     tel: "tel:6096517436",
-    bookingUrl: "https://yourhealthnow.janeapp.com/locations/afc/book#staff_member/3",
+    bookingUrl: "https://yourhealthnow.janeapp.com/locations/afc/book#/staff_member/3",
     social: {
       facebook: "https://www.facebook.com/yhnhealth/",
       instagram: "https://www.instagram.com/p/DQrd5dHE7_b/",

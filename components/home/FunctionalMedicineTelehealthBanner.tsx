@@ -151,11 +151,11 @@ export default function FunctionalMedicineTelehealthBanner() {
             </div>
 
             <a
-              href="tel:8565322063"
+              href="tel:6096517436"
               className="mt-4 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-white/65 transition-colors hover:text-accent"
             >
               <Phone size={12} strokeWidth={2.25} />
-              Or call (856) 532-2063
+              Or call (609) 651-7436
             </a>
           </div>
         </div>

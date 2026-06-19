@@ -100,25 +100,47 @@ function DesktopDropdown({
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
-      <button
-        type="button"
-        aria-expanded={open}
-        aria-haspopup="true"
-        onFocus={() => setOpen(true)}
-        onBlur={() => setOpen(false)}
-        className={cn(
-          linkBase,
-          "gap-1.5",
-          open ? "text-brand-light" : "text-brand hover:text-brand-light"
-        )}
-      >
-        {item.label}
-        <ChevronDown
-          size={11}
-          strokeWidth={2.5}
-          className={cn("transition-transform duration-300", open && "rotate-180")}
-        />
-      </button>
+      {item.href ? (
+        <Link
+          href={item.href}
+          aria-haspopup="true"
+          aria-expanded={open}
+          onFocus={() => setOpen(true)}
+          onBlur={() => setOpen(false)}
+          className={cn(
+            linkBase,
+            "gap-1.5",
+            open ? "text-brand-light" : "text-brand hover:text-brand-light"
+          )}
+        >
+          {item.label}
+          <ChevronDown
+            size={11}
+            strokeWidth={2.5}
+            className={cn("transition-transform duration-300", open && "rotate-180")}
+          />
+        </Link>
+      ) : (
+        <button
+          type="button"
+          aria-expanded={open}
+          aria-haspopup="true"
+          onFocus={() => setOpen(true)}
+          onBlur={() => setOpen(false)}
+          className={cn(
+            linkBase,
+            "gap-1.5",
+            open ? "text-brand-light" : "text-brand hover:text-brand-light"
+          )}
+        >
+          {item.label}
+          <ChevronDown
+            size={11}
+            strokeWidth={2.5}
+            className={cn("transition-transform duration-300", open && "rotate-180")}
+          />
+        </button>
+      )}
 
       {/* Active indicator */}
       <span

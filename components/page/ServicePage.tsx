@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { ArrowRight, type LucideIcon } from "lucide-react";
-import { Breadcrumbs, FadeUp } from "@/components/page/Primitives";
+import { Breadcrumbs, FadeUp, Parallax } from "@/components/page/Primitives";
 
 export type ServiceSection = { heading?: string; body: string };
 export type ServiceBenefit = { icon: LucideIcon; title: string; body?: string };
@@ -48,7 +48,9 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
               backgroundSize: "32px 32px",
             }}
           />
-          <div className="pointer-events-none absolute -right-32 top-12 h-96 w-96 rounded-full bg-accent/15 blur-3xl" />
+          <Parallax speed={80} className="pointer-events-none absolute -right-32 top-12">
+            <div className="h-96 w-96 rounded-full bg-accent/15 blur-3xl" />
+          </Parallax>
           <div className="relative mx-auto max-w-[1320px] px-6 pt-10 pb-16 lg:px-10 lg:pt-14 lg:pb-24">
             <Breadcrumbs trail={[{ label: "Home", href: "/" }, { label: title }]} />
 
@@ -140,13 +142,15 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
               >
                 <div className="sticky top-28">
                   <div className="relative aspect-[4/5] lg:aspect-video overflow-hidden rounded-3xl bg-mist shadow-card">
-                    <Image
-                      src={imageSrc}
-                      alt={imageAlt}
-                      fill
-                      sizes="(min-width: 1024px) 40vw, 100vw"
-                      className="object-cover"
-                    />
+                    <Parallax speed={28} className="absolute inset-0 scale-110">
+                      <Image
+                        src={imageSrc}
+                        alt={imageAlt}
+                        fill
+                        sizes="(min-width: 1024px) 40vw, 100vw"
+                        className="object-cover"
+                      />
+                    </Parallax>
                     <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-brand-dark/40 to-transparent" />
                   </div>
                   <div className="mt-5 flex items-center gap-3 rounded-2xl border border-mist bg-cream-light/60 px-5 py-4">

@@ -1,23 +1,26 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "motion/react";
 import { ArrowUpRight, MapPin, Phone } from "lucide-react";
 
 const LOCATIONS = [
   {
+    clinic: "Chiropractic Clinic 1",
     city: "Merchantville",
     state: "NJ",
     phone: "(856) 532-2063",
     phoneHref: "tel:+18565322063",
     address: "5 W Chestnut Ave",
+    bookingUrl: "https://yourhealthnow.janeapp.com/locations/mmwc/book#/staff_member/1",
   },
   {
+    clinic: "Chiropractic Clinic 2",
     city: "Chalfont",
     state: "PA",
     phone: "(609) 651-7436",
     phoneHref: "tel:+16096517436",
     address: "350 N Main St #201",
+    bookingUrl: "https://yourhealthnow.janeapp.com/locations/afc/book#/staff_member/3",
   },
 ];
 
@@ -49,7 +52,7 @@ export default function LocationCTABanner() {
             {/* Eyebrow */}
             <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.32em] text-white/80 backdrop-blur">
               <MapPin size={12} className="text-accent" strokeWidth={2.25} />
-              Visit Us · {loc.state}
+              {loc.clinic} · In-Person
             </span>
 
             {/* City headline */}
@@ -99,8 +102,10 @@ export default function LocationCTABanner() {
             </div>
 
             {/* CTA */}
-            <Link
-              href="/locations"
+            <a
+              href={loc.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group mt-8 inline-flex items-center gap-3 rounded-full bg-accent px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-brand-dark shadow-card transition-all hover:-translate-y-0.5 hover:bg-white hover:shadow-card-hover"
             >
               Book at this location
@@ -108,7 +113,7 @@ export default function LocationCTABanner() {
                 size={14}
                 className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               />
-            </Link>
+            </a>
           </div>
         </motion.div>
       ))}
