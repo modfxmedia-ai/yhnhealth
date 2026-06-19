@@ -62,7 +62,7 @@ export default function ServicesGrid() {
           className="mt-20 flex justify-center"
         >
           <Link
-            href="/locations"
+            href="/contact-us"
             className="group inline-flex items-center gap-3 rounded-full border-2 border-brand bg-transparent px-8 py-4 text-[11px] font-bold uppercase tracking-[0.24em] text-brand transition-all hover:bg-brand hover:text-white"
           >
             Schedule your visit

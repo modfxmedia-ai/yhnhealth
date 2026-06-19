@@ -90,7 +90,7 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
                   </Link>
                 ) : (
                   <Link
-                    href="/locations"
+                    href="/contact-us"
                     className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:bg-brand-dark hover:shadow-lg"
                   >
                     Book Appointment
@@ -228,7 +228,7 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
                   </h2>
                 </FadeUp>
                 <Link
-                  href={isChiropracticMedicine ? "/contact-us" : "/locations"}
+                  href="/contact-us"
                   className="text-[11px] font-bold uppercase tracking-[0.24em] text-brand transition-colors hover:text-accent-dark"
                 >
                   {isChiropracticMedicine ? "Contact the Office →" : "Book Appointment →"}
@@ -315,7 +315,7 @@ export default function ServicePage({ config }: { config: ServiceConfig }) {
                     </Link>
                   ) : (
                     <Link
-                      href="/locations"
+                      href="/contact-us"
                       className="group inline-flex items-center justify-between gap-3 rounded-full bg-accent px-7 py-4 text-[12px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:bg-accent-dark"
                     >
                       Book Your Appointment

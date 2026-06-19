@@ -310,7 +310,7 @@ export default function MeetTheDoctorClient() {
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
               <Link
-                href="/locations"
+                href="/contact-us"
                 className="inline-flex items-center gap-2 rounded-full bg-brand px-8 py-4 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:bg-accent"
               >
                 Find a Location

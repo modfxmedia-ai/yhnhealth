@@ -439,7 +439,7 @@ function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => void })
                 </a>
               ))}
               <Link
-                href="/locations"
+                href="/contact-us"
                 onClick={onClose}
                 className="mt-2 block w-full rounded-full bg-brand py-3.5 text-center text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-colors hover:bg-brand-light"
               >
@@ -535,7 +535,7 @@ export default function Header() {
             {/* Right cluster */}
             <div className="ml-auto flex shrink-0 items-center gap-2.5">
               <Link
-                href="/locations"
+                href="/contact-us"
                 className={cn(
                   "group inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-brand text-[11px] font-bold uppercase tracking-[0.2em] text-white shadow-soft transition-all duration-300 hover:bg-brand-light hover:shadow-card",
                   scrolled ? "px-5 py-2.5" : "px-6 py-3"

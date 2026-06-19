@@ -7,9 +7,11 @@ import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
 import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Phone, RotateCw, Sparkles } from "lucide-react";
 import { HERO_SLIDES } from "@/lib/siteData";
 import { cn } from "@/lib/utils";
+import { useBookingPopup } from "@/components/BookingPopup";
 
 export default function HeroSection() {
   const [active, setActive] = useState(0);
+  const { openBooking } = useBookingPopup();
   const [paused, setPaused] = useState(false);
   const [flipped, setFlipped] = useState(false);
   const { scrollY } = useScroll();
@@ -169,7 +171,7 @@ export default function HeroSection() {
               className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
             >
               <Link
-                href="/locations"
+                href="/contact-us"
                 className="group inline-flex items-center gap-3 rounded-full bg-white px-9 py-4 text-[12px] font-bold uppercase tracking-[0.24em] text-brand shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent hover:text-white hover:shadow-card-hover"
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-accent transition-colors group-hover:bg-white" />
@@ -192,6 +194,12 @@ export default function HeroSection() {
               href="https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2"
               target="_blank"
               rel="noopener"
+              onClick={(e) => {
+                e.preventDefault();
+                openBooking(
+                  "https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2"
+                );
+              }}
               variants={{
                 hidden: { opacity: 0, y: 16 },
                 visible: { opacity: 1, y: 0 },

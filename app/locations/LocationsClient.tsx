@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { ArrowUpRight, Calendar, MapPin, Phone, Clock, Mail, FlaskConical, Video } from "lucide-react";
 import { Breadcrumbs, FadeUp } from "@/components/page/Primitives";
+import { useBookingPopup } from "@/components/BookingPopup";
 
 type Loc = {
   clinic: string;
@@ -61,6 +62,7 @@ const FM_REGION_MAP =
   "https://www.google.com/maps?q=Pennsylvania+and+New+Jersey,+USA&z=7&output=embed";
 
 export default function LocationsClient() {
+  const { openBooking } = useBookingPopup();
   return (
     <main className="bg-cream-light">
       {/* HERO - full-width navy banner */}
@@ -201,6 +203,10 @@ export default function LocationsClient() {
                         href={loc.bookingUrl}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          openBooking(loc.bookingUrl);
+                        }}
                         className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-[11px] font-bold uppercase tracking-[0.22em] text-white transition-all hover:bg-accent-dark"
                       >
                         <Calendar size={13} strokeWidth={2.5} />
@@ -317,6 +323,10 @@ export default function LocationsClient() {
                       href={FM_BOOKING_URL}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        openBooking(FM_BOOKING_URL);
+                      }}
                       className="group inline-flex items-center justify-between gap-3 rounded-full bg-accent px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:bg-accent-dark"
                     >
                       <span className="inline-flex items-center gap-2">

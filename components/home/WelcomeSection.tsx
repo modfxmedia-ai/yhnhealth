@@ -171,7 +171,7 @@ export default function WelcomeSection() {
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link
-              href="/locations"
+              href="/contact-us"
               className="group inline-flex items-center gap-3 rounded-full bg-brand px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white shadow-card transition-all hover:-translate-y-0.5 hover:bg-brand-light hover:shadow-card-hover"
             >
               Schedule a Visit

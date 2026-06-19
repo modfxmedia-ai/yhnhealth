@@ -108,7 +108,7 @@ export default function AreaServicePage({
                 </a>
                 <div className="mt-5 flex flex-col gap-2">
                   <Link
-                    href="/locations"
+                    href="/contact-us"
                     className="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-3 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-colors hover:bg-accent"
                   >
                     Book Appointment
@@ -471,7 +471,7 @@ export default function AreaServicePage({
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
               <Link
-                href="/locations"
+                href="/contact-us"
                 className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-brand-dark transition-colors hover:bg-white"
               >
                 Book Appointment

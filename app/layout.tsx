@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import { BookingProvider } from "@/components/BookingPopup";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -43,10 +44,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} ${italianno.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans bg-cream-light text-ink antialiased">
-        <ScrollToTop />
-        <Header />
-        <div className="flex flex-1 flex-col">{children}</div>
-        <Footer />
+        <BookingProvider>
+          <ScrollToTop />
+          <Header />
+          <div className="flex flex-1 flex-col">{children}</div>
+          <Footer />
+        </BookingProvider>
 
         {/* Knock Knock chatbot widget - loaded on every page */}
         <Script id="knock-knock-widget" strategy="afterInteractive">

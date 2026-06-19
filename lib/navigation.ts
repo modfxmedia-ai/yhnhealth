@@ -68,7 +68,7 @@ export const NAV_ITEMS: NavItem[] = [
   {
     label: "Contact",
     href: "/contact-us",
-    children: [{ label: "Locations", href: "/locations" }],
+    children: [],
   },
   {
     label: "More",
@@ -78,7 +78,6 @@ export const NAV_ITEMS: NavItem[] = [
         label: "About Us",
         href: "/about-us",
         children: [
-          { label: "Locations", href: "/locations" },
           { label: "Meet The Team", href: "/meet-the-doctor" },
           { label: "Testimonials", href: "/testimonials" },
         ],

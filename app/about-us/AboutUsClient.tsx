@@ -282,7 +282,7 @@ export default function AboutUsClient() {
               <ArrowUpRight size={13} />
             </Link>
             <Link
-              href="/locations"
+              href="/contact-us"
               className="inline-flex items-center gap-2 rounded-full border border-white/20 px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:border-accent hover:bg-white/5"
             >
               Book Appointment

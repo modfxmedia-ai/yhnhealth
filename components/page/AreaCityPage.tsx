@@ -92,7 +92,7 @@ export default function AreaCityPage({ city }: { city: City }) {
                   Mon–Fri · 7:30 am – 8:00 pm
                 </p>
                 <Link
-                  href="/locations"
+                  href="/contact-us"
                   className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-6 py-3 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-colors hover:bg-accent"
                 >
                   Book Appointment
@@ -248,7 +248,7 @@ export default function AreaCityPage({ city }: { city: City }) {
               Book at our {clinic.name} office - the closest YHN clinic to {city.name}.
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-              <Link href="/locations" className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-brand-dark transition-colors hover:bg-white">
+              <Link href="/contact-us" className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-brand-dark transition-colors hover:bg-white">
                 Book Appointment
                 <ArrowUpRight size={14} />
               </Link>

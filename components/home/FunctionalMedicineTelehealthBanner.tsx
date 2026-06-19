@@ -10,6 +10,7 @@ import {
   Phone,
   Video,
 } from "lucide-react";
+import { useBookingPopup } from "@/components/BookingPopup";
 
 const FM_BOOKING_URL =
   "https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2";
@@ -21,6 +22,7 @@ const FEATURES = [
 ];
 
 export default function FunctionalMedicineTelehealthBanner() {
+  const { openBooking } = useBookingPopup();
   return (
     <section className="relative overflow-hidden bg-brand-dark">
       {/* Decorative rings */}
@@ -117,6 +119,10 @@ export default function FunctionalMedicineTelehealthBanner() {
                 href={FM_BOOKING_URL}
                 target="_blank"
                 rel="noopener"
+                onClick={(e) => {
+                  e.preventDefault();
+                  openBooking(FM_BOOKING_URL);
+                }}
                 className="group flex items-center justify-between gap-3 rounded-2xl border border-accent bg-accent px-5 py-4 transition-all hover:-translate-y-0.5 hover:bg-accent-dark hover:shadow-card"
               >
                 <div className="text-left">

@@ -5,6 +5,7 @@ import { useRef } from "react";
 import Link from "next/link";
 import { ArrowUpRight, Atom, Microscope, Heart, Sparkles, ListChecks, Stethoscope, Compass, Phone } from "lucide-react";
 import { Breadcrumbs, BookingStrip, FadeUp } from "@/components/page/Primitives";
+import { useBookingPopup } from "@/components/BookingPopup";
 
 const PILLARS = [
   { icon: Atom, title: "Root-Cause Analysis", body: "We investigate biochemistry, gut health, hormones, and lifestyle to find why symptoms appear, not just what they look like." },
@@ -25,6 +26,7 @@ const CONDITIONS = [
 ];
 
 export default function FunctionalMedicineClient() {
+  const { openBooking } = useBookingPopup();
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], [60, -60]);
@@ -95,6 +97,12 @@ export default function FunctionalMedicineClient() {
                   href="https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openBooking(
+                      "https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2"
+                    );
+                  }}
                   className="inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:bg-accent"
                 >
                   Free Consultation Call

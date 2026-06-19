@@ -206,7 +206,7 @@ export default function ArticlePostClient({ slug }: { slug: string }) {
                     or Chalfont, PA location.
                   </p>
                   <Link
-                    href="/locations"
+                    href="/contact-us"
                     className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand px-6 py-3 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-colors hover:bg-accent"
                   >
                     Book Appointment

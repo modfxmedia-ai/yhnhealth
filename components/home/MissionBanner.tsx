@@ -83,7 +83,7 @@ export default function MissionBanner() {
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <Link
-            href="/locations"
+            href="/contact-us"
             className="group inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-[11px] font-bold uppercase tracking-[0.24em] text-brand transition-all hover:-translate-y-0.5 hover:bg-accent hover:text-white"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-accent transition-colors group-hover:bg-white" />

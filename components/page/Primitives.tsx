@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import { ChevronRight, Phone } from "lucide-react";
+import { useBookingPopup } from "@/components/BookingPopup";
 
 type Crumb = { label: string; href?: string };
 
@@ -53,6 +54,7 @@ export function BookingStrip({
 
   const FM_BOOKING_URL =
     "https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2";
+  const { openBooking } = useBookingPopup();
 
   return (
     <motion.section
@@ -78,7 +80,7 @@ export function BookingStrip({
         <div className="flex flex-wrap items-center gap-3">
           {!fm && (
             <Link
-              href="/locations"
+              href="/contact-us"
               className={`inline-flex items-center gap-2 rounded-full px-7 py-3 text-[11px] font-bold uppercase tracking-[0.24em] transition-all ${
                 variant === "cream"
                   ? "bg-brand text-white hover:bg-brand-dark"
@@ -92,6 +94,14 @@ export function BookingStrip({
             href={fm ? FM_BOOKING_URL : "tel:8565322063"}
             target={fm ? "_blank" : undefined}
             rel={fm ? "noopener noreferrer" : undefined}
+            onClick={
+              fm
+                ? (e) => {
+                    e.preventDefault();
+                    openBooking(FM_BOOKING_URL);
+                  }
+                : undefined
+            }
             className={`inline-flex items-center gap-2 rounded-full border px-5 py-3 text-[11px] font-bold uppercase tracking-[0.22em] transition-colors ${
               variant === "cream"
                 ? "border-brand/20 text-brand hover:border-accent hover:text-accent-dark"

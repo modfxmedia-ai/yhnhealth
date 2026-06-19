@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { Phone, Mail, MapPin, Send, ShieldAlert, Calendar, ArrowUpRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/page/Primitives";
+import { useBookingPopup } from "@/components/BookingPopup";
 import { LOCATIONS } from "@/lib/siteData";
 
 const MAP_EMBEDS: Record<string, string> = {
@@ -220,6 +221,7 @@ function LocationBlock({
   tel: string;
   bookingUrl: string;
 }) {
+  const { openBooking } = useBookingPopup();
   return (
     <div>
       <p className="font-display text-lg font-bold">{title}</p>
@@ -236,6 +238,10 @@ function LocationBlock({
           href={bookingUrl}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={(e) => {
+            e.preventDefault();
+            openBooking(bookingUrl);
+          }}
           className="group inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-white transition-all hover:bg-accent-dark"
         >
           <Calendar size={12} strokeWidth={2.25} />

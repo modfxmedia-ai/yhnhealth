@@ -309,7 +309,7 @@ export default function TestimonialsClient() {
                       Pick a service, location, and time that works for you - booking is open online.
                     </p>
                     <Link
-                      href="/locations"
+                      href="/contact-us"
                       className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-[10px] font-bold uppercase tracking-[0.22em] text-white transition-all hover:-translate-y-0.5 hover:bg-accent"
                     >
                       Book Appointment
@@ -441,7 +441,7 @@ export default function TestimonialsClient() {
           </div>
           <div className="flex flex-wrap items-center gap-3">
             <Link
-              href="/locations"
+              href="/contact-us"
               className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:bg-accent-dark"
             >
               Book Your Appointment

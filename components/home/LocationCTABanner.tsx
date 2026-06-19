@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { ArrowUpRight, MapPin, Phone } from "lucide-react";
+import { useBookingPopup } from "@/components/BookingPopup";
 
 const LOCATIONS = [
   {
@@ -25,6 +26,7 @@ const LOCATIONS = [
 ];
 
 export default function LocationCTABanner() {
+  const { openBooking } = useBookingPopup();
   return (
     <section className="relative grid grid-cols-1 overflow-hidden md:grid-cols-2">
       {LOCATIONS.map((loc, i) => (
@@ -106,6 +108,10 @@ export default function LocationCTABanner() {
               href={loc.bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={(e) => {
+                e.preventDefault();
+                openBooking(loc.bookingUrl);
+              }}
               className="group mt-8 inline-flex items-center gap-3 rounded-full bg-accent px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-brand-dark shadow-card transition-all hover:-translate-y-0.5 hover:bg-white hover:shadow-card-hover"
             >
               Book at this location

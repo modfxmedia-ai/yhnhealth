@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { Clock, Phone, MapPin, ArrowUpRight, FlaskConical, Video, Calendar } from "lucide-react";
 import { HOURS, LOCATIONS } from "@/lib/siteData";
+import { useBookingPopup } from "@/components/BookingPopup";
 
 const FM_BOOKING_URL =
   "https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2";
@@ -55,6 +56,7 @@ const SOCIAL_ICONS: Record<string, { Icon: (p: IconProps) => ReactElement; label
 };
 
 export default function HoursContactSection() {
+  const { openBooking } = useBookingPopup();
   return (
     <section className="relative overflow-hidden bg-cream-light py-20 md:py-24 lg:py-28">
       <div className="relative mx-auto max-w-[1320px] px-6 lg:px-10">
@@ -209,6 +211,10 @@ export default function HoursContactSection() {
                       href={loc.bookingUrl}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        openBooking(loc.bookingUrl);
+                      }}
                       className="group/btn inline-flex items-center justify-center gap-3 rounded-full bg-brand px-6 py-3 text-[10px] font-bold uppercase tracking-[0.22em] text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-brand-light"
                     >
                       Book Online
@@ -299,6 +305,10 @@ export default function HoursContactSection() {
                     href={FM_BOOKING_URL}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      openBooking(FM_BOOKING_URL);
+                    }}
                     className="group/btn inline-flex items-center justify-center gap-3 rounded-full bg-accent px-6 py-3 text-[10px] font-bold uppercase tracking-[0.22em] text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-accent-dark"
                   >
                     <Calendar size={12} strokeWidth={2.25} />

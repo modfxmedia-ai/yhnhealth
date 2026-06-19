@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { MapPin, ArrowUpRight, Calendar, FlaskConical, Video } from "lucide-react";
 import { LOCATIONS } from "@/lib/siteData";
+import { useBookingPopup } from "@/components/BookingPopup";
 
 const FM_BOOKING_URL =
   "https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2";
@@ -29,6 +30,7 @@ const PA_NJ_REGION_EMBED =
   "https://www.google.com/maps?q=Pennsylvania+and+New+Jersey,+USA&z=7&output=embed";
 
 export default function LocationMapSection() {
+  const { openBooking } = useBookingPopup();
   return (
     <section className="relative overflow-hidden bg-white py-16 md:py-20 lg:py-24">
       <div className="relative mx-auto max-w-[1320px] px-6 lg:px-10">
@@ -170,6 +172,10 @@ export default function LocationMapSection() {
                 href={FM_BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  openBooking(FM_BOOKING_URL);
+                }}
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-[10px] font-bold uppercase tracking-[0.22em] text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-accent-dark"
               >
                 <Calendar size={12} strokeWidth={2.25} />

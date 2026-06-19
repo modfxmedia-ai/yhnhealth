@@ -40,7 +40,6 @@ const QUICK_LINKS = [
   { label: "About Us", href: "/about-us" },
   { label: "Meet The Team", href: "/meet-the-doctor" },
   { label: "Articles", href: "/articles" },
-  { label: "Locations", href: "/locations" },
   { label: "Areas We Serve", href: "/areas-we-serve" },
   { label: "Contact", href: "/contact-us" },
 ];
@@ -109,7 +108,7 @@ export default function Footer() {
             <span className="font-script font-normal italic text-accent">be well,</span> be you
           </h2>
           <Link
-            href="/locations"
+            href="/contact-us"
             className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-2.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:-translate-y-0.5 hover:bg-white hover:text-brand"
           >
             Schedule a Visit
