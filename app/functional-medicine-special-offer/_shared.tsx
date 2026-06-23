@@ -9,8 +9,8 @@ import { ArrowUpRight, Phone, Quote, Star } from "lucide-react";
 /*  Shared constants                                                           */
 /* -------------------------------------------------------------------------- */
 
-export const PHONE_NJ = "(609) 869-9498";
-export const PHONE_NJ_TEL = "tel:+16098699498";
+export const PHONE_NJ = "(609) 651-7436";
+export const PHONE_NJ_TEL = "tel:+16096517436";
 
 export const LP_PATH = "/functional-medicine-special-offer";
 export const BOOK_PATH = "/functional-medicine-special-offer/book";

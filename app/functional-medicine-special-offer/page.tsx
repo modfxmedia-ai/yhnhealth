@@ -38,8 +38,8 @@ import {
 /*  Constants                                                                  */
 /* -------------------------------------------------------------------------- */
 
-const PHONE_NJ = "(609) 869-9498";
-const PHONE_NJ_TEL = "tel:+16098699498";
+const PHONE_NJ = "(609) 651-7436";
+const PHONE_NJ_TEL = "tel:+16096517436";
 
 const VIMEO_SRC =
   "https://player.vimeo.com/video/1200442621?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0";
