@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "motion/react";
-import { useState } from "react";
-import { Phone, Mail, MapPin, Send, ShieldAlert, Calendar, ArrowUpRight } from "lucide-react";
+import Script from "next/script";
+import { Phone, Mail, MapPin, Calendar, ArrowUpRight, Video, Clock } from "lucide-react";
 import { Breadcrumbs } from "@/components/page/Primitives";
 import { useBookingPopup } from "@/components/BookingPopup";
 import { LOCATIONS } from "@/lib/siteData";
@@ -19,14 +19,11 @@ const LOCATION_STATE: Record<string, string> = {
   Chalfont: "PA",
 };
 
+const FM_BOOKING_URL =
+  "https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2";
+
 export default function ContactClient() {
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setSubmitted(true);
-  }
-
+  const { openBooking } = useBookingPopup();
   return (
     <main className="bg-cream-light">
       <section className="relative bg-white">
@@ -53,37 +50,27 @@ export default function ContactClient() {
               appointment, use the booking links for your location. For urgent care, call us directly.
             </p>
 
-            <form onSubmit={handleSubmit} className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
-              <Field label="Name" name="name" required />
-              <Field label="Phone" name="phone" type="tel" />
-              <div className="md:col-span-2">
-                <Field label="Email" name="email" type="email" required />
-              </div>
-              <div className="md:col-span-2">
-                <label className="block text-[10px] font-bold uppercase tracking-[0.24em] text-stone">
-                  Message
-                </label>
-                <textarea
-                  name="message"
-                  rows={4}
-                  required
-                  className="mt-2 w-full rounded-xl border border-brand/15 bg-mist/40 px-4 py-3 text-sm text-brand placeholder:text-stone/60 focus:border-brand focus:bg-white focus:outline-none"
-                />
-              </div>
+            <div id="book" className="mt-10 scroll-mt-28">
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/75fLlP8l9bjou8xrpwwT"
+                style={{ width: "100%", height: "470px", border: "none", borderRadius: 0 }}
+                id="inline-75fLlP8l9bjou8xrpwwT"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="🔵 Website contact page form 23-06-26  "
+                data-height="470"
+                data-layout-iframe-id="inline-75fLlP8l9bjou8xrpwwT"
+                data-form-id="75fLlP8l9bjou8xrpwwT"
+                title="🔵 Website contact page form 23-06-26  "
+              />
+              <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
+            </div>
 
-              <p className="md:col-span-2 inline-flex items-start gap-2 text-[11px] text-stone">
-                <ShieldAlert size={13} className="mt-0.5 shrink-0 text-accent" />
-                Please do not submit any Protected Health Information (PHI).
-              </p>
-
-              <button
-                type="submit"
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand px-7 py-3.5 text-[11px] font-bold uppercase tracking-[0.24em] text-white transition-all hover:bg-accent md:col-span-2 md:w-fit"
-              >
-                {submitted ? "Thanks - we'll be in touch" : "Send Message"}
-                <Send size={13} className="transition-transform group-hover:translate-x-0.5" />
-              </button>
-            </form>
 
             {/* Direct email link (no dropdown) */}
             <a
@@ -126,11 +113,44 @@ export default function ContactClient() {
                 />
               ))}
 
-              <div className="border-t border-white/10 pt-7">
-                <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent">Hours</p>
-                <p className="mt-2 text-sm text-white/80">Monday &ndash; Friday</p>
-                <p className="text-base font-semibold">7:30 am &ndash; 8:00 pm</p>
-                <p className="mt-2 text-xs text-white/60">Saturday &amp; Sunday Closed</p>
+              <div className="rounded-2xl border border-accent/40 bg-white/5 p-6 backdrop-blur">
+                <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.28em] text-accent">
+                  <Video size={11} strokeWidth={2.25} />
+                  Functional Medicine
+                </p>
+                <p className="mt-3 font-display text-2xl font-bold leading-tight text-white">
+                  Free 30-minute consultation
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-white/70">
+                  New to functional medicine? Start with a complimentary 30-minute
+                  telehealth consult with Dr. Chris, available across all of PA &amp; NJ.
+                </p>
+
+                <a
+                  href={FM_BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openBooking(FM_BOOKING_URL);
+                  }}
+                  className="group mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-[10px] font-bold uppercase tracking-[0.22em] text-white transition-all hover:-translate-y-0.5 hover:bg-accent-dark"
+                >
+                  <Calendar size={12} strokeWidth={2.25} />
+                  Book Free Consult
+                  <ArrowUpRight
+                    size={12}
+                    className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  />
+                </a>
+
+                <a
+                  href="tel:6096517436"
+                  className="mt-4 flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-accent"
+                >
+                  <Phone size={13} className="text-accent" strokeWidth={2} />
+                  (609) 651-7436
+                </a>
               </div>
             </div>
           </motion.aside>
@@ -173,38 +193,23 @@ export default function ContactClient() {
               </div>
             ))}
           </div>
+
+          {/* Office hours */}
+          <div className="mt-6 flex flex-col items-center justify-center gap-2 rounded-2xl border border-brand/10 bg-white px-6 py-5 text-center shadow-card sm:flex-row sm:gap-4 sm:text-left">
+            <p className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.28em] text-accent-dark">
+              <Clock size={13} className="text-accent" strokeWidth={2.25} />
+              Office Hours
+            </p>
+            <p className="text-sm text-stone">
+              Monday &ndash; Friday{" "}
+              <span className="font-semibold text-brand">7:30 am &ndash; 8:00 pm</span>
+              <span className="mx-2 hidden text-stone/40 sm:inline">&middot;</span>
+              <span className="text-stone/70">Saturday &amp; Sunday Closed</span>
+            </p>
+          </div>
         </div>
       </section>
     </main>
-  );
-}
-
-function Field({
-  label,
-  name,
-  type = "text",
-  required,
-  placeholder,
-}: {
-  label: string;
-  name: string;
-  type?: string;
-  required?: boolean;
-  placeholder?: string;
-}) {
-  return (
-    <div>
-      <label className="block text-[10px] font-bold uppercase tracking-[0.24em] text-stone">
-        {label} {required && <span className="text-accent">*</span>}
-      </label>
-      <input
-        type={type}
-        name={name}
-        required={required}
-        placeholder={placeholder}
-        className="mt-2 w-full rounded-xl border border-brand/15 bg-mist/40 px-4 py-3 text-sm text-brand placeholder:text-stone/60 focus:border-brand focus:bg-white focus:outline-none"
-      />
-    </div>
   );
 }
 

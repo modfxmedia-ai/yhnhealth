@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
-import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Phone, RotateCw, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Check, ChevronDown, ChevronLeft, ChevronRight, RotateCw, Sparkles } from "lucide-react";
 import { HERO_SLIDES } from "@/lib/siteData";
 import { cn } from "@/lib/utils";
 import { useBookingPopup } from "@/components/BookingPopup";
@@ -171,17 +171,6 @@ export default function HeroSection() {
               className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
             >
               <Link
-                href="/contact-us"
-                className="group inline-flex items-center gap-3 rounded-full bg-white px-9 py-4 text-[12px] font-bold uppercase tracking-[0.24em] text-brand shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent hover:text-white hover:shadow-card-hover"
-              >
-                <span className="h-1.5 w-1.5 rounded-full bg-accent transition-colors group-hover:bg-white" />
-                Book Functional Medicine Visit
-                <ChevronRight
-                  size={14}
-                  className="transition-transform duration-300 group-hover:translate-x-1"
-                />
-              </Link>
-              <Link
                 href="/about-us"
                 className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-4 text-[12px] font-semibold uppercase tracking-[0.24em] text-white backdrop-blur transition-colors hover:border-accent hover:text-accent"
               >
@@ -219,15 +208,7 @@ export default function HeroSection() {
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-y-0 -left-full w-1/2 -skew-x-12 bg-gradient-to-r from-transparent via-white/35 to-transparent transition-all duration-700 group-hover:left-full"
               />
-              <span className="relative inline-flex h-8 w-8 items-center justify-center rounded-full bg-white text-accent shadow-inner">
-                <Phone size={14} strokeWidth={2.5} />
-              </span>
-              <span className="relative inline-flex items-center gap-2">
-                <span className="rounded-full bg-white/25 px-2 py-0.5 text-[10px] font-extrabold tracking-[0.18em] text-white">
-                  FREE
-                </span>
-                <span>30-Minute Consultation</span>
-              </span>
+              <span className="relative">Book Free Functional Medicine Consultation</span>
               <ChevronRight
                 size={14}
                 strokeWidth={2.5}
@@ -349,24 +330,60 @@ export default function HeroSection() {
                       <p className="mt-3 text-[13.5px] leading-relaxed text-white/80">
                         {slide.info}
                       </p>
+
+                      {/* Value points — fill the card and lead the eye toward the CTA */}
+                      <ul className="mt-5 space-y-2.5 border-t border-white/10 pt-5">
+                        {[
+                          "Doctor-led, root-cause care",
+                          "A plan built around your biology",
+                          "In-office & secure telehealth across PA & NJ",
+                        ].map((point) => (
+                          <li
+                            key={point}
+                            className="flex items-start gap-2.5 text-[12.5px] leading-snug text-white/85"
+                          >
+                            <span className="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-accent/20 text-accent">
+                              <Check size={10} strokeWidth={3} />
+                            </span>
+                            {point}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <div className="flex items-center justify-between gap-3">
-                      {slide.href ? (
-                        <Link
-                          href={slide.href}
-                          onClick={(e) => e.stopPropagation()}
-                          className="inline-flex items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-white shadow-card transition-all hover:bg-accent-dark"
-                        >
-                          {slide.cta ?? "Learn more"}
-                          <ArrowUpRight size={12} strokeWidth={2.5} />
-                        </Link>
-                      ) : (
-                        <span className="h-1" />
+
+                    <div>
+                      {slide.href && (
+                        <p className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.24em] text-accent">
+                          <motion.span
+                            aria-hidden="true"
+                            animate={{ y: [0, 4, 0] }}
+                            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+                            className="inline-flex"
+                          >
+                            <ArrowDown size={13} strokeWidth={2.5} />
+                          </motion.span>
+                          Get started below
+                        </p>
                       )}
-                      <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.24em] text-white">
-                        <RotateCw size={10} strokeWidth={2.25} />
-                        Flip back
-                      </span>
+
+                      <div className="flex items-center justify-between gap-3">
+                        {slide.href ? (
+                          <Link
+                            href={slide.href}
+                            onClick={(e) => e.stopPropagation()}
+                            className="inline-flex items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-white shadow-card transition-all hover:bg-accent-dark"
+                          >
+                            {slide.cta ?? "Learn more"}
+                            <ArrowUpRight size={12} strokeWidth={2.5} />
+                          </Link>
+                        ) : (
+                          <span className="h-1" />
+                        )}
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.24em] text-white">
+                          <RotateCw size={10} strokeWidth={2.25} />
+                          Flip back
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </motion.div>

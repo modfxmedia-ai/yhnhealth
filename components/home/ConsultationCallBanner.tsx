@@ -174,7 +174,7 @@ export default function ConsultationCallBanner() {
                   </div>
 
                   <a
-                    href="tel:8565322063"
+                    href="tel:6096517436"
                     className="group flex items-center justify-between gap-3 rounded-2xl border border-brand/10 bg-white px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-accent hover:shadow-card"
                   >
                     <div className="text-left">
@@ -182,7 +182,7 @@ export default function ConsultationCallBanner() {
                         Prefer to call?
                       </p>
                       <p className="mt-1 font-display text-base font-bold text-brand">
-                        (856) 532-2063
+                        (609) 651-7436
                       </p>
                     </div>
                     <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand text-white transition-colors group-hover:bg-accent">

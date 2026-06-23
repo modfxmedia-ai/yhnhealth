@@ -2,9 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import Script from "next/script";
 import {
-  AnimatePresence,
   motion,
   useInView,
   useScroll,
@@ -31,7 +29,6 @@ import {
   Stethoscope,
   TestTube,
   Video,
-  X,
 } from "lucide-react";
 
 /* -------------------------------------------------------------------------- */
@@ -41,19 +38,11 @@ import {
 const PHONE_NJ = "(609) 651-7436";
 const PHONE_NJ_TEL = "tel:+16096517436";
 
+const BOOKING_URL =
+  "https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2";
+
 const VIMEO_SRC =
   "https://player.vimeo.com/video/1200442621?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0";
-
-const NAV_LINKS = [
-  { href: "#stories", label: "Patient Stories" },
-  { href: "#approach", label: "Our Approach" },
-  { href: "#results", label: "Results" },
-  { href: "#conditions", label: "Conditions" },
-  { href: "#pathway", label: "How It Works" },
-  { href: "#testing", label: "Testing" },
-  { href: "#offer", label: "Special Offer" },
-  { href: "#locations", label: "Locations" },
-];
 
 const REVIEWS = [
   {
@@ -81,79 +70,6 @@ const REVIEWS = [
     service: "Hormone & Gut Health",
   },
 ];
-
-/* -------------------------------------------------------------------------- */
-/*  Modal                                                                      */
-/* -------------------------------------------------------------------------- */
-
-function ConsultModal({ onClose }: { onClose: () => void }) {
-  return (
-    <AnimatePresence>
-      <motion.div
-        className="fixed inset-0 z-[60] flex items-center justify-center bg-brand-dark/70 p-4 backdrop-blur-sm"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        onClick={onClose}
-        role="dialog"
-        aria-modal="true"
-        aria-label="Claim Your Free 30-Min Consultation"
-      >
-        <motion.div
-          className="relative w-full max-w-lg overflow-hidden rounded-3xl bg-white shadow-card-hover ring-1 ring-brand/10"
-          initial={{ opacity: 0, y: 28, scale: 0.96 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 20, scale: 0.97 }}
-          transition={{ type: "spring", stiffness: 260, damping: 26 }}
-          onClick={(e) => e.stopPropagation()}
-        >
-          <div className="relative overflow-hidden bg-gradient-to-br from-brand via-brand-light to-brand-dark px-6 py-4">
-            <span
-              aria-hidden="true"
-              className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-accent/25 blur-2xl"
-            />
-            <div className="relative flex items-center justify-between gap-4">
-              <h2 className="font-display text-xl font-bold text-white">
-                Claim Your Free 30-Min Consultation
-              </h2>
-              <button
-                type="button"
-                onClick={onClose}
-                aria-label="Close"
-                className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur transition-colors hover:bg-white/30"
-              >
-                <X size={18} strokeWidth={2.25} />
-              </button>
-            </div>
-          </div>
-
-          <iframe
-            src="https://api.leadconnectorhq.com/widget/form/HRGE0xWN8uOHbwJgwPfP"
-            style={{ width: "100%", height: "529px", border: "none", borderRadius: "0px" }}
-            id="inline-HRGE0xWN8uOHbwJgwPfP"
-            data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="🔵 Google Functional Medicine LP form (built on website) 19-06-26"
-            data-height="529"
-            data-layout-iframe-id="inline-HRGE0xWN8uOHbwJgwPfP"
-            data-form-id="HRGE0xWN8uOHbwJgwPfP"
-            title="🔵 Google Functional Medicine LP form (built on website) 19-06-26"
-          />
-
-          <Script
-            src="https://link.msgsndr.com/js/form_embed.js"
-            strategy="afterInteractive"
-          />
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
-  );
-}
 
 /* -------------------------------------------------------------------------- */
 /*  CTA buttons                                                                */
@@ -452,8 +368,8 @@ function CollageImage({
 /* -------------------------------------------------------------------------- */
 
 export default function FunctionalMedicineSpecialOfferPage() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const openModal = () => setModalOpen(true);
+  const openModal = () =>
+    window.open(BOOKING_URL, "_blank", "noopener,noreferrer");
 
   // Hide the global Knock Knock chat widget on this standalone landing page
   // (fallback for client-side navigation; layout already skips loading it here).
@@ -557,27 +473,6 @@ export default function FunctionalMedicineSpecialOfferPage() {
             </button>
           </div>
         </div>
-
-        {/* In-page section navigation */}
-        <nav
-          aria-label="Page sections"
-          className="border-t border-brand/10 bg-white/90 backdrop-blur"
-        >
-          <div className="mx-auto max-w-[1320px] px-5 lg:px-10">
-            <ul className="flex items-center justify-center gap-1 overflow-x-auto py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              {NAV_LINKS.map((link) => (
-                <li key={link.href} className="shrink-0">
-                  <a
-                    href={link.href}
-                    className="block whitespace-nowrap rounded-full px-3.5 py-1.5 text-[13px] font-semibold text-stone transition-colors hover:bg-mist hover:text-brand"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </nav>
       </header>
 
       <main>
@@ -1346,71 +1241,6 @@ export default function FunctionalMedicineSpecialOfferPage() {
             </div>
           </div>
         </section>
-
-        {/* --------------------------------------------------------------- */}
-        {/*  LOCATIONS                                                       */}
-        {/* --------------------------------------------------------------- */}
-        <section id="locations" className="bg-white py-16 scroll-mt-28 lg:py-20">
-          <div className="mx-auto max-w-[1320px] px-5 lg:px-10">
-            <FadeUp className="text-center sm:text-left">
-              <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-stone">
-                Office Locations
-              </p>
-              <h3 className="mt-3 font-display text-2xl font-bold text-brand">
-                Prefer to come in?
-              </h3>
-            </FadeUp>
-
-            <div className="mt-8 grid gap-5 sm:grid-cols-2">
-              <FadeUp>
-                <div className="flex items-center gap-5 rounded-2xl border border-brand/10 bg-cream-light p-4">
-                  <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-xl border border-brand/10">
-                    <iframe
-                      src="https://www.google.com/maps?q=5+W+Chestnut+Ave,+Merchantville,+NJ+08109&output=embed&z=15"
-                      title="Map of Merchantville, NJ office"
-                      className="pointer-events-none absolute left-1/2 top-1/2 h-[230px] w-[230px] -translate-x-1/2 -translate-y-1/2"
-                      style={{ border: 0 }}
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-display text-lg font-bold text-brand">
-                      Merchantville, NJ
-                    </p>
-                    <p className="mt-1 text-sm text-stone">
-                      5 W Chestnut Ave, Merchantville, NJ 08109
-                    </p>
-                  </div>
-                </div>
-              </FadeUp>
-              <FadeUp delay={0.1}>
-                <div className="flex items-center gap-5 rounded-2xl border border-brand/10 bg-cream-light p-4">
-                  <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-xl border border-brand/10">
-                    <iframe
-                      src="https://www.google.com/maps?q=350+N+Main+St+%23201,+Chalfont,+PA+18914&output=embed&z=15"
-                      title="Map of Chalfont, PA office"
-                      className="pointer-events-none absolute left-1/2 top-1/2 h-[230px] w-[230px] -translate-x-1/2 -translate-y-1/2"
-                      style={{ border: 0 }}
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-display text-lg font-bold text-brand">Chalfont, PA</p>
-                    <p className="mt-1 text-sm text-stone">
-                      350 N Main St #201, Chalfont, PA 18914
-                    </p>
-                  </div>
-                </div>
-              </FadeUp>
-            </div>
-
-            <p className="mt-6 text-sm text-stone">
-              Telehealth is also available for patients across NJ, PA, and beyond.
-            </p>
-          </div>
-        </section>
       </main>
 
       {/* ----------------------------------------------------------------- */}
@@ -1462,9 +1292,6 @@ export default function FunctionalMedicineSpecialOfferPage() {
           <ArrowUpRight size={15} />
         </button>
       </motion.div>
-
-      {/* Modal overlay */}
-      {modalOpen && <ConsultModal onClose={() => setModalOpen(false)} />}
     </div>
   );
 }

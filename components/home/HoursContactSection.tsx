@@ -280,7 +280,7 @@ export default function HoursContactSection() {
                       Available across all of PA &amp; NJ
                     </p>
                     <a
-                      href="tel:8565322063"
+                      href="tel:6096517436"
                       className="flex items-center gap-3 text-sm font-semibold text-white hover:text-accent"
                     >
                       <Phone
@@ -288,7 +288,7 @@ export default function HoursContactSection() {
                         className="shrink-0 text-accent"
                         strokeWidth={1.75}
                       />
-                      (856) 532-2063
+                      (609) 651-7436
                     </a>
                   </div>
 
