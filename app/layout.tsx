@@ -56,8 +56,11 @@ export default function RootLayout({
           {`
             (function () {
               var bareRoutes = ['/functional-medicine-special-offer'];
-              if (bareRoutes.indexOf(window.location.pathname.replace(/\\/$/, '')) !== -1) {
-                return;
+              var path = window.location.pathname.replace(/\\/$/, '');
+              for (var i = 0; i < bareRoutes.length; i++) {
+                if (path === bareRoutes[i] || path.indexOf(bareRoutes[i] + '/') === 0) {
+                  return;
+                }
               }
               window.company_id = '6a355eb46b7af26290ba9224';
               var newScript = document.createElement('script');

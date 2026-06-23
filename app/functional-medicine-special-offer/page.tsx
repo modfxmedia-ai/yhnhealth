@@ -44,6 +44,17 @@ const PHONE_NJ_TEL = "tel:+16098699498";
 const VIMEO_SRC =
   "https://player.vimeo.com/video/1200442621?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0";
 
+const NAV_LINKS = [
+  { href: "#stories", label: "Patient Stories" },
+  { href: "#approach", label: "Our Approach" },
+  { href: "#results", label: "Results" },
+  { href: "#conditions", label: "Conditions" },
+  { href: "#pathway", label: "How It Works" },
+  { href: "#testing", label: "Testing" },
+  { href: "#offer", label: "Special Offer" },
+  { href: "#locations", label: "Locations" },
+];
+
 const REVIEWS = [
   {
     text: "After my first call I felt heard. The complimentary consultation alone was more thorough than any visit I had with my previous doctor — and that was before I even stepped into the office. They genuinely care about the WHY behind your symptoms.",
@@ -469,11 +480,49 @@ export default function FunctionalMedicineSpecialOfferPage() {
   }, []);
 
   const heroRef = useRef<HTMLDivElement>(null);
+  const heroVideoRef = useRef<HTMLIFrameElement>(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"],
   });
   const orbY = useTransform(scrollYProgress, [0, 1], [0, 140]);
+
+  // Prevent Vimeo's "More from …" end screen from showing when the hero video
+  // finishes by resetting the player back to the first frame on the "ended" event.
+  useEffect(() => {
+    const iframe = heroVideoRef.current;
+    if (!iframe) return;
+
+    const SDK_SRC = "https://player.vimeo.com/api/player.js";
+    let player: { on: (e: string, cb: () => void) => void; destroy: () => void; setCurrentTime: (t: number) => Promise<number>; pause: () => Promise<void> } | null = null;
+
+    const init = () => {
+      const Vimeo = (window as unknown as { Vimeo?: { Player: new (el: HTMLIFrameElement) => typeof player } }).Vimeo;
+      if (!Vimeo || !iframe) return;
+      player = new Vimeo.Player(iframe) as typeof player;
+      player?.on("ended", () => {
+        player?.setCurrentTime(0).catch(() => {});
+        player?.pause().catch(() => {});
+      });
+    };
+
+    const existing = document.querySelector<HTMLScriptElement>(`script[src="${SDK_SRC}"]`);
+    if ((window as unknown as { Vimeo?: unknown }).Vimeo) {
+      init();
+    } else if (existing) {
+      existing.addEventListener("load", init);
+    } else {
+      const script = document.createElement("script");
+      script.src = SDK_SRC;
+      script.async = true;
+      script.addEventListener("load", init);
+      document.body.appendChild(script);
+    }
+
+    return () => {
+      player?.destroy();
+    };
+  }, []);
 
   return (
     <div className="min-h-screen scroll-smooth bg-white font-sans text-ink">
@@ -508,6 +557,27 @@ export default function FunctionalMedicineSpecialOfferPage() {
             </button>
           </div>
         </div>
+
+        {/* In-page section navigation */}
+        <nav
+          aria-label="Page sections"
+          className="border-t border-brand/10 bg-white/90 backdrop-blur"
+        >
+          <div className="mx-auto max-w-[1320px] px-5 lg:px-10">
+            <ul className="flex items-center justify-center gap-1 overflow-x-auto py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              {NAV_LINKS.map((link) => (
+                <li key={link.href} className="shrink-0">
+                  <a
+                    href={link.href}
+                    className="block whitespace-nowrap rounded-full px-3.5 py-1.5 text-[13px] font-semibold text-stone transition-colors hover:bg-mist hover:text-brand"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
       </header>
 
       <main>
@@ -617,6 +687,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
                 <div className="relative overflow-hidden rounded-[1.75rem] border border-white/15 bg-brand-dark shadow-card-hover">
                   <div className="relative aspect-[9/16] w-full">
                     <iframe
+                      ref={heroVideoRef}
                       src={VIMEO_SRC}
                       allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                       allowFullScreen
@@ -635,8 +706,8 @@ export default function FunctionalMedicineSpecialOfferPage() {
             <div className="mx-auto max-w-[1320px] px-5 py-8 lg:px-10 lg:py-10">
               <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4">
                 {[
-                  { big: <Counter end={500} suffix="+" />, label: "Patients Served" },
-                  { big: "2", label: "Locations · NJ & PA" },
+                  { big: <Counter end={2000} suffix="+" />, label: "Patients Served" },
+                  { big: "2", label: "Chiropractic Care Locations" },
                   { big: "Telehealth", label: "Available Nationwide" },
                   { big: <Counter end={30} suffix=" min" />, label: "Free Consultation" },
                 ].map((s, i) => (
@@ -659,9 +730,85 @@ export default function FunctionalMedicineSpecialOfferPage() {
         </section>
 
         {/* --------------------------------------------------------------- */}
+        {/*  REVIEWS                                                         */}
+        {/* --------------------------------------------------------------- */}
+        <section id="stories" className="relative overflow-hidden bg-cream-light py-20 scroll-mt-28 lg:py-28">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-40 top-10 h-96 w-96 rounded-full bg-accent/10 blur-3xl"
+          />
+          <div className="relative mx-auto max-w-[1320px] px-5 lg:px-10">
+            <FadeUp className="text-center">
+              <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-accent-dark">
+                Patient Stories
+              </p>
+              <h2 className="mt-3 font-display text-3xl font-bold text-brand sm:text-4xl">
+                Real people,{" "}
+                <span className="font-script text-4xl font-normal text-accent sm:text-5xl">
+                  real results
+                </span>
+              </h2>
+              <div className="mt-4 flex items-center justify-center gap-3 text-sm font-semibold text-stone">
+                <span className="flex">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} size={18} className="fill-accent text-accent" />
+                  ))}
+                </span>
+                <span>
+                  <Counter end={2000} suffix="+" /> patients served across NJ &amp; PA
+                </span>
+              </div>
+            </FadeUp>
+
+            <div className="mt-12 grid gap-5 md:grid-cols-2">
+              {REVIEWS.map((r, i) => (
+                <FadeUp key={r.author} delay={i * 0.08}>
+                  <motion.div
+                    whileHover={{ y: -6 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    className="relative h-full rounded-3xl border border-brand/10 bg-white p-7 shadow-card transition-shadow hover:shadow-card-hover"
+                  >
+                    <Quote
+                      size={40}
+                      className="absolute right-6 top-6 text-accent/15"
+                      aria-hidden="true"
+                    />
+                    <span className="flex gap-0.5">
+                      {Array.from({ length: 5 }).map((_, s) => (
+                        <Star key={s} size={15} className="fill-accent text-accent" />
+                      ))}
+                    </span>
+                    <p className="relative mt-4 leading-relaxed text-ink">
+                      &ldquo;{r.text}&rdquo;
+                    </p>
+                    <div className="mt-6 flex items-center gap-3 border-t border-brand/10 pt-4">
+                      <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand font-display text-lg font-bold text-accent">
+                        {r.author.charAt(0)}
+                      </span>
+                      <div>
+                        <p className="font-semibold text-brand">{r.author}</p>
+                        <p className="text-xs text-stone">
+                          {r.service} · {r.location}
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                </FadeUp>
+              ))}
+            </div>
+
+            <FadeUp delay={0.1} className="mt-12 text-center">
+              <PrimaryCTA onClick={openModal} className="mx-auto">
+                Start Your Success Story
+              </PrimaryCTA>
+            </FadeUp>
+          </div>
+        </section>
+
+        {/* --------------------------------------------------------------- */}
         {/*  FOUR PILLARS                                                    */}
         {/* --------------------------------------------------------------- */}
-        <section className="relative overflow-hidden bg-white py-20 lg:py-28">
+        <section id="approach" className="relative overflow-hidden bg-white py-20 scroll-mt-28 lg:py-28">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-steel-soft/40 blur-3xl"
@@ -744,7 +891,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
         {/* --------------------------------------------------------------- */}
         {/*  RESULTS / MOTION GRAPHS                                         */}
         {/* --------------------------------------------------------------- */}
-        <section className="relative overflow-hidden bg-cream-light py-20 lg:py-28">
+        <section id="results" className="relative overflow-hidden bg-cream-light py-20 scroll-mt-28 lg:py-28">
           <div className="relative mx-auto max-w-[1320px] px-5 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
               <FadeUp className="text-center sm:text-left">
@@ -828,7 +975,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
         {/* --------------------------------------------------------------- */}
         {/*  CONDITIONS                                                      */}
         {/* --------------------------------------------------------------- */}
-        <section className="bg-white py-20 lg:py-28">
+        <section id="conditions" className="bg-white py-20 scroll-mt-28 lg:py-28">
           <div className="mx-auto max-w-[1320px] px-5 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
               <div>
@@ -885,7 +1032,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
         {/* --------------------------------------------------------------- */}
         {/*  CARE PATHWAY                                                    */}
         {/* --------------------------------------------------------------- */}
-        <section className="bg-cream-light py-20 lg:py-28">
+        <section id="pathway" className="bg-cream-light py-20 scroll-mt-28 lg:py-28">
           <div className="mx-auto max-w-[1320px] px-5 lg:px-10">
             <FadeUp className="text-center sm:text-left">
               <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-accent-dark">
@@ -956,7 +1103,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
         {/* --------------------------------------------------------------- */}
         {/*  TESTING SECTION                                                 */}
         {/* --------------------------------------------------------------- */}
-        <section className="bg-white py-20 lg:py-28">
+        <section id="testing" className="bg-white py-20 scroll-mt-28 lg:py-28">
           <div className="mx-auto max-w-[1320px] px-5 lg:px-10">
             <FadeUp className="text-center sm:text-left">
               <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-accent-dark">
@@ -1104,85 +1251,9 @@ export default function FunctionalMedicineSpecialOfferPage() {
         </section>
 
         {/* --------------------------------------------------------------- */}
-        {/*  REVIEWS                                                         */}
-        {/* --------------------------------------------------------------- */}
-        <section className="relative overflow-hidden bg-cream-light py-20 lg:py-28">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-40 top-10 h-96 w-96 rounded-full bg-accent/10 blur-3xl"
-          />
-          <div className="relative mx-auto max-w-[1320px] px-5 lg:px-10">
-            <FadeUp className="text-center">
-              <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-accent-dark">
-                Patient Stories
-              </p>
-              <h2 className="mt-3 font-display text-3xl font-bold text-brand sm:text-4xl">
-                Real people,{" "}
-                <span className="font-script text-4xl font-normal text-accent sm:text-5xl">
-                  real results
-                </span>
-              </h2>
-              <div className="mt-4 flex items-center justify-center gap-3 text-sm font-semibold text-stone">
-                <span className="flex">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} size={18} className="fill-accent text-accent" />
-                  ))}
-                </span>
-                <span>
-                  <Counter end={500} suffix="+" /> patients served across NJ &amp; PA
-                </span>
-              </div>
-            </FadeUp>
-
-            <div className="mt-12 grid gap-5 md:grid-cols-2">
-              {REVIEWS.map((r, i) => (
-                <FadeUp key={r.author} delay={i * 0.08}>
-                  <motion.div
-                    whileHover={{ y: -6 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                    className="relative h-full rounded-3xl border border-brand/10 bg-white p-7 shadow-card transition-shadow hover:shadow-card-hover"
-                  >
-                    <Quote
-                      size={40}
-                      className="absolute right-6 top-6 text-accent/15"
-                      aria-hidden="true"
-                    />
-                    <span className="flex gap-0.5">
-                      {Array.from({ length: 5 }).map((_, s) => (
-                        <Star key={s} size={15} className="fill-accent text-accent" />
-                      ))}
-                    </span>
-                    <p className="relative mt-4 leading-relaxed text-ink">
-                      &ldquo;{r.text}&rdquo;
-                    </p>
-                    <div className="mt-6 flex items-center gap-3 border-t border-brand/10 pt-4">
-                      <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand font-display text-lg font-bold text-accent">
-                        {r.author.charAt(0)}
-                      </span>
-                      <div>
-                        <p className="font-semibold text-brand">{r.author}</p>
-                        <p className="text-xs text-stone">
-                          {r.service} · {r.location}
-                        </p>
-                      </div>
-                    </div>
-                  </motion.div>
-                </FadeUp>
-              ))}
-            </div>
-
-            <FadeUp delay={0.1} className="mt-12 text-center">
-              <PrimaryCTA onClick={openModal} className="mx-auto">
-                Start Your Success Story
-              </PrimaryCTA>
-            </FadeUp>
-          </div>
-        </section>
-
-        {/* --------------------------------------------------------------- */}
         {/*  OFFER / CTA                                                     */}
         {/* --------------------------------------------------------------- */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-brand-dark via-brand to-brand-dark py-20 text-white lg:py-28">
+        <section id="offer" className="relative overflow-hidden bg-gradient-to-br from-brand-dark via-brand to-brand-dark py-20 text-white scroll-mt-28 lg:py-28">
           <DarkMotionField />
           <span
             aria-hidden="true"
@@ -1251,7 +1322,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
                   </p>
                   <div className="mt-6 grid grid-cols-2 gap-4">
                     {[
-                      { big: <Counter end={500} suffix="+" />, label: "Patients Served" },
+                      { big: <Counter end={2000} suffix="+" />, label: "Patients Served" },
                       { big: <Counter end={30} suffix=" min" />, label: "Free Consult" },
                       { big: "2", label: "NJ & PA Offices" },
                       { big: "100%", label: "Doctor-Led" },
@@ -1279,7 +1350,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
         {/* --------------------------------------------------------------- */}
         {/*  LOCATIONS                                                       */}
         {/* --------------------------------------------------------------- */}
-        <section className="bg-white py-16 lg:py-20">
+        <section id="locations" className="bg-white py-16 scroll-mt-28 lg:py-20">
           <div className="mx-auto max-w-[1320px] px-5 lg:px-10">
             <FadeUp className="text-center sm:text-left">
               <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-stone">
