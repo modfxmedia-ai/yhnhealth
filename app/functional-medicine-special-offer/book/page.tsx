@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Script from "next/script";
 import { motion } from "motion/react";
 import {
@@ -25,6 +26,29 @@ import {
 const BOOKING_EMBED_SRC =
   "https://api.leadconnectorhq.com/widget/booking/TruvPY8ARyRsAbyT0abm";
 const BOOKING_EMBED_ID = "msgsndr-calendar";
+const THANK_YOU_PATH = "/functional-medicine-special-offer/thank-you";
+
+/** Detect a completed-booking message broadcast by the GoHighLevel calendar
+ *  widget. The embed posts a `message` to the parent window once an
+ *  appointment is scheduled; we match the documented event plus a few
+ *  defensive fallbacks. */
+function isBookingComplete(data: unknown): boolean {
+  if (typeof data === "string") {
+    const d = data.toLowerCase();
+    return d.includes("appointment") && (d.includes("book") || d.includes("schedul"));
+  }
+  if (data && typeof data === "object") {
+    const o = data as Record<string, unknown>;
+    const t = `${o.type ?? o.event ?? o.page ?? ""}`.toLowerCase();
+    return (
+      t.includes("appointment") ||
+      t.includes("booked") ||
+      t.includes("booking_complete") ||
+      t === "thank_you"
+    );
+  }
+  return false;
+}
 
 const PROMISES = [
   { icon: Clock, title: "30 minutes", copy: "A focused, no-pressure call to map out your next step." },
@@ -33,6 +57,25 @@ const PROMISES = [
 ];
 
 export default function BookingPage() {
+  const router = useRouter();
+
+  // Redirect to the thank-you page once the calendar booking completes.
+  useEffect(() => {
+    let redirected = false;
+    const handleMessage = (event: MessageEvent) => {
+      if (redirected) return;
+      if (!event.origin.includes("leadconnectorhq.com") && !event.origin.includes("msgsndr")) {
+        return;
+      }
+      if (isBookingComplete(event.data)) {
+        redirected = true;
+        router.push(THANK_YOU_PATH);
+      }
+    };
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, [router]);
+
   // Hide the global Knock Knock chat widget on this standalone funnel page.
   useEffect(() => {
     const style = document.createElement("style");
