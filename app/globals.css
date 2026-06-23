@@ -57,3 +57,34 @@ body {
 html {
   overflow-x: clip;
 }
+
+/*
+ * Knock Knock chat widget — corner bubble constraint.
+ *
+ * The widget is injected by an external script (api.knock-knockapp.com) and
+ * sizes its container (#kka-chat-widget) via inline styles set from JS, which
+ * is why it can balloon into a large gradient card. We pin it to a compact,
+ * rounded launcher in the bottom-right corner. !important is required to win
+ * over the widget's inline styles.
+ */
+#kka-chat-widget {
+  width: 72px !important;
+  height: 72px !important;
+  max-width: 72px !important;
+  max-height: 72px !important;
+  top: auto !important;
+  left: auto !important;
+  right: 20px !important;
+  bottom: 20px !important;
+  transform: none !important;
+  border-radius: 9999px !important;
+  overflow: hidden !important;
+  box-shadow: 0 12px 40px rgba(31, 53, 99, 0.16) !important;
+}
+
+#kka-chat-widget iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  border-radius: 9999px !important;
+}
