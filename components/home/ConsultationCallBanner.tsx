@@ -78,7 +78,7 @@ export default function ConsultationCallBanner() {
                 consultation with Dr. Chris &mdash; no waiting room, no
                 in-person visit required. Open to residents anywhere in{" "}
                 <span className="font-semibold text-brand">
-                  Pennsylvania &amp; New Jersey
+                  the US
                 </span>
                 .
               </p>
@@ -126,8 +126,8 @@ export default function ConsultationCallBanner() {
                   30 minutes with Dr. Chris
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-stone">
-                  Functional medicine telehealth visits available across all of
-                  Pennsylvania &amp; New Jersey. Pick a time that works for you.
+                  Functional medicine telehealth visits available across the
+                  US. Pick a time that works for you.
                 </p>
 
                 <div className="mt-5 space-y-3">
@@ -165,7 +165,7 @@ export default function ConsultationCallBanner() {
                           className="text-accent"
                           strokeWidth={2.25}
                         />
-                        All of PA &amp; NJ
+                        Across the US
                       </p>
                     </div>
                     <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand/5 text-brand">

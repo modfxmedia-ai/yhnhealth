@@ -65,7 +65,7 @@ export default function FunctionalMedicineTelehealthBanner() {
           <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75 md:text-lg">
             Doctor-led functional medicine care delivered across{" "}
             <span className="font-semibold text-white">
-              all of Pennsylvania &amp; New Jersey
+              the US
             </span>{" "}
             via secure video. No commute, no waiting room - just deep
             root-cause work with Dr. Chris.
@@ -110,7 +110,7 @@ export default function FunctionalMedicineTelehealthBanner() {
               Schedule with Dr. Chris
             </p>
             <p className="mt-2 text-sm leading-relaxed text-white/70">
-              Telehealth visits open to PA &amp; NJ residents. New patients can
+              Telehealth visits open to U.S. residents. New patients can
               start with a free 30-minute consultation call.
             </p>
 

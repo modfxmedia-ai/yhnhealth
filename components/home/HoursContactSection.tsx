@@ -126,8 +126,8 @@ export default function HoursContactSection() {
                 </p>
                 <p className="mt-1 text-sm text-stone">
                   Telehealth visits with Dr. Chris are scheduled by appointment
-                  and run independently of office hours. Available across all
-                  of PA &amp; NJ.
+                  and run independently of office hours. Available across the
+                  US.
                 </p>
               </div>
             </div>
@@ -252,7 +252,7 @@ export default function HoursContactSection() {
                 <div>
                   <p className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-accent">
                     <FlaskConical size={11} strokeWidth={2.25} />
-                    Pennsylvania &amp; New Jersey
+                    Nationwide Telehealth
                   </p>
                   <h3 className="mt-2 font-display text-3xl font-bold text-white md:text-4xl">
                     Functional Medicine Telehealth
@@ -260,7 +260,7 @@ export default function HoursContactSection() {
                   <p className="mt-3 max-w-md text-sm leading-relaxed text-white/75">
                     Doctor-led functional medicine care with Dr. Chris,
                     delivered via secure video. Open to residents anywhere in
-                    PA &amp; NJ - no commute, no waiting room.
+                    the US - no commute, no waiting room.
                   </p>
                   <div className="mt-5 space-y-3">
                     <p className="flex items-start gap-3 text-sm text-white/80">
@@ -277,7 +277,7 @@ export default function HoursContactSection() {
                         className="mt-0.5 shrink-0 text-accent"
                         strokeWidth={1.75}
                       />
-                      Available across all of PA &amp; NJ
+                      Available across the US
                     </p>
                     <a
                       href="tel:6096517436"

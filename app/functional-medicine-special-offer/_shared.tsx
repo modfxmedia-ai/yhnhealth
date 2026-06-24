@@ -181,7 +181,7 @@ export function LpFooter() {
         <p className="max-w-2xl text-xs leading-relaxed text-white/55">
           © 2026 Your Health Now. All rights reserved. The information on this page is
           for general educational purposes only and is not medical advice. Results vary
-          by individual. Telehealth available across NJ &amp; PA.
+          by individual. Telehealth available across the US.
         </p>
       </div>
     </footer>

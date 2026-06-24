@@ -336,7 +336,7 @@ export default function HeroSection() {
                         {[
                           "Doctor-led, root-cause care",
                           "A plan built around your biology",
-                          "In-office & secure telehealth across PA & NJ",
+                          "In-office in NJ & PA · Secure telehealth across the US",
                         ].map((point) => (
                           <li
                             key={point}

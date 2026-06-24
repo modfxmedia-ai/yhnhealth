@@ -44,7 +44,7 @@ export const SEO: Record<string, SeoEntry> = {
   "/health-optimization-programs": {
     title: "Health Optimization Programs | Functional Medicine in NJ & PA | Your Health Now",
     description:
-      "12 doctor-designed Health Optimization Programs - weight & metabolism, hormones, energy, thyroid, gut, longevity and more. 6- or 12-month pathways with telehealth in Merchantville, NJ & Chalfont, PA.",
+      "12 doctor-designed Health Optimization Programs - weight & metabolism, hormones, energy, thyroid, gut, longevity and more. 6- or 12-month pathways with offices in Merchantville, NJ & Chalfont, PA and telehealth across the US.",
   },
   "/family-chiropractic-care": {
     title: "Chiropractic Care | Chalfont, PA & Merchantville, NJ | Your Health Now",
