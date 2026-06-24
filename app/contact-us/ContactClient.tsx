@@ -113,7 +113,7 @@ export default function ContactClient() {
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-white/70">
                   New to functional medicine? Start with a complimentary 30-minute
-                  telehealth consult with Dr. Chris, available across the US.
+                  telehealth consult with Dr. Chris, available across all of PA &amp; NJ.
                 </p>
 
                 <a

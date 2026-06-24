@@ -26,8 +26,8 @@ const MAPS = [
   },
 ];
 
-const US_REGION_EMBED =
-  "https://www.google.com/maps?q=United+States&z=4&output=embed";
+const PA_NJ_REGION_EMBED =
+  "https://www.google.com/maps?q=Pennsylvania+and+New+Jersey,+USA&z=7&output=embed";
 
 export default function LocationMapSection() {
   const { openBooking } = useBookingPopup();
@@ -53,8 +53,9 @@ export default function LocationMapSection() {
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-stone md:text-lg">
             Visit us in person at our Merchantville, NJ or Chalfont, PA
-            chiropractic offices &mdash; or see Dr. Chris from anywhere in the
-            US via secure functional medicine telehealth.
+            chiropractic offices &mdash; or see Dr. Chris from anywhere in
+            Pennsylvania &amp; New Jersey via secure functional medicine
+            telehealth.
           </p>
         </motion.div>
 
@@ -105,7 +106,7 @@ export default function LocationMapSection() {
           ))}
         </div>
 
-        {/* FM Telehealth coverage card, nationwide */}
+        {/* FM Telehealth coverage card, PA & NJ */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -119,8 +120,8 @@ export default function LocationMapSection() {
               Functional Medicine · Telehealth
             </div>
             <iframe
-              src={US_REGION_EMBED}
-              title="Functional medicine telehealth coverage area"
+              src={PA_NJ_REGION_EMBED}
+              title="Functional medicine telehealth coverage area: Pennsylvania and New Jersey"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="h-full w-full opacity-90 grayscale transition-all duration-700 hover:grayscale-0"
@@ -135,12 +136,12 @@ export default function LocationMapSection() {
             <div>
               <p className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-accent">
                 <Video size={11} strokeWidth={2.25} />
-                Nationwide Coverage
+                Statewide Coverage
               </p>
               <h3 className="mt-3 font-display text-3xl font-bold leading-tight text-white md:text-4xl">
                 Available everywhere in{" "}
                 <span className="font-script font-normal italic text-accent">
-                  the US
+                  PA &amp; NJ
                 </span>
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-white/75 md:text-base">
@@ -153,7 +154,11 @@ export default function LocationMapSection() {
               <div className="mt-5 flex flex-wrap items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80">
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/5 px-3 py-1.5 backdrop-blur">
                   <MapPin size={11} className="text-accent" strokeWidth={2.25} />
-                  All 50 States
+                  Pennsylvania
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/5 px-3 py-1.5 backdrop-blur">
+                  <MapPin size={11} className="text-accent" strokeWidth={2.25} />
+                  New Jersey
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/5 px-3 py-1.5 backdrop-blur">
                   <Video size={11} className="text-accent" strokeWidth={2.25} />

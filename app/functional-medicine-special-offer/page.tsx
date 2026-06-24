@@ -507,7 +507,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-steel-light backdrop-blur"
               >
                 <Sparkles size={12} className="text-accent" />
-                Functional Medicine • Telehealth across the US
+                Functional Medicine • NJ &amp; PA • Telehealth
               </motion.span>
 
               <motion.h1
@@ -1099,7 +1099,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
             <div className="mt-12 grid gap-8 lg:grid-cols-12 lg:items-start">
               <CollageImage
                 src="/images/functional-medicine-lp/telehealth.webp"
-                alt="Functional medicine telehealth appointment from anywhere in the US"
+                alt="Functional medicine telehealth appointment from anywhere in NJ and PA"
                 label="Telehealth Visits"
                 width={656}
                 height={656}
@@ -1117,7 +1117,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
                   {
                     icon: Video,
                     title: "Telehealth Available",
-                    body: "See a functional medicine doctor near you or from home, anywhere in the US.",
+                    body: "See a functional medicine doctor near you or from home, anywhere in NJ & PA.",
                   },
                   {
                     icon: Compass,
@@ -1234,7 +1234,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
                     ))}
                   </div>
                   <p className="mt-6 text-center text-xs text-white/55">
-                    Telehealth nationwide · Offices in Merchantville, NJ &amp; Chalfont, PA
+                    Telehealth available · Merchantville, NJ &amp; Chalfont, PA
                   </p>
                 </div>
               </FadeUp>
@@ -1264,7 +1264,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
           <p className="max-w-2xl text-xs leading-relaxed text-white/55">
             © 2026 Your Health Now. All rights reserved. The information on this page is
             for general educational purposes only and is not medical advice. Results vary
-            by individual. Telehealth available across the US.
+            by individual. Telehealth available across NJ &amp; PA.
           </p>
         </div>
       </footer>

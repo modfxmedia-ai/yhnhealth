@@ -52,7 +52,7 @@ function isBookingComplete(data: unknown): boolean {
 
 const PROMISES = [
   { icon: Clock, title: "30 minutes", copy: "A focused, no-pressure call to map out your next step." },
-  { icon: Video, title: "Telehealth or in-office", copy: "Meet by video across the US, or visit us in person." },
+  { icon: Video, title: "Telehealth or in-office", copy: "Meet by video across NJ & PA, or visit us in person." },
   { icon: ShieldCheck, title: "No obligation", copy: "Completely complimentary. No commitment required." },
 ];
 

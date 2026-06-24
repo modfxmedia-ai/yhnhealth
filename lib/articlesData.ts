@@ -1086,8 +1086,8 @@ export const ARTICLES: Article[] = [
       },
       {
         type: "callout",
-        title: "Telehealth across the US",
-        text: "Functional medicine consults at YHN are delivered via secure video to residents anywhere in the United States. New patients start with a free 30-minute call to see if it's a fit.",
+        title: "Telehealth across PA & NJ",
+        text: "Functional medicine consults at YHN are delivered via secure video to residents anywhere in Pennsylvania and New Jersey. New patients start with a free 30-minute call to see if it's a fit.",
       },
     ],
     related: ["functional-medicine-fatigue-root-causes", "functional-medicine-gut-health"],
