@@ -35,8 +35,8 @@ import {
 /*  Constants                                                                  */
 /* -------------------------------------------------------------------------- */
 
-const PHONE_NJ = "(609) 651-7436";
-const PHONE_NJ_TEL = "tel:+16096517436";
+const PHONE_NJ = "+1 609-869-9498";
+const PHONE_NJ_TEL = "tel:+16098699498";
 
 const BOOKING_URL =
   "https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2";
@@ -603,7 +603,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
                 {[
                   { big: <Counter end={2000} suffix="+" />, label: "Patients Served" },
                   { big: "2", label: "Chiropractic Care Locations" },
-                  { big: "Telehealth", label: "Available Nationwide" },
+                  { big: "Telehealth", label: "Across NJ & PA" },
                   { big: <Counter end={30} suffix=" min" />, label: "Free Consultation" },
                 ].map((s, i) => (
                   <FadeUp
