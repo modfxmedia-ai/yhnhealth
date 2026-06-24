@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import Script from "next/script";
-import { Phone, Mail, MapPin, Calendar, ArrowUpRight, Video, Clock } from "lucide-react";
+import { Phone, MapPin, Calendar, ArrowUpRight, Video, Clock } from "lucide-react";
 import { Breadcrumbs } from "@/components/page/Primitives";
 import { useBookingPopup } from "@/components/BookingPopup";
 import { LOCATIONS } from "@/lib/siteData";
@@ -70,16 +70,6 @@ export default function ContactClient() {
               />
               <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
             </div>
-
-
-            {/* Direct email link (no dropdown) */}
-            <a
-              href="mailto:info@yhnhealth.com"
-              className="mt-10 inline-flex items-center gap-2 text-sm font-semibold text-brand hover:text-accent"
-            >
-              <Mail size={15} className="text-accent" />
-              info@yhnhealth.com
-            </a>
           </motion.div>
 
           {/* Right: info dark panel with per-location booking links */}
