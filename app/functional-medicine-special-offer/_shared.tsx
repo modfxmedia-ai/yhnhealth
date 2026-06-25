@@ -18,7 +18,7 @@ export const BOOK_PATH = "/functional-medicine-special-offer/book";
 /** Patient stories shown across the Functional Medicine landing-page funnel. */
 export const REVIEWS = [
   {
-    text: "After my first call I felt heard. The complimentary consultation alone was more thorough than any visit I had with my previous doctor — and that was before I even stepped into the office. They genuinely care about the WHY behind your symptoms.",
+    text: "After my first call I felt heard. The complimentary consultation alone was more thorough than any visit I had with my previous doctor, and that was before I even stepped into the office. They genuinely care about the WHY behind your symptoms.",
     author: "Jessica R.",
     location: "Merchantville, NJ",
     service: "Functional Medicine",
@@ -51,7 +51,7 @@ export function LpHeader({ ctaHref = BOOK_PATH, ctaLabel = "Book Free Consult" }
   return (
     <header className="relative z-40 border-b border-brand/10 bg-white/90 backdrop-blur sm:sticky sm:top-0">
       <div className="mx-auto flex max-w-[1320px] items-center justify-between px-5 py-3 lg:px-10">
-        <Link href={LP_PATH} aria-label="Your Health Now — back to overview">
+        <Link href={LP_PATH} aria-label="Your Health Now, back to overview">
           <Image
             src="/images/logo.webp"
             alt="Your Health Now"

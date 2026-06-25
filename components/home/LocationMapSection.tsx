@@ -53,7 +53,7 @@ export default function LocationMapSection() {
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-stone md:text-lg">
             Visit us in person at our Merchantville, NJ or Chalfont, PA
-            chiropractic offices &mdash; or see Dr. Chris from anywhere in
+            chiropractic offices, or see Dr. Chris from anywhere in
             Pennsylvania &amp; New Jersey via secure functional medicine
             telehealth.
           </p>

@@ -84,7 +84,7 @@ export default function FunctionalMedicineClient() {
                 transition={{ duration: 0.7, delay: 0.2 }}
                 className="mt-7 max-w-xl text-lg leading-relaxed text-stone"
               >
-                Where conventional medicine has failed to find the answer, functional medicine asks the next question. We address complex chronic conditions by treating the whole biology &mdash; not just the diagnosis.
+                Where conventional medicine has failed to find the answer, functional medicine asks the next question. We address complex chronic conditions by treating the whole biology, not just the diagnosis.
               </motion.p>
 
               <motion.div

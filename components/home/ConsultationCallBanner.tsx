@@ -75,7 +75,7 @@ export default function ConsultationCallBanner() {
               <p className="mt-5 max-w-xl text-base leading-relaxed text-stone md:text-lg">
                 Wondering if functional medicine is the right path for your
                 chronic symptoms? Start with a complimentary 30-minute phone
-                consultation with Dr. Chris &mdash; no waiting room, no
+                consultation with Dr. Chris, no waiting room, no
                 in-person visit required. Open to residents anywhere in{" "}
                 <span className="font-semibold text-brand">
                   Pennsylvania &amp; New Jersey

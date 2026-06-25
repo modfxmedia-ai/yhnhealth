@@ -90,7 +90,7 @@ export default function ThankYouPage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mt-6 font-display text-3xl font-bold leading-tight sm:text-4xl lg:text-[2.75rem]"
             >
-              You&apos;re all set —{" "}
+              You&apos;re all set,{" "}
               <span className="font-script text-4xl font-normal text-accent sm:text-5xl">
                 thank you!
               </span>

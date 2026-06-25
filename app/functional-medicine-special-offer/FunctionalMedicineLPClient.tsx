@@ -46,7 +46,7 @@ const VIMEO_SRC =
 
 const REVIEWS = [
   {
-    text: "After my first call I felt heard. The complimentary consultation alone was more thorough than any visit I had with my previous doctor — and that was before I even stepped into the office. They genuinely care about the WHY behind your symptoms.",
+    text: "After my first call I felt heard. The complimentary consultation alone was more thorough than any visit I had with my previous doctor, and that was before I even stepped into the office. They genuinely care about the WHY behind your symptoms.",
     author: "Jessica R.",
     location: "Merchantville, NJ",
     service: "Functional Medicine",
@@ -531,7 +531,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
               >
                 Doctor-led <strong className="font-semibold text-white">root cause medicine</strong>{" "}
                 for complex chronic conditions. Comprehensive functional lab testing,
-                personalized treatment, and whole-person care — in-person or via telehealth.
+                personalized treatment, and whole-person care, in-person or via telehealth.
               </motion.p>
 
               <motion.div
@@ -720,7 +720,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
                 </span>
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-lg text-stone sm:mx-0">
-                A functional medicine doctor looks upstream of your symptoms — combining
+                A functional medicine doctor looks upstream of your symptoms, combining
                 advanced diagnostics with personalized protocols to restore how you feel.
               </p>
             </FadeUp>
@@ -748,7 +748,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
                   {
                     icon: Atom,
                     title: "Root-Cause Analysis",
-                    body: "We investigate biochemistry, gut health, hormones, and lifestyle to find WHY symptoms appear — not just what they look like. This is root cause medicine, not symptom suppression.",
+                    body: "We investigate biochemistry, gut health, hormones, and lifestyle to find WHY symptoms appear, not just what they look like. This is root cause medicine, not symptom suppression.",
                   },
                   {
                     icon: Microscope,
@@ -758,12 +758,12 @@ export default function FunctionalMedicineSpecialOfferPage() {
                   {
                     icon: ClipboardList,
                     title: "Personalized Care Plan",
-                    body: "Your protocol is built around your biology, your history, and your goals — guided by a functional medicine doctor, never a one-size-fits-all template.",
+                    body: "Your protocol is built around your biology, your history, and your goals, guided by a functional medicine doctor, never a one-size-fits-all template.",
                   },
                   {
                     icon: ListChecks,
                     title: "Ongoing Optimization",
-                    body: "Functional medicine is iterative. We measure, adjust, and refine until you're not just less sick — you're well.",
+                    body: "Functional medicine is iterative. We measure, adjust, and refine until you're not just less sick, you're well.",
                   },
                 ].map((c, i) => (
                   <FadeUp key={c.title} delay={i * 0.08}>
@@ -884,7 +884,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
                   <p className="mx-auto mt-4 max-w-xl text-lg text-stone sm:mx-0">
                     Functional medicine is at its best with complex, chronic, multi-system
                     conditions. If you&rsquo;ve been told your labs are &ldquo;normal&rdquo;
-                    but you don&rsquo;t feel well — this is for you.
+                    but you don&rsquo;t feel well, this is for you.
                   </p>
                 </FadeUp>
 
@@ -983,7 +983,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
                 </div>
 
                 <p className="mt-6 text-base italic text-stone">
-                  Telehealth appointments available — see a functional medicine doctor
+                  Telehealth appointments available, see a functional medicine doctor
                   from anywhere in NJ, PA, and beyond.
                 </p>
 
@@ -1112,7 +1112,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
                   {
                     icon: Stethoscope,
                     title: "Doctor-Led Care",
-                    body: "Every plan is guided by an experienced functional medicine doctor — not handed off.",
+                    body: "Every plan is guided by an experienced functional medicine doctor, not handed off.",
                   },
                   {
                     icon: Video,

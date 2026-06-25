@@ -173,7 +173,7 @@ export default function HealthOptimizationProgramsClient() {
               <p className="mt-7 max-w-2xl text-lg leading-relaxed text-stone">
                 Designed for individuals who want to proactively improve their health, energy,
                 longevity, metabolism, hormone balance, and overall wellness through a structured
-                functional medicine approach &mdash; even if you are not currently dealing with
+                functional medicine approach, even if you are not currently dealing with
                 major illness or complex medical conditions.
               </p>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-stone">
@@ -284,7 +284,7 @@ export default function HealthOptimizationProgramsClient() {
             </h2>
             <div className="mt-4 h-[3px] w-20 bg-accent" />
             <p className="mt-5 text-base leading-relaxed text-stone">
-              Our most-requested programs &mdash; each rooted in functional medicine and tailored
+              Our most-requested programs, each rooted in functional medicine and tailored
               to your biology.
             </p>
           </FadeUp>
