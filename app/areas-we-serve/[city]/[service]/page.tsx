@@ -7,6 +7,7 @@ import {
   SERVICE_BY_SLUG,
 } from "@/lib/pseoData";
 import AreaServicePage from "@/components/page/AreaServicePage";
+import { SITE_URL } from "@/lib/siteUrl";
 
 export const dynamicParams = false;
 
@@ -26,12 +27,13 @@ export async function generateMetadata(
 
   const title = `${service.name} in ${city.name}, ${city.state} | Your Health Now`;
   const description = `${service.name} for ${city.name}, ${city.state} patients. ${service.summary.split(".")[0]}. Same-week appointments - book today.`;
-  const canonical = `https://yhnhealth.com/areas-we-serve/${city.slug}/${service.slug}`;
+  const canonical = `${SITE_URL}/areas-we-serve/${city.slug}/${service.slug}`;
   return {
     title,
     description,
     alternates: { canonical },
     openGraph: { title, description, url: canonical, type: "website" },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 

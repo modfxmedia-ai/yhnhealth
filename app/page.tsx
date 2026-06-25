@@ -13,6 +13,7 @@ import ArticlesSection from "@/components/home/ArticlesSection";
 import NewsletterSection from "@/components/home/NewsletterSection";
 import HoursContactSection from "@/components/home/HoursContactSection";
 import LocationMapSection from "@/components/home/LocationMapSection";
+import { SITE_URL } from "@/lib/siteUrl";
 
 export const metadata: Metadata = {
   title: "Your Health Now | Functional Medicine & Chiropractic in Chalfont, PA & Merchantville, NJ",
@@ -27,12 +28,12 @@ export const metadata: Metadata = {
     "Merchantville NJ",
     "Chalfont PA",
   ],
-  alternates: { canonical: "https://yhnhealth.com/" },
+  alternates: { canonical: `${SITE_URL}/` },
   openGraph: {
     title: "Your Health Now | Functional Medicine & Chiropractic in Chalfont, PA & Merchantville, NJ",
     description:
       "Functional medicine and chiropractic care under one roof - root-cause investigation, advanced labs, and precise hands-on care in Chalfont, PA and Merchantville, NJ.",
-    url: "https://yhnhealth.com/",
+    url: `${SITE_URL}/`,
     type: "website",
     siteName: "Your Health Now",
   },

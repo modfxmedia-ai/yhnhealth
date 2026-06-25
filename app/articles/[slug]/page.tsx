@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ARTICLES, ARTICLE_BY_SLUG } from "@/lib/articlesData";
 import ArticlePostClient from "./ArticlePostClient";
+import { SITE_URL } from "@/lib/siteUrl";
 
 export function generateStaticParams() {
   return ARTICLES.map((a) => ({ slug: a.slug }));
@@ -17,7 +18,7 @@ export async function generateMetadata({
   if (!a) return { title: "Article Not Found | Your Health Now" };
   const title = `${a.title} | Your Health Now`;
   const description = a.excerpt;
-  const url = `https://yhnhealth.com/articles/${a.slug}`;
+  const url = `${SITE_URL}/articles/${a.slug}`;
   return {
     title,
     description,

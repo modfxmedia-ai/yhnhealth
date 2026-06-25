@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CITIES, CITY_BY_SLUG, SERVICES } from "@/lib/pseoData";
 import AreaCityPage from "@/components/page/AreaCityPage";
+import { SITE_URL } from "@/lib/siteUrl";
 
 export const dynamicParams = false;
 
@@ -17,12 +18,13 @@ export async function generateMetadata(
   if (!city) return {};
   const title = `Chiropractor in ${city.name}, ${city.state} | Your Health Now`;
   const description = `Patient-specific chiropractic, functional medicine, and rehab serving ${city.name}, ${city.state} and ${city.county} County. ${SERVICES.length} services available - book today.`;
-  const canonical = `https://yhnhealth.com/areas-we-serve/${city.slug}`;
+  const canonical = `${SITE_URL}/areas-we-serve/${city.slug}`;
   return {
     title,
     description,
     alternates: { canonical },
     openGraph: { title, description, url: canonical, type: "website" },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 

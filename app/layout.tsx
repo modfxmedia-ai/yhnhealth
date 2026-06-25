@@ -6,6 +6,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { BookingProvider } from "@/components/BookingPopup";
+import { SITE_URL } from "@/lib/siteUrl";
+
+const DEFAULT_OG_IMAGE = "/images/yhn-clone/your-health-now.jpg";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,13 +30,94 @@ const italianno = Italianno({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yhnhealth.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Your Health Now | Chiropractors in Chalfont, PA & Merchantville, NJ",
     template: "%s | Your Health Now",
   },
   description:
     "Are you seeking pain relief? Our chiropractor provides effective treatment for patients like you in Chalfont, PA & Merchantville, NJ. Call today for an appointment!",
+  openGraph: {
+    siteName: "Your Health Now",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Your Health Now - Chiropractic & Functional Medicine",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [DEFAULT_OG_IMAGE],
+  },
+  robots: { index: true, follow: true },
+};
+
+const ORGANIZATION_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "@id": `${SITE_URL}/#organization`,
+  name: "Your Health Now",
+  url: SITE_URL,
+  logo: `${SITE_URL}/images/logo.webp`,
+  image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
+  medicalSpecialty: ["Chiropractic", "Functional Medicine"],
+  priceRange: "$$",
+  sameAs: [
+    "https://www.facebook.com/yhnhealth/",
+    "https://www.instagram.com/p/DQrd5dHE7_b/",
+    "https://www.linkedin.com/company/your-health-now-llc",
+  ],
+  location: [
+    {
+      "@type": "MedicalClinic",
+      "@id": `${SITE_URL}/locations#merchantville`,
+      name: "Your Health Now - Merchantville",
+      telephone: "+1-856-532-2063",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "5 W Chestnut Ave",
+        addressLocality: "Merchantville",
+        addressRegion: "NJ",
+        postalCode: "08109",
+        addressCountry: "US",
+      },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "07:30",
+          closes: "20:00",
+        },
+      ],
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": `${SITE_URL}/locations#chalfont`,
+      name: "Your Health Now - Chalfont",
+      telephone: "+1-609-651-7436",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "350 N Main St #201",
+        addressLocality: "Chalfont",
+        addressRegion: "PA",
+        postalCode: "18914",
+        addressCountry: "US",
+      },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "07:30",
+          closes: "20:00",
+        },
+      ],
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -44,6 +128,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} ${italianno.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans bg-cream-light text-ink antialiased">
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_SCHEMA) }}
+        />
         <BookingProvider>
           <ScrollToTop />
           <Header />

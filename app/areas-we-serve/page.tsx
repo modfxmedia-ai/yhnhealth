@@ -3,12 +3,13 @@ import Link from "next/link";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import { CITIES, SERVICES, CLINICS } from "@/lib/pseoData";
 import { Breadcrumbs, FadeUp } from "@/components/page/Primitives";
+import { SITE_URL } from "@/lib/siteUrl";
 
 export const metadata: Metadata = {
   title: "Areas We Serve | Chiropractors in NJ & PA | Your Health Now",
   description:
     "Your Health Now serves 30+ cities across South Jersey and Bucks/Montgomery County, PA - patient-specific chiropractic, functional medicine, and rehab. Find your area.",
-  alternates: { canonical: "https://yhnhealth.com/areas-we-serve" },
+  alternates: { canonical: `${SITE_URL}/areas-we-serve` },
 };
 
 export default function AreasWeServePage() {

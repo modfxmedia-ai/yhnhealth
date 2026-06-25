@@ -2,8 +2,9 @@ import type { MetadataRoute } from "next";
 import { SITE_PATHS } from "@/lib/navigation";
 import { CITIES, SERVICES } from "@/lib/pseoData";
 import { ARTICLES } from "@/lib/articlesData";
+import { SITE_URL } from "@/lib/siteUrl";
 
-const BASE = "https://yhnhealth.com";
+const BASE = SITE_URL;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -49,5 +50,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...core, ...areasIndex, ...cityHubs, ...cityServices, ...articles];
+  const landingPages: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE}/functional-medicine-special-offer`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+  ];
+
+  return [...core, ...areasIndex, ...cityHubs, ...cityServices, ...articles, ...landingPages];
 }
