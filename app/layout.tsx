@@ -134,6 +134,19 @@ export default function RootLayout({
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_SCHEMA) }}
         />
+        <Script
+          id="ga4-loader"
+          src="https://www.googletagmanager.com/gtag/js?id=G-GX8PHZR3EG"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-GX8PHZR3EG');
+          `}
+        </Script>
         <BookingProvider>
           <ScrollToTop />
           <Header />
