@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
-import { ChevronDown, ChevronRight, Menu, X, MapPin, Clock } from "lucide-react";
+import { ChevronDown, ChevronRight, Menu, X, MapPin, Clock, Calendar } from "lucide-react";
 import { NAV_ITEMS, isNavGroup, type NavChild, type NavItem } from "@/lib/navigation";
 import { cn } from "@/lib/utils";
 
@@ -75,6 +75,37 @@ function TopBar({ hidden }: { hidden: boolean }) {
 /* -------------------------------------------------------------------------- */
 /*  Desktop Dropdown                                                          */
 /* -------------------------------------------------------------------------- */
+function DropdownBookCTA() {
+  const pathname = usePathname();
+  return (
+    <Link
+      href="/contact-us"
+      role="menuitem"
+      onClick={(e) => {
+        if (pathname === "/contact-us") {
+          e.preventDefault();
+          document
+            .getElementById("book")
+            ?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }}
+      className="group flex items-center justify-between gap-4 border-t border-brand/10 bg-mist/60 px-5 py-3 text-[13px] font-bold uppercase tracking-[0.18em] text-brand transition-colors hover:bg-accent hover:text-white"
+    >
+      <span className="inline-flex items-center gap-2">
+        <Calendar
+          size={13}
+          strokeWidth={2.25}
+          className="text-accent transition-colors group-hover:text-white"
+        />
+        Book Appointment
+      </span>
+      <span className="text-accent transition-colors group-hover:text-white">
+        →
+      </span>
+    </Link>
+  );
+}
+
 function DesktopDropdown({
   item,
   scrolled,
@@ -172,6 +203,7 @@ function DesktopDropdown({
                   <DropdownRow key={child.label} child={child} />
                 ))}
               </div>
+              <DropdownBookCTA />
             </div>
           </motion.div>
         )}
@@ -261,6 +293,7 @@ function DropdownRow({ child }: { child: NavChild }) {
                   </Link>
                 ))}
               </div>
+              <DropdownBookCTA />
             </div>
           </motion.div>
         )}
@@ -420,6 +453,22 @@ function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => void })
                             </Link>
                           )
                         )}
+                        <Link
+                          href="/contact-us"
+                          onClick={(e) => {
+                            if (pathname === "/contact-us") {
+                              e.preventDefault();
+                              document
+                                .getElementById("book")
+                                ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                            }
+                            onClose();
+                          }}
+                          className="mt-2 inline-flex items-center gap-2 rounded-full bg-brand px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-white transition-colors hover:bg-accent"
+                        >
+                          <Calendar size={11} strokeWidth={2.25} />
+                          Book Appointment
+                        </Link>
                       </div>
                     </motion.div>
                   </div>

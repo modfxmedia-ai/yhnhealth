@@ -20,24 +20,70 @@ import {
   type ArticleBlock,
 } from "@/lib/articlesData";
 
+// Parses inline markdown-style links `[label](href)` into React nodes.
+// External URLs open in a new tab; internal paths use next/link.
+function renderInline(text: string): React.ReactNode {
+  const re = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const nodes: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+  while ((match = re.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      nodes.push(text.slice(lastIndex, match.index));
+    }
+    const label = match[1];
+    const href = match[2];
+    const isExternal = /^https?:\/\//i.test(href);
+    if (isExternal) {
+      nodes.push(
+        <a
+          key={`lnk-${key++}`}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold text-accent-dark underline decoration-accent/50 decoration-2 underline-offset-4 transition-colors hover:text-accent"
+        >
+          {label}
+        </a>
+      );
+    } else {
+      nodes.push(
+        <Link
+          key={`lnk-${key++}`}
+          href={href}
+          className="font-semibold text-accent-dark underline decoration-accent/50 decoration-2 underline-offset-4 transition-colors hover:text-accent"
+        >
+          {label}
+        </Link>
+      );
+    }
+    lastIndex = match.index + match[0].length;
+  }
+  if (lastIndex < text.length) {
+    nodes.push(text.slice(lastIndex));
+  }
+  return nodes.length ? nodes : text;
+}
+
 function Block({ block }: { block: ArticleBlock }) {
   switch (block.type) {
     case "p":
       return (
         <p className="text-base leading-relaxed text-stone md:text-lg md:leading-[1.85]">
-          {block.text}
+          {renderInline(block.text)}
         </p>
       );
     case "h2":
       return (
         <h2 className="mt-12 font-display text-2xl font-bold text-brand md:text-3xl">
-          {block.text}
+          {renderInline(block.text)}
         </h2>
       );
     case "h3":
       return (
         <h3 className="mt-8 font-display text-xl font-bold text-brand md:text-2xl">
-          {block.text}
+          {renderInline(block.text)}
         </h3>
       );
     case "list":
@@ -49,7 +95,7 @@ function Block({ block }: { block: ArticleBlock }) {
               className="flex items-start gap-3 text-base leading-relaxed text-stone md:text-lg"
             >
               <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-              <span>{item}</span>
+              <span>{renderInline(item)}</span>
             </li>
           ))}
         </ul>
@@ -58,7 +104,7 @@ function Block({ block }: { block: ArticleBlock }) {
       return (
         <figure className="my-10 border-l-2 border-accent bg-cream-light px-6 py-7 md:px-8 md:py-8">
           <blockquote className="font-display text-xl italic leading-relaxed text-brand md:text-2xl">
-            &ldquo;{block.text}&rdquo;
+            &ldquo;{renderInline(block.text)}&rdquo;
           </blockquote>
           {block.cite && (
             <figcaption className="mt-3 text-[11px] font-bold uppercase tracking-[0.22em] text-accent-dark"> - {block.cite}
@@ -72,7 +118,9 @@ function Block({ block }: { block: ArticleBlock }) {
           <p className="text-[10px] font-bold uppercase tracking-[0.32em] text-accent-dark">
             {block.title}
           </p>
-          <p className="mt-3 text-base leading-relaxed text-brand md:text-lg">{block.text}</p>
+          <p className="mt-3 text-base leading-relaxed text-brand md:text-lg">
+            {renderInline(block.text)}
+          </p>
         </aside>
       );
     default:

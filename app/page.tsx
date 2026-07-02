@@ -13,6 +13,8 @@ import ArticlesSection from "@/components/home/ArticlesSection";
 import NewsletterSection from "@/components/home/NewsletterSection";
 import HoursContactSection from "@/components/home/HoursContactSection";
 import LocationMapSection from "@/components/home/LocationMapSection";
+import DoctorSnippetSection from "@/components/home/DoctorSnippetSection";
+import QuestionFormSection from "@/components/home/QuestionFormSection";
 import { SITE_URL } from "@/lib/siteUrl";
 
 export const metadata: Metadata = {
@@ -52,8 +54,10 @@ export default function HomePage() {
       <TestimonialsSection />
       <ServicesGrid />
       <MeetTeamSection />
+      <DoctorSnippetSection />
       <MissionBanner />
       <ArticlesSection />
+      <QuestionFormSection />
       <NewsletterSection />
       <HoursContactSection />
       <LocationMapSection />

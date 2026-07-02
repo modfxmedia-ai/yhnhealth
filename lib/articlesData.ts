@@ -69,6 +69,381 @@ const IMG = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "pediatric-chiropractor-doylestown-signs",
+    title: "Signs Your Child May Benefit From a Pediatric Chiropractor in Doylestown",
+    excerpt:
+      "Kids don't always say \"my back hurts.\" They show it in posture, sleep, mood, and movement. Here are the subtle signs a pediatric chiropractor may be able to help.",
+    category: "About Chiropractic Care",
+    date: "July 2, 2026",
+    readTime: 8,
+    image: "/images/articles/pediatric-chiropractor.webp",
+    imageAlt: "Pediatric chiropractor gently caring for a young child",
+    body: [
+      {
+        type: "p",
+        text: "Chiropractic care for kids is not the same as care for adults. Pediatric chiropractic uses very light, age-appropriate pressure and gentle techniques that match a child's size, stage of growth, and comfort level. The goal is to support how the spine, nerves, and muscles work together so the body can move and function as smoothly as possible.",
+      },
+      {
+        type: "p",
+        text: "Many common childhood issues can be linked to how well the body is aligned and how the nervous system is coping with stress. When the spine or muscles are tight, stiff, or out of balance, kids may show it in their posture, mood, sleep, or behavior long before they can explain what hurts. A pediatric chiropractor in Doylestown can be one piece of your child's wellness team - alongside the pediatrician, dentist, and other trusted providers.",
+      },
+      {
+        type: "p",
+        text: "Midsummer is often a busy time for families. Kids are more active - traveling, going to camps, and getting ready for the next school year. It can be a smart time to check in on posture, growth, and development so your child heads into fall feeling comfortable and confident.",
+      },
+      { type: "h2", text: "Subtle signs your child's body may be out of balance" },
+      {
+        type: "p",
+        text: "Sometimes kids don't say, \"My back hurts.\" Instead, they show us through how they sit, stand, or move. You may notice changes like:",
+      },
+      {
+        type: "list",
+        items: [
+          "Rounded shoulders or a head that juts forward when standing.",
+          "One shoulder or hip looking higher in photos.",
+          "Uneven shoe wear, limping, toe-walking, or more tripping than usual.",
+          "Complaints of \"growing pains,\" leg aches, or a stiff neck after sports or carrying a backpack.",
+        ],
+      },
+      { type: "h3", text: "Behavior and mood clues" },
+      {
+        type: "list",
+        items: [
+          "Irritability or meltdowns that feel like they come out of nowhere.",
+          "Trouble sitting still, constant wiggling in chairs, or avoiding certain activities.",
+          "Difficulty relaxing or winding down at night, especially after busy days.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Summer can add a few extra triggers. Long car rides, amusement park days, sports camps, swimming, and roughhousing can all strain little bodies. If your child seems extra sore, tired, or out of sorts after these activities, it may point to alignment issues or nervous system stress that deserve a gentle chiropractic check.",
+      },
+      { type: "h2", text: "When growing pains, headaches, and sleep struggles need a closer look" },
+      {
+        type: "p",
+        text: "\"Growing pains\" are common, but not every ache should be brushed off. Typical growing pains usually happen in both legs, often in the evening, come and go, and improve with simple comfort measures at home.",
+      },
+      {
+        type: "p",
+        text: "Pain that sticks around, shows up in joints, or keeps your child from playing, sleeping, or enjoying normal activities may be linked to posture, alignment, or sports strain. In those cases, a closer look is wise.",
+      },
+      { type: "h3", text: "Headaches to watch for" },
+      {
+        type: "list",
+        items: [
+          "More frequent headaches behind the eyes or at the base of the skull.",
+          "Neck and shoulder tightness.",
+          "Trouble focusing on schoolwork, books, or hobbies.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Forward head posture and tight neck muscles can affect how well nerves and blood vessels function in that area. A pediatric chiropractor looks at spinal alignment, muscle balance, and movement patterns that might be feeding into headache or focus issues.",
+      },
+      { type: "h3", text: "Sleep signals" },
+      {
+        type: "list",
+        items: [
+          "Difficulty falling asleep or staying asleep.",
+          "Tossing, turning, or seeming \"restless\" all night.",
+          "Complaints of achy legs, back, or neck at bedtime.",
+        ],
+      },
+      {
+        type: "p",
+        text: "By working to improve alignment and reduce tension, chiropractic care may support a calmer nervous system and more restful, restorative sleep, which becomes especially important before school routines begin again.",
+      },
+      { type: "h2", text: "Clues from babies and toddlers that often get overlooked" },
+      {
+        type: "p",
+        text: "Babies and toddlers cannot always tell us what is wrong with words, so we look for patterns in how they feed, move, and interact. With babies, red flags can include:",
+      },
+      {
+        type: "list",
+        items: [
+          "Preferring to nurse or bottle-feed on just one side.",
+          "Arching the back or pulling off frequently during feeds.",
+          "Colic-like crying, excessive gassiness, or constipation.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Gentle pediatric chiropractic care uses very light pressure to support comfort and mobility in the neck, jaw, and spine, which may help these little ones feed and settle more easily.",
+      },
+      { type: "h3", text: "Movement and milestones" },
+      {
+        type: "list",
+        items: [
+          "A strong dislike of tummy time.",
+          "A head that always tilts to one side or flat spots on the back of the head.",
+          "Delays or uneven patterns with rolling, crawling, or pulling to stand.",
+        ],
+      },
+      {
+        type: "p",
+        text: "A pediatric chiropractor can assess the spine, muscles, and joints for restrictions that might be holding a child back from moving freely and meeting milestones in a balanced way.",
+      },
+      { type: "h3", text: "For toddlers on the move, watch for:" },
+      {
+        type: "list",
+        items: [
+          "Frequent falls on the same side.",
+          "Walking with feet turned in or out.",
+          "Favoring one leg or side when climbing or running.",
+          "Tantrums or sudden mood changes tied to getting in and out of car seats or strollers.",
+        ],
+      },
+      {
+        type: "callout",
+        title: "Early support, gentle results",
+        text: "Early, gentle adjustments may support better comfort, coordination, and healthy movement patterns during these busy years. Techniques are always tailored to your child's age and comfort - often no more than a fingertip touch.",
+      },
+      { type: "h2", text: "How a pediatric chiropractic visit actually works" },
+      {
+        type: "p",
+        text: "Many parents feel more at ease when they know what to expect. A first pediatric visit often includes a detailed health history (birth, development, injuries, illnesses, current concerns), a gentle, hands-on exam of posture, spinal alignment, muscle tone, and nervous system responses, and time for your questions plus space to share what you notice about mood, sleep, learning, or sports.",
+      },
+      {
+        type: "p",
+        text: "Techniques are always tailored to your child's age and comfort. Pediatric adjustments use very light pressure, often no more than a fingertip touch. Chiropractors often show the pressure on a parent's hand first, explain each step in simple, calm language, and use toys, conversation, or play to help kids feel relaxed.",
+      },
+      {
+        type: "p",
+        text: "At Your Health Now, we also bring in functional medicine ideas like nutrition, gut health, and inflammation when they relate to your child's symptoms. When it makes sense, we coordinate care with pediatricians, therapists, and other providers so everyone is on the same page. Midsummer checkups can be a helpful time to address any lingering concerns before school and sports schedules fill up.",
+      },
+      { type: "h2", text: "How to choose the right pediatric chiropractor near you" },
+      {
+        type: "p",
+        text: "Finding the right fit matters. When you talk with a pediatric chiropractor, you might ask about training or extra study in pediatric care, experience with infants, toddlers, and school-age kids, and how they keep children safe, comfortable, and involved in their own care.",
+      },
+      {
+        type: "p",
+        text: "You want someone who works with kids regularly and has a calm, patient, child-centered approach. It should feel like your child's comfort and consent are respected every step of the way.",
+      },
+      { type: "h3", text: "Communication that works" },
+      {
+        type: "list",
+        items: [
+          "Spends time listening to your story and concerns.",
+          "Gives clear, honest answers in language you can understand.",
+          "Invites you to be part of the plan with home tips or simple exercises when appropriate.",
+        ],
+      },
+      {
+        type: "p",
+        text: "At Your Health Now, we see parents as partners. We value your observations about your child's posture, behavior, sleep, and school or sports performance, because you know your child best.",
+      },
+      {
+        type: "p",
+        text: "Practical details also matter to busy local families. Consider location, parking, and office hours that work with school, camp, and sports; a setup that works for siblings and family visits; and how to explain the visit to your child so they feel safe, informed, and empowered.",
+      },
+      {
+        type: "callout",
+        title: "Trust what you're seeing",
+        text: "When you trust your instincts and pay attention to these signs, you can take thoughtful steps to support your child's comfort, growth, and long-term wellness.",
+      },
+      { type: "h2", text: "Support your child's health with gentle, targeted care" },
+      {
+        type: "p",
+        text: "If you are looking for a trusted [pediatric chiropractor in Doylestown](/pediatric-care), we are here to help your child move, sleep, and grow more comfortably. At Your Health Now, we tailor every visit to your child's age, needs, and comfort level so they feel safe and supported. Reach out today through our [contact page](/contact-us) to schedule a visit or ask any questions about what to expect.",
+      },
+    ],
+    related: ["pediatric-care-benefits", "chiropractic-across-all-ages", "athletic-care-young-athletes"],
+  },
+  {
+    slug: "functional-medicine-doctor-bucks-county",
+    title: "When to Choose a Functional Medicine Doctor in Bucks County",
+    excerpt:
+      "If you keep dealing with the same symptoms even after trying different doctors or medications, it may be time for root-cause care. Here's when functional medicine can help.",
+    category: "Functional Medicine",
+    date: "June 30, 2026",
+    readTime: 8,
+    image: "/images/articles/functional-medicine.avif",
+    imageAlt: "Functional medicine doctor reviewing advanced lab results with a patient",
+    body: [
+      {
+        type: "p",
+        text: "When your body is trying to tell you something, quick fixes only go so far. If you keep dealing with the same symptoms - even after trying different doctors, medications, or over-the-counter products - it may be time for a different kind of care. That is where a functional medicine doctor in Bucks County can help.",
+      },
+      {
+        type: "p",
+        text: "Functional medicine looks at why your symptoms are happening, not just how to quiet them for a while. Instead of focusing only on one body part or diagnosis, we look at how everything works together. This kind of partner is helpful when your health issues feel complex, long-lasting, or confusing.",
+      },
+      {
+        type: "p",
+        text: "Summer often shines a light on these problems. Maybe you want more energy for hikes, kids' activities, yard work, or trips to the shore, but your body is not keeping up. Addressing chronic concerns now can help you feel better through the rest of the year, including the busy fall and winter months.",
+      },
+      { type: "h2", text: "What a functional medicine doctor actually does" },
+      {
+        type: "p",
+        text: "A functional medicine doctor is like a health detective for your whole body. We want to understand how your systems connect:",
+      },
+      {
+        type: "list",
+        items: [
+          "Hormones.",
+          "Gut health and digestion.",
+          "Inflammation.",
+          "Nutrition.",
+          "Stress and mood.",
+          "Sleep patterns.",
+          "Environment at home and work.",
+        ],
+      },
+      {
+        type: "p",
+        text: "When one area is off, it can affect everything else. For example, gut problems can impact mood, hormones, pain, and even skin. Instead of treating each symptom by itself, we step back and look at the full picture.",
+      },
+      {
+        type: "p",
+        text: "We often use advanced testing that goes beyond standard lab work - expanded bloodwork panels, hormone testing, GI and microbiome testing, food sensitivity panels, and micronutrient testing. These tools can help uncover hidden imbalances that do not show up on basic tests.",
+      },
+      { type: "h3", text: "Personalized plans, not one-size-fits-all" },
+      {
+        type: "list",
+        items: [
+          "Targeted nutrition changes.",
+          "Lifestyle shifts around sleep, stress, and movement.",
+          "Specific supplements when appropriate.",
+          "Mind-body strategies to calm the nervous system.",
+          "Coordination with medications when they are needed.",
+        ],
+      },
+      {
+        type: "p",
+        text: "The goal is not a one-size-fits-all protocol. The goal is a plan that fits your body, your life, and your long-term health goals.",
+      },
+      { type: "h2", text: "Signs it's time to see a functional medicine doctor" },
+      {
+        type: "p",
+        text: "It can be hard to know when you need this kind of deeper support. Some signs that it may be time include:",
+      },
+      {
+        type: "list",
+        items: [
+          "Persistent fatigue, brain fog, or low energy with \"normal\" labs.",
+          "Ongoing weight changes that do not match your eating or activity.",
+          "Sleep problems that have not improved with simple changes.",
+          "Anxiety, mood swings, or irritability that feel out of character.",
+          "Headaches or body pain that keep coming back.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Chronic digestive and hormone concerns are another big reason people seek this type of care. This can look like IBS symptoms, reflux, bloating, or irregular bowel habits, as well as hormone-related concerns such as irregular cycles, PMS, heavy or painful periods, perimenopause or menopause symptoms that feel intense, low libido or sexual health concerns, and thyroid problems that do not feel well controlled.",
+      },
+      { type: "h3", text: "Seasonal and lifestyle patterns" },
+      {
+        type: "list",
+        items: [
+          "Flares in allergies or asthma.",
+          "Increases in joint pain or migraines.",
+          "Swings in mood or energy.",
+        ],
+      },
+      {
+        type: "p",
+        text: "If you notice your symptoms changing with the weather, pollen counts, or stress around travel and schedule shifts, it may point to deeper imbalances that functional medicine can explore.",
+      },
+      { type: "h2", text: "How functional medicine and chiropractic work together" },
+      {
+        type: "p",
+        text: "Functional medicine and chiropractic care fit together in a very natural way. Chiropractic focuses on alignment, movement, and the nervous system, while functional medicine focuses on internal systems like digestion, hormones, and immune balance. When we combine both, we can address:",
+      },
+      {
+        type: "list",
+        items: [
+          "Alignment issues that lead to pain and limited mobility.",
+          "Systemic inflammation that keeps pain going.",
+          "Nutrient and hormone issues that affect healing.",
+          "Nerve irritation that links the spine, brain, and organs.",
+        ],
+      },
+      {
+        type: "p",
+        text: "For example, someone might have chronic low back pain along with gut discomfort. Chiropractic care can improve joint motion and nerve function, which eases pain. At the same time, functional medicine can address inflammation and digestive problems that may be feeding that pain from the inside.",
+      },
+      {
+        type: "p",
+        text: "Another common pattern is headaches with neck tension and hormone shifts. Chiropractic can help with neck and upper back mechanics, while functional medicine looks at triggers like stress, sleep, blood sugar, and hormone changes. Working on both sides of the problem often leads to deeper, more stable progress.",
+      },
+      {
+        type: "callout",
+        title: "Care under one roof",
+        text: "At Your Health Now, we bring these approaches together under one roof so your care can feel more connected and less scattered.",
+      },
+      { type: "h2", text: "Choosing the right functional medicine doctor" },
+      {
+        type: "p",
+        text: "Choosing a functional medicine doctor is a personal decision. Some helpful things to look for include:",
+      },
+      {
+        type: "list",
+        items: [
+          "Solid medical training and clinical experience.",
+          "Advanced functional medicine education or coursework.",
+          "Comfort with complex, long-term health concerns.",
+          "Respectful, collaborative communication style.",
+        ],
+      },
+      { type: "h3", text: "Practical details that matter" },
+      {
+        type: "list",
+        items: [
+          "Whether the office offers both in-person and telehealth visits.",
+          "How often follow-up visits are recommended.",
+          "How test results are explained and discussed.",
+          "How the office supports you between visits.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Your Health Now stands out by combining doctor-led functional medicine care and chiropractic services in one clinic. We offer advanced testing options, thoughtful evaluations, and personalized treatment plans for people in Pennsylvania and New Jersey, including the Bucks County area. Our focus is on understanding you as a whole person, not just a diagnosis.",
+      },
+      { type: "h2", text: "Preparing for your first visit and what to expect" },
+      {
+        type: "p",
+        text: "Good prep helps you get the most from your first visit. Before you come in, it can help to:",
+      },
+      {
+        type: "list",
+        items: [
+          "Gather recent lab results, imaging, and medical records.",
+          "Make a list of medications and supplements you are taking.",
+          "Write down your main symptoms and when they started.",
+          "Think about your health goals, both short-term and long-term.",
+        ],
+      },
+      {
+        type: "p",
+        text: "During an initial visit, you can expect a detailed conversation - not a rushed check-in. We typically talk about your daily routine, sleep, and stress load, along with eating patterns and digestion. We also review hormone and reproductive history, past illnesses, injuries, and major life events, and consider your environment at home and work.",
+      },
+      {
+        type: "p",
+        text: "From there, we may suggest certain tests to fill in missing pieces. We then build a phased plan so you are not trying to change everything at once. Many people start with basics around food, sleep, and stress, then add more targeted support as results and patterns become clearer.",
+      },
+      {
+        type: "p",
+        text: "Progress often comes in layers. You might notice small shifts in energy or sleep first, then changes in pain, hormones, or digestion. Follow-up visits help adjust your plan for things like summer travel, back-to-school stress, and immune support as cooler weather returns.",
+      },
+      { type: "h2", text: "Taking the next step toward root-cause healing" },
+      {
+        type: "p",
+        text: "You do not have to keep pushing through fatigue, pain, or confusing symptoms on your own. Working with a functional medicine doctor can help you understand what your body is trying to say - and what to do next.",
+      },
+      {
+        type: "p",
+        text: "At Your Health Now, we are here to listen, look deeper, and support a clear plan for your health. Starting this work now can help you enjoy more of what you love in every season, with more energy, less guesswork, and a path that finally makes sense.",
+      },
+      { type: "h2", text: "Take the next step toward personalized, root-cause care" },
+      {
+        type: "p",
+        text: "If you are ready to move beyond quick fixes and truly understand what your body needs, we invite you to work with our [functional medicine doctor in Bucks County](/functional-medicine). At Your Health Now, we take the time to listen, investigate, and create a plan that fits your life and health goals. Reach out today through our [contact page](/contact-us) so we can discuss your concerns and map out your next steps together.",
+      },
+    ],
+    related: ["functional-medicine-fatigue-root-causes", "functional-medicine-vs-conventional", "functional-medicine-gut-health"],
+  },
+  {
     slug: "morning-routine-affects-your-spine",
     title: "How Your Morning Routine Affects Your Spine",
     excerpt:

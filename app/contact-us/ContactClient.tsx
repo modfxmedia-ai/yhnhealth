@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import Script from "next/script";
-import { Phone, MapPin, Calendar, ArrowUpRight, Video, Clock } from "lucide-react";
+import { Phone, MapPin, Calendar, ArrowUpRight, Video, Clock, Navigation } from "lucide-react";
 import { Breadcrumbs } from "@/components/page/Primitives";
 import { useBookingPopup } from "@/components/BookingPopup";
 import { LOCATIONS } from "@/lib/siteData";
@@ -165,7 +165,7 @@ export default function ContactClient() {
                     className="absolute inset-0 h-full w-full border-0"
                   />
                 </div>
-                <div className="flex items-center justify-between gap-3 px-5 py-4">
+                <div className="flex flex-col gap-3 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
                   <div className="min-w-0">
                     <p className="font-display text-sm font-bold text-brand">{loc.name}</p>
                     <p className="truncate text-xs text-stone">{loc.address}</p>
@@ -174,10 +174,15 @@ export default function ContactClient() {
                     href={loc.social.maps}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex shrink-0 items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-brand hover:text-accent"
+                    aria-label={`Get directions to ${loc.name}`}
+                    className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-brand px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.22em] text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-accent"
                   >
-                    Directions
-                    <ArrowUpRight size={12} />
+                    <Navigation size={11} strokeWidth={2.25} />
+                    Get Directions
+                    <ArrowUpRight
+                      size={11}
+                      className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    />
                   </a>
                 </div>
               </div>

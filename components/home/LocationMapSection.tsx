@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { MapPin, ArrowUpRight, Calendar, FlaskConical, Video } from "lucide-react";
+import { MapPin, ArrowUpRight, Calendar, FlaskConical, Video, Navigation } from "lucide-react";
 import { LOCATIONS } from "@/lib/siteData";
 import { useBookingPopup } from "@/components/BookingPopup";
 
@@ -82,7 +82,7 @@ export default function LocationMapSection() {
                   className="h-full w-full grayscale transition-all duration-700 group-hover:grayscale-0"
                 />
               </div>
-              <div className="flex items-center justify-between gap-4 p-6">
+              <div className="flex flex-col gap-4 p-6 md:flex-row md:items-center md:justify-between">
                 <div>
                   <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-accent-dark">
                     Chiropractic Clinic · 0{i + 1}
@@ -92,15 +92,22 @@ export default function LocationMapSection() {
                   </h3>
                   <p className="mt-1 text-sm text-stone">{m.address}</p>
                 </div>
-                <Link
-                  href={m.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Open ${m.name} in Google Maps`}
-                  className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand text-white transition-colors hover:bg-accent"
-                >
-                  <ArrowUpRight size={16} />
-                </Link>
+                <div className="flex items-center gap-3 md:shrink-0">
+                  <Link
+                    href={m.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Get directions to ${m.name}`}
+                    className="group/dir inline-flex items-center gap-2 rounded-full bg-brand px-5 py-3 text-[10px] font-bold uppercase tracking-[0.22em] text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-accent"
+                  >
+                    <Navigation size={12} strokeWidth={2.25} />
+                    Get Directions
+                    <ArrowUpRight
+                      size={12}
+                      className="transition-transform duration-300 group-hover/dir:translate-x-0.5 group-hover/dir:-translate-y-0.5"
+                    />
+                  </Link>
+                </div>
               </div>
             </motion.div>
           ))}
