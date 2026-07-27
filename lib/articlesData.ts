@@ -69,6 +69,445 @@ const IMG = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "childs-first-chiropractic-visit-haddonfield",
+    title: "Your Child's First Chiropractic Visit in Haddonfield",
+    excerpt:
+      "Learn what happens at your child's first visit, including assessment and safety. See how a family chiropractor in Haddonfield, NJ can help kids thrive.",
+    category: "Wellness4Kids",
+    date: "July 27, 2026",
+    readTime: 8,
+    image: "/images/articles/your-childs-first-chiropractic-visit-in-haddonfield.jpg",
+    imageAlt: "Parent and child at a first pediatric chiropractic visit in Haddonfield, NJ",
+    body: [
+      {
+        type: "p",
+        text: "Taking your child to a chiropractor for the first time can feel very different from going yourself. Many parents in Haddonfield are curious but a little unsure. You might wonder what the visit will look like, how gentle the care really is, and how your child will react.",
+      },
+      {
+        type: "p",
+        text: "Choosing a family chiropractor in Haddonfield, NJ means the focus is on kids and their unique needs. Care is gentle, movement-based, and centered around healthy development. There is also attention to how chiropractic can work alongside pediatric and primary care, not replace it.",
+      },
+      {
+        type: "p",
+        text: "In this guide, we will walk you through what to expect, step by step. From getting ready at home, to the first assessment, to how safe, age-appropriate care usually looks, our goal is to help you feel calm, informed, and prepared.",
+      },
+      { type: "h2", text: "Preparing for That First Pediatric Chiropractic Visit" },
+      {
+        type: "p",
+        text: "A few days before your child's appointment, it helps to gather some basic information. You do not need to create anything fancy, just have a few details ready to share.",
+      },
+      {
+        type: "list",
+        items: [
+          "Health history, including any diagnoses or medications.",
+          "Pregnancy and birth details that feel important.",
+          "Sports, dance, or other activities your child does.",
+          "Any imaging or reports from pediatricians or specialists.",
+        ],
+      },
+      {
+        type: "p",
+        text: "If you have a baby, think about feeding patterns, sleep, and whether your baby prefers looking or turning one way. For toddlers and older kids, think about how they move, play, and sit during screen time or homework.",
+      },
+      { type: "h3", text: "On the day of the visit" },
+      {
+        type: "list",
+        items: [
+          "Dress your child in comfy clothes they can move in.",
+          "Bring a favorite small toy, stuffed animal, or book.",
+          "Pack a simple snack and water, especially in hot weather.",
+          "Try to plan the visit around naps and meals if possible.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Use simple, calm language when you explain what will happen. For example, you could say, \"We are going to see a doctor who helps kids' bodies move and feel better. They will look at how you stand, sit, and turn, and I will be with you the whole time.\"",
+      },
+      {
+        type: "p",
+        text: "Summer is often when parents start to notice more about their child's movement. Extra running, climbing, camps, and travel can make posture or alignment issues easier to see. If you spot anything like limping after sports, always leaning to one side in a chair, or complaining of \"tired\" shoulders after swimming or backpacks, jot that down and share it with the chiropractor.",
+      },
+      { type: "h2", text: "What Happens During the Initial Pediatric Assessment" },
+      {
+        type: "p",
+        text: "When you arrive at a family chiropractor in Haddonfield, NJ, you can expect a friendly, low-pressure visit. The environment is usually relaxed and kid-focused, with space for parents to ask questions and for children to warm up.",
+      },
+      {
+        type: "p",
+        text: "The intake part of the visit often includes a chat about your child's health, activities, and daily routines, questions about sleep, school, sports, and screen time, and a chance for you to share any worries or goals.",
+      },
+      { type: "h3", text: "For babies, the chiropractor may" },
+      {
+        type: "list",
+        items: [
+          "Check head shape and head turning.",
+          "Gently move the neck, hips, and spine.",
+          "Watch how your baby lies, rolls, or tries to sit.",
+          "Check reflexes and basic neurological responses.",
+        ],
+      },
+      { type: "h3", text: "For toddlers and preschoolers, they may" },
+      {
+        type: "list",
+        items: [
+          "Watch how your child walks, runs, and climbs on the table.",
+          "Gently check range of motion in the neck, back, and hips.",
+          "Look at foot position and balance.",
+          "Use simple games to see how your child moves.",
+        ],
+      },
+      { type: "h3", text: "For school age kids and teens, they may" },
+      {
+        type: "list",
+        items: [
+          "Look at posture from the front, side, and back.",
+          "Check flexibility, strength, and balance.",
+          "Gently test joint motion and muscle tone.",
+          "Screen basic neurological function and reflexes.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Sometimes the chiropractor may suggest additional tests or imaging. This is usually when something in the history or exam raises questions that need a closer look. In those cases, care is often coordinated with your child's pediatrician or other providers. The goal is to have a full, safe picture of your child's health before moving forward.",
+      },
+      { type: "h2", text: "Safety First: How Gentle Pediatric Chiropractic Care Works" },
+      {
+        type: "p",
+        text: "Safety is one of the most common topics parents want to talk about, and that is a good thing. Pediatric chiropractic is not just adult care done \"lighter.\" It uses different methods and training focused on growing bodies.",
+      },
+      {
+        type: "list",
+        items: [
+          "Forces used with infants and young children are very light.",
+          "Techniques are adapted for each age and size.",
+          "The focus is on comfort and calm, not on big twisting motions.",
+        ],
+      },
+      {
+        type: "p",
+        text: "For many kids, an adjustment may look and feel like light fingertip pressure on specific joints or muscles, gentle stretching or rocking motions, small handheld instruments that deliver soft, controlled input, or positions that feel like play, such as lying on a parent's chest or sitting while playing with a toy.",
+      },
+      {
+        type: "p",
+        text: "You may or may not hear any \"popping\" sounds. That sound is not required for an adjustment to work, and with kids, the focus is often on soft, quiet techniques.",
+      },
+      {
+        type: "p",
+        text: "After the visit, it is common for children to be a little tired or extra relaxed, sleep more deeply that night, or notice mild soreness, like after trying a new activity.",
+      },
+      {
+        type: "callout",
+        title: "Your questions always matter",
+        text: "If you see anything that worries you, or if soreness seems to get stronger or last longer than you expected, it is always okay to call the office and ask. Clear communication, informed consent, and your child's comfort are part of every step.",
+      },
+      { type: "h2", text: "Common Kid Concerns Chiropractic Care Can Support" },
+      {
+        type: "p",
+        text: "Parents often bring their kids to a chiropractor because something small keeps catching their eye. It might not seem like a big problem at first, but it still feels worth checking.",
+      },
+      {
+        type: "list",
+        items: [
+          "Slouching at the table or during screen time.",
+          "Shoulder or neck discomfort from backpacks.",
+          "Sports-related aches that return after rest.",
+          "One foot turning in or out more than the other.",
+          "Uneven wear on shoes.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Kids are also whole people, not just spines. At Your Health Now, we blend chiropractic care with a functional medicine mindset. That means we look at how things like digestion, immune health, sleep, and stress might be affecting how your child feels and moves day to day.",
+      },
+      {
+        type: "p",
+        text: "For example, we may talk about whether your child wakes rested or feels sluggish, how often they get sick or seem run down, any regular tummy troubles, like bloating or discomfort, and how school and activities affect their stress levels.",
+      },
+      {
+        type: "p",
+        text: "With this wider view, we can create a care plan that is specific to your child. The focus is on healthy development, comfortable movement, and supporting the body's natural ability to adapt and stay resilient over time.",
+      },
+      { type: "h2", text: "Take the Next Step Toward Your Child's Health in Haddonfield" },
+      {
+        type: "p",
+        text: "Over the next week or so, pay extra attention to how your child moves and feels. Notice posture at the table, how they act after a long day of sports or play, how they sleep, and what they say about aches or \"tight\" spots. Jot down anything that seems off, even if it feels small. These details help guide questions and support at a first visit.",
+      },
+      {
+        type: "p",
+        text: "At Your Health Now, we serve families in Haddonfield and nearby communities with a mix of gentle chiropractic care and functional medicine support, both in person and through telehealth for broader wellness needs. Starting early with thoughtful, root-cause-focused care can help your child move with comfort and confidence as they grow and head into a new school year.",
+      },
+      {
+        type: "p",
+        text: "If you are ready to address pain, improve posture, and support long-term wellness for every age, we are here to help at Your Health Now. Schedule your first visit with our [family chiropractor in Haddonfield, NJ](/family-chiropractic-care) and start building a care plan tailored to your household's needs. If you have questions about appointments, insurance, or what to expect, simply [contact us](/contact-us) and we will walk you through the next steps.",
+      },
+    ],
+    related: ["family-chiropractor-preventive-care-haddonfield", "pediatric-care-benefits", "pediatric-chiropractor-doylestown-signs"],
+  },
+  {
+    slug: "family-chiropractor-preventive-care-haddonfield",
+    title: "Preventive Care Benefits of a Family Chiropractor",
+    excerpt:
+      "Learn why families choose a family chiropractor in Haddonfield, NJ for preventive care, function-focused support, and lasting wellness for all ages.",
+    category: "About Chiropractic Care",
+    date: "July 20, 2026",
+    readTime: 8,
+    image: "/images/articles/preventive-care-benefits-of-a-family-chiropractor.webp",
+    imageAlt: "Family chiropractor providing preventive care for parents and children in Haddonfield, NJ",
+    body: [
+      {
+        type: "p",
+        text: "Healthy habits are easier to build before there is a problem, not after. Preventive chiropractic care follows that same idea. Instead of waiting until someone in the family is in pain, parents choose regular checkups to keep the spine and nervous system working well over time.",
+      },
+      {
+        type: "p",
+        text: "For busy families in Haddonfield, this kind of care fits right in with dental cleanings, sports physicals, and eye exams. It is not just about fixing a sore back. It is about helping the body move, grow, and recover in a way that supports school, work, sports, and play.",
+      },
+      {
+        type: "list",
+        items: [
+          "Gentle checkups of the spine and joints.",
+          "Early spotting of small problems before they become big ones.",
+          "Supporting the nervous system, which helps control the whole body.",
+        ],
+      },
+      {
+        type: "p",
+        text: "At Your Health Now, we serve New Jersey families with both chiropractic care and functional medicine support. We care for parents and kids together, with the goal of long-term health instead of short-term quick fixes.",
+      },
+      { type: "h2", text: "How a Family Chiropractor Supports Every Life Stage" },
+      {
+        type: "p",
+        text: "Every age comes with its own body changes and stress. A family chiropractor in Haddonfield, NJ pays attention to what each person in the family is going through and adjusts care to match.",
+      },
+      { type: "h3", text: "For infants and kids, common issues can include" },
+      {
+        type: "list",
+        items: [
+          "Growth and posture changes as they learn to sit, crawl, and walk.",
+          "Heavy school backpacks that pull on the neck and shoulders.",
+          "Sports, dance, and playground falls that can affect joints and muscles.",
+          "Extra screen time that leads to slouching and \"tech neck.\"",
+        ],
+      },
+      {
+        type: "p",
+        text: "Gentle chiropractic care for children can focus on how they move, how they carry their backpack, and how they sit in class or in front of a screen. Small posture changes now can set them up for healthier habits later.",
+      },
+      {
+        type: "p",
+        text: "Parents often face a different set of stressors. Long days at a desk, long drives, caring for kids, yardwork, travel, and weekend sports can all add up. Common issues can include neck tension, tight hips and low back, and sore shoulders.",
+      },
+      { type: "h3", text: "For adults, a family chiropractor may look at" },
+      {
+        type: "list",
+        items: [
+          "Desk and phone posture.",
+          "Lifting form for kids, luggage, and chores.",
+          "Old sports injuries that keep coming back.",
+          "Stress patterns that show up as tight muscles.",
+        ],
+      },
+      {
+        type: "p",
+        text: "When one office follows the whole family, care does not feel random. We can coordinate visit times so care is easier to fit into the week, create age-appropriate plans for each family member, and shift the focus from emergency visits to steady, proactive care.",
+      },
+      {
+        type: "p",
+        text: "This kind of plan helps everyone stay on track together, instead of dealing with problems one by one when they flare up.",
+      },
+      { type: "h2", text: "Summer Wellness: Keeping Kids and Parents Active and Safe" },
+      {
+        type: "p",
+        text: "Summer in Haddonfield often means sports leagues, day camps, vacations, and lots of time outside. All that fun is great for the body, but it can also bring more small injuries, like twisted ankles, sore necks, and tight backs.",
+      },
+      {
+        type: "p",
+        text: "During these active months, preventive chiropractic visits can help check balance, joint motion, and posture before kids ramp up activity, spot early signs of overuse in shoulders, hips, and knees, and support smoother movement so it is easier to run, jump, and swim.",
+      },
+      {
+        type: "p",
+        text: "When the body moves well, it can be easier to avoid sprains from awkward landings, strains from doing too much too fast, and overuse issues from repeating the same motion all week.",
+      },
+      {
+        type: "callout",
+        title: "Simple summer habits",
+        text: "We coach families on easy stretches before and after sports or yardwork, hydration habits that support muscles and joints, posture tips for road trips and long flights, and basic recovery routines after a full day of activity.",
+      },
+      {
+        type: "p",
+        text: "These small shifts, paired with regular checkups, can help kids and adults feel more ready for an active summer and the transition back to school and regular schedules.",
+      },
+      { type: "h2", text: "Beyond Pain Relief: Whole-Person Care at Your Health Now" },
+      {
+        type: "p",
+        text: "Pain is often the signal that brings people in, but it is usually not the full story. At Your Health Now, we look at the whole person, not just the sore spot. That is why we pair chiropractic care with advanced testing and functional medicine.",
+      },
+      {
+        type: "p",
+        text: "Instead of only asking where it hurts, we also look at how the nervous system is working, signs of inflammation in the body, nutrition patterns that may affect energy and healing, and stress levels and sleep quality.",
+      },
+      {
+        type: "p",
+        text: "The spine and nervous system are closely connected. When the nervous system is under stress, the body may feel more tense, more tired, and slower to recover. Inflammation, poor food choices, and ongoing stress can also affect how the spine moves and how muscles respond.",
+      },
+      {
+        type: "p",
+        text: "By tracking changes over time, a family chiropractor in Haddonfield, NJ can notice trends, such as posture shifts during growth spurts, changing work demands, or new sports seasons. This long-term view can guide better choices for care, activity, and daily habits.",
+      },
+      { type: "h2", text: "What to Expect at Your First Family Visit" },
+      {
+        type: "p",
+        text: "Knowing what will happen at a first visit can make everyone feel more at ease, especially kids. A typical first appointment for Haddonfield families often includes a detailed health history for each family member, questions about daily routines, sports, work, and school, a posture and movement check, looking at how you sit, stand, bend, and walk, and a gentle spine and nervous system evaluation.",
+      },
+      {
+        type: "p",
+        text: "We adapt our touch and techniques for each age group. For infants and young children, adjustments are very light and gentle. For teens and adults, we match the approach to their comfort level, body type, and activity demands.",
+      },
+      {
+        type: "p",
+        text: "After the exam, we talk through what we found and what it may mean for your health, whether chiropractic care seems like a good fit, and how often visits might help in the beginning. We also give simple home advice, like basic stretches, posture tweaks for desks or homework, and suggestions to make sleep and daily movement more comfortable.",
+      },
+      { type: "h2", text: "Take the Next Step Toward Healthier Family Routines" },
+      {
+        type: "p",
+        text: "Thinking of chiropractic care as a regular part of your family's wellness routine can change how you plan the year. Instead of waiting for sudden pain that disrupts school, work, or sports, you can build steady support into your late-summer and back-to-school schedules.",
+      },
+      {
+        type: "p",
+        text: "A family chiropractor in Haddonfield, NJ can help you sort through school and sports concerns, like heavy backpacks, new practice loads, or upcoming travel. From there, you can set up a plan for consistent checkups that match your calendar and your family's goals, so healthy movement becomes part of everyday life.",
+      },
+      {
+        type: "p",
+        text: "If you are ready to address pain, improve mobility, and support long-term wellness for every age, we are here to help. As a trusted [family chiropractor in Haddonfield, NJ](/family-chiropractic-care), Your Health Now focuses on personalized care that fits your daily life. Schedule an appointment or ask a question through our [contact page](/contact-us) so we can discuss the next best step for your family's health.",
+      },
+    ],
+    related: ["childs-first-chiropractic-visit-haddonfield", "chiropractic-across-all-ages", "pediatric-care-benefits"],
+  },
+  {
+    slug: "functional-medicine-berwyn-digestive-issues",
+    title: "Digestive Relief With Functional Medicine in Berwyn, PA",
+    excerpt:
+      "Discover how functional medicine in Berwyn, PA helps address digestive issues by targeting root causes and supporting long term wellness through care plans.",
+    category: "Functional Medicine",
+    date: "July 13, 2026",
+    readTime: 8,
+    image: "/images/articles/digestive-relief-with-functional-medicine-in-berwyn-pa.jpg",
+    imageAlt: "Functional medicine provider discussing digestive health with a patient in Berwyn, PA",
+    body: [
+      {
+        type: "p",
+        text: "Digestive issues can make even the nicest summer day around Berwyn feel hard. When your stomach hurts, you feel gassy, or reflux keeps you up at night, cookouts and weekend trips are not very fun. Many people notice that in warm weather, their usual gut problems, like IBS, reflux, or bloating, get louder and harder to ignore.",
+      },
+      {
+        type: "p",
+        text: "Summer often brings more barbecues, alcohol, ice cream, and travel. Those changes can throw digestion off, especially if things were already a little shaky. This is where functional medicine in Berwyn, PA can help. Instead of chasing quick fixes, we look for what is actually bothering your system. At Your Health Now, we combine functional medicine and chiropractic care to help people in and around Berwyn find a calmer, more comfortable gut that can handle real life, not just a perfect diet on a perfect day.",
+      },
+      { type: "h2", text: "How Functional Medicine Uncovers Root Causes of Gut Trouble" },
+      {
+        type: "p",
+        text: "Functional medicine starts with curiosity. Instead of asking only, \"What symptom do you have?\", we ask, \"Why is your body reacting this way?\" Gut issues are often a mix of many small triggers, not just one big cause.",
+      },
+      {
+        type: "p",
+        text: "During a functional medicine visit, we may explore your full health story, including past infections or antibiotic use, daily food choices, eating schedule, and how you feel after meals, sleep patterns, stress load, and how you recover from busy days, and bowel habits, gas, bloating, and any pain or burning you feel.",
+      },
+      {
+        type: "p",
+        text: "Advanced testing can sometimes help us see what is going on under the surface. Depending on your case, we may explore food reactions or sensitivities, microbiome imbalance, like too much of some gut bugs and not enough of others, markers of inflammation or irritation in the gut, and blood sugar swings that may be stressing your whole system.",
+      },
+      {
+        type: "p",
+        text: "This is different from a quick visit that only focuses on a single symptom, like heartburn. Functional medicine care is more personal. Two people with the same complaint, for example reflux, may end up with very different plans, because the reasons their reflux showed up are not the same.",
+      },
+      {
+        type: "list",
+        items: [
+          "IBS keeps flaring for no clear reason.",
+          "Constipation or loose stools seem to change with every trip or event.",
+          "Bloating shows up even when you are \"eating healthy.\"",
+          "Reflux returns as soon as you stop a short-term fix.",
+        ],
+      },
+      {
+        type: "p",
+        text: "When summer brings more cookouts and road trips, these problems often get worse. By understanding your triggers, we can help you move through the season with fewer surprises.",
+      },
+      { type: "h2", text: "What to Expect From Functional Medicine in Berwyn, PA" },
+      {
+        type: "p",
+        text: "If you live in or near Berwyn, getting started with functional medicine does not have to be complicated. At Your Health Now, we work with patients locally so care can fit around your life, not the other way around.",
+      },
+      { type: "h3", text: "1. Initial telehealth visit" },
+      {
+        type: "p",
+        text: "We talk with you through video, so you can stay at home or even join from a trip. We review your main concerns, health history, and goals. This is where we start to connect the dots.",
+      },
+      { type: "h3", text: "2. Deeper review and testing" },
+      {
+        type: "p",
+        text: "If needed, we suggest lab work or other tests to learn more about your gut, hormones, blood sugar, or other systems that may be affecting digestion.",
+      },
+      { type: "h3", text: "3. A summer-friendly gut health plan" },
+      {
+        type: "p",
+        text: "We then create a plan that can work during real life, including picnics, travel, and busy weeks. The plan may include simple, clear nutrition shifts that do not require a perfect kitchen, microbiome support, such as specific fibers or supplements when appropriate, stress tools you can use at the park, at work, or at home, and movement ideas that fit into your favorite warm-weather activities.",
+      },
+      {
+        type: "p",
+        text: "Because much of this care can happen over telehealth, you can stay on track even if you are away for weekends or vacations. We check in, adjust your plan, and help you notice what is working and what needs to change.",
+      },
+      { type: "h2", text: "Seasonal Triggers for Digestive Problems in Berwyn Summers" },
+      {
+        type: "p",
+        text: "Summer in Berwyn can be beautiful, but the habits that come with it are not always easy on your gut. Some common triggers include barbecues with fatty meats, sauces, and chips that strain digestion, alcohol at parties, which can irritate the stomach and loosen the valve that keeps acid down, ice cream and cold treats, which may bother those with lactose issues, and irregular meals when you skip lunch, then overeat at night.",
+      },
+      {
+        type: "p",
+        text: "On top of food, other summer stressors can also bother digestion, like travel days that mess up your normal bathroom routine, late nights that cut into sleep and recovery, heat and mild dehydration, which can slow bowel movements, and extra stress from busy schedules, which may tighten your gut and change motility.",
+      },
+      {
+        type: "p",
+        text: "A functional medicine provider can help you plan ahead so you do not feel stuck. Together, we might choose \"safe\" go-to options at cookouts, like grilled veggies or certain proteins, set simple guidelines for alcohol and sweets that still feel enjoyable, use tools to support your gut before and after events, such as timing of meals or basic supplement support when appropriate, and adjust your plan around trips, so your gut has as much stability as possible.",
+      },
+      {
+        type: "callout",
+        title: "The goal isn't perfection",
+        text: "The goal is not a perfect summer with zero symptoms, but fewer flares, faster recovery, and more confidence to say yes to plans.",
+      },
+      { type: "h2", text: "Integrating Chiropractic Care to Support Digestive Health" },
+      {
+        type: "p",
+        text: "Digestion is not only about food; it is also about your nervous system. The nerves that help control your stomach and intestines travel through your spine, especially the mid-back and lower thoracic regions. When these areas are not moving well, nerve signals may be less clear.",
+      },
+      {
+        type: "p",
+        text: "Chiropractic care focuses on gentle spinal adjustments that support better alignment and motion, posture work to reduce strain in the mid-back and rib cage, and movement training to help your whole body work more smoothly.",
+      },
+      {
+        type: "p",
+        text: "When your spine moves well and your nervous system can communicate more clearly, your body may handle digestion in a more balanced way. Better nerve signaling can help with motility, the wave-like motion that moves food through the gut.",
+      },
+      {
+        type: "p",
+        text: "At Your Health Now, we bring functional medicine and chiropractic care together in Berwyn, PA. That means we look at both the internal factors, like microbiome balance and food triggers, and the structural pieces, like spinal motion and posture. For many people, this combined approach feels more complete than focusing on just one angle.",
+      },
+      { type: "h2", text: "Taking Your Next Step Toward Calmer Digestion This Summer" },
+      {
+        type: "p",
+        text: "If your digestion tends to flare in the summer, start by paying attention. Notice which foods, events, or stressors line up with more gas, reflux, or bathroom changes. A simple notebook or notes app can be enough to spot patterns.",
+      },
+      {
+        type: "p",
+        text: "When you are ready, functional medicine and chiropractic care together can offer a clearer view of what your body is trying to say. At Your Health Now, we work with people in Berwyn to uncover root causes and create realistic plans so you can enjoy cookouts, road trips, and regular weeks with more comfort and confidence.",
+      },
+      {
+        type: "p",
+        text: "If you are ready to address the root causes of your symptoms and feel more in control of your health, we are here to help. Explore how our approach to [functional medicine in Berwyn, PA](/functional-medicine) can be tailored to your unique needs. At Your Health Now, we work with you to create a clear, practical plan for long-term wellness. Have questions or want to schedule a visit? Simply [contact us](/contact-us) to get started.",
+      },
+    ],
+    related: ["functional-medicine-gut-health", "functional-medicine-fatigue-root-causes", "functional-medicine-doctor-bucks-county"],
+  },
+  {
     slug: "pediatric-chiropractor-doylestown-signs",
     title: "Signs Your Child May Benefit From a Pediatric Chiropractor in Doylestown",
     excerpt:
