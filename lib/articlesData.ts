@@ -69,6 +69,177 @@ const IMG = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "main-line-pregnancy-chiropractic-care-for-trimester-relief",
+    title: "Pregnancy Chiropractic Care on the Main Line for Easier Third Trimesters",
+    excerpt:
+      "Discover pregnancy chiropractic care in Main Line, PA for third trimester comfort, better mobility, and natural support for prenatal wellness and alignment.",
+    category: "Health & Wellness",
+    date: "August 4, 2026",
+    readTime: 9,
+    image: "/images/articles/main-line-pregnancy-chiropractic-care-for-trimester-relief.jpeg",
+    imageAlt: "Pregnant woman receiving gentle third trimester chiropractic care on the Main Line",
+    body: [
+      { type: "h2", text: "Third Trimester Comfort on the Main Line Starts Here" },
+      {
+        type: "p",
+        text: "By the third trimester, pregnancy is not subtle. Your belly is bigger, your balance feels different, and everyday life on the Main Line can start to feel heavy, especially when you are trying to keep up with work, family, and summer heat. Simple things like getting out of the car at the station, walking to Suburban Square, or sitting on the train into Philly can leave you sore and tired.",
+      },
+      {
+        type: "p",
+        text: "Pregnancy chiropractic care on the Main Line can help you move with less discomfort and more confidence as your due date gets closer. Gentle, pregnancy-focused care can support your joints, muscles, and nervous system so you can walk, sleep, and sit with more ease. At Your Health Now on the Main Line, we blend chiropractic care with functional medicine to look at your whole body, in the office and through telehealth, so your third trimester feels more supported from every angle.",
+      },
+      { type: "h2", text: "Why Your Third Trimester Feels So Uncomfortable" },
+      {
+        type: "p",
+        text: "There are real physical reasons that the last few months can feel so intense. Your center of gravity shifts forward as your belly grows, your body makes hormones that loosen ligaments, and your spine, pelvis, and hips take on new strain. This often shows up as:",
+      },
+      {
+        type: "list",
+        items: [
+          "Low back pain and tightness",
+          "Hip or pelvic pressure",
+          "Soreness in feet and ankles",
+          "Neck and shoulder tension from changing posture",
+        ],
+      },
+      {
+        type: "p",
+        text: "Everyday life on the Main Line can add to this. Walking to shops and playgrounds, climbing stairs in older homes or train stations, and standing on platforms or in long lines can all stress joints that are already working harder. Long workdays at a desk or on your feet make it easier to slump, twist, or favor one side, which can increase pain and stiffness by evening.",
+      },
+      {
+        type: "p",
+        text: "Old injuries or alignment issues can also resurface. That old ankle sprain, a previous car accident, or years of sitting at a computer can show up now as sciatica, deep pelvic discomfort, or trouble finding a comfortable sleep position. When your body is compensating for a growing belly, it has less margin for those past stress points.",
+      },
+      { type: "h2", text: "How Gentle Chiropractic Care Supports Late Pregnancy" },
+      {
+        type: "p",
+        text: "Pregnancy safe chiropractic care is different from traditional high-force adjusting. In the third trimester, the focus is on gentle, low-force techniques that respect the changes in your ligaments, joints, and soft tissues. The goal is not to twist or force your body, but to guide it back toward better balance.",
+      },
+      {
+        type: "p",
+        text: "Key ways this can help include:",
+      },
+      {
+        type: "list",
+        items: [
+          "Improving pelvic alignment so walking, rolling in bed, and getting in and out of the car feel smoother",
+          "Reducing low back and hip pain so you can stand, sit, and rest with more comfort",
+          "Supporting better posture to ease strain on your neck, shoulders, and upper back",
+          "Creating more space and ease around the pelvis, which may support more comfortable baby positioning",
+        ],
+      },
+      {
+        type: "p",
+        text: "At Your Health Now, care is individualized. Your provider looks at your:",
+      },
+      {
+        type: "list",
+        items: [
+          "Health history, including old injuries and past pregnancies",
+          "Stage of pregnancy and how your body is changing week by week",
+          "Preferences for birth and what positions might be most important for you",
+        ],
+      },
+      {
+        type: "p",
+        text: "Care can also fit into a team approach. Many people feel best when their OB or midwife, doula, and chiropractic provider all communicate and support the same overall plan.",
+      },
+      { type: "h2", text: "Pregnancy Chiropractic Care on the Main Line for Summer Ease" },
+      {
+        type: "p",
+        text: "Late pregnancy on the Main Line can feel extra heavy in the summer. Heat and humidity can increase swelling in your legs and feet and make sleep harder. It is common to feel stuck between needing rest and also needing to keep moving to feel well.",
+      },
+      {
+        type: "p",
+        text: "Gentle chiropractic care can support circulation and movement by helping joints move more freely and muscles relax. When your hips, knees, and ankles move better, it is often easier to:",
+      },
+      {
+        type: "list",
+        items: [
+          "Take short walks in your Main Line neighborhood",
+          "Climb stairs without as much discomfort",
+          "Stand and shift your weight while cooking or caring for older kids",
+        ],
+      },
+      {
+        type: "p",
+        text: "Better alignment can also support deeper, more restful sleep. When your spine and pelvis are more balanced, you may find:",
+      },
+      {
+        type: "list",
+        items: [
+          "Fewer wake-ups from sharp hip or back pain when you roll over",
+          "Easier time finding a side-lying position that feels safe and supported",
+          "More comfort during light prenatal exercise like gentle walking or stretching",
+        ],
+      },
+      {
+        type: "p",
+        text: "As due dates approach, feeling less pain and more steady in your body often leads to less stress. You can focus more on preparing emotionally and practically, instead of only managing discomfort.",
+      },
+      { type: "h2", text: "Functional Medicine Support for Third Trimester Comfort" },
+      {
+        type: "p",
+        text: "Chiropractic care often works best when your whole body is supported. Functional medicine can help by looking at how your nutrition, lifestyle, and lab findings may be affecting your energy, inflammation, and sleep during pregnancy.",
+      },
+      {
+        type: "p",
+        text: "Third-trimester support on the Main Line may include general guidance around:",
+      },
+      {
+        type: "list",
+        items: [
+          "Gentle strategies to help manage swelling and fluid balance",
+          "Simple, safe movement plans that match your current energy level",
+          "Sleep routines that make it easier to wind down at night",
+          "Hydration and mineral balance to support muscles and nerves",
+        ],
+      },
+      {
+        type: "p",
+        text: "Telehealth visits can be helpful when traveling across the Main Line feels like too much. You can talk through symptoms, review your daily routine, and get a personalized plan without needing to sit in traffic or on a hot train.",
+      },
+      { type: "h2", text: "Preparing Your Body for Labor and Postpartum Recovery" },
+      {
+        type: "p",
+        text: "The third trimester is also the time to think about labor and recovery. Regular chiropractic care can support pelvic balance, which may help your body move more freely during contractions, walking, and changing positions. When the muscles and ligaments surrounding your pelvis are under less strain, everyday movement often feels more coordinated.",
+      },
+      {
+        type: "p",
+        text: "Better alignment before birth may:",
+      },
+      {
+        type: "list",
+        items: [
+          "Make it easier to use labor positions that feel good for you",
+          "Help you walk, sway, and lean without as much pain",
+          "Support more comfortable breathing and rib movement as baby grows",
+        ],
+      },
+      {
+        type: "p",
+        text: "Planning ahead for the \"fourth trimester\" can also be useful. The way your body functions in late pregnancy can affect how you feel after birth. A smooth transition from third-trimester care into postpartum support can help with:",
+      },
+      {
+        type: "list",
+        items: [
+          "Back and neck pain from lifting and holding your baby",
+          "Nursing or feeding posture that does not strain your shoulders and upper back",
+          "Gentle steps toward core and pelvic support as your body heals",
+        ],
+      },
+      {
+        type: "p",
+        text: "When your body feels more stable, it is often easier to focus on your baby and on this new season of life, instead of only on your own discomfort.",
+      },
+      { type: "h2", text: "Support Your Pregnancy With Personalized Chiropractic Care" },
+      {
+        type: "p",
+        text: "If you are ready to address discomfort and support a healthier pregnancy, we invite you to explore our specialized [pregnancy chiropractic care in Main Line, PA](/family-chiropractic-care). At Your Health Now, we listen closely to your concerns and tailor each adjustment to your stage of pregnancy and unique needs. To schedule an appointment or ask a question, simply [contact us](/contact-us) and we will help you take the next step toward a more comfortable, confident pregnancy.",
+      },
+    ],
+  },
+  {
     slug: "childs-first-chiropractic-visit-haddonfield",
     title: "Your Child's First Chiropractic Visit in Haddonfield",
     excerpt:
