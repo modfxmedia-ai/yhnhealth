@@ -2254,6 +2254,216 @@ export const ARTICLES: Article[] = [
     ],
     related: ["functional-medicine-gut-health", "functional-medicine-fatigue-root-causes", "functional-medicine-hormone-thyroid"],
   },
+  {
+    slug: "lyme-disease-specialist-villanova-pa",
+    title: "Find a Lyme Disease Specialist in Villanova, PA",
+    excerpt:
+      "When antibiotics fall short, a Lyme disease specialist in Villanova, PA can offer advanced testing, personalized protocols, and hands on care.",
+    category: "Functional Medicine",
+    date: "August 11, 2026",
+    readTime: 8,
+    image: "/images/articles/find-a-lyme-disease-specialist-in-villanova-pa.png",
+    imageAlt: "Lyme disease specialist reviewing a patient's care plan in Villanova, PA",
+    body: [
+      { type: "h2", text: "When Lyme Symptoms Linger After Antibiotics" },
+      {
+        type: "p",
+        text: "Finishing a round of antibiotics for Lyme disease is supposed to bring relief. For some people in Pennsylvania, especially after heavy tick exposure in the warmer months, that relief never quite comes. The infection may be treated, but the tiredness, joint pain, and brain fog can still hang on.",
+      },
+      {
+        type: "p",
+        text: "When that happens, it can feel confusing and even a little scary. You might hear that your tests look fine and that you should be better by now. A Lyme disease specialist in Villanova, PA, looks at these lingering symptoms in a different way, and asks a bigger question: what is still driving your body to feel this bad?",
+      },
+      {
+        type: "p",
+        text: "At our office in Villanova, we combine functional medicine and chiropractic care to look beyond a one-size-fits-all plan. Together, we work to uncover deeper issues that may be keeping your system stuck and slowing your recovery, even after standard antibiotics are finished.",
+      },
+      { type: "h2", text: "Why Standard Lyme Treatment Sometimes Falls Short" },
+      {
+        type: "p",
+        text: "Most people with early Lyme infection get a short course of antibiotics and maybe a basic blood test. This approach focuses mainly on killing the main Lyme bacteria. For some people, that is enough. For others, it is only the first step.",
+      },
+      {
+        type: "p",
+        text: "After treatment, many people still report:",
+      },
+      {
+        type: "list",
+        items: [
+          "Ongoing fatigue and low stamina",
+          "Brain fog, memory trouble, or poor focus",
+          "Achy joints and muscles",
+          "Sleep problems, like trouble falling or staying asleep",
+          "Mood changes, such as anxiety or low mood",
+        ],
+      },
+      {
+        type: "p",
+        text: "These issues can feel even heavier when regular routines pick up again, like busy work schedules, kids' activities, and more time in the car or at a desk. The body is already struggling, and day-to-day stress adds another layer.",
+      },
+      {
+        type: "p",
+        text: "There are several reasons symptoms may last, even when Lyme tests are negative:",
+      },
+      {
+        type: "list",
+        items: [
+          "Co-infections from the same tick bite that were never tested or treated",
+          "Underlying immune system imbalances that were there long before the tick bite",
+          "Gut disruption after antibiotics that affects digestion, mood, and immunity",
+          "Chronic, low-grade inflammation that keeps pain and fatigue going",
+        ],
+      },
+      {
+        type: "p",
+        text: "Standard care is not always designed to look for these deeper problems. That is where a different style of thinking can help.",
+      },
+      { type: "h2", text: "How a Lyme Disease Specialist in Villanova, PA Thinks Differently" },
+      {
+        type: "p",
+        text: "A Lyme disease specialist is not just someone who prescribes more antibiotics. It is someone who has deeper training in tick-borne illness and who looks at your body as an interconnected system. Instead of asking only, \"Is the infection gone?\" we also ask, \"What else is out of balance?\"",
+      },
+      {
+        type: "p",
+        text: "In Villanova, that can mean using more complete evaluations, such as:",
+      },
+      {
+        type: "list",
+        items: [
+          "Expanded Lyme and co-infection panels, when appropriate",
+          "Markers that look at immune and inflammatory activity",
+          "Gut health testing to see how well you break down food and absorb nutrients",
+          "Nutrient and hormone checks, which can affect energy, mood, and sleep",
+        ],
+      },
+      {
+        type: "p",
+        text: "Just as important, we sit down and listen. A personalized plan is built around:",
+      },
+      {
+        type: "list",
+        items: [
+          "Your full health history, including other infections or long-term issues",
+          "Environmental exposures, such as mold, chemicals, or heavy stress at home or work",
+          "Lifestyle factors, like sleep habits, diet, movement, and emotional load",
+        ],
+      },
+      {
+        type: "p",
+        text: "Instead of giving the same protocol to everyone, we work to match care to the way your body is responding right now.",
+      },
+      { type: "h2", text: "How Functional Medicine Supports Lyme Recovery" },
+      {
+        type: "p",
+        text: "Functional medicine does not replace appropriate medical care. It adds more support to help your body work better over time. In many chronic Lyme cases, the job is not only to fight germs, but also to help tissues recover and to calm the overworked immune and nervous systems.",
+      },
+      {
+        type: "p",
+        text: "This often includes targeted support such as:",
+      },
+      {
+        type: "list",
+        items: [
+          "Nutrients that help energy production in the cells",
+          "Herbal or nutritional support chosen with care for the immune system",
+          "Gentle detox support for the liver and lymphatic system",
+          "Strategies to support the nervous system so it is not stuck in \"alarm\" mode",
+        ],
+      },
+      {
+        type: "p",
+        text: "Antibiotics can be very helpful, but they can also strain the gut. Since so much of your immune function is connected to your digestive tract, we often focus on:",
+      },
+      {
+        type: "list",
+        items: [
+          "Restoring a healthy microbiome with food and carefully chosen supplements",
+          "Supporting the gut lining so it can heal from irritation",
+          "Reducing inflammatory triggers in the diet",
+          "Encouraging regular hydration and bowel movements to move waste out of the body",
+        ],
+      },
+      {
+        type: "p",
+        text: "Lifestyle is another key piece. We commonly talk with patients about:",
+      },
+      {
+        type: "list",
+        items: [
+          "Anti-inflammatory eating patterns that feel realistic, not extreme",
+          "A simple sleep routine to help the brain and body reset at night",
+          "Gentle movement, like walking or stretching, instead of intense workouts that can trigger crashes",
+          "Basic stress reduction tools, such as breathing exercises or short quiet breaks",
+        ],
+      },
+      {
+        type: "p",
+        text: "These steps can make it easier for your body to handle busy home and work seasons without so many flares.",
+      },
+      { type: "h2", text: "How Chiropractic Care Supports Lyme Healing" },
+      {
+        type: "p",
+        text: "Lyme and its co-infections can affect joints, muscles, and the nervous system. People often report neck and back pain, headaches, jaw tension, or tingling and burning in the arms or legs. When the spine and surrounding tissues are tight and irritated, signals between the brain and the rest of the body can be affected.",
+      },
+      {
+        type: "p",
+        text: "Chiropractic care focuses on the structure of the spine and how it affects your nervous system. With careful, gentle adjustments and related techniques, we aim to:",
+      },
+      {
+        type: "list",
+        items: [
+          "Improve joint mobility so the body can move with less strain",
+          "Reduce irritation around spinal nerves",
+          "Support better posture and body mechanics for daily tasks",
+          "Help the nervous system shift toward a calmer, more balanced state",
+        ],
+      },
+      {
+        type: "p",
+        text: "At Your Health Now in Villanova, we blend chiropractic care with functional medicine planning. This means spinal adjustments are timed and tailored to match where you are in your healing plan. For someone with high pain and fatigue, we often start slowly and make changes in small, steady steps, watching closely for how your system responds.",
+      },
+      { type: "h2", text: "What to Expect From a Villanova Lyme Specialist Visit" },
+      {
+        type: "p",
+        text: "If you see a Lyme disease specialist in Villanova, PA, your first visit will not be rushed. We usually begin with a detailed conversation about:",
+      },
+      {
+        type: "list",
+        items: [
+          "When and where you may have been exposed to ticks",
+          "What testing and treatment you have already had",
+          "Which symptoms came first and how they have changed over time",
+          "Your sleep, digestion, mood, and pain patterns",
+        ],
+      },
+      {
+        type: "p",
+        text: "We also include a careful physical and neurological exam. This helps us look for muscle weakness, joint restrictions, balance issues, or nerve changes that might not show up on lab work.",
+      },
+      {
+        type: "p",
+        text: "From there, our team at Your Health Now builds a phased plan. Early on, we often focus on:",
+      },
+      {
+        type: "list",
+        items: [
+          "Easing the most disruptive symptoms, such as severe pain, insomnia, or gut upset",
+          "Supporting basic daily needs like hydration, light movement, and simple meals",
+          "Helping you understand your triggers so you can avoid big flares when possible",
+        ],
+      },
+      {
+        type: "p",
+        text: "As you gain some stability, we shift attention to deeper drivers like immune dysfunction, chronic inflammation, and long-standing nutritional gaps. Follow-up visits and repeat testing, when needed, guide us as we fine-tune your plan. As seasons change and life demands shift, your care can shift too, so you are not stuck doing the same thing forever, even if your body's needs change.",
+      },
+      { type: "h2", text: "Take the Next Step Toward Relief From Lyme Symptoms" },
+      {
+        type: "p",
+        text: "If you are ready for a more comprehensive, attentive approach to your care, schedule a visit with our [Lyme disease specialist in Villanova, PA](/lyme-disease-solutions). At Your Health Now, we take time to understand your full health picture and create a plan that fits your life, not the other way around. Reach out today through our [contact page](/contact-us) so we can help you move forward with clarity and confidence.",
+      },
+    ],
+    related: ["chronic-lyme-functional-medicine", "functional-medicine-gut-health", "inflammation-chronic-illness"],
+  },
 ];
 
 export const ARTICLE_BY_SLUG: Record<string, Article> = ARTICLES.reduce(
