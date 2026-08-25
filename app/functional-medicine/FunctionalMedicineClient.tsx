@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowUpRight, Atom, Microscope, Heart, Sparkles, ListChecks, Stethoscope, Compass, Phone } from "lucide-react";
 import { Breadcrumbs, BookingStrip, FadeUp } from "@/components/page/Primitives";
 import { useBookingPopup } from "@/components/BookingPopup";
+import FMCPBadge from "@/components/FMCPBadge";
 
 const PILLARS = [
   { icon: Atom, title: "Root-Cause Analysis", body: "We investigate biochemistry, gut health, hormones, and lifestyle to find why symptoms appear, not just what they look like." },
@@ -121,6 +122,15 @@ export default function FunctionalMedicineClient() {
                   <Phone size={14} />
                   Call (609) 651-7436
                 </a>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.35 }}
+                className="mt-8 text-brand"
+              >
+                <FMCPBadge size={72} />
               </motion.div>
             </div>
 

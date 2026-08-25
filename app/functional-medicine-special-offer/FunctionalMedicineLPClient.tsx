@@ -30,6 +30,7 @@ import {
   TestTube,
   Video,
 } from "lucide-react";
+import FMCPBadge from "@/components/FMCPBadge";
 
 /* -------------------------------------------------------------------------- */
 /*  Constants                                                                  */
@@ -559,6 +560,14 @@ export default function FunctionalMedicineSpecialOfferPage() {
                   </li>
                 ))}
               </motion.ul>
+
+              <motion.div
+                variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
+                transition={{ duration: 0.6 }}
+                className="mt-8 flex justify-center text-white lg:justify-start"
+              >
+                <FMCPBadge size={72} />
+              </motion.div>
             </motion.div>
 
             {/* Video — matches the functional-medicine page treatment */}

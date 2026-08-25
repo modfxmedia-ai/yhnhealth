@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { ArrowUpRight, GraduationCap, Award, Sparkles } from "lucide-react";
+import FMCPBadge from "@/components/FMCPBadge";
 
 const DOCTOR = {
   name: "Dr. Chris Chianese",
@@ -115,6 +116,10 @@ export default function DoctorSnippetSection() {
               >
                 Ask Dr. Chris a Question
               </Link>
+            </div>
+
+            <div className="mt-8 border-t border-brand/10 pt-6 text-brand">
+              <FMCPBadge size={72} />
             </div>
           </motion.div>
         </div>
