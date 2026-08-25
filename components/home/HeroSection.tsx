@@ -8,6 +8,7 @@ import { ArrowDown, ArrowUpRight, Check, ChevronDown, ChevronLeft, ChevronRight,
 import { HERO_SLIDES } from "@/lib/siteData";
 import { cn } from "@/lib/utils";
 import { useBookingPopup } from "@/components/BookingPopup";
+import FMCPBadge from "@/components/FMCPBadge";
 
 export default function HeroSection() {
   const [active, setActive] = useState(0);
@@ -245,6 +246,17 @@ export default function HeroSection() {
                   </p>
                 </div>
               ))}
+            </motion.div>
+
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+              className="mt-8 max-w-2xl text-white"
+            >
+              <FMCPBadge size={72} />
             </motion.div>
           </div>
 
