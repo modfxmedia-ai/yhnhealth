@@ -3,19 +3,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowUpRight, GraduationCap, Award, Sparkles } from "lucide-react";
+import { ArrowUpRight, GraduationCap, Award, Sparkles, BadgeCheck } from "lucide-react";
 import FMCPBadge from "@/components/FMCPBadge";
 
 const DOCTOR = {
   name: "Dr. Chris Chianese",
-  credentials: "MS, DC, CPSC",
+  credentials: "MS, DC, CPSC, FMCP",
   role: "Chiropractic Physician & Functional Medicine Specialist",
   image: "/images/yhn-clone/team-chris.webp",
-  bio: "Dr. Chris blends chiropractic care and functional medicine to help patients uncover the root cause of pain, fatigue, and chronic conditions - and get back to the life they deserve.",
+  bio: "Dr. Chris blends chiropractic care and functional medicine to help patients uncover the root cause of pain, fatigue, and chronic conditions - and get back to the life they deserve. He holds the FMCP (Functional Medicine Certified Professional) credential from the Institute for Functional Medicine, the gold standard in functional medicine education.",
   highlights: [
     { icon: GraduationCap, text: "MS Applied Nutrition · Canisius College" },
     { icon: Award, text: "Doctor of Chiropractic, Summa Cum Laude · Sherman College" },
     { icon: Sparkles, text: "Certified Pediatric & Sports Chiropractor (CPSC)" },
+    { icon: BadgeCheck, text: "FMCP - Functional Medicine Certified Professional (IFM)" },
   ],
 };
 
