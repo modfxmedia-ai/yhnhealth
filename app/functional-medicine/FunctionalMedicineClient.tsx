@@ -130,7 +130,7 @@ export default function FunctionalMedicineClient() {
                 transition={{ duration: 0.7, delay: 0.35 }}
                 className="mt-8 text-brand"
               >
-                <FMCPBadge size={72} />
+                <FMCPBadge size={112} />
               </motion.div>
             </div>
 

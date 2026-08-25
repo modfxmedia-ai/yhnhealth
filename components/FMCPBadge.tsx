@@ -9,17 +9,17 @@ interface FMCPBadgeProps {
   className?: string;
 }
 
-export default function FMCPBadge({ size = 88, showLabel = true, className = "" }: FMCPBadgeProps) {
+export default function FMCPBadge({ size = 112, showLabel = true, className = "" }: FMCPBadgeProps) {
   return (
     <a
       href={CREDENTIAL_URL}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="View Dr. Chris's FMCP (Functional Medicine Certified Professional) credential from The Institute for Functional Medicine"
-      className={`inline-flex items-center gap-3 ${className}`}
+      className={`inline-flex items-center gap-4 ${className}`}
     >
       <span
-        className="flex shrink-0 items-center justify-center rounded-2xl bg-white p-2 shadow-card ring-1 ring-black/5 transition-transform hover:-translate-y-0.5"
+        className="flex shrink-0 items-center justify-center rounded-2xl bg-white p-2.5 shadow-card ring-1 ring-black/5 transition-transform hover:-translate-y-0.5"
         style={{ width: size, height: size }}
       >
         <Image
@@ -31,9 +31,9 @@ export default function FMCPBadge({ size = 88, showLabel = true, className = "" 
         />
       </span>
       {showLabel && (
-        <span className="text-left text-xs font-semibold uppercase leading-snug tracking-[0.08em] text-current">
+        <span className="text-left text-base font-semibold uppercase leading-snug tracking-[0.08em] text-current">
           FMCP Certified
-          <span className="mt-0.5 block text-[10.5px] font-medium normal-case tracking-normal text-current/70">
+          <span className="mt-0.5 block text-sm font-medium normal-case tracking-normal text-current/70">
             Institute for Functional Medicine
           </span>
         </span>

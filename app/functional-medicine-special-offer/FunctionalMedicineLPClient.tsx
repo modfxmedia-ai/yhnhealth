@@ -566,7 +566,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
                 transition={{ duration: 0.6 }}
                 className="mt-8 flex justify-center text-white lg:justify-start"
               >
-                <FMCPBadge size={72} />
+                <FMCPBadge size={112} />
               </motion.div>
             </motion.div>
 

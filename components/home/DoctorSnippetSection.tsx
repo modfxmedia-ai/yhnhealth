@@ -120,7 +120,7 @@ export default function DoctorSnippetSection() {
             </div>
 
             <div className="mt-8 border-t border-brand/10 pt-6 text-brand">
-              <FMCPBadge size={72} />
+              <FMCPBadge size={112} />
             </div>
           </motion.div>
         </div>

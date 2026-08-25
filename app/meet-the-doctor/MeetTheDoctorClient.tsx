@@ -206,7 +206,7 @@ export default function MeetTheDoctorClient() {
 
                     {doc.slug === "dr-chris" && (
                       <div className="mt-7 border-t border-brand/10 pt-6 text-brand">
-                        <FMCPBadge size={72} />
+                        <FMCPBadge size={112} />
                       </div>
                     )}
                   </div>
