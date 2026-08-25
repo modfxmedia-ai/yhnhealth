@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, Award, BookOpen, Activity, Briefcase } from "lucide-react";
 import { Breadcrumbs, FadeUp } from "@/components/page/Primitives";
+import FMCPBadge from "@/components/FMCPBadge";
 
 type Doc = {
   name: string;
@@ -202,6 +203,12 @@ export default function MeetTheDoctorClient() {
                         <p key={idx}>{p}</p>
                       ))}
                     </div>
+
+                    {doc.slug === "dr-chris" && (
+                      <div className="mt-7 border-t border-brand/10 pt-6 text-brand">
+                        <FMCPBadge size={72} />
+                      </div>
+                    )}
                   </div>
                 </motion.article>
               );
