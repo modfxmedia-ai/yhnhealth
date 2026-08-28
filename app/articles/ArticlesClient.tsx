@@ -16,7 +16,9 @@ function ArticlesIndex() {
   const [query, setQuery] = useState("");
 
   const filtered = useMemo(() => {
-    let list = ARTICLES;
+    let list = [...ARTICLES].sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+    );
     if (active !== "All") list = list.filter((a) => a.category === active);
     if (query.trim()) {
       const q = query.toLowerCase();

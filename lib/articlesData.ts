@@ -69,6 +69,206 @@ const IMG = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "postpartum-pelvic-alignment-and-core-care-in-furlong",
+    title: "Postpartum Pelvic Alignment and Core Care in Furlong",
+    excerpt:
+      "Learn when postpartum chiropractic care can help pelvic alignment, core recovery, and feeding posture strain with a pregnancy chiropractor in Furlong, PA.",
+    category: "Health & Wellness",
+    date: "August 25, 2026",
+    readTime: 7,
+    image: "/images/articles/postpartum-pelvic-alignment-and-core-care-in-furlong.jpg",
+    imageAlt: "New mother in Furlong, PA receiving postpartum chiropractic care for pelvic alignment and core recovery",
+    body: [
+      { type: "h2", text: "Regain Comfort and Confidence in Your Postpartum Body" },
+      {
+        type: "p",
+        text: "Childbirth changes your body in big ways. Your pelvis, core, and posture all work differently after pregnancy, and that can leave you feeling sore, unsteady, and tired. When you add in long days and nights feeding and carrying your baby, even simple tasks around your home in Furlong can start to feel hard.",
+      },
+      {
+        type: "p",
+        text: "At our office, we support new moms with care that looks at the whole picture. We blend chiropractic care and functional medicine to check how your joints, muscles, and daily habits are working together. Our goal is to help you move with less pain, breathe better, and feel more like yourself again.",
+      },
+      {
+        type: "p",
+        text: "Postpartum chiropractic care is not a replacement for your OB/GYN, midwife, or pelvic floor physical therapist. It works alongside them. We do not treat emergencies or serious medical problems, and we do not promise quick fixes. What we can do is help your body move in a safer, more efficient way so your other care and natural healing can work better.",
+      },
+      { type: "h2", text: "Understanding Postpartum Changes in Furlong Moms" },
+      {
+        type: "p",
+        text: "During pregnancy, your body makes hormones that loosen your ligaments to help your baby grow and your pelvis open for birth. Whether you delivered vaginally or by C-section, those changes affect several key areas of your body, including:",
+      },
+      {
+        type: "list",
+        items: [
+          "Pelvic joints and ligaments",
+          "Abdominal and core muscles",
+          "Hip, low back, and mid-back muscles",
+          "The way you stand, walk, and lift",
+        ],
+      },
+      {
+        type: "p",
+        text: "After birth, many moms notice low back or hip pain when getting out of bed, pelvic or tailbone soreness when sitting, and a wobbly or unstable feeling when walking or lifting the baby.",
+      },
+      {
+        type: "p",
+        text: "Common concerns we hear from local moms also include trouble with everyday movements such as getting in and out of the car with the car seat, carrying the baby up and down steps, rolling in bed or standing up from the couch, and sitting on hard bleachers or park benches.",
+      },
+      {
+        type: "p",
+        text: "A pregnancy chiropractor in Furlong, PA looks not only at your spine, but also at how you move in real life. We pay attention to the positions you use while:",
+      },
+      {
+        type: "list",
+        items: [
+          "Feeding and burping the baby",
+          "Lifting the stroller in and out of the trunk",
+          "Bending over cribs, bassinets, and changing tables",
+          "Returning to work or household tasks",
+        ],
+      },
+      {
+        type: "p",
+        text: "We watch your posture, test your core and pelvic control, and look for patterns that might be keeping your body from healing well.",
+      },
+      { type: "h2", text: "Pelvic Alignment After Birth: When to Seek Chiropractic Help" },
+      {
+        type: "p",
+        text: "Not every ache means your pelvis is out of balance, but some signs suggest it needs more focused help. Red flags include:",
+      },
+      {
+        type: "list",
+        items: [
+          "Sharp pain in the groin or pubic area",
+          "Clicking, grinding, or popping in the front of the pelvis",
+          "One-sided hip or buttock pain that keeps coming back",
+          "Pain that worsens with standing, walking, pushing a stroller, or climbing stairs",
+        ],
+      },
+      {
+        type: "p",
+        text: "Gentle, postpartum-safe chiropractic adjustments can:",
+      },
+      {
+        type: "list",
+        items: [
+          "Reduce pressure on irritated pelvic joints",
+          "Help muscles on each side of the body share the workload",
+          "Improve how your hips, low back, and pelvis move together",
+          "Make daily activities like babywearing and stroller pushing feel easier",
+        ],
+      },
+      {
+        type: "p",
+        text: "In Furlong, many moms walk on grass, trails, or uneven driveways, carry babies at outdoor events, and load strollers in and out of cars. These everyday tasks can flare a pelvis that is already stressed from pregnancy and birth. When your joints are better aligned and your muscles are better supported, those same activities often feel less painful and less draining.",
+      },
+      { type: "h2", text: "Core Recovery and Diastasis: Beyond Traditional AB Workouts" },
+      {
+        type: "p",
+        text: "Diastasis recti is a separation of the abdominal muscles along the midline. After pregnancy, that gap can leave you feeling weak or \u201csoft\u201d through the middle, like your back works overtime to hold you up, and pressure or bulging in the belly with basic movements.",
+      },
+      {
+        type: "p",
+        text: "Trying to fix this with standard crunches or sit-ups can make things worse. At Your Health Now, we look deeper at how your core system is working. We assess:",
+      },
+      {
+        type: "list",
+        items: [
+          "How you breathe and use your diaphragm",
+          "The position of your ribcage and pelvis",
+          "How your pelvic floor and abdominal muscles team up",
+        ],
+      },
+      {
+        type: "p",
+        text: "From there, we design phased core recovery plans that respect:",
+      },
+      {
+        type: "list",
+        items: [
+          "Healing timelines after vaginal delivery or C-section",
+          "Your current energy level and sleep patterns",
+          "Other demands on your body, like lifting older kids or returning to work",
+        ],
+      },
+      {
+        type: "p",
+        text: "As a pregnancy chiropractor in Furlong, PA, we also coordinate with pelvic floor specialists when needed. That way, you have support for both internal muscle function and external alignment, instead of trying to figure it out alone with random online workouts.",
+      },
+      { type: "h2", text: "Easing Neck, Shoulder, and Back Strain From Newborn Feeding" },
+      {
+        type: "p",
+        text: "Newborn feeding is beautiful, but it is also very physical. Hours spent nursing or bottle-feeding can lead to rounded shoulders and a tight chest, forward head posture and neck strain, and achy mid-back pain and between-the-shoulder-blade pain.",
+      },
+      {
+        type: "p",
+        text: "Common posture mistakes during feeding include:",
+      },
+      {
+        type: "list",
+        items: [
+          "Hunching your back to bring your body to the baby instead of lifting the baby to you",
+          "Letting your shoulders creep up toward your ears",
+          "Twisting your spine to the side instead of turning your whole body",
+          "Sitting on a soft couch that sinks your hips lower than your knees",
+        ],
+      },
+      {
+        type: "p",
+        text: "Simple ergonomic changes can help, such as:",
+      },
+      {
+        type: "list",
+        items: [
+          "Using pillows to bring the baby up to your chest",
+          "Resting your feet on a small stool so your hips and knees are level",
+          "Switching feeding sides and positions often",
+          "Choosing a firm chair with back support when possible",
+        ],
+      },
+      {
+        type: "p",
+        text: "Chiropractic adjustments, gentle soft tissue work, and specific stretches can lower tension in your neck, shoulders, and upper back. When your joints move more freely and your muscles are less guarded, long feeds and nighttime wakeups usually feel more comfortable, and it is easier to keep good posture without thinking about it every second.",
+      },
+      { type: "h2", text: "Taking the Next Step Toward Postpartum Relief in Furlong" },
+      {
+        type: "p",
+        text: "One of the biggest myths we hear is that pain and stiffness are just the price of being a new mom. While some soreness can be normal, ongoing pain, pressure, or weakness is your body asking for help. The earlier you listen, the easier it usually is to change the pattern.",
+      },
+      {
+        type: "p",
+        text: "For a first visit at Your Health Now, it helps to think about:",
+      },
+      {
+        type: "list",
+        items: [
+          "Where you feel pain and when it started",
+          "What makes it better or worse in daily life",
+          "Your birth story and any past injuries",
+          "Your current feeding, sleeping, and movement routines",
+        ],
+      },
+      {
+        type: "p",
+        text: "During a postpartum evaluation, we talk through your health history, check your posture and movement, and gently test key areas like your pelvis, spine, ribs, and core. From there, we suggest a plan that might include in-office chiropractic care, simple at-home movement habits, and, when helpful, telehealth functional medicine support to look at factors like energy, stress, and recovery.",
+      },
+      {
+        type: "p",
+        text: "With care that respects both your body and your new role as a parent, it is possible to feed, lift, and care for your baby with less pain and more confidence.",
+      },
+      {
+        type: "callout",
+        title: "Feel more comfortable and confident postpartum",
+        text: "If you are ready for gentler movement, better sleep, and less tension, our [pregnancy chiropractor in Furlong, PA](/pregnancy-care) is here to support you. At Your Health Now, we tailor each visit to your stage of recovery and your daily demands so you can feel more at ease in your changing body. Schedule an appointment or ask a question through our [contact page](/contact-us), and we will help you take the next step toward a more comfortable postpartum recovery.",
+      },
+    ],
+    related: [
+      "main-line-pregnancy-chiropractic-care-for-trimester-relief",
+      "pregnancy-chiropractic",
+      "childs-first-chiropractic-visit-haddonfield",
+    ],
+  },
+  {
     slug: "lyme-disease-specialist-villanova-pa",
     title: "Find a Lyme Disease Specialist in Villanova, PA",
     excerpt:
@@ -455,7 +655,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Learn what happens at your child's first visit, including assessment and safety. See how a family chiropractor in Haddonfield, NJ can help kids thrive.",
     category: "Wellness4Kids",
-    date: "July 27, 2026",
+    date: "July 28, 2026",
     readTime: 8,
     image: "/images/articles/your-childs-first-chiropractic-visit-in-haddonfield.jpg",
     imageAlt: "Parent and child at a first pediatric chiropractic visit in Haddonfield, NJ",
@@ -630,7 +830,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Learn why families choose a family chiropractor in Haddonfield, NJ for preventive care, function-focused support, and lasting wellness for all ages.",
     category: "About Chiropractic Care",
-    date: "July 20, 2026",
+    date: "July 21, 2026",
     readTime: 8,
     image: "/images/articles/preventive-care-benefits-of-a-family-chiropractor.webp",
     imageAlt: "Family chiropractor providing preventive care for parents and children in Haddonfield, NJ",
@@ -770,7 +970,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Discover how functional medicine in Berwyn, PA helps address digestive issues by targeting root causes and supporting long term wellness through care plans.",
     category: "Functional Medicine",
-    date: "July 13, 2026",
+    date: "July 14, 2026",
     readTime: 8,
     image: "/images/articles/digestive-relief-with-functional-medicine-in-berwyn-pa.jpg",
     imageAlt: "Functional medicine provider discussing digestive health with a patient in Berwyn, PA",
@@ -894,7 +1094,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Kids don't always say \"my back hurts.\" They show it in posture, sleep, mood, and movement. Here are the subtle signs a pediatric chiropractor may be able to help.",
     category: "About Chiropractic Care",
-    date: "July 2, 2026",
+    date: "July 7, 2026",
     readTime: 8,
     image: "/images/articles/pediatric-chiropractor.webp",
     imageAlt: "Pediatric chiropractor gently caring for a young child",
@@ -1269,7 +1469,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Could your morning routine be causing your back pain? The first 30 minutes of your day put more load on your spine than almost any other window.",
     category: "Health & Wellness",
-    date: "May 2026",
+    date: "May 5, 2026",
     readTime: 7,
     image: IMG.back,
     imageAlt: "Man with back pain sitting on a low fence",
@@ -1317,7 +1517,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Morning stiffness isn't just about getting older. It's a reliable signal that your tissues, hydration, or sleep position need adjustment.",
     category: "Common Conditions Treated",
-    date: "May 2026",
+    date: "April 28, 2026",
     readTime: 6,
     image: IMG.stretch,
     imageAlt: "Person stretching after waking up",
@@ -1360,7 +1560,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Yard work, travel, golf, and beach days are where winter-deconditioned spines get hurt. Here's how to prep yours.",
     category: "About Chiropractic Care",
-    date: "April 2026",
+    date: "April 21, 2026",
     readTime: 5,
     image: IMG.active,
     imageAlt: "Woman in sneakers standing on a boulder outdoors",
@@ -1399,7 +1599,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Most pain isn't caused by one big event. It's the accumulation of small, repeated stresses your body never got to recover from.",
     category: "Common Conditions Treated",
-    date: "April 2026",
+    date: "April 14, 2026",
     readTime: 6,
     image: IMG.shoulder,
     imageAlt: "Woman holding her painful shoulder",
@@ -1437,7 +1637,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "The link between spinal mechanics, the autonomic nervous system, and your felt sense of stress is more direct than most people realize.",
     category: "Health & Wellness",
-    date: "March 2026",
+    date: "April 7, 2026",
     readTime: 7,
     image: IMG.individualApproach,
     imageAlt: "Calming wellness setting",
@@ -1480,7 +1680,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Bulges, herniations, degeneration - most disc conditions respond well to conservative care. Here's what we treat and how.",
     category: "Common Conditions Treated",
-    date: "March 2026",
+    date: "March 31, 2026",
     readTime: 8,
     image: IMG.asianBack,
     imageAlt: "Woman struggling with back pain",
@@ -1519,7 +1719,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Beyond pain relief, consistent care supports posture, mobility, sleep, and the resilience to handle the demands of daily life.",
     category: "About Chiropractic Care",
-    date: "February 2026",
+    date: "March 24, 2026",
     readTime: 6,
     image: IMG.chiropracticHero,
     imageAlt: "Chiropractic care benefits",
@@ -1554,7 +1754,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "From newborns to active 80-year-olds, the technique changes but the principle stays the same: a body that moves well feels well.",
     category: "Wellness4Kids",
-    date: "February 2026",
+    date: "March 17, 2026",
     readTime: 6,
     image: IMG.couple,
     imageAlt: "Older couple smiling together",
@@ -1593,7 +1793,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Chiropractic restores joint motion. Physical therapy builds the strength to keep it. Together, they finish the job.",
     category: "Therapies & Techniques",
-    date: "January 2026",
+    date: "March 10, 2026",
     readTime: 7,
     image: IMG.exercises,
     imageAlt: "Woman doing rehab exercises",
@@ -1626,7 +1826,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "A non-surgical option for disc-related pain that creates negative pressure inside the disc, drawing herniated material back in.",
     category: "Therapies & Techniques",
-    date: "January 2026",
+    date: "March 3, 2026",
     readTime: 6,
     image: IMG.decompression,
     imageAlt: "Spinal decompression therapy",
@@ -1664,7 +1864,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "A hands-on soft tissue technique that breaks up adhesions in muscle, tendon, fascia, and nerve - with movement.",
     category: "Therapies & Techniques",
-    date: "December 2025",
+    date: "February 24, 2026",
     readTime: 5,
     image: IMG.art,
     imageAlt: "Active Release Technique therapy",
@@ -1694,7 +1894,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Specialized stainless-steel tools amplify your provider's hands and target chronic adhesions and scar tissue with precision.",
     category: "Therapies & Techniques",
-    date: "December 2025",
+    date: "February 17, 2026",
     readTime: 5,
     image: IMG.iastm,
     imageAlt: "IASTM instrument-assisted soft tissue mobilization",
@@ -1727,7 +1927,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Backpacks, sports, screens, growth spurts - kids' spines deal with a lot. Here's how gentle pediatric care helps.",
     category: "Wellness4Kids",
-    date: "November 2025",
+    date: "February 10, 2026",
     readTime: 6,
     image: IMG.pediatric,
     imageAlt: "Pediatric chiropractic care",
@@ -1761,7 +1961,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Year-round single-sport specialization, growing bones, and adult-level training volumes - young athletes need different care.",
     category: "Wellness4Kids",
-    date: "November 2025",
+    date: "February 3, 2026",
     readTime: 6,
     image: IMG.athletic,
     imageAlt: "Athletic care for young athletes",
@@ -1790,7 +1990,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Tension and cervicogenic headaches are among the most consistently treatable conditions in our practice.",
     category: "Common Conditions Treated",
-    date: "October 2025",
+    date: "January 27, 2026",
     readTime: 7,
     image: IMG.neck,
     imageAlt: "Woman with neck pain",
@@ -1824,7 +2024,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Most ergonomic advice is generic. Here's the short list that consistently changes outcomes for our desk-bound patients.",
     category: "Health & Wellness",
-    date: "October 2025",
+    date: "January 20, 2026",
     readTime: 6,
     image: IMG.posture,
     imageAlt: "Workplace ergonomics and posture",
@@ -1858,7 +2058,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Sciatica is a symptom, not a diagnosis. Knowing the source determines the right treatment.",
     category: "Common Conditions Treated",
-    date: "September 2025",
+    date: "January 13, 2026",
     readTime: 7,
     image: IMG.spine,
     imageAlt: "Sciatica spine anatomy",
@@ -1892,7 +2092,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Most running injuries aren't caused by running. They're caused by what runners aren't doing the rest of the week.",
     category: "Therapies & Techniques",
-    date: "September 2025",
+    date: "January 6, 2026",
     readTime: 7,
     image: IMG.knee,
     imageAlt: "Runner clutching painful knee",
@@ -1925,7 +2125,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Most ankle sprains never fully rehab. That's why so many people sprain the same ankle over and over.",
     category: "Common Conditions Treated",
-    date: "August 2025",
+    date: "December 30, 2025",
     readTime: 6,
     image: IMG.ankle,
     imageAlt: "Woman holding her painful ankle",
@@ -1959,7 +2159,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Pain when you reach overhead is rarely 'just a shoulder problem.' It's usually a thoracic spine, scapula, and shoulder problem.",
     category: "Common Conditions Treated",
-    date: "August 2025",
+    date: "December 23, 2025",
     readTime: 7,
     image: IMG.movement,
     imageAlt: "Shoulder mobility and movement therapy",
@@ -1987,7 +2187,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "From early back discomfort to round ligament pain to pelvic positioning for delivery - pregnancy-trained chiropractic helps.",
     category: "Health & Wellness",
-    date: "July 2025",
+    date: "December 16, 2025",
     readTime: 6,
     image: IMG.pregnancy,
     imageAlt: "Prenatal chiropractic care",
@@ -2021,7 +2221,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Chronic pain has a chemistry. The foods you eat either feed inflammation or feed recovery - there isn't really a neutral.",
     category: "Health & Wellness",
-    date: "July 2025",
+    date: "December 9, 2025",
     readTime: 7,
     image: IMG.nutrition,
     imageAlt: "Nutrition for pain and recovery",
@@ -2055,7 +2255,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "There is no one perfect mattress. There is a perfect mattress for you - and it's probably not the one in the ad.",
     category: "Health & Wellness",
-    date: "June 2025",
+    date: "December 2, 2025",
     readTime: 6,
     image: IMG.practice,
     imageAlt: "Restorative sleep environment",
@@ -2084,7 +2284,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Once you start, you have to keep going forever. Adjustments are dangerous. The pop is bones cracking. None of these are true.",
     category: "About Chiropractic Care",
-    date: "June 2025",
+    date: "November 25, 2025",
     readTime: 6,
     image: IMG.welcome,
     imageAlt: "Welcoming chiropractic clinic",
@@ -2127,7 +2327,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Walk in nervous, walk out informed. Here's exactly how your first appointment at YHN goes.",
     category: "About Chiropractic Care",
-    date: "May 2025",
+    date: "November 18, 2025",
     readTime: 5,
     image: IMG.geriatric,
     imageAlt: "Patient consultation",
@@ -2162,7 +2362,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "If you've been told your fatigue is 'just stress,' you're not getting the full picture. Here's how functional medicine actually investigates low energy.",
     category: "Functional Medicine",
-    date: "June 2026",
+    date: "June 23, 2026",
     readTime: 8,
     image: "/images/yhn-clone/hero-funcmed.webp",
     imageAlt: "Functional medicine consultation",
@@ -2206,7 +2406,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Bloating, brain fog, joint pain, and skin issues often share a single upstream driver - and it's not where most people are looking.",
     category: "Functional Medicine",
-    date: "June 2026",
+    date: "June 16, 2026",
     readTime: 7,
     image: "/images/articles/gut-health.jpeg",
     imageAlt: "Gut health and nutrition focus",
@@ -2249,7 +2449,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Functional medicine isn't anti-medicine. It's a different lens - one that asks why a problem started, not just how to suppress its symptoms.",
     category: "Functional Medicine",
-    date: "June 2026",
+    date: "June 9, 2026",
     readTime: 6,
     image: "/images/yhn-clone/hero-telehealth.webp",
     imageAlt: "Functional medicine telehealth consultation",
@@ -2293,7 +2493,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Fatigue, weight gain, anxiety, and brain fog are often labeled 'hormonal' - then dismissed because labs are 'normal.' Here's how functional medicine actually evaluates hormone health.",
     category: "Functional Medicine",
-    date: "June 2026",
+    date: "June 2, 2026",
     readTime: 7,
     image: IMG.funcmedHero,
     imageAlt: "Functional medicine hormone and thyroid testing",
@@ -2337,7 +2537,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Lyme and tick-borne co-infections rarely show up cleanly on standard testing. Here's how a functional medicine workup uncovers what's been missed.",
     category: "Functional Medicine",
-    date: "June 2026",
+    date: "May 26, 2026",
     readTime: 8,
     image: "/images/articles/chronic-lyme.jpg",
     imageAlt: "Chronic Lyme disease and tick-borne illness assessment",
@@ -2381,7 +2581,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Heart disease, depression, autoimmune flares, joint pain, brain fog - they look unrelated, but they often share one upstream driver.",
     category: "Functional Medicine",
-    date: "June 2026",
+    date: "May 19, 2026",
     readTime: 6,
     image: "/images/articles/inflammation.jpeg",
     imageAlt: "Functional medicine approach to chronic inflammation",
@@ -2426,7 +2626,7 @@ export const ARTICLES: Article[] = [
     excerpt:
       "Keto, paleo, plant-based, Mediterranean - every diet has fans and critics. Functional medicine asks a different question: what does your body actually need?",
     category: "Functional Medicine",
-    date: "June 2026",
+    date: "May 12, 2026",
     readTime: 6,
     image: IMG.supplementsSvc,
     imageAlt: "Personalized nutrition planning in functional medicine",
