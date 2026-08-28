@@ -1264,6 +1264,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
             height={50}
             className="h-auto w-[150px] rounded-lg bg-white/95 px-3 py-2"
           />
+          <FMCPBadge size={88} className="text-white" />
           <a
             href={PHONE_NJ_TEL}
             className="inline-flex items-center gap-2 text-lg font-bold text-accent transition-colors hover:text-white"
