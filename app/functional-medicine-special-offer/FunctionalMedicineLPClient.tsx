@@ -2,7 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Script from "next/script";
 import {
+  AnimatePresence,
   motion,
   useInView,
   useScroll,
@@ -29,6 +31,7 @@ import {
   Stethoscope,
   TestTube,
   Video,
+  X,
 } from "lucide-react";
 import FMCPBadge from "@/components/FMCPBadge";
 
@@ -39,8 +42,8 @@ import FMCPBadge from "@/components/FMCPBadge";
 const PHONE_NJ = "+1 609-869-9498";
 const PHONE_NJ_TEL = "tel:+16098699498";
 
-const BOOKING_URL =
-  "https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2";
+const LEAD_FORM_ID = "QFOqExGO8VVWILYAid61";
+const LEAD_FORM_SRC = `https://api.leadconnectorhq.com/widget/form/${LEAD_FORM_ID}`;
 
 const VIMEO_SRC =
   "https://player.vimeo.com/video/1200442621?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0";
@@ -369,8 +372,24 @@ function CollageImage({
 /* -------------------------------------------------------------------------- */
 
 export default function FunctionalMedicineSpecialOfferPage() {
-  const openModal = () =>
-    window.open(BOOKING_URL, "_blank", "noopener,noreferrer");
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const openModal = () => setIsFormOpen(true);
+  const closeModal = () => setIsFormOpen(false);
+
+  // Lock background scroll and allow Escape to dismiss while the form modal is open.
+  useEffect(() => {
+    if (!isFormOpen) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeModal();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [isFormOpen]);
 
   // Hide the global Knock Knock chat widget on this standalone landing page
   // (fallback for client-side navigation; layout already skips loading it here).
@@ -1302,6 +1321,93 @@ export default function FunctionalMedicineSpecialOfferPage() {
           <ArrowUpRight size={15} />
         </button>
       </motion.div>
+
+      {/* ----------------------------------------------------------------- */}
+      {/*  Lead form modal — GoHighLevel embed, opened by every CTA button   */}
+      {/* ----------------------------------------------------------------- */}
+      <AnimatePresence>
+        {isFormOpen && (
+          <motion.div
+            role="dialog"
+            aria-modal="true"
+            aria-label="Book your free consultation"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-brand-dark/80 p-3 backdrop-blur-md sm:p-6"
+            onClick={closeModal}
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 28, scale: 0.97 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 14, scale: 0.97 }}
+              transition={{ duration: 0.3, ease: [0.22, 0.61, 0.36, 1] }}
+              className="relative flex max-h-[92vh] w-full max-w-xl flex-col overflow-hidden rounded-[28px] bg-white shadow-card-hover ring-1 ring-brand/10"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Branded header */}
+              <div className="relative shrink-0 overflow-hidden bg-gradient-to-br from-brand-dark via-brand to-brand-dark px-6 pb-7 pt-6 text-white sm:px-8 sm:pt-7">
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -left-16 -top-16 h-48 w-48 rounded-full bg-accent/20 blur-3xl"
+                />
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -right-10 bottom-0 h-40 w-40 rounded-full bg-steel/25 blur-3xl"
+                />
+                <button
+                  type="button"
+                  onClick={closeModal}
+                  aria-label="Close"
+                  className="absolute right-4 top-4 z-10 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition-colors hover:border-accent hover:bg-white/20 hover:text-accent"
+                >
+                  <X size={18} />
+                </button>
+                <span className="relative inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.22em] text-accent">
+                  <Sparkles size={12} /> Free 30-Min Consultation
+                </span>
+                <h2 className="relative mt-3 max-w-sm font-display text-2xl font-bold leading-tight sm:text-[1.75rem]">
+                  Let&apos;s find the{" "}
+                  <span className="font-script text-3xl font-normal text-accent sm:text-4xl">
+                    root cause
+                  </span>
+                </h2>
+                <p className="relative mt-2 max-w-sm text-sm text-white/70">
+                  Fill out the quick form below and our team will reach out to
+                  confirm your complimentary consultation.
+                </p>
+              </div>
+
+              {/* Form */}
+              <div className="min-h-0 flex-1 overflow-y-auto bg-mist/40 p-3 sm:p-4">
+                <div className="overflow-hidden rounded-2xl bg-white shadow-inner ring-1 ring-brand/10">
+                  <iframe
+                    src={LEAD_FORM_SRC}
+                    style={{ width: "100%", height: "min(62vh, 700px)", border: "none", borderRadius: 16 }}
+                    id={`inline-${LEAD_FORM_ID}`}
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="landing Page Form"
+                    data-height="804"
+                    data-layout-iframe-id={`inline-${LEAD_FORM_ID}`}
+                    data-form-id={LEAD_FORM_ID}
+                    data-cookie-consent="true"
+                    data-cookie-consent-provider="auto"
+                    title="landing Page Form"
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
     </div>
   );
 }
