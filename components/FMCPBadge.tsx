@@ -7,17 +7,17 @@ interface FMCPBadgeProps {
   size?: number;
   showLabel?: boolean;
   className?: string;
+  linked?: boolean;
 }
 
-export default function FMCPBadge({ size = 112, showLabel = true, className = "" }: FMCPBadgeProps) {
-  return (
-    <a
-      href={CREDENTIAL_URL}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="View Dr. Chris's FMCP (Functional Medicine Certified Professional) credential from The Institute for Functional Medicine"
-      className={`inline-flex items-center gap-4 ${className}`}
-    >
+export default function FMCPBadge({
+  size = 112,
+  showLabel = true,
+  className = "",
+  linked = true,
+}: FMCPBadgeProps) {
+  const content = (
+    <>
       <span
         className="flex shrink-0 items-center justify-center rounded-2xl bg-white p-2.5 shadow-card ring-1 ring-black/5 transition-transform hover:-translate-y-0.5"
         style={{ width: size, height: size }}
@@ -38,6 +38,22 @@ export default function FMCPBadge({ size = 112, showLabel = true, className = ""
           </span>
         </span>
       )}
+    </>
+  );
+
+  if (!linked) {
+    return <span className={`inline-flex items-center gap-4 ${className}`}>{content}</span>;
+  }
+
+  return (
+    <a
+      href={CREDENTIAL_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="View Dr. Chris's FMCP (Functional Medicine Certified Professional) credential from The Institute for Functional Medicine"
+      className={`inline-flex items-center gap-4 ${className}`}
+    >
+      {content}
     </a>
   );
 }

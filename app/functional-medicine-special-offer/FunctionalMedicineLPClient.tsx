@@ -454,15 +454,16 @@ export default function FunctionalMedicineSpecialOfferPage() {
     };
   }, [isFormOpen]);
 
-  // Once the embedded lead form reports a completed submission, show a thank-you
-  // state and hand the visitor off to the booking calendar.
+  // Once the embedded lead form reports a completed submission, show a
+  // confirmation message for a few seconds, then hand the visitor off to
+  // the booking calendar.
   useEffect(() => {
     if (!isFormOpen || formSubmitted) return;
     const markSubmitted = () => {
       setFormSubmitted(true);
       redirectTimeout.current = setTimeout(() => {
         window.location.href = BOOKING_URL;
-      }, 2200);
+      }, 2500);
     };
     const handleMessage = (event: MessageEvent) => {
       if (!event.origin.includes("leadconnectorhq.com") && !event.origin.includes("msgsndr")) {
@@ -689,7 +690,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
                 transition={{ duration: 0.6 }}
                 className="mt-8 flex justify-center text-white lg:justify-start"
               >
-                <FMCPBadge size={112} />
+                <FMCPBadge size={112} linked={false} />
               </motion.div>
             </motion.div>
 
@@ -1387,7 +1388,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
             height={50}
             className="h-auto w-[150px] rounded-lg bg-white/95 px-3 py-2"
           />
-          <FMCPBadge size={88} className="text-white" />
+          <FMCPBadge size={88} className="text-white" linked={false} />
           <a
             href={PHONE_NJ_TEL}
             className="inline-flex items-center gap-2 text-lg font-bold text-accent transition-colors hover:text-white"
@@ -1483,7 +1484,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
                 </p>
               </div>
 
-              {/* Form / thank-you */}
+              {/* Form / confirmation */}
               {formSubmitted ? (
                 <div className="relative flex min-h-[360px] flex-1 flex-col items-center justify-center gap-5 overflow-hidden bg-gradient-to-b from-mist/60 via-white to-white px-6 py-16 text-center sm:px-10">
                   <span
@@ -1508,12 +1509,12 @@ export default function FunctionalMedicineSpecialOfferPage() {
                       <Sparkles size={12} /> You&apos;re all set
                     </span>
                     <h3 className="font-display text-2xl font-bold text-brand sm:text-[1.7rem]">
-                      Thank you for submitting your information!
+                      Thank You for Submitting Your Information!
                     </h3>
                     <p className="max-w-sm text-sm leading-relaxed text-stone">
-                      We&apos;ve received your details and our team will reach
-                      out shortly. You&apos;ll now be redirected to select a
-                      convenient date and time for your appointment.
+                      Your details have been received. You&apos;ll now be
+                      redirected to our booking page to choose a convenient
+                      date and time for your appointment.
                     </p>
                   </motion.div>
                   <div className="relative flex w-48 flex-col items-center gap-2">
@@ -1522,7 +1523,7 @@ export default function FunctionalMedicineSpecialOfferPage() {
                         className="block h-full rounded-full bg-gradient-to-r from-accent to-accent-dark"
                         initial={{ width: "0%" }}
                         animate={{ width: "100%" }}
-                        transition={{ duration: 2.2, ease: "easeInOut" }}
+                        transition={{ duration: 2.5, ease: "easeInOut" }}
                       />
                     </span>
                     <span className="text-[11px] font-medium uppercase tracking-wide text-steel">
