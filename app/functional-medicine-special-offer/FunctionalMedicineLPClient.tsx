@@ -42,8 +42,58 @@ import FMCPBadge from "@/components/FMCPBadge";
 const PHONE_NJ = "+1 609-869-9498";
 const PHONE_NJ_TEL = "tel:+16098699498";
 
+const BOOKING_URL =
+  "https://yourhealthnow.janeapp.com/locations/yhn/book#staff_member/2";
+
 const LEAD_FORM_ID = "QFOqExGO8VVWILYAid61";
 const LEAD_FORM_SRC = `https://api.leadconnectorhq.com/widget/form/${LEAD_FORM_ID}`;
+
+/** Detect a completed-submission message broadcast by the GoHighLevel form
+ *  embed. LeadConnector doesn't publish a fixed message contract for forms,
+ *  so we match on the documented iframe-resize prefix being absent plus a
+ *  handful of defensive keyword checks. */
+function isLeadFormSubmitted(data: unknown): boolean {
+  if (typeof data === "string") {
+    if (data.startsWith("[iFrameSizer]")) return false;
+    const d = data.toLowerCase();
+    return (
+      d.includes("submit") ||
+      d.includes("thank-you") ||
+      d.includes("thankyou") ||
+      d.includes("thank you") ||
+      d.includes("redirected") ||
+      d.includes("appointment")
+    );
+  }
+  if (data && typeof data === "object" && !Array.isArray(data)) {
+    const o = data as Record<string, unknown>;
+    const combined = [o.type, o.event, o.action, o.page, o.pageUrl, o.redirectUrl, o.url]
+      .filter((v): v is string => typeof v === "string")
+      .join(" ")
+      .toLowerCase();
+    return (
+      combined.includes("submit") ||
+      combined.includes("success") ||
+      combined.includes("thank-you") ||
+      combined.includes("thankyou")
+    );
+  }
+  return false;
+}
+
+/** The GoHighLevel embed script (form_embed.js) auto-resizes the iframe by
+ *  posting "[iFrameSizer]<id>:<height>:<width>:<type>" on every content-height
+ *  change. When the multi-field intake form is replaced by GHL's own short
+ *  "thank you" confirmation, the reported height collapses sharply — a
+ *  reliable, verifiable signal we use as a fallback when no explicit
+ *  submit/success message is sent. */
+function parseIframeSizerHeight(data: unknown, iframeId: string): number | null {
+  if (typeof data !== "string" || !data.startsWith("[iFrameSizer]")) return null;
+  const [id, heightStr] = data.slice("[iFrameSizer]".length).split(":");
+  if (id !== iframeId && !id?.startsWith(`${iframeId}___`)) return null;
+  const height = Number(heightStr);
+  return Number.isFinite(height) ? height : null;
+}
 
 const VIMEO_SRC =
   "https://player.vimeo.com/video/1200442621?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0";
@@ -373,8 +423,21 @@ function CollageImage({
 
 export default function FunctionalMedicineSpecialOfferPage() {
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const openModal = () => setIsFormOpen(true);
-  const closeModal = () => setIsFormOpen(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const redirectTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const maxFormHeight = useRef(0);
+  const sizerReports = useRef(0);
+
+  const openModal = () => {
+    setFormSubmitted(false);
+    maxFormHeight.current = 0;
+    sizerReports.current = 0;
+    setIsFormOpen(true);
+  };
+  const closeModal = () => {
+    setIsFormOpen(false);
+    if (redirectTimeout.current) clearTimeout(redirectTimeout.current);
+  };
 
   // Lock background scroll and allow Escape to dismiss while the form modal is open.
   useEffect(() => {
@@ -390,6 +453,47 @@ export default function FunctionalMedicineSpecialOfferPage() {
       window.removeEventListener("keydown", onKeyDown);
     };
   }, [isFormOpen]);
+
+  // Once the embedded lead form reports a completed submission, show a thank-you
+  // state and hand the visitor off to the booking calendar.
+  useEffect(() => {
+    if (!isFormOpen || formSubmitted) return;
+    const markSubmitted = () => {
+      setFormSubmitted(true);
+      redirectTimeout.current = setTimeout(() => {
+        window.location.href = BOOKING_URL;
+      }, 2200);
+    };
+    const handleMessage = (event: MessageEvent) => {
+      if (!event.origin.includes("leadconnectorhq.com") && !event.origin.includes("msgsndr")) {
+        return;
+      }
+      const height = parseIframeSizerHeight(event.data, `inline-${LEAD_FORM_ID}`);
+      if (height !== null) {
+        sizerReports.current += 1;
+        if (height > maxFormHeight.current) maxFormHeight.current = height;
+        const droppedSharply =
+          sizerReports.current >= 1 &&
+          maxFormHeight.current >= 300 &&
+          height > 0 &&
+          (height <= Math.max(320, maxFormHeight.current * 0.75) ||
+            maxFormHeight.current - height >= 120);
+        if (droppedSharply) {
+          markSubmitted();
+        }
+        return;
+      }
+      if (isLeadFormSubmitted(event.data)) {
+        markSubmitted();
+      }
+    };
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, [isFormOpen, formSubmitted]);
+
+  useEffect(() => () => {
+    if (redirectTimeout.current) clearTimeout(redirectTimeout.current);
+  }, []);
 
   // Hide the global Knock Knock chat widget on this standalone landing page
   // (fallback for client-side navigation; layout already skips loading it here).
@@ -1379,30 +1483,78 @@ export default function FunctionalMedicineSpecialOfferPage() {
                 </p>
               </div>
 
-              {/* Form */}
-              <div className="min-h-0 flex-1 overflow-y-auto bg-mist/40 p-3 sm:p-4">
-                <div className="overflow-hidden rounded-2xl bg-white shadow-inner ring-1 ring-brand/10">
-                  <iframe
-                    src={LEAD_FORM_SRC}
-                    style={{ width: "100%", height: "min(62vh, 700px)", border: "none", borderRadius: 16 }}
-                    id={`inline-${LEAD_FORM_ID}`}
-                    data-layout="{'id':'INLINE'}"
-                    data-trigger-type="alwaysShow"
-                    data-trigger-value=""
-                    data-activation-type="alwaysActivated"
-                    data-activation-value=""
-                    data-deactivation-type="neverDeactivate"
-                    data-deactivation-value=""
-                    data-form-name="landing Page Form"
-                    data-height="804"
-                    data-layout-iframe-id={`inline-${LEAD_FORM_ID}`}
-                    data-form-id={LEAD_FORM_ID}
-                    data-cookie-consent="true"
-                    data-cookie-consent-provider="auto"
-                    title="landing Page Form"
+              {/* Form / thank-you */}
+              {formSubmitted ? (
+                <div className="relative flex min-h-[360px] flex-1 flex-col items-center justify-center gap-5 overflow-hidden bg-gradient-to-b from-mist/60 via-white to-white px-6 py-16 text-center sm:px-10">
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute left-1/2 top-0 h-64 w-64 -translate-x-1/2 -translate-y-1/3 rounded-full bg-accent/10 blur-3xl"
                   />
+                  <motion.span
+                    initial={{ scale: 0.5, opacity: 0, rotate: -8 }}
+                    animate={{ scale: 1, opacity: 1, rotate: 0 }}
+                    transition={{ type: "spring", stiffness: 260, damping: 16 }}
+                    className="relative inline-flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-dark text-white shadow-lg shadow-accent/30 ring-8 ring-accent/10"
+                  >
+                    <CheckCircle2 size={40} strokeWidth={2.25} />
+                  </motion.span>
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.15, duration: 0.4 }}
+                    className="relative flex flex-col items-center gap-2"
+                  >
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-accent-dark">
+                      <Sparkles size={12} /> You&apos;re all set
+                    </span>
+                    <h3 className="font-display text-2xl font-bold text-brand sm:text-[1.7rem]">
+                      Thank you for submitting your information!
+                    </h3>
+                    <p className="max-w-sm text-sm leading-relaxed text-stone">
+                      We&apos;ve received your details and our team will reach
+                      out shortly. You&apos;ll now be redirected to select a
+                      convenient date and time for your appointment.
+                    </p>
+                  </motion.div>
+                  <div className="relative flex w-48 flex-col items-center gap-2">
+                    <span className="h-1.5 w-full overflow-hidden rounded-full bg-brand/10">
+                      <motion.span
+                        className="block h-full rounded-full bg-gradient-to-r from-accent to-accent-dark"
+                        initial={{ width: "0%" }}
+                        animate={{ width: "100%" }}
+                        transition={{ duration: 2.2, ease: "easeInOut" }}
+                      />
+                    </span>
+                    <span className="text-[11px] font-medium uppercase tracking-wide text-steel">
+                      Redirecting to booking&hellip;
+                    </span>
+                  </div>
                 </div>
-              </div>
+              ) : (
+                <div className="min-h-0 flex-1 overflow-y-auto bg-mist/40 p-3 sm:p-4">
+                  <div className="overflow-hidden rounded-2xl bg-white shadow-inner ring-1 ring-brand/10">
+                    <iframe
+                      src={LEAD_FORM_SRC}
+                      style={{ width: "100%", height: "min(62vh, 700px)", border: "none", borderRadius: 16 }}
+                      id={`inline-${LEAD_FORM_ID}`}
+                      data-layout="{'id':'INLINE'}"
+                      data-trigger-type="alwaysShow"
+                      data-trigger-value=""
+                      data-activation-type="alwaysActivated"
+                      data-activation-value=""
+                      data-deactivation-type="neverDeactivate"
+                      data-deactivation-value=""
+                      data-form-name="landing Page Form"
+                      data-height="804"
+                      data-layout-iframe-id={`inline-${LEAD_FORM_ID}`}
+                      data-form-id={LEAD_FORM_ID}
+                      data-cookie-consent="true"
+                      data-cookie-consent-provider="auto"
+                      title="landing Page Form"
+                    />
+                  </div>
+                </div>
+              )}
             </motion.div>
           </motion.div>
         )}
