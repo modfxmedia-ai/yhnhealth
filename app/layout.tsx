@@ -56,6 +56,9 @@ export const metadata: Metadata = {
     images: [DEFAULT_OG_IMAGE],
   },
   robots: { index: true, follow: true },
+  verification: {
+    google: "RMGFvea8aBi7XU_f9P0x_D09Zqowz_9LtZmaxlwkSm4",
+  },
 };
 
 const ORGANIZATION_SCHEMA = {
