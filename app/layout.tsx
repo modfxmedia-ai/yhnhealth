@@ -8,6 +8,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 import BottomBookBanner from "@/components/BottomBookBanner";
 import { BookingProvider } from "@/components/BookingPopup";
 import { SITE_URL } from "@/lib/siteUrl";
+import JsonLd from "@/components/JsonLd";
+import { organizationGraph } from "@/lib/schema";
 
 const DEFAULT_OG_IMAGE = "/images/yhn-clone/your-health-now.jpg";
 
@@ -33,11 +35,11 @@ const italianno = Italianno({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Your Health Now | Chiropractors in Chalfont, PA & Merchantville, NJ",
+    default: "Chiropractor in Chalfont, PA & Merchantville, NJ | Your Health Now",
     template: "%s | Your Health Now",
   },
   description:
-    "Are you seeking pain relief? Our chiropractor provides effective treatment for patients like you in Chalfont, PA & Merchantville, NJ. Call today for an appointment!",
+    "Your Health Now is a chiropractic and functional medicine clinic in Chalfont, PA and Merchantville, NJ. Doctor-led care for back pain, neck pain, sciatica, and root-cause health. Book today.",
   openGraph: {
     siteName: "Your Health Now",
     type: "website",
@@ -55,73 +57,20 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: [DEFAULT_OG_IMAGE],
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   verification: {
     google: "RMGFvea8aBi7XU_f9P0x_D09Zqowz_9LtZmaxlwkSm4",
   },
-};
-
-const ORGANIZATION_SCHEMA = {
-  "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
-  "@id": `${SITE_URL}/#organization`,
-  name: "Your Health Now",
-  url: SITE_URL,
-  logo: `${SITE_URL}/images/logo.webp`,
-  image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
-  medicalSpecialty: ["Chiropractic", "Functional Medicine"],
-  priceRange: "$$",
-  sameAs: [
-    "https://www.facebook.com/yhnhealth/",
-    "https://www.instagram.com/p/DQrd5dHE7_b/",
-    "https://www.linkedin.com/company/your-health-now-llc",
-  ],
-  location: [
-    {
-      "@type": "MedicalClinic",
-      "@id": `${SITE_URL}/locations#merchantville`,
-      name: "Your Health Now - Merchantville",
-      telephone: "+1-856-532-2063",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "5 W Chestnut Ave",
-        addressLocality: "Merchantville",
-        addressRegion: "NJ",
-        postalCode: "08109",
-        addressCountry: "US",
-      },
-      openingHoursSpecification: [
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          opens: "07:30",
-          closes: "20:00",
-        },
-      ],
-    },
-    {
-      "@type": "MedicalClinic",
-      "@id": `${SITE_URL}/locations#chalfont`,
-      name: "Your Health Now - Chalfont",
-      telephone: "+1-609-651-7436",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "350 N Main St #201",
-        addressLocality: "Chalfont",
-        addressRegion: "PA",
-        postalCode: "18914",
-        addressCountry: "US",
-      },
-      openingHoursSpecification: [
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          opens: "07:30",
-          closes: "20:00",
-        },
-      ],
-    },
-  ],
 };
 
 export default function RootLayout({
@@ -132,12 +81,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} ${italianno.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans bg-cream-light text-ink antialiased">
-        <Script
-          id="organization-schema"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_SCHEMA) }}
-        />
+        <JsonLd data={organizationGraph()} />
         <Script
           id="ga4-loader"
           src="https://www.googletagmanager.com/gtag/js?id=G-GX8PHZR3EG"

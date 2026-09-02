@@ -11,6 +11,22 @@ export function isNavGroup(child: NavChild): child is NavGroup {
   return Array.isArray((child as NavGroup).children);
 }
 
+/** Look up a nav item's display label by its href, for building silo cross-links with an accurate title. */
+export function getNavLabel(href: string): string | undefined {
+  for (const item of NAV_ITEMS) {
+    if (item.href === href) return item.label;
+    for (const child of item.children) {
+      if (child.href === href) return child.label;
+      if (isNavGroup(child)) {
+        for (const grandchild of child.children) {
+          if (grandchild.href === href) return grandchild.label;
+        }
+      }
+    }
+  }
+  return undefined;
+}
+
 /**
  * Nav structure mirrored from https://yhnhealth.com/ - labels, slugs and the
  * nested submenu layout match the live site exactly.
@@ -49,6 +65,16 @@ export const NAV_ITEMS: NavItem[] = [
       { label: "Arthrostimulation Therapy", href: "/arthrostimulation-therapy" },
       { label: "Vibracussion Therapy", href: "/vibracussion-therapy" },
       { label: "Decompression Therapy", href: "/decompression-therapy" },
+    ],
+  },
+  {
+    label: "Pain Relief",
+    href: null,
+    children: [
+      { label: "Back Pain & Sciatica", href: "/lower-back" },
+      { label: "Neck Pain & Headaches", href: "/head-and-neck" },
+      { label: "Upper Back Pain", href: "/upper-back" },
+      { label: "Shoulder Pain", href: "/shoulder-and-clavicle" },
     ],
   },
   {
@@ -133,6 +159,10 @@ export const SITE_PATHS: string[] = [
   "/integrative-nutrition",
   "/lifestyle-and-nutritional-advice",
   "/worksite-care",
+  "/lower-back",
+  "/head-and-neck",
+  "/upper-back",
+  "/shoulder-and-clavicle",
   "/locations",
   "/about-us",
   "/meet-the-doctor",
@@ -149,4 +179,5 @@ export const SITE_PATHS: string[] = [
   "/module-6",
   "/sitemap",
   "/privacy-policy",
+  "/medical-disclaimer",
 ];

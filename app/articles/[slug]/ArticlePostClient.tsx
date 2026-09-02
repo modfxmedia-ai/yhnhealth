@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import {
   ArrowLeft,
   ArrowUpRight,
+  BadgeCheck,
   BookOpen,
   Calendar,
   Clock,
@@ -16,6 +17,7 @@ import {
 import { Breadcrumbs, FadeUp } from "@/components/page/Primitives";
 import {
   ARTICLE_BY_SLUG,
+  getArticleAuthor,
   getRelated,
   type ArticleBlock,
 } from "@/lib/articlesData";
@@ -132,6 +134,7 @@ export default function ArticlePostClient({ slug }: { slug: string }) {
   const article = ARTICLE_BY_SLUG[slug];
   if (!article) return null;
   const related = getRelated(slug, 3);
+  const author = getArticleAuthor(article);
 
   return (
     <main className="bg-white">
@@ -195,6 +198,14 @@ export default function ArticlePostClient({ slug }: { slug: string }) {
                   Your Health Now
                 </span>
               </div>
+
+              <Link
+                href="/meet-the-doctor"
+                className="mt-5 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.18em] text-brand hover:text-accent-dark"
+              >
+                <BadgeCheck size={14} className="text-accent-dark" />
+                Written &amp; medically reviewed by {author}
+              </Link>
             </FadeUp>
 
             <FadeUp delay={0.15} className="lg:col-span-5">

@@ -1377,3 +1377,17 @@ export function relatedServices(serviceSlug: string, n = 8): ServiceData[] {
   const rest = SERVICES.filter((x) => x.category !== s.category && x.slug !== s.slug);
   return [...same, ...rest].slice(0, n);
 }
+
+/**
+ * Silo link-back: pSEO services whose `parentSlug` points at a given real
+ * money/pillar page (e.g. "/lower-back"). Used to link the pillar page down
+ * into its local city x service leaf pages, closing the hub -> leaf -> pillar loop.
+ */
+export function pseoChildrenForParent(parentSlug: string): ServiceData[] {
+  return SERVICES.filter((s) => s.parentSlug === parentSlug);
+}
+
+/** A small, curated set of cities (both clinic anchors first) for cross-linking from pillar pages. */
+export function representativeCities(n = 8): City[] {
+  return [...CITIES].sort((a, b) => a.driveMin - b.driveMin).slice(0, n);
+}

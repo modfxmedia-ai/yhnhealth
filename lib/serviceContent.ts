@@ -661,6 +661,166 @@ export const SERVICE_CONTENT: Record<string, ServiceConfig> = {
     },
     related: pickRelated("other", "worksite-care"),
   },
+
+  "lower-back": {
+    slug: "lower-back",
+    title: "Back Pain & Sciatica Relief",
+    eyebrow: "Pain Relief",
+    intro:
+      "Precise diagnosis and hands-on care for lumbar disc, joint, and sciatic pain - built around the actual pain generator, not a generic protocol.",
+    imageSrc: img("decompression-therapy"),
+    imageAlt: "Chiropractor evaluating a patient's lower back",
+    sections: [
+      {
+        heading: "Why back pain needs a real diagnosis",
+        body:
+          "Lower back pain is rarely one thing. A disc bulge, a locked facet joint, an irritated sacroiliac joint, and a pinched sciatic nerve can all produce similar symptoms but need different treatment. Before we adjust anything, our doctors run orthopedic, neurological, and movement testing to identify which structure is actually generating your pain - so the plan targets the cause, not just the ache.",
+      },
+      {
+        heading: "How we treat it",
+        body:
+          "Most patients start with a combination of chiropractic adjustments, spinal decompression, and soft-tissue work to calm the acute pain within the first one to two weeks. From there, we rebuild the hip and core strength that let the pain happen in the first place, so the relief holds instead of resetting to zero after every flare-up. Most patients don't need an MRI before starting conservative care, and we'll only order imaging when our exam findings call for it.",
+      },
+    ],
+    benefits: {
+      eyebrow: "What Sets Our Approach Apart",
+      title: "Back pain care built around the actual cause",
+      items: [
+        { icon: Stethoscope, title: "Exam-driven diagnosis", body: "Orthopedic and neurological testing before any adjustment." },
+        { icon: Activity, title: "Decompression for discs", body: "Flexion-distraction traction for herniated and bulging discs." },
+        { icon: ShieldCheck, title: "Sciatica-specific care", body: "We differentiate disc, piriformis, SI, and stenosis cases." },
+        { icon: Zap, title: "Fast phase-one relief", body: "Most patients feel meaningful change in 1-3 visits." },
+        { icon: Heart, title: "Hip & core rebuild", body: "Long-term correction, not just symptom chasing." },
+        { icon: CheckCircle2, title: "Imaging only when indicated", body: "We avoid unnecessary MRIs and scans." },
+      ],
+    },
+    related: [
+      { slug: "family-chiropractic-care", label: "Family Chiropractic Care" },
+      { slug: "decompression-therapy", label: "Decompression Therapy" },
+      { slug: "athletic-care", label: "Athletic Care" },
+      { slug: "geriatric-care", label: "Geriatric Care" },
+    ],
+  },
+
+  "head-and-neck": {
+    slug: "head-and-neck",
+    title: "Neck Pain, Headache & Whiplash Care",
+    eyebrow: "Pain Relief",
+    intro:
+      "Cervical and upper-cervical care for tech neck, tension headaches, migraines, and whiplash - diagnosed precisely, treated at the source.",
+    imageSrc: img("family-chiropractic-care"),
+    imageAlt: "Chiropractor treating a patient's neck",
+    sections: [
+      {
+        heading: "The neck-headache connection",
+        body:
+          "Most chronic headaches, including many migraines, trace back to restriction in the upper cervical spine - the joints at the base of the skull. Screen time, poor sleep posture, and old whiplash injuries all load that area over time. We map your specific pattern (location, frequency, triggers) before treating, so care targets your actual driver instead of a generic neck adjustment.",
+      },
+      {
+        heading: "Whiplash and post-accident care",
+        body:
+          "Motor-vehicle whiplash, concussion-related neck pain, and post-accident headaches are treated with a phased protocol - acute care first, then progressive rehab - along with the documentation most insurance and legal claims require. We coordinate with your medical team when concussion symptoms are present and never skip a red-flag screen before treating.",
+      },
+    ],
+    benefits: {
+      eyebrow: "Conditions We Treat Most Often",
+      title: "From tech neck to whiplash",
+      items: [
+        { icon: Brain, title: "Cervicogenic headaches", body: "Upper-cervical adjustments and suboccipital release." },
+        { icon: Zap, title: "Tension & migraine support", body: "Trigger mapping paired with hands-on care." },
+        { icon: ShieldCheck, title: "Whiplash protocols", body: "Phased acute-to-rehab care with proper documentation." },
+        { icon: Monitor, title: "Tech-neck correction", body: "Posture and screen-setup coaching that actually sticks." },
+        { icon: Stethoscope, title: "Red-flag screening", body: "We rule out serious causes before every treatment plan." },
+        { icon: Heart, title: "Low-force options available", body: "Instrument-assisted care for patients who prefer it." },
+      ],
+    },
+    related: [
+      { slug: "family-chiropractic-care", label: "Family Chiropractic Care" },
+      { slug: "decompression-therapy", label: "Decompression Therapy" },
+      { slug: "arthrostimulation-therapy", label: "Arthrostimulation Therapy" },
+      { slug: "ergonomics", label: "Ergonomics" },
+    ],
+  },
+
+  "upper-back": {
+    slug: "upper-back",
+    title: "Upper Back & Mid-Spine Pain Relief",
+    eyebrow: "Pain Relief",
+    intro:
+      "Thoracic mobility, rib mechanics, and posture-driven pain relief for the mid-back ache that shows up every afternoon at a desk.",
+    imageSrc: img("functional-postural-analysis"),
+    imageAlt: "Doctor assessing upper back posture",
+    sections: [
+      {
+        heading: "Why your upper back aches by 2pm",
+        body:
+          "Upper-back pain almost always traces back to thoracic spine stiffness, restricted rib mechanics, and shallow breathing patterns built up from hours at a screen. Foam rolling and stretching provide temporary relief because they don't restore joint mobility - that takes hands-on mobilization and a corrected workstation, not just a looser muscle.",
+      },
+      {
+        heading: "Our approach",
+        body:
+          "We start with a thoracic mobility and rib-mechanics exam, then combine manual mobilization, chiropractic adjustment, and breathing-pattern rehab. For patients whose pain is desk-driven, we also review your actual monitor height, chair, and keyboard distance - real fixes, not generic ergonomics advice - so the improvement holds between visits.",
+      },
+    ],
+    benefits: {
+      eyebrow: "What Patients Gain",
+      title: "Relief that outlasts the visit",
+      items: [
+        { icon: Activity, title: "Restored thoracic motion", body: "Manual mobilization and adjustment of stiff segments." },
+        { icon: Heart, title: "Easier breathing", body: "Diaphragm and posterior-chain rehab for shallow breathers." },
+        { icon: ShieldCheck, title: "Red-flag screening first", body: "We rule out cardiac and other non-mechanical causes." },
+        { icon: Monitor, title: "Real workstation fixes", body: "Screen height and chair adjustments matched to you." },
+        { icon: Stethoscope, title: "Rib-mechanics testing", body: "Rib-head dysfunction is common and very treatable." },
+        { icon: CheckCircle2, title: "Long-term durability", body: "Posture rebuild, not a one-visit fix." },
+      ],
+    },
+    related: [
+      { slug: "functional-postural-analysis", label: "Functional Postural Analysis" },
+      { slug: "ergonomics", label: "Ergonomics" },
+      { slug: "iastm", label: "IASTM" },
+      { slug: "percussion-therapy", label: "Percussion Therapy" },
+    ],
+  },
+
+  "shoulder-and-clavicle": {
+    slug: "shoulder-and-clavicle",
+    title: "Shoulder Pain Relief",
+    eyebrow: "Pain Relief",
+    intro:
+      "Whole-shoulder care that treats the scapula, thoracic spine, and rotator cuff together - not just the joint that hurts.",
+    imageSrc: img("iastm"),
+    imageAlt: "Therapist working on a patient's shoulder",
+    sections: [
+      {
+        heading: "Shoulders don't work alone",
+        body:
+          "A painful shoulder is often a scapular control problem, a thoracic mobility problem, or a rotator-cuff problem wearing a shoulder-pain disguise. Treating only the joint that hurts explains why stretching alone rarely fixes it. We assess the cuff, scapula, thoracic spine, and neck together before building a plan.",
+      },
+      {
+        heading: "Our approach",
+        body:
+          "Care typically combines ART or IASTM soft-tissue release on the cuff, pec minor, and lats with targeted thoracic and AC-joint adjustments, followed by banded rotator-cuff and scapular rehab so the shoulder doesn't re-injure once symptoms settle. Many partial rotator-cuff tears respond well to this conservative approach; when surgery is the right call, we coordinate rehab around it.",
+      },
+    ],
+    benefits: {
+      eyebrow: "What We Address",
+      title: "The whole shoulder complex, not just the ache",
+      items: [
+        { icon: Activity, title: "Restored overhead motion", body: "Combined joint and soft-tissue treatment." },
+        { icon: Heart, title: "Less night pain", body: "Most patients notice improved sleep within 2-3 weeks." },
+        { icon: Stethoscope, title: "Whole-chain assessment", body: "Cuff, scapula, thoracic spine, and neck evaluated together." },
+        { icon: ShieldCheck, title: "Post-op friendly", body: "Rehab coordinated alongside your surgeon's protocol." },
+        { icon: Zap, title: "ART & IASTM in-house", body: "Precise soft-tissue tools most PT clinics don't offer." },
+        { icon: CheckCircle2, title: "Sport-specific recovery", body: "Return-to-throw and return-to-lift progressions." },
+      ],
+    },
+    related: [
+      { slug: "art", label: "ART" },
+      { slug: "iastm", label: "IASTM" },
+      { slug: "athletic-care", label: "Athletic Care" },
+      { slug: "functional-movement-restoration", label: "Functional Movement Restoration" },
+    ],
+  },
 };
 
 // Quietly reference unused icons so tree-shaking still picks them, and TS doesn't warn:

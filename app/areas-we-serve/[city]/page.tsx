@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { CITIES, CITY_BY_SLUG, SERVICES } from "@/lib/pseoData";
+import { CITIES, CITY_BY_SLUG } from "@/lib/pseoData";
 import AreaCityPage from "@/components/page/AreaCityPage";
 import { SITE_URL } from "@/lib/siteUrl";
+import JsonLd from "@/components/JsonLd";
+import { areaCityJsonLd } from "@/lib/schema";
 
 export const dynamicParams = false;
 
@@ -17,13 +19,19 @@ export async function generateMetadata(
   const city = CITY_BY_SLUG[citySlug];
   if (!city) return {};
   const title = `Chiropractor in ${city.name}, ${city.state} | Your Health Now`;
-  const description = `Patient-specific chiropractic, functional medicine, and rehab serving ${city.name}, ${city.state} and ${city.county} County. ${SERVICES.length} services available - book today.`;
+  const description = `Chiropractic and functional medicine for ${city.name}, ${city.state} (${city.zips[0]}) and ${city.county} County. Doctor-led care, same-week appointments.`;
   const canonical = `${SITE_URL}/areas-we-serve/${city.slug}`;
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: { canonical },
-    openGraph: { title, description, url: canonical, type: "website" },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      type: "website",
+      images: [{ url: "/images/yhn-clone/your-health-now.jpg", width: 1200, height: 630 }],
+    },
     twitter: { card: "summary_large_image", title, description },
   };
 }
@@ -34,5 +42,10 @@ export default async function CityPage(
   const { city: citySlug } = await params;
   const city = CITY_BY_SLUG[citySlug];
   if (!city) notFound();
-  return <AreaCityPage city={city} />;
+  return (
+    <>
+      <JsonLd data={areaCityJsonLd(city)} />
+      <AreaCityPage city={city} />
+    </>
+  );
 }

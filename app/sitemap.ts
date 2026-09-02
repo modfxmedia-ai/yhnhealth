@@ -7,7 +7,7 @@ import { SITE_URL } from "@/lib/siteUrl";
 const BASE = SITE_URL;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  const lastModified = new Date("2026-09-02T12:00:00.000Z");
   const core: MetadataRoute.Sitemap = SITE_PATHS.map((path) => ({
     url: `${BASE}${path === "/" ? "" : path}`,
     lastModified,

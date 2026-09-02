@@ -17,7 +17,20 @@ export type Article = {
   imageAlt: string;
   body: ArticleBlock[];
   related?: string[]; // slugs
+  /** Byline shown on the article and used for Article schema. Falls back by category when omitted. */
+  author?: string;
 };
+
+/** Doctor bylines mapped from clinical focus so attribution matches real credentials, not a single catch-all name. */
+const AUTHOR_BY_CATEGORY: Partial<Record<ArticleCategory, string>> = {
+  "Functional Medicine": "Dr. Chris Chianese, MS, DC, FMCP",
+  "Wellness4Kids": "Dr. Marc Chianese, MS, DC",
+};
+const DEFAULT_AUTHOR = "Dr. Chris Chianese, MS, DC, FMCP";
+
+export function getArticleAuthor(a: Article): string {
+  return a.author ?? AUTHOR_BY_CATEGORY[a.category] ?? DEFAULT_AUTHOR;
+}
 
 export const ARTICLE_CATEGORIES = [
   "About Chiropractic Care",

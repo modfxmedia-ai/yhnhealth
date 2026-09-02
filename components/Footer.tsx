@@ -64,6 +64,7 @@ const FOOTER_LOCATIONS = [
     address: "5 W Chestnut Ave, Merchantville, NJ 08109",
     phone: "(856) 532-2063",
     tel: "tel:8565322063",
+    href: "/areas-we-serve/merchantville-nj/chiropractic-care",
   },
   {
     name: "Chalfont",
@@ -71,6 +72,7 @@ const FOOTER_LOCATIONS = [
     address: "350 N Main St #201, Chalfont, PA 18914",
     phone: "(609) 651-7436",
     tel: "tel:6096517436",
+    href: "/areas-we-serve/chalfont-pa/chiropractic-care",
   },
 ];
 
@@ -211,9 +213,9 @@ export default function Footer() {
             <div className="mt-4 space-y-4">
               {FOOTER_LOCATIONS.map((loc) => (
                 <div key={loc.name}>
-                  <p className="font-display text-sm font-semibold">
+                  <Link href={loc.href} className="font-display text-sm font-semibold hover:text-accent">
                     {loc.name}, <span className="text-steel-light">{loc.state}</span>
-                  </p>
+                  </Link>
                   <p className="mt-1 flex items-start gap-2 text-[11px] leading-relaxed text-white/70">
                     <MapPin size={11} className="mt-0.5 shrink-0 text-accent" strokeWidth={2} />
                     {loc.address}
@@ -272,11 +274,18 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <Link href="/privacy-policy" className="hover:text-accent">Privacy</Link>
             <span className="h-3 w-px bg-white/20" />
+            <Link href="/medical-disclaimer" className="hover:text-accent">Disclaimer</Link>
+            <span className="h-3 w-px bg-white/20" />
             <Link href="/sitemap" className="hover:text-accent">Sitemap</Link>
             <span className="h-3 w-px bg-white/20" />
             <Link href="/contact-us" className="hover:text-accent">Contact</Link>
           </div>
         </div>
+        <p className="mx-auto max-w-[1320px] px-6 pb-5 text-[10px] leading-relaxed normal-case tracking-normal text-white/40 lg:px-10">
+          Educational information on this website is not a diagnosis or a substitute for an in-person exam.
+          Chiropractic and functional medicine care is provided by licensed clinicians at our Merchantville, NJ
+          and Chalfont, PA clinics. Call to confirm insurance, hours, and whether a visit is appropriate for you.
+        </p>
       </div>
 
       <div aria-hidden="true" className="h-[3px] w-full bg-gradient-to-r from-brand via-accent to-brand" />

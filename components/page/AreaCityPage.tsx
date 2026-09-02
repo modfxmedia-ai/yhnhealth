@@ -18,10 +18,33 @@ import {
 } from "@/lib/pseoData";
 import { Breadcrumbs, FadeUp } from "@/components/page/Primitives";
 
+function seededIndex(seed: string, mod: number): number {
+  let h = 0;
+  for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0;
+  return h % mod;
+}
+
+const CITY_VARIANTS = [
+  (c: City, clinic: string) =>
+    `New patients here often start with a quick call rather than booking blind - it's a fast way to confirm ${clinic} can help before you take time off work near ${c.landmarks[0]}.`,
+  (c: City, _clinic: string) =>
+    `${c.name} covers a mix of ${c.neighborhoods.slice(0, 2).join(" and ")}-area households, and scheduling flexes around that - we keep early and late slots open for ${c.county} County commuters.`,
+  (c: City, _clinic: string) =>
+    `With about ${c.population} residents, ${c.name} is small enough that word travels fast when a plan actually works - a good share of our ${c.name} patients come in on a neighbor's recommendation.`,
+  (c: City, clinic: string) =>
+    `${clinic} stays open into the evening specifically because so many ${c.name} patients come straight from work near ${c.landmarks[Math.min(1, c.landmarks.length - 1)]}.`,
+];
+
+function cityVariant(city: City, clinicName: string): string {
+  const idx = seededIndex(`${city.slug}:cityhub`, CITY_VARIANTS.length);
+  return CITY_VARIANTS[idx](city, clinicName);
+}
+
 export default function AreaCityPage({ city }: { city: City }) {
   const clinic = CLINICS[city.clinic];
   const cityFull = `${city.name}, ${city.state}`;
   const nearby = nearbyCities(city.slug);
+  const extraLine = cityVariant(city, clinic.name);
 
   const grouped = SERVICES.reduce<Record<string, typeof SERVICES>>((acc, s) => {
     (acc[s.category] ||= []).push(s);
@@ -135,6 +158,7 @@ export default function AreaCityPage({ city }: { city: City }) {
               {city.landmarks.slice(0, 2).join(" and ")}. Care is scheduled around busy commutes - early morning,
               lunchtime and post-work appointments are standard.
             </p>
+            <p className="mt-4 text-[15px] leading-relaxed text-stone">{extraLine}</p>
           </FadeUp>
 
           <FadeUp delay={0.1} className="lg:col-span-7">

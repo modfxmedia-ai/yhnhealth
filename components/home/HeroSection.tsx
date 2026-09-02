@@ -131,23 +131,14 @@ export default function HeroSection() {
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.9, ease: "easeOut" }}
-              className="mt-7 font-display text-[40px] font-bold leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-[88px]"
+              className="mt-7 font-display text-[36px] font-bold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[72px]"
             >
-              Health{" "}
-              <span className="relative inline-block">
-                <span className="relative z-10">For Every</span>
-                <motion.span
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ duration: 1, delay: 1.1, ease: "easeOut" }}
-                  className="absolute bottom-2 left-0 right-0 h-3 origin-left bg-accent/40"
-                  aria-hidden="true"
-                />
-              </span>{" "}
-              <span className="font-script font-normal italic text-accent">
-                Body
-              </span>
+              Chiropractor in Chalfont, PA{" "}
+              <span className="block sm:inline">&amp; Merchantville, NJ</span>
             </motion.h1>
+            <p className="mt-4 font-script text-3xl font-normal italic text-accent sm:text-4xl">
+              Health For Every Body
+            </p>
 
             <motion.p
               variants={{
@@ -157,10 +148,11 @@ export default function HeroSection() {
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="mt-7 max-w-2xl text-lg leading-relaxed text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] md:text-xl"
             >
-              Combining Functional Medicine and Chiropractic Care to uncover
-              root causes, restore movement, and help your body perform the way
-              it was designed to, through advanced testing, personalized
-              protocols, and precise hands-on treatment.
+              Your Health Now is a doctor-led chiropractic and functional
+              medicine clinic with offices in Chalfont, Pennsylvania and
+              Merchantville, New Jersey. Patients come here for back pain, neck
+              pain, sciatica, family adjustments, and root-cause care — not a
+              one-size-fits-all visit.
             </motion.p>
 
             <motion.div
@@ -169,11 +161,24 @@ export default function HeroSection() {
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.7, ease: "easeOut" }}
-              className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
+              className="mt-10 flex flex-col flex-wrap items-start gap-4 sm:flex-row sm:items-center"
             >
               <Link
-                href="/about-us"
+                href="/areas-we-serve/chalfont-pa/chiropractic-care"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-4 text-[12px] font-semibold uppercase tracking-[0.24em] text-brand-dark transition-colors hover:bg-white"
+              >
+                Chiropractic in Chalfont
+                <ArrowUpRight size={14} />
+              </Link>
+              <Link
+                href="/areas-we-serve/merchantville-nj/chiropractic-care"
                 className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-4 text-[12px] font-semibold uppercase tracking-[0.24em] text-white backdrop-blur transition-colors hover:border-accent hover:text-accent"
+              >
+                Chiropractic in Merchantville
+              </Link>
+              <Link
+                href="/about-us"
+                className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.24em] text-white/80 hover:text-accent"
               >
                 Discover Our Care
               </Link>

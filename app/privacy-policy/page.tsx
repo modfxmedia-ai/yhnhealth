@@ -3,7 +3,7 @@ import { Breadcrumbs } from "@/components/page/Primitives";
 import { SITE_URL } from "@/lib/siteUrl";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Your Health Now",
+  title: { absolute: "Privacy Policy | Your Health Now" },
   description:
     "How Your Health Now collects, uses, and protects information you provide through this website.",
   alternates: { canonical: `${SITE_URL}/privacy-policy` },

@@ -6,9 +6,9 @@ import { Breadcrumbs, FadeUp } from "@/components/page/Primitives";
 import { SITE_URL } from "@/lib/siteUrl";
 
 export const metadata: Metadata = {
-  title: "Areas We Serve | Chiropractors in NJ & PA | Your Health Now",
+  title: { absolute: "Chiropractor near you in NJ & PA | Your Health Now" },
   description:
-    "Your Health Now serves 30+ cities across South Jersey and Bucks/Montgomery County, PA - patient-specific chiropractic, functional medicine, and rehab. Find your area.",
+    "Your Health Now serves cities across South Jersey and Bucks County, PA from clinics in Merchantville, NJ and Chalfont, PA. Find chiropractic and functional medicine near you.",
   alternates: { canonical: `${SITE_URL}/areas-we-serve` },
 };
 

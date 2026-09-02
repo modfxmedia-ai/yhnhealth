@@ -1,27 +1,30 @@
 "use client";
 
 import { motion } from "motion/react";
+import Link from "next/link";
 import { ArrowUpRight, MapPin, Phone } from "lucide-react";
 import { useBookingPopup } from "@/components/BookingPopup";
 
 const LOCATIONS = [
   {
-    clinic: "Chiropractic Clinic 1",
+    clinic: "Chiropractic Clinic",
     city: "Merchantville",
     state: "NJ",
     phone: "(856) 532-2063",
     phoneHref: "tel:+18565322063",
     address: "5 W Chestnut Ave",
     bookingUrl: "https://yourhealthnow.janeapp.com/locations/mmwc/book#/staff_member/1",
+    careHref: "/areas-we-serve/merchantville-nj/chiropractic-care",
   },
   {
-    clinic: "Chiropractic Clinic 2",
+    clinic: "Chiropractic Clinic",
     city: "Chalfont",
     state: "PA",
     phone: "(609) 651-7436",
     phoneHref: "tel:+16096517436",
     address: "350 N Main St #201",
     bookingUrl: "https://yourhealthnow.janeapp.com/locations/afc/book#/staff_member/3",
+    careHref: "/areas-we-serve/chalfont-pa/chiropractic-care",
   },
 ];
 
@@ -102,6 +105,13 @@ export default function LocationCTABanner() {
                 </div>
               </a>
             </div>
+
+            <Link
+              href={loc.careHref}
+              className="mt-5 text-[11px] font-bold uppercase tracking-[0.24em] text-white/85 underline-offset-4 hover:text-accent hover:underline"
+            >
+              Chiropractic care in {loc.city}, {loc.state}
+            </Link>
 
             {/* CTA */}
             <a

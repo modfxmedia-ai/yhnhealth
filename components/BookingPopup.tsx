@@ -58,6 +58,11 @@ export function BookingProvider({ children }: { children: ReactNode }) {
     () => ({
       openBooking: (url?: string | null) => {
         if (!url) return;
+        const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag;
+        gtag?.("event", "generate_lead", {
+          event_category: "booking",
+          event_label: url,
+        });
         window.open(url, "_blank", "noopener,noreferrer");
       },
       closeBooking: () => {},

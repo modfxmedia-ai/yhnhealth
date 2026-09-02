@@ -23,9 +23,61 @@ import {
   relatedServices,
 } from "@/lib/pseoData";
 import { Breadcrumbs, FadeUp } from "@/components/page/Primitives";
+import { getNavLabel } from "@/lib/navigation";
 
 function localize(input: string, city: string): string {
   return input.replace(/\{city\}/g, city);
+}
+
+/** Deterministic hash so the same city+service always picks the same variant (stable across builds, no client/server mismatch). */
+function seededIndex(seed: string, mod: number): number {
+  let h = 0;
+  for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0;
+  return h % mod;
+}
+
+/**
+ * A large fraction of the ~1,050 city x service pages share templated phrasing
+ * once you swap out city/service names. These variant banks inject additional,
+ * genuinely different sentences per page (picked deterministically by city+service)
+ * so pages read less like a mail-merge and more like distinct content.
+ */
+const OVERVIEW_VARIANTS = [
+  (city: City, _service: ServiceData, _clinic: string) =>
+    `${city.name} residents near ${city.landmarks[0]} often ask how many visits it takes to feel a difference - most cases see meaningful change well before the plan is finished, and we tell you the realistic timeline at visit one.`,
+  (city: City, service: ServiceData, _clinic: string) =>
+    `Because ${city.name} sits in ${city.county} County, most of our ${city.name} patients coordinate their ${service.shortName} visits around a ${city.state === "NJ" ? "South Jersey" : "Bucks or Montco"} commute - early morning and late afternoon slots fill first.`,
+  (city: City, service: ServiceData, clinic: string) =>
+    `Families near ${city.neighborhoods[0]} frequently combine ${service.shortName} with one of our other services in the same visit window, so a trip out to ${clinic} covers more than one need.`,
+  (city: City, service: ServiceData, _clinic: string) =>
+    `${city.name}'s population of roughly ${city.population} means we see a wide range of cases here - from first-time patients unsure what to expect, to people who've tried ${service.shortName} elsewhere and want a more precise plan.`,
+  (city: City, _service: ServiceData, _clinic: string) =>
+    `If you're weighing options near ${city.landmarks[Math.min(1, city.landmarks.length - 1)]}, the biggest difference patients notice here is the exam - we test before we treat, so the plan matches what's actually wrong, not a standard protocol.`,
+  (city: City, _service: ServiceData, clinic: string) =>
+    `${city.name} is ${city.driveMin === 0 ? "home to our clinic itself" : `about ${city.driveMin} minutes from ${clinic}`}, which is close enough that most patients here keep a consistent weekly or biweekly schedule instead of letting gaps reset their progress.`,
+];
+
+function overviewVariant(city: City, service: ServiceData, clinicName: string): string {
+  const idx = seededIndex(`${city.slug}:${service.slug}:overview`, OVERVIEW_VARIANTS.length);
+  return OVERVIEW_VARIANTS[idx](city, service, clinicName);
+}
+
+const SHORT_ANSWER_VARIANTS = [
+  (city: City, clinic: string) =>
+    `Yes - we regularly see patients from ${city.name} at our ${clinic} clinic.`,
+  (city: City, clinic: string) =>
+    `Yes, ${city.name} residents are a regular part of our practice at ${clinic}.`,
+  (city: City, clinic: string) =>
+    `Yes. Patients near ${city.landmarks[0]} in ${city.name} routinely choose our ${clinic} office for this.`,
+  (city: City, clinic: string) =>
+    `Yes, this is available to ${city.name} patients at our nearest clinic, ${clinic}, about ${city.driveMin === 0 ? "a couple minutes away" : `${city.driveMin} minutes out`}.`,
+];
+
+/** Very short, generic FAQ answers (often just "Yes.") get expanded with real, city-specific detail instead of staying a one-word answer on every one of the ~1,050 pages. */
+function enhanceShortAnswer(question: string, rawAnswer: string, city: City, clinicName: string): string {
+  if (rawAnswer.trim().length > 55) return rawAnswer;
+  const idx = seededIndex(`${question}:${city.slug}:faq`, SHORT_ANSWER_VARIANTS.length);
+  return SHORT_ANSWER_VARIANTS[idx](city, clinicName);
 }
 
 export default function AreaServicePage({
@@ -40,7 +92,12 @@ export default function AreaServicePage({
   const nearby = nearbyCities(city.slug);
   const related = relatedServices(service.slug);
   const summary = localize(service.summary, cityFull);
-  const faq = service.faq.map((f) => ({ q: localize(f.q, cityFull), a: localize(f.a, cityFull) }));
+  const faq = service.faq.map((f) => {
+    const localizedA = localize(f.a, cityFull);
+    return { q: localize(f.q, cityFull), a: enhanceShortAnswer(f.q, localizedA, city, clinic.name) };
+  });
+  const parentLabel = service.parentSlug ? getNavLabel(service.parentSlug) : undefined;
+  const extraOverviewLine = overviewVariant(city, service, clinic.name);
 
   return (
     <main className="bg-white">
@@ -84,8 +141,15 @@ export default function AreaServicePage({
                 className="mt-6 h-[3px] w-24 bg-accent"
               />
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-stone md:text-lg">
-                {summary} Patients across {city.vibe} drive to our {clinic.name} office - about{" "}
-                {city.driveMin === 0 ? "a few minutes away" : `${city.driveMin} minutes from ${city.name}`}.
+                Your Health Now provides {service.shortName} for people who live
+                and work in {cityFull}. Care is delivered at {clinic.address}
+                {city.driveMin === 0
+                  ? `, in town.`
+                  : `, about ${city.driveMin} minutes from ${city.name}.`}{" "}
+                ZIP {city.zips.join(" / ")} · {city.county} County.
+              </p>
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-stone md:text-lg">
+                {summary} Patients across {city.vibe} drive to our {clinic.name} office.
               </p>
             </FadeUp>
 
@@ -167,6 +231,7 @@ export default function AreaServicePage({
               functional medicine. That depth lets us combine techniques inside a single visit - so {city.name}{" "}
               patients spend less time chasing relief across four different offices.
             </p>
+            <p className="mt-5 text-[15px] leading-relaxed text-stone md:text-base">{extraOverviewLine}</p>
 
             <ul className="mt-7 grid gap-3 sm:grid-cols-2">
               {[
@@ -183,6 +248,16 @@ export default function AreaServicePage({
                 </li>
               ))}
             </ul>
+
+            {service.parentSlug && parentLabel && (
+              <Link
+                href={service.parentSlug}
+                className="mt-7 inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.22em] text-brand hover:text-accent-dark"
+              >
+                Read our full {parentLabel} guide
+                <ArrowRight size={14} />
+              </Link>
+            )}
           </FadeUp>
         </div>
       </section>

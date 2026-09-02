@@ -12,14 +12,14 @@ export const SEO: Record<string, SeoEntry> = {
       "Looking for pain relief? Our chiropractor offers adjustments in Chalfont, PA & Merchantville, NJ. If you're seeking treatment, call today for an appointment!",
   },
   "/meet-the-doctor": {
-    title: "Meet The Team | Chiropractors In Merchantville, NJ & Chalfont, PA | Your Health Now",
+    title: "Dr. Chris, Marc & Lillee Chianese | Your Health Now",
     description:
-      "Your Health Now are your local Chiropractors in Merchantville, NJ & Chalfont, PA. Call today! Meet The Team",
+      "Meet Dr. Chris Chianese (MS, DC, FMCP), Dr. Marc Chianese (MS, DC), and Dr. Lillee Chianese (DC, Webster, NRCME) — the chiropractic and functional medicine team in Merchantville, NJ and Chalfont, PA.",
   },
   "/locations": {
-    title: "Locations | Chiropractors In Merchantville, NJ & Chalfont, PA | Your Health Now",
+    title: "Chiropractic Clinics in Merchantville, NJ & Chalfont, PA | Your Health Now",
     description:
-      "Visit Your Health Now at our Merchantville, NJ or Chalfont, PA chiropractic clinic. Hours, directions, parking, and online booking for new patients.",
+      "Two Your Health Now clinics: 5 W Chestnut Ave, Merchantville, NJ and 350 N Main St #201, Chalfont, PA. Hours, directions, and online booking for new patients.",
   },
   "/testimonials": {
     title: "Testimonials | Chiropractors In Merchantville, NJ & Chalfont, PA | Your Health Now",
@@ -47,9 +47,9 @@ export const SEO: Record<string, SeoEntry> = {
       "12 doctor-designed Health Optimization Programs - weight & metabolism, hormones, energy, thyroid, gut, longevity and more. 6- or 12-month pathways with telehealth in Merchantville, NJ & Chalfont, PA.",
   },
   "/family-chiropractic-care": {
-    title: "Chiropractic Care | Chalfont, PA & Merchantville, NJ | Your Health Now",
+    title: "Chiropractor in Chalfont, PA & Merchantville, NJ | Your Health Now",
     description:
-      "Need an expert in Chiropractic Adjustments? Your Health Now serves the Chalfont, PA & Merchantville, NJ area and is currently accepting new patients! Call us today!",
+      "Chiropractic care in Chalfont, PA and Merchantville, NJ for back pain, neck pain, sciatica, and family adjustments. Doctor-led, same-week appointments. Book today.",
   },
   "/functional-postural-analysis": {
     title: "Functional Postural Analysis | Chiropractors In Merchantville, NJ & Chalfont, PA | Your Health Now",
@@ -206,6 +206,26 @@ export const SEO: Record<string, SeoEntry> = {
     description:
       "Privacy policy for yhnhealth.com - how Your Health Now collects, uses and protects your information.",
   },
+  "/lower-back": {
+    title: "Back Pain & Sciatica Relief | Chalfont, PA & Merchantville, NJ | Your Health Now",
+    description:
+      "Diagnosis-driven back pain and sciatica relief in Chalfont, PA & Merchantville, NJ. Decompression, chiropractic adjustments, and core rehab that target the actual cause.",
+  },
+  "/head-and-neck": {
+    title: "Neck Pain, Headache & Whiplash Care | Chalfont, PA & Merchantville, NJ | Your Health Now",
+    description:
+      "Neck pain, tension headache, migraine, and whiplash care in Chalfont, PA & Merchantville, NJ. Upper-cervical adjustments and documented post-accident treatment plans.",
+  },
+  "/upper-back": {
+    title: "Upper Back & Mid-Spine Pain Relief | Chalfont, PA & Merchantville, NJ | Your Health Now",
+    description:
+      "Upper back and mid-spine pain relief in Chalfont, PA & Merchantville, NJ. Thoracic mobilization, rib-mechanics care, and real workstation fixes for desk-driven pain.",
+  },
+  "/shoulder-and-clavicle": {
+    title: "Shoulder Pain Relief | Chalfont, PA & Merchantville, NJ | Your Health Now",
+    description:
+      "Whole-shoulder pain relief in Chalfont, PA & Merchantville, NJ. Rotator cuff, scapular, and thoracic-spine care combined with ART and IASTM soft-tissue therapy.",
+  },
 };
 
 import type { Metadata } from "next";
@@ -217,7 +237,7 @@ export function buildMetadata(slug: string): Metadata {
   const entry = SEO[slug];
   if (!entry) throw new Error(`No SEO entry for slug: ${slug}`);
   return {
-    title: entry.title,
+    title: { absolute: entry.title },
     description: entry.description,
     alternates: { canonical: slug },
     openGraph: {

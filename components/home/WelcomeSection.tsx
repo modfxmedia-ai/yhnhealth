@@ -148,6 +148,12 @@ export default function WelcomeSection() {
           </h2>
 
           <div className="mt-8 space-y-5 text-[17px] leading-relaxed text-stone">
+            <p>
+              If you need a chiropractor in Chalfont, PA or Merchantville, NJ,
+              you are in the right place. Care is delivered by named doctors —
+              Dr. Chris, Dr. Marc, and Dr. Lillee Chianese — not a rotating
+              associate you never meet twice.
+            </p>
             {PARAGRAPHS.map((p) => (
               <p key={p}>{p}</p>
             ))}
@@ -179,6 +185,13 @@ export default function WelcomeSection() {
                 size={14}
                 className="transition-transform duration-300 group-hover:translate-x-1"
               />
+            </Link>
+            <Link
+              href="/family-chiropractic-care"
+              className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.22em] text-brand hover:text-accent-dark"
+            >
+              Chiropractic care
+              <ArrowRight size={14} />
             </Link>
             <Link
               href="/functional-medicine"

@@ -5,9 +5,12 @@ import {
   CITY_BY_SLUG,
   SERVICES,
   SERVICE_BY_SLUG,
+  CLINICS,
 } from "@/lib/pseoData";
 import AreaServicePage from "@/components/page/AreaServicePage";
 import { SITE_URL } from "@/lib/siteUrl";
+import JsonLd from "@/components/JsonLd";
+import { areaServiceJsonLd } from "@/lib/schema";
 
 export const dynamicParams = false;
 
@@ -26,13 +29,24 @@ export async function generateMetadata(
   if (!city || !service) return {};
 
   const title = `${service.name} in ${city.name}, ${city.state} | Your Health Now`;
-  const description = `${service.name} for ${city.name}, ${city.state} patients. ${service.summary.split(".")[0]}. Same-week appointments - book today.`;
+  const clinic = CLINICS[city.clinic];
+  const drive =
+    city.driveMin === 0
+      ? `Our clinic is in ${city.name}`
+      : `About ${city.driveMin} minutes from ${city.name}`;
+  const description = `${service.name} in ${city.name}, ${city.state} (${city.zips[0]}). ${drive} at ${clinic.address}. Same-week appointments. ${service.summary.split(".")[0]}.`;
   const canonical = `${SITE_URL}/areas-we-serve/${city.slug}/${service.slug}`;
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: { canonical },
-    openGraph: { title, description, url: canonical, type: "website" },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      type: "website",
+      images: [{ url: "/images/yhn-clone/your-health-now.jpg", width: 1200, height: 630 }],
+    },
     twitter: { card: "summary_large_image", title, description },
   };
 }
@@ -44,5 +58,10 @@ export default async function CityServicePage(
   const city = CITY_BY_SLUG[citySlug];
   const service = SERVICE_BY_SLUG[serviceSlug];
   if (!city || !service) notFound();
-  return <AreaServicePage city={city} service={service} />;
+  return (
+    <>
+      <JsonLd data={areaServiceJsonLd(city, service)} />
+      <AreaServicePage city={city} service={service} />
+    </>
+  );
 }
